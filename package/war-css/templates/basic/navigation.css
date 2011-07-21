@@ -1,0 +1,107 @@
+
+
+.nav-menu {
+  list-style: none outside none;
+  position: relative; 
+  overflow-y: visible; overflow-x: visible;
+  display:block;
+  min-height: 2.8em; /* ie specific- won't expand UL with floats */
+}
+
+.nav-menu {
+  list-style-type: none;
+  padding: 0; 
+  margin: 0;
+}
+
+/* Force containing div to clear floats */
+.nav-menu:after {
+        content: ".";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+}
+
+
+.nav-menu { z-index: 50 ; }
+
+.nav-menu li.nav-tab { 
+  display:inline;
+} /* horizontal */
+
+.nav-menu, .nav-menu a, .nav-menu li ul {
+  border-color:#D4D4D4;
+}
+
+.nav-menu {
+  border-width:0 0 0.1em 0.1em;
+}
+
+.nav-menu a {
+  text-decoration:none;
+  color:black;
+  background:#EFEFEF;
+  padding:2px;
+  display:block;
+}
+
+	
+.nav-menu a {
+  border-width:0.091em 0.091em 0.091em 0;
+  border-style: solid;
+  font-size:1.1em;
+  line-height:1.273em;
+  padding:0.636em 0.818em;
+}
+
+
+
+.ul.nav-menu li.nav-tab a {
+  padding-left: 1em;
+  padding-right: 1em;
+	
+}
+
+div.navbar-container {
+}
+
+
+
+
+.nav-menu li {
+  float:left; 
+  position:relative;
+}
+
+.nav-menu li.nav-tab-right {
+  float:right; 
+  position:relative;
+}
+
+.nav-menu li.nav-tab-right-first a {
+  border-left-width: 0.091em;
+}
+
+.nav-menu li.nav-tab {
+  /* Should not depend on type size */
+  margin-bottom:-1px;
+}
+
+.nav-menu a:hover {
+  background:#CCCCFF;
+}
+
+.nav-menu, .nav-menu a, .nav-menu li ul {
+  border-style:solid;
+}
+
+.nav-menu .current a {
+  border-bottom-color: #FFFFFF;
+  background: none repeat scroll 0 0 #FFFFFF;
+}
+
+.nav-menu li.spacer-tab {
+  width:100%;
+}

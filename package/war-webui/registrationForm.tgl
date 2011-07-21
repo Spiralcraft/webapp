@@ -1,0 +1,113 @@
+<%webuic:DataSession
+  tgns:webuic="class:/spiralcraft/servlet/webui/components/"
+  tgns:html="class:/spiralcraft/servlet/webui/components/html/"
+  tgns:lang="class:/spiralcraft/lang/"
+  tgns:sec="class:/spiralcraft/security/"
+  tgns:secauth="class:/spiralcraft/security/auth/"
+  tgns:util="class:/spiralcraft/util/"
+  tgns:rules="class:/spiralcraft/rules/"
+  tgns:j="class:/java/lang/"
+  tgns:meta="class:/spiralcraft/webapp/meta/"  
+  %>
+  <%html:Form
+    %>
+  
+    <%html:Login%> 
+    
+      <%With x="{ [#reg-form-data]  passwordVerify:[@j:String] }"%>
+        
+        <%html:TupleEditor
+          typeX='[@sec:Login].type'
+          errorTag.tagName="div"
+          errorTag.clazz="error"
+          %>
+          <%.rules%>
+            <%rules:ExpressionRule 
+              expression="clearpass.length()>6" 
+              message="Password must be at least 7 characters long"
+            /%>
+            <%rules:ExpressionRule 
+              expression="clearpass==[reg-form-data].passwordVerify" 
+              message="Passwords do not match"
+            /%>
+          <%/.rules%>
+          
+
+          <%.preSaveAssignments%>
+            <%lang:Assignment
+              source="[secauth:LoginEntry].username=.username"
+            /%>
+            <%lang:Assignment
+              source="[secauth:LoginEntry].passwordCleartext=.clearpass"
+            /%>
+          <%/.preSaveAssignments%>
+                  
+          <div>
+            <div class="form-field">
+              <label>Username</label>
+              <%html:TextInput 
+                x="username"
+                name="login_username"
+                contextualizeName="false"
+              /%>
+            </div>
+            <div class="form-field">
+              <label>Password</label>
+              <%html:TextInput 
+                x="clearpass" 
+                name="login_clearpass"
+                contextualizeName="false"
+                password="true"
+                .tag.id="password"
+              /%>
+            </div>
+            <div class="form-field">
+              <label>Verify Password</label>
+              <%html:TextInput 
+                x="[reg-form-data].passwordVerify" 
+                name="login_clearpass_check"
+                contextualizeName="false"
+                password="true"
+                .tag.id="password-check"
+              /%>
+            </div>
+            
+            <%html:TupleEditor
+              typeX='[@meta:Identity].type'
+              errorTag.tagName="div"
+              errorTag.clazz="error"
+              %>
+              <%.preSaveAssignments%>
+                <%lang:Assignment source=".principalName=[sec:Login].username"/%>
+              <%/.preSaveAssignments%>
+            
+              <div class="form-field">
+                <label>Email Address</label>
+                <%html:TextInput 
+                  x=".email" 
+                  name="email"
+                  errorTag.tagName="div"
+                  errorTag.clazz="error"
+                /%>
+                </span>
+              </div>
+            
+            <%/html:TupleEditor%>
+            
+            <div class="form-button-bar">
+              <%html:Button 
+                x="[html:TupleEditor].saveCommand([html:Login].loginCommand())" 
+                tag.clazz="form-completion-button"
+                %>Register
+              <%/html:Button%>
+            </div>
+          </div>
+        <%/html:TupleEditor%>
+      <%/With%>
+      
+    <%/html:Login%>
+  <%/html:Form%>
+
+<%/webuic:DataSession%>
+
+

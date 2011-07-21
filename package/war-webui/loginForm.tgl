@@ -1,0 +1,49 @@
+<%html:Form 
+  tgns:html="class:/spiralcraft/servlet/webui/components/html/"
+  %>
+  <%html:Login
+    requireLoginPermission="true"
+    errorTag.tagName="div"
+    errorTag.clazz="error"
+    %>
+    <div class="form-field">
+      <label>Username</label>
+      <%html:TextInput 
+          x="username"
+          name="login_username" 
+          contextualizeName="false" 
+          tag.clazz="title"
+          errorTag.tagName="div"
+          errorTag.clazz="error"
+      /%>
+    </div>
+    <div class="form-field">
+      <label>Password</label>
+      <%html:TextInput 
+        x="passwordCleartext" 
+        name="login_clearpass"
+        contextualizeName="false"
+        password="true"
+        tag.clazz="title"
+        errorTag.tagName="div"
+        errorTag.clazz="error"
+      /%>
+    </div>
+    <div class="form-field"> 
+      <%html:CheckboxInput
+        x="persistent" 
+        contextualizeName="false"
+      /%> Keep me signed in on this browser
+    </div>
+    <div class="form-button-bar">
+      <%html:Button 
+        x="[html:Login].loginCommand()" 
+        tag.clazz="form-completion-button"
+        %>Sign In
+      <%/html:Button%>
+    </div>
+        
+  <%/html:Login%>
+<%/html:Form%>
+
+

@@ -1,0 +1,60 @@
+<%@doclet
+  tgns:jn="class:/java/net"
+  tgns:swa="dynamic:/spiralcraft/webapp/"
+  textgen:trim="true"
+  contextX='
+    { 
+      [#swa:page]
+      template:=[*jn:URI{"/css/spiralcraft-webapp/templates/basic"}]
+    }
+    '
+  %>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+      <title><%title require="false"/%></title>
+      <%head require="false"/%>
+      <%swa:template require="false"%>
+        <link rel="stylesheet" 
+          href="/css/spiralcraft-webapp/reset.css" 
+          type="text/css" media="screen, projection" 
+        />
+        <link rel="stylesheet" 
+          href="<%=[swa:page].template/%>/style.css" 
+          type="text/css" media="screen, projection" 
+        />
+        <link rel="stylesheet" 
+          href="<%=[swa:page].template/%>/typography.css" 
+          type="text/css" media="screen, projection" 
+        />
+        <link rel="stylesheet" 
+          href="<%=[swa:page].template/%>/forms.css" 
+          type="text/css" media="screen, projection" 
+        />
+        <link rel="stylesheet" 
+          href="<%=[swa:page].template/%>/grid.css" 
+          type="text/css" media="screen, projection" 
+        />
+        <link rel="stylesheet" 
+          href="<%=[swa:page].template/%>/layout.css" 
+          type="text/css" media="screen, projection" 
+        />
+        <link rel="stylesheet" 
+          href="<%=[swa:page].template/%>/topbar.css" 
+          type="text/css" media="screen, projection" 
+        />
+        <link rel="stylesheet" 
+          href="<%=[swa:page].template/%>/navigation.css" 
+          type="text/css" media="screen, projection" 
+        />
+
+        
+      <%/swa:template%>
+  
+    </head>
+    <body>
+      <%@insert/%>
+    </body>
+  </html>
+<%/@doclet%>

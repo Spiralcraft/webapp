@@ -1,0 +1,35 @@
+<meta:Type
+  xmlns:meta="class:/spiralcraft/data/types/meta/"
+  xmlns:entity="class:/spiralcraft/archetype/entity/"
+  xmlns:net="class:/spiralcraft/archetype/net/"
+  >
+  <baseType>
+    <entity:Identity.type/>
+  </baseType>
+  
+  <fields>
+    <meta:Field>
+      <name>email
+      </name>
+      
+      <type><net:EmailAddress.type/>
+      </type>
+    </meta:Field>
+
+    <meta:Field>
+      <name>disabled
+      </name>
+      
+      <type><Boolean.type/>
+      </type>
+    </meta:Field>
+    
+    <meta:Field>
+      <name>superUser
+      </name>
+      
+      <type><Boolean.type/>
+      </type>
+    </meta:Field>
+  </fields>
+</meta:Type>

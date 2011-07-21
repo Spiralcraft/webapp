@@ -1,0 +1,44 @@
+<af:AutoFilter.list
+  xmlns:af="class:/spiralcraft/servlet/autofilter/"
+  xmlns:smtp="class:/spiralcraft/net/smtp/"
+  xmlns:webui="class:/spiralcraft/servlet/webui/"
+  xmlns:config="context://config/"
+  xmlns:webapp="context://config/spiralcraft-webapp/"
+  >
+    
+  <af:ReferenceFocusFilter>
+
+    <typeURI>context://config/FileSpace
+    </typeURI>
+                
+    <scope>CONSTANT
+    </scope>
+    
+  </af:ReferenceFocusFilter>
+  
+  <af:ReferenceFocusFilter>
+
+    <typeURI>context://config/Space
+    </typeURI>
+                
+    <scope>CONSTANT
+    </scope>
+    
+  </af:ReferenceFocusFilter>
+  
+  <af:ReferenceFocusFilter>
+        
+    <instanceURI>context://config/SMTPConnector.xml
+    </instanceURI>
+    
+    <scope>CONSTANT
+    </scope>    
+        
+  </af:ReferenceFocusFilter>   
+  
+  <config:SecurityFilter/>
+ 
+  
+
+</af:AutoFilter.list>
+  

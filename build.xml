@@ -1,0 +1,12 @@
+<project name="spiralcraft-webapp" default="pack" basedir=".">
+
+	
+  <property name="module" value="webapp"/>
+  <property name="buildVersion" value="0.4.15-dev1"/>
+  <property name="publish.resolver.type" value="distrib"/>    
+
+  <import file="../../build/build-spiralcraft-common.xml"/>
+	
+
+
+</project>

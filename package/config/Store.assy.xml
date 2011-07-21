@@ -1,0 +1,24 @@
+<data-xml:XmlStore
+  xmlns:data-xml="class:/spiralcraft/data/xml/"
+  xmlns:data="class:/spiralcraft/data/"
+  xmlns:bizm="class:/spiralcraft/biz/meta/"
+  xmlns:webapp="class:/spiralcraft/webapp/meta/"
+  >
+  <name>local
+  </name>
+  
+  <baseResourceURI>context://data/spiralcraft-webapp/live/
+  </baseResourceURI>
+
+  
+  <schema dataURI="webapp:WebApp.schema.xml"/>
+  
+  
+  <debugLevel>INFO
+  </debugLevel>
+  
+  <historyRetention.maxCount>1
+  </historyRetention.maxCount>
+        
+  
+</data-xml:XmlStore>
