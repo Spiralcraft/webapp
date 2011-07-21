@@ -1,0 +1,21 @@
+<%@doclet
+  tgns:jn="class:/java/net"
+  tgns:swa="dynamic:/spiralcraft/webapp/"
+  tgns:data="class:/spiralcraft/data/"
+  tgns:lang="class:/spiralcraft/lang/"
+  tgns:webui="context:/WEB-INF/webui/spiralcraft-webapp/"
+  textgen:trim="true"
+  contextX='
+    {
+      [#swa:dataField]
+      x:=`.`
+      ,labelX:=`.[data:Field].name`
+    }
+    '
+  %>
+  <%With $x="[swa:dataField].x"%>
+    <%webui:formField $labelX="[swa:dataField].labelX"%>
+      <%@insert/%>
+    <%/webui:formField%>
+  <%/With%>
+<%/@doclet%>

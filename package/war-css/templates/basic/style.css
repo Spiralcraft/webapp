@@ -5,14 +5,14 @@ body {
   color:#222222;
 }
 
-button.form-completion-button { 
+button.sc-form-completion-button { 
   background-color: #EFEFEF;
   border-style: solid;
   border-width: 0.1em;
   border-color: #000000;
 }
 
-button.form-control-button { 
+button.sc-form-control-button { 
   background-color: #EFEFEF;
   border-style: solid;
   border-width: 0.1em;
@@ -20,12 +20,17 @@ button.form-control-button {
   font-size: 80%;
 }
 
-.form-button-bar {
+.sc-form-button-bar {
   margin-top: 1em;
 }
 
 
-.form-field label {
+.sc-form-field {
+  padding-bottom: 0.4em;        
+}
+
+
+.sc-form-field label {
   display: block;       
 }
 

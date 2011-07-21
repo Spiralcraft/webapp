@@ -1,0 +1,19 @@
+<%@doclet
+  tgns:jn="class:/java/net"
+  tgns:swa="dynamic:/spiralcraft/webapp/"
+  tgns:data="class:/spiralcraft/data/"
+  tgns:lang="class:/spiralcraft/lang"
+  textgen:trim="true"
+  
+  contextX='
+    {
+      [#swa:formField]
+      labelX:=`""`
+    }
+    '
+  %>
+  <div class="sc-form-field">
+    <label><%Out $x="[swa:formField].labelX"/%></label>
+    <%@insert/%>
+  </div>
+<%/@doclet%>

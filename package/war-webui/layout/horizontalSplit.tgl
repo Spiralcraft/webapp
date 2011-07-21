@@ -1,0 +1,14 @@
+<%@doclet
+  tgns:layout="context:/WEB-INF/webui/spiralcraft-webapp/layout/"
+  textgen:trim="true"
+  %>
+<div>
+  <div class="left">
+    <%layout:left require="false"/%>
+  </div>
+  <div class="right">
+    <%layout:right require="false"/%>
+  </div>
+  <br style="clear:both;"/>  
+</div>
+<%/@doclet%>
