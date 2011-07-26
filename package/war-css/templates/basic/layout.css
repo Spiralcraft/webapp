@@ -45,6 +45,11 @@
   width:594px;
 }
 
+#content-fullwidth {
+  float:left;
+  width:100%;
+	
+}
 
 #content-box {
   width: 100%;
