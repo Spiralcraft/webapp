@@ -49,6 +49,7 @@
                 x="username"
                 name="login_username"
                 contextualizeName="false"
+                .tag.clazz="sc-registration-username"
               /%>
             </div>
             <div class="form-field">
@@ -59,6 +60,7 @@
                 contextualizeName="false"
                 password="true"
                 .tag.id="password"
+                .tag.clazz="sc-registration-password"
               /%>
             </div>
             <div class="form-field">
@@ -69,6 +71,7 @@
                 contextualizeName="false"
                 password="true"
                 .tag.id="password-check"
+                .tag.clazz="sc-registration-password-verify"
               /%>
             </div>
             

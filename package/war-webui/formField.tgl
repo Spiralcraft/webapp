@@ -3,17 +3,18 @@
   tgns:swa="dynamic:/spiralcraft/webapp/"
   tgns:data="class:/spiralcraft/data/"
   tgns:lang="class:/spiralcraft/lang"
+  tgns:j="class:/java/lang/"
   textgen:trim="true"
-  
   contextX='
     {
       [#swa:formField]
       labelX:=`""`
+      ,idX:=`""`
     }
     '
   %>
   <div class="sc-form-field">
-    <label><%Out $x="[swa:formField].labelX"/%></label>
+    <label for="<%Out $x='[swa:formField].idX'/%>"><%Out $x="[swa:formField].labelX"/%></label>
     <%@insert/%>
   </div>
 <%/@doclet%>

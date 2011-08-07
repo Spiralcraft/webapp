@@ -10,11 +10,12 @@
       [#swa:dataField]
       x:=`.`
       ,labelX:=`.[data:Field].name`
+      ,idX:=`.[data:Field].name`
     }
     '
   %>
-  <%With $x="[swa:dataField].x"%>
-    <%webui:formField $labelX="[swa:dataField].labelX"%>
+  <%With $x="[swa:dataField].x" writeThrough="true"%>
+    <%webui:formField $labelX="[swa:dataField].labelX" $idX="[swa:dataField].idX"%>
       <%@insert/%>
     <%/webui:formField%>
   <%/With%>
