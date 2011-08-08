@@ -1,0 +1,13 @@
+<%webapp:page
+  tgns:webapp="context:/WEB-INF/webui/spiralcraft-webapp/"
+  tgns:themeui="context:/WEB-INF/webui/spiralcraft-webapp/themes/basic/"
+  textgen:trim="true"
+  themeName="basic"
+  %>
+  <%themeui:topBar/%>
+  <div id="container">
+    <div id="page">
+      <%@insert/%>
+    </div>
+  </div>
+<%/webapp:page%>

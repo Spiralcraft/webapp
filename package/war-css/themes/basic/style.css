@@ -9,7 +9,7 @@
 a {text-decoration: none}
 
 body {
-  background:none repeat scroll 0 0 #FFFFFF;
+  background:none repeat scroll 0 0 #AAAAAA;
   color:#222222;
 }
 
@@ -26,6 +26,10 @@ button.sc-form-control-button {
   border-width: 0.1em;
   border-color: #000000;
   font-size: 80%;
+}
+
+#container {
+  background-color: #FFFFFF;
 }
 
 .sc-form-button-bar {

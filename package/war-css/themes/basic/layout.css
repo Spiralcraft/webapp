@@ -1,5 +1,18 @@
 
-#container {margin: 0 auto; width: 960px; }
+#body
+{
+  text-align: center; /* IE5/Win */
+}
+
+/*
+ * Fixed width container for entire layout
+ */
+#container 
+{ 
+  margin: 0 auto; 
+  width: 960px;
+  text-align: left;
+}
 
 #topbar {
   clear: both;

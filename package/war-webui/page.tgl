@@ -1,11 +1,13 @@
 <%@doclet
   tgns:jn="class:/java/net"
   tgns:swa="dynamic:/spiralcraft/webapp/"
+  tgns:webapp="context:/WEB-INF/webui/spiralcraft-webapp/"
   textgen:trim="true"
   contextX='
     { 
-      [#swa:page]
-      template:=[*jn:URI{"/css/spiralcraft-webapp/templates/basic"}]
+      cssURI:=[*jn:URI{"/css"}]
+      ,themePackage:="spiralcraft-webapp"
+      ,themeName:="basic"
     }
     '
   %>
@@ -15,42 +17,16 @@
     <head>
       <title><%title require="false"/%></title>
       <%head require="false"/%>
-      <%swa:template require="false"%>
+      <%swa:theme require="false"%>
         <link rel="stylesheet" 
-          href="/css/spiralcraft-webapp/reset.css" 
+          href="<%=[webapp:page].cssURI/%>/spiralcraft-webapp/reset.css" 
           type="text/css" media="screen, projection" 
         />
         <link rel="stylesheet" 
-          href="<%=[swa:page].template/%>/style.css" 
+          href="<%=[webapp:page].cssURI/%>/<%=[webapp:page].themePackage/%>/themes/<%=[webapp:page].themeName/%>/style.css" 
           type="text/css" media="screen, projection" 
         />
-        <link rel="stylesheet" 
-          href="<%=[swa:page].template/%>/typography.css" 
-          type="text/css" media="screen, projection" 
-        />
-        <link rel="stylesheet" 
-          href="<%=[swa:page].template/%>/forms.css" 
-          type="text/css" media="screen, projection" 
-        />
-        <link rel="stylesheet" 
-          href="<%=[swa:page].template/%>/grid.css" 
-          type="text/css" media="screen, projection" 
-        />
-        <link rel="stylesheet" 
-          href="<%=[swa:page].template/%>/layout.css" 
-          type="text/css" media="screen, projection" 
-        />
-        <link rel="stylesheet" 
-          href="<%=[swa:page].template/%>/topbar.css" 
-          type="text/css" media="screen, projection" 
-        />
-        <link rel="stylesheet" 
-          href="<%=[swa:page].template/%>/navigation.css" 
-          type="text/css" media="screen, projection" 
-        />
-
-        
-      <%/swa:template%>
+      <%/swa:theme%>
   
     </head>
     <body>

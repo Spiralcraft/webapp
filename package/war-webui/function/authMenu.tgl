@@ -1,0 +1,26 @@
+<%@doclet
+  tgns:funcui="context:/WEB-INF/webui/spiralcraft-webapp/function/"
+  tgns:jnet="class:/java/net/"
+  contextX='{
+    loginURI:=[*jnet:URI{"/login.webui"}]
+    ,registerURI:=[*jnet:URI{"/register.webui"}]
+  }'
+  %>
+  <ul class="sc-auth-menu">
+    <%If x="[secauth:AuthSession].authenticated"
+      tgns:secauth="class:/spiralcraft/security/auth/"
+      tgns:filter="class:/spiralcraft/servlet/autofilter/"
+      tgns:html="class:/spiralcraft/servlet/webui/components/html"
+      %>
+      Signed in as <%=[secauth:AuthSession].principal.name/%>
+      <%html:Link x="[filter:SecurityFilter].logoutCommand()"%>Sign Out<%/html:Link%>
+    <%Else/%>
+      <li>
+        <a href="<%=[funcui:authMenu].registerURI/%>" alt="Register">Register</a>
+      </li>
+      <li>
+        <a href="<%=[funcui:authMenu].loginURI/%>" alt="Sign In">Sign In</a>
+      </li>
+    <%/If%>
+  </ul>
+<%/@doclet%>

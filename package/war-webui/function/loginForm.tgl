@@ -1,13 +1,14 @@
 <%html:Form 
   tgns:html="class:/spiralcraft/servlet/webui/components/html/"
   tgns:webui="context:/WEB-INF/webui/spiralcraft-webapp/"  
+  tag.onsubmit="SPIRALCRAFT.security.loginFormOnSubmit(this)"
   %>
   <%html:Login
     requireLoginPermission="true"
     errorTag.tagName="div"
     errorTag.clazz="error"
     %>
-    <%webui:formField labelx='"Username"'%>
+    <%webui:formField labelX='"Username"'%>
       <%html:TextInput 
           x="username"
           name="login_username" 
@@ -18,7 +19,7 @@
       /%>
     <%/webui:formField%>
     
-    <%webui:formField labelx='"Password"'%>
+    <%webui:formField labelX='"Password"'%>
       <%html:TextInput 
         x="passwordCleartext" 
         name="login_clearpass "
@@ -30,6 +31,13 @@
       /%>
     <%/webui:formField%>
     
+    <%html:HiddenInput
+      x="passwordDigest"
+      name="login_digestpass"
+      contextualizeName="false"
+      password="true"
+    /%>
+    
     <%webui:formField%>
       <%html:CheckboxInput
         x="persistent" 
@@ -37,10 +45,10 @@
       /%> Keep me signed in on this browser
     <%/webui:formField%>
     
-    <div class="form-button-bar">
+    <div class="sc-form-button-bar">
       <%html:Button 
         x="[html:Login].loginCommand()" 
-        tag.clazz="form-completion-button"
+        tag.clazz="sc-form-completion-button"
         %>Sign In
       <%/html:Button%>
     </div>

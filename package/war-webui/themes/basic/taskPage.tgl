@@ -1,0 +1,10 @@
+<%themeui:page
+  tgns:themeui="context:/WEB-INF/webui/spiralcraft-webapp/themes/basic/"
+  textgen:trim="true"
+  %>
+  <div id="content-fullwidth">
+    <div id="center-form">
+      <%@insert/%>
+    </div>
+  </div>
+<%/themeui:page%>

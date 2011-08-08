@@ -4,7 +4,7 @@
   xmlns:bizm="class:/spiralcraft/biz/meta/"
   xmlns:webapp="class:/spiralcraft/webapp/meta/"
   >
-  <name>local
+  <name>spiralcraft-webapp
   </name>
   
   <baseResourceURI>context://data/spiralcraft-webapp/live/

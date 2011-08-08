@@ -8,8 +8,10 @@
   tgns:rules="class:/spiralcraft/rules/"
   tgns:j="class:/java/lang/"
   tgns:meta="class:/spiralcraft/webapp/meta/"  
+  tgns:webui="context:/WEB-INF/webui/spiralcraft-webapp/"    
   %>
   <%html:Form
+    tag.onsubmit="SPIRALCRAFT.security.loginFormOnSubmit(this)"
     %>
   
     <%html:Login%> 
@@ -43,28 +45,25 @@
           <%/.preSaveAssignments%>
                   
           <div>
-            <div class="form-field">
-              <label>Username</label>
+            <%webui:dataField x="username"%>
               <%html:TextInput 
-                x="username"
                 name="login_username"
                 contextualizeName="false"
                 .tag.clazz="sc-registration-username"
               /%>
-            </div>
-            <div class="form-field">
-              <label>Password</label>
+            <%/webui:dataField%>
+            
+            <%webui:dataField x="clearpass"%>
               <%html:TextInput 
-                x="clearpass" 
                 name="login_clearpass"
                 contextualizeName="false"
                 password="true"
                 .tag.id="password"
                 .tag.clazz="sc-registration-password"
               /%>
-            </div>
-            <div class="form-field">
-              <label>Verify Password</label>
+            <%/webui:dataField%>
+
+            <%webui:formField labelX='"Verify Password"'%>
               <%html:TextInput 
                 x="[reg-form-data].passwordVerify" 
                 name="login_clearpass_check"
@@ -73,7 +72,7 @@
                 .tag.id="password-check"
                 .tag.clazz="sc-registration-password-verify"
               /%>
-            </div>
+            <%/webui:formField%>
             
             <%html:TupleEditor
               typeX='[@meta:Identity].type'
@@ -84,23 +83,20 @@
                 <%lang:Assignment source=".principalName=[sec:Login].username"/%>
               <%/.preSaveAssignments%>
             
-              <div class="form-field">
-                <label>Email Address</label>
+              <%webui:dataField x="email"%>
                 <%html:TextInput 
-                  x=".email" 
                   name="email"
                   errorTag.tagName="div"
                   errorTag.clazz="error"
                 /%>
-                </span>
-              </div>
+              <%/webui:dataField%>
             
             <%/html:TupleEditor%>
             
-            <div class="form-button-bar">
+            <div class="sc-form-button-bar">
               <%html:Button 
                 x="[html:TupleEditor].saveCommand([html:Login].loginCommand())" 
-                tag.clazz="form-completion-button"
+                tag.clazz="sc-form-completion-button"
                 %>Register
               <%/html:Button%>
             </div>
