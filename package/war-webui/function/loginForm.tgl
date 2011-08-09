@@ -32,7 +32,7 @@
     <%/webui:formField%>
     
     <%html:HiddenInput
-      x="passwordDigest"
+      x="saltedDigest"
       name="login_digestpass"
       contextualizeName="false"
       password="true"

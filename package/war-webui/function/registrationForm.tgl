@@ -9,14 +9,20 @@
   tgns:j="class:/java/lang/"
   tgns:meta="class:/spiralcraft/webapp/meta/"  
   tgns:webui="context:/WEB-INF/webui/spiralcraft-webapp/"    
+  tgns:codec="class:/spiralcraft/codec/text/"
   %>
   <%html:Form
-    tag.onsubmit="SPIRALCRAFT.security.loginFormOnSubmit(this)"
+    tag.onsubmit="SPIRALCRAFT.security.registrationFormOnSubmit(this)"
     %>
   
     <%html:Login%> 
     
-      <%With x="{ [#reg-form-data]  passwordVerify:[@j:String] }"%>
+      <%With x="{ [#reg-form-data]  
+                   passwordVerify:[@j:String] 
+                   ,digestVerify:[@j:String]
+                   ,passwordLength:=0
+                 }"
+        %>
         
         <%html:TupleEditor
           typeX='[@sec:Login].type'
@@ -25,11 +31,17 @@
           %>
           <%.rules%>
             <%rules:ExpressionRule 
-              expression="clearpass.length()>6" 
+              expression="(digestpass.length()>0 && [reg-form-data].passwordLength>6) 
+                          || clearpass.length()>6
+                         " 
               message="Password must be at least 7 characters long"
             /%>
             <%rules:ExpressionRule 
               expression="clearpass==[reg-form-data].passwordVerify" 
+              message="Passwords do not match"
+            /%>
+            <%rules:ExpressionRule 
+              expression="digestpass==[reg-form-data].digestVerify" 
               message="Passwords do not match"
             /%>
           <%/.rules%>
@@ -42,12 +54,15 @@
             <%lang:Assignment
               source="[secauth:LoginEntry].passwordCleartext=.clearpass"
             /%>
+            <%lang:Assignment
+              source='[secauth:LoginEntry].saltedDigest=[@codec:HexCodec].@decodeHex(.digestpass)'
+            /%>
           <%/.preSaveAssignments%>
                   
           <div>
             <%webui:dataField x="username"%>
               <%html:TextInput 
-                name="login_username"
+                name="register_username"
                 contextualizeName="false"
                 .tag.clazz="sc-registration-username"
               /%>
@@ -55,24 +70,43 @@
             
             <%webui:dataField x="clearpass"%>
               <%html:TextInput 
-                name="login_clearpass"
+                name="register_clearpass"
                 contextualizeName="false"
                 password="true"
                 .tag.id="password"
                 .tag.clazz="sc-registration-password"
               /%>
             <%/webui:dataField%>
+            
+            <%html:HiddenInput
+              name="register_digestpass"
+              contextualizeName="false"
+              x="digestpass"
+            /%>
+            
+            <%html:HiddenInput
+              name="register_passwordlength"
+              contextualizeName="false"
+              x="[reg-form-data].passwordLength"
+            /%>            
+              
 
             <%webui:formField labelX='"Verify Password"'%>
               <%html:TextInput 
                 x="[reg-form-data].passwordVerify" 
-                name="login_clearpass_check"
+                name="register_clearpass_check"
                 contextualizeName="false"
                 password="true"
                 .tag.id="password-check"
                 .tag.clazz="sc-registration-password-verify"
               /%>
             <%/webui:formField%>
+
+            <%html:HiddenInput
+              name="register_digestpass_check"
+              contextualizeName="false"
+              x="[reg-form-data].digestVerify"
+            /%>
             
             <%html:TupleEditor
               typeX='[@meta:Identity].type'
