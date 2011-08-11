@@ -1,6 +1,7 @@
 <%@doclet
   tgns:funcui="context:/WEB-INF/webui/spiralcraft-webapp/function/"
   tgns:jnet="class:/java/net/"
+  tgns:webui="class:/spiralcraft/servlet/webui/"
   contextX='{
     loginURI:=[*jnet:URI{"/login.webui"}]
     ,registerURI:=[*jnet:URI{"/register.webui"}]
@@ -19,7 +20,11 @@
         <a href="<%=[funcui:authMenu].registerURI/%>" alt="Register">Register</a>
       </li>
       <li>
-        <a href="<%=[funcui:authMenu].loginURI/%>" alt="Sign In">Sign In</a>
+        <a 
+          href="<%=[funcui:authMenu].loginURI/%>?referer=<%=[webui:ServiceContext].dataEncodedAbsoluteBackLink/%>" 
+          alt="Sign In"
+          >Sign In
+        </a>
       </li>
     <%/If%>
   </ul>
