@@ -8,4 +8,6 @@
   </name>
   <contextualizeName>false
   </contextualizeName>
+  <password>true
+  </password>
 </html:HiddenInput>

@@ -1,0 +1,21 @@
+<html:TextInput
+  xmlns:html="class:/spiralcraft/servlet/webui/components/html/"
+  xmlns:sec="class:/spiralcraft/security/auth/"
+  >
+  <x>[sec:LoginEntry].username
+  </x>
+  <name>login_username
+  </name>
+  <contextualizeName>false
+  </contextualizeName>
+  <required>true
+  </required>
+  <errorTag.tagName>div
+  </errorTag.tagName>
+  <errorTag.clazz>error
+  </errorTag.clazz>
+  <tag.autocomplete>off
+  </tag.autocomplete>
+  <tag.clazz>sc-login-username
+  </tag.clazz>
+</html:TextInput>

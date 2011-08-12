@@ -1,5 +1,6 @@
 <%@doclet
   tgns:swa-reg="context:/WEB-INF/webui/spiralcraft-webapp/function/registration/"
+  tgns:j="class:/java/lang/"
   %>
 
   <%With 

@@ -1,11 +1,10 @@
 <html:HiddenInput
   xmlns:html="class:/spiralcraft/servlet/webui/components/html/"
-  xmlns:sec="class:/spiralcraft/security"
-  xmlns:swa-reg="context:/WEB-INF/webui/spiralcraft-webapp/function/registration/"
+  xmlns:sec="class:/spiralcraft/security/auth/"
   >
-  <x>[swa-reg:context].digestVerify
+  <x>[sec:LoginEntry].saltedDigest
   </x>
-  <name>register_digestpass_check
+  <name>login_digestpass
   </name>
   <contextualizeName>false
   </contextualizeName>

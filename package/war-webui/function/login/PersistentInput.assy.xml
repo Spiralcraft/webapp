@@ -1,0 +1,7 @@
+<html:CheckboxInput
+  xmlns:html="class:/spiralcraft/servlet/webui/components/html/"
+  xmlns:sec="class:/spiralcraft/security/auth/"
+  >
+  <x>[sec:LoginEntry].persistent
+  </x>
+</html:CheckboxInput>
