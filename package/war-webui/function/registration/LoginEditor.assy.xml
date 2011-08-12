@@ -48,7 +48,7 @@
     </rules:ExpressionRule>      
   </rules>
           
-  <preSaveAssignments>
+  <publishedAssignments>
     <lang:Assignment>
       <source>[secauth:LoginEntry].username=.username
       </source>
@@ -63,6 +63,6 @@
           =[@codec:HexCodec].@decodeHex(.digestpass)
       </source>
     </lang:Assignment>
-  </preSaveAssignments>
+  </publishedAssignments>
 </html:TupleEditor>
           
