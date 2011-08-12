@@ -1,0 +1,6 @@
+<html:Form
+  xmlns:html="class:/spiralcraft/servlet/webui/components/html"
+  >
+  <tag.onsubmit>SPIRALCRAFT.security.registrationFormOnSubmit(this)
+  </tag.onsubmit>
+</html:Form>

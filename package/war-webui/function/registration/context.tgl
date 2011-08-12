@@ -1,0 +1,14 @@
+<%@doclet
+  tgns:swa-reg="context:/WEB-INF/webui/spiralcraft-webapp/function/registration/"
+  %>
+
+  <%With 
+    x="{ [#swa-reg:context]  
+         passwordVerify:[@j:String] 
+         ,digestVerify:[@j:String]
+         ,passwordLength:=0
+       }"
+    %>
+    <%@insert/%>
+  <%/With%>
+<%/@doclet%>

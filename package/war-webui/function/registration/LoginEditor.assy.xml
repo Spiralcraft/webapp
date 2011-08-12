@@ -1,0 +1,68 @@
+<html:TupleEditor
+  xmlns:html="class:/spiralcraft/servlet/webui/components/html"
+  xmlns:rules="class:/spiralcraft/rules/"
+  xmlns:lang="class:/spiralcraft/lang"
+  xmlns:sec="class:/spiralcraft/security/"
+  xmlns:secauth="class:/spiralcraft/security/auth/"
+  xmlns:swa-reg="context:/WEB-INF/webui/spiralcraft-webapp/function/registration/"
+  xmlns:codec="class:/spiralcraft/codec/text/"
+  >
+  <typeX>[@sec:Login].type
+  </typeX>
+  
+  <errorTag.tagName>div
+  </errorTag.tagName>
+
+  <errorTag.clazz>error
+  </errorTag.clazz>
+  
+  <rules>
+    <rules:ExpressionRule>
+      <expression>
+        <![CDATA[
+        
+        (digestpass.length()>0 
+          && [swa-reg:context].passwordLength>6
+        ) 
+        || clearpass.length()>6
+        
+        ]]>
+      </expression>
+
+      <message>Password must be at least 7 characters long
+      </message>
+    </rules:ExpressionRule>
+    
+    <rules:ExpressionRule>
+      <expression>clearpass==[swa-reg:context].passwordVerify
+      </expression>
+      <message>Passwords do not match
+      </message>
+    </rules:ExpressionRule>
+     
+    <rules:ExpressionRule>
+      <expression>digestpass==[swa-reg:context].digestVerify
+      </expression>
+      <message>Passwords do not match
+      </message>
+    </rules:ExpressionRule>      
+  </rules>
+          
+  <preSaveAssignments>
+    <lang:Assignment>
+      <source>[secauth:LoginEntry].username=.username
+      </source>
+    </lang:Assignment>
+    <lang:Assignment>
+      <source>[secauth:LoginEntry].passwordCleartext=.clearpass
+      </source>
+    </lang:Assignment>
+    <lang:Assignment>
+      <source>
+        [secauth:LoginEntry].saltedDigest
+          =[@codec:HexCodec].@decodeHex(.digestpass)
+      </source>
+    </lang:Assignment>
+  </preSaveAssignments>
+</html:TupleEditor>
+          

@@ -1,0 +1,7 @@
+<%@doclet
+  tgns:swa-reg="context:/WEB-INF/webui/spiralcraft-webapp/function/registration/"
+  %>
+  <%swa-reg:DigestHiddenInput/%>
+  <%swa-reg:DigestVerifyHiddenInput/%>
+  <%swa-reg:PasswordLengthHiddenInput/%>
+<%/@doclet%>

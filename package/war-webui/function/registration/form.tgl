@@ -1,0 +1,84 @@
+<%@doclet
+  tgns:webuic="class:/spiralcraft/servlet/webui/components/"
+  tgns:html="class:/spiralcraft/servlet/webui/components/html/"
+  tgns:lang="class:/spiralcraft/lang/"
+  tgns:sec="class:/spiralcraft/security/"
+  tgns:secauth="class:/spiralcraft/security/auth/"
+  tgns:util="class:/spiralcraft/util/"
+  tgns:rules="class:/spiralcraft/rules/"
+  tgns:j="class:/java/lang/"
+  tgns:meta="class:/spiralcraft/webapp/meta/"  
+  tgns:webui="context:/WEB-INF/webui/spiralcraft-webapp/"    
+  tgns:codec="class:/spiralcraft/codec/text/"
+  tgns:swa-reg="context:/WEB-INF/webui/spiralcraft-webapp/function/registration/"
+  contextX=
+    '{
+      afterCommitX:=`{}`
+    }'
+  %>
+  <%swa-reg:Form%>
+  
+    <%html:Login%> 
+    
+      <%swa-reg:context%>
+        
+        <%swa-reg:LoginEditor%>
+                  
+          <div class="sc-registration-panel">
+          
+            <%webui:dataField x="username" labelX='"Username"'%>
+              <%swa-reg:UsernameInput/%>
+            <%/webui:dataField%>
+            
+            <%webui:dataField x="clearpass" labelX='"Password"'%>
+              <%swa-reg:PasswordInput/%>
+            <%/webui:dataField%>
+            
+
+            <%webui:formField labelX='"Verify Password"'%>
+              <%swa-reg:PasswordVerifyInput/%>
+            <%/webui:formField%>
+
+            <%swa-reg:digestHiddenInputs/%>
+            
+            <%swa-reg:form-identityEditor require="false"%>
+              <%html:TupleEditor
+                typeX='[@meta:Identity].type'
+                errorTag.tagName="div"
+                errorTag.clazz="error"
+                %>
+                <%.preSaveAssignments%>
+                  <%lang:Assignment source=".principalName=[sec:Login].username"/%>
+                <%/.preSaveAssignments%>
+              
+                <%webui:dataField x="email"%>
+                  <%html:TextInput 
+                    name="email"
+                    required="true" 
+                    errorTag.tagName="div"
+                    errorTag.clazz="error"
+                    tag.autocomplete="off" 
+                  /%>
+                <%/webui:dataField%>
+              
+              <%/html:TupleEditor%>
+            <%/swa-reg:form-identityEditor%>
+            
+            <div class="sc-form-button-bar">
+              <%html:Button 
+                x="[html:TupleEditor].saveCommand([html:Login].loginCommand())" 
+                tag.clazz="sc-form-completion-button"
+                %>Register
+              <%/html:Button%>
+            </div>
+          </div>
+          
+        <%/swa-reg:LoginEditor%>
+      <%/swa-reg:context%>
+      
+    <%/html:Login%>
+  <%/swa-reg:Form%>
+
+<%/@doclet%>
+
+

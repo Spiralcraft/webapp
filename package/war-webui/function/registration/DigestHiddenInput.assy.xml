@@ -1,0 +1,11 @@
+<html:HiddenInput
+  xmlns:html="class:/spiralcraft/servlet/webui/components/html/"
+  xmlns:sec="class:/spiralcraft/security"
+  >
+  <x>[sec:Login].digestpass
+  </x>
+  <name>register_digestpass
+  </name>
+  <contextualizeName>false
+  </contextualizeName>
+</html:HiddenInput>
