@@ -1,5 +1,5 @@
 <%@doclet
-  tgns:funcui="context:/WEB-INF/webui/spiralcraft-webapp/function/"
+  tgns:swa-login="context:/WEB-INF/webui/spiralcraft-webapp/function/login/"
   tgns:jnet="class:/java/net/"
   tgns:webui="class:/spiralcraft/servlet/webui/"
   contextX='{
@@ -17,11 +17,11 @@
       <%html:Link x="[filter:SecurityFilter].logoutCommand()"%>Sign Out<%/html:Link%>
     <%Else/%>
       <li>
-        <a href="<%=[funcui:authMenu].registerURI/%>" alt="Register">Register</a>
+        <a href="<%=[swa-login:authMenu].registerURI/%>" alt="Register">Register</a>
       </li>
       <li>
         <a 
-          href="<%=[funcui:authMenu].loginURI/%>?referer=<%=[webui:ServiceContext].dataEncodedAbsoluteBackLink/%>" 
+          href="<%=[swa-login:authMenu].loginURI/%>?referer=<%=[webui:ServiceContext].dataEncodedAbsoluteBackLink/%>" 
           alt="Sign In"
           >Sign In
         </a>
