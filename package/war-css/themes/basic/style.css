@@ -28,8 +28,13 @@ button.sc-form-control-button {
   font-size: 80%;
 }
 
-#container {
+#sc-container {
   background-color: #FFFFFF;
+}
+
+.sc-task-panel {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .sc-form-button-bar {

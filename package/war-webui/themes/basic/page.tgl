@@ -1,13 +1,28 @@
-<%webapp:page
+<%@doclet
   tgns:webapp="context:/WEB-INF/webui/spiralcraft-webapp/"
   tgns:themeui="context:/WEB-INF/webui/spiralcraft-webapp/themes/basic/"
   textgen:trim="true"
-  themeName="basic"
+  contextX='
+    { 
+      titleX:=`""`
+    }
+    '
   %>
-  <%themeui:topBar/%>
-  <div id="container">
-    <div id="page">
-      <%@insert/%>
+  <%webapp:page
+    themeName="basic"
+    $titleX="[themeui:page].titleX"
+    %>
+    <%themeui:topBar/%>
+    <div id="sc-container">
+      <div id="sc-page">
+        <%themeui:page-header require="false"%>
+          <%themeui:header%>
+            <h1><%Out $x="[themeui:page].titleX"/%></h1>
+          <%/themeui:header%>
+        <%/themeui:page-header%>
+        <%@insert/%>
+        <%themeui:page-footer require="false"/%>
+      </div>
     </div>
-  </div>
-<%/webapp:page%>
+  <%/webapp:page%>
+<%/@doclet%>

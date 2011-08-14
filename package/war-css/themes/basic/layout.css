@@ -1,40 +1,59 @@
-
-#body
-{
-  text-align: center; /* IE5/Win */
-}
-
 /*
  * Fixed width container for entire layout
  */
-#container 
+#sc-container 
 { 
   margin: 0 auto; 
   width: 960px;
   text-align: left;
 }
 
-#topbar {
+.sc-topbar {
   clear: both;
   width: 100%;
   background-color: #EFEFEF;
   list-style-type:none;
 }
 
-#topbar-right {
+.sc-topbar-right {
   float: right;
   margin-right: 1em;	
 	
 }
 
-#page { padding:2.2em; }
+#sc-page { padding:2.2em; }
 
-#header {
+.sc-page-header {
   clear: both;
-  border-width:0; 
+  border-width:0;
+  border-bottom-width:1px;
+  border-style: solid;
+  border-color: #EFEFEF;
   padding:0;
+  margin:0;
+  margin-bottom: 4px;
 }
 
+.sc-page-content {
+  width: 100%;
+}
+
+
+.sc-page-footer {
+  clear: both;
+  border-width:0;
+  border-top-width:1px;
+  border-style: solid;
+  border-color: #EFEFEF;
+  padding:0;
+  margin:0;
+  margin-top: 1em;
+  padding-top: 4px;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 75%;
+  text-align: center;
+}
 
 #navbar {
   width: 100%;
@@ -53,15 +72,13 @@
         height: 0;
 }
 
-#content {
+.sc-panel-main {
   float:left;
   width:594px;
 }
 
-#content-fullwidth {
-  float:left;
+.sc-panel-full {
   width:100%;
-	
 }
 
 #content-box {
@@ -93,7 +110,7 @@
   margin: 0;
 }
 
-#center-form {
+.sc-form {
   padding-top: 0;
   margin: 2em;
 }

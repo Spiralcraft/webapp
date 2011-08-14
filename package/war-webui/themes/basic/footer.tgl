@@ -1,0 +1,9 @@
+<%@doclet
+  tgns:jn="class:/java/net"
+  tgns:swa="dynamic:/spiralcraft/webapp/"
+  textgen:trim="true"
+  %>
+  <div class="sc-page-footer">
+    <%@insert/%>
+  </div>
+<%/@doclet%>

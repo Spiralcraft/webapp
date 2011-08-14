@@ -1,0 +1,19 @@
+<%@doclet
+  tgns:themeui="context:/WEB-INF/webui/spiralcraft-webapp/themes/basic/"
+  textgen:trim="true"
+  contextX='
+    { 
+      titleX:=`""`
+    }
+    '
+  %>
+  <div class="sc-task-panel">
+    <%themeui:taskPanel-header require="false"%>
+      <%themeui:panelHeader%>
+        <h2><%Out $x="[themeui:taskPanel].titleX"/%></h2>
+      <%/themeui:panelHeader%>
+    <%/themeui:taskPanel-header%>
+    <%@insert/%>
+    <%themeui:taskPanel-footer require="false"/%>
+  </div>
+<%/@doclet%>

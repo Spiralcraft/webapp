@@ -19,17 +19,41 @@
         </revision>
         
         <scm:Notes>
-          <scm:Note>
+          <scm:Note>Development of basic theme
           </scm:Note>
-        </scm:Notes>          
+          <scm:Note>Formalization of css selector naming
+          </scm:Note>
+        </scm:Notes> 
         
-        <path>
+        <path>package
         </path>
         
         <resources>
-          <URI>
+          <URI>war-css/themes/basic/layout.css
           </URI>
-          <URI>
+          <URI>war-css/themes/basic/style.css
+          </URI>
+          <URI>war-css/themes/basic/topbar.css
+          </URI>
+          <URI>war-webui/themes/basic/contentFull.tgl
+          </URI>
+          <URI>war-webui/themes/basic/footer.tgl
+          </URI>
+          <URI>war-webui/themes/basic/header.tgl
+          </URI>
+          <URI>war-webui/themes/basic/page.tgl
+          </URI>
+          <URI>war-webui/themes/basic/panelFooter.tgl
+          </URI>
+          <URI>war-webui/themes/basic/panelHeader.tgl
+          </URI>
+          <URI>war-webui/themes/basic/taskPage.tgl
+          </URI>
+          <URI>war-webui/themes/basic/taskPanel.tgl
+          </URI>
+          <URI>war-webui/themes/basic/topBar.tgl
+          </URI>
+          <URI>war-webui/page.tgl
           </URI>
         </resources>
 

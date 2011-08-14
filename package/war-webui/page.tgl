@@ -10,6 +10,7 @@
       ,javascriptURI:=[*jn:URI{"/js"}]
       ,themePackage:="spiralcraft-webapp"
       ,themeName:="basic"
+      ,titleX:=`""`
     }
     '
   %>
@@ -17,7 +18,7 @@
   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
   <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-      <title><%title require="false"/%></title>
+      <title><%title require="false"/%><%Out $x="[webapp:page].titleX"/%></title>
       <%swa:theme-css require="false"%>
         <link rel="stylesheet" 
           href="<%=[webapp:page].cssURI/%>/spiralcraft-webapp/reset.css" 
@@ -34,9 +35,9 @@
         >
       </script>
       <%jsclient:spiralcraft-jsclient/%>
-      <%head require="false"/%>
+      <%webapp:page-head require="false"/%>
     </head>
-    <body>
+    <body onload="SPIRALCRAFT.dom.bodyOnLoad()">
       <%@insert/%>
     </body>
   </html>

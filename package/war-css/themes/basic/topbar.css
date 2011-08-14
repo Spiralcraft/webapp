@@ -1,4 +1,4 @@
-#topbar a {
+.sc-topbar a {
   text-decoration: none;
   padding: 0;
   margin: 0;
@@ -11,11 +11,11 @@
   border-color: #AFAFFF;
 }
 
-#topbar a:hover {
+.sc-topbar a:hover {
   border-color: #0000FF;
 }
 
-#topbar li {
+.sc-topbar li {
   list-style-type: none;
   display: inline;
   padding: 0;
@@ -25,7 +25,7 @@
   border-top-width: .1em;
 }
 
-#topbar ul { 
+.sc-topbar ul { 
   position: relative;
   list-style: none outside none; 
   list-style-type: none;
@@ -41,7 +41,7 @@
 }
 
 /* Force containing div to clear floats */
-#topbar:after {
+.sc-topbar:after {
   content: ".";
   display: block;
   clear: both;
