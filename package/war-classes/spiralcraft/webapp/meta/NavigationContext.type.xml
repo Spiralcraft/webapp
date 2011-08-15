@@ -1,0 +1,35 @@
+<meta:Type
+  xmlns:meta="class:/spiralcraft/data/types/meta/"
+  xmlns:entity="class:/spiralcraft/archetype/entity/"
+  xmlns:net="class:/spiralcraft/archetype/net/"
+  xmlns:swa-meta="class:/spiralcraft/webapp/meta/"
+  >
+  <description>
+    Provides contextual information to navigation components
+  </description>
+  
+  <fields>
+    
+    <meta:Field>
+      <name>neighborPaths
+      </name>
+      <type><swa-meta:Path.list.type/>
+      </type>
+    </meta:Field>
+
+    <meta:Field>
+      <name>contextPaths
+      </name>
+      <type><swa-meta:Path.list.type/>
+      </type>
+    </meta:Field>
+
+    <meta:Field>
+      <name>activePath
+      </name>
+      <type><swa-meta:Path.type/>
+      </type>
+    </meta:Field>
+    
+  </fields>
+</meta:Type>

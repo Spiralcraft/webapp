@@ -1,0 +1,106 @@
+<meta:Type
+  xmlns:meta="class:/spiralcraft/data/types/meta/"
+  xmlns:entity="class:/spiralcraft/archetype/entity/"
+  xmlns:net="class:/spiralcraft/archetype/net/"
+  xmlns:swa-meta="class:/spiralcraft/webapp/meta/"
+  >
+
+  
+  <fields>
+    <meta:SequenceField>
+      <name>id</name>
+      <type><LSID.type/></type>
+    </meta:SequenceField>
+    
+    <meta:Field>
+      <name>parentId</name>
+      <type><LSID.type/></type>
+    </meta:Field>
+    
+    <meta:Field>
+      <name>originId</name>
+      <type><LSID.type/></type>
+    </meta:Field>
+
+    <meta:RelativeField>
+      <name>origin
+      </name>
+      <type><swa-meta:Place.type/>
+      </type>
+      <fieldList>originId
+      </fieldList>
+    </meta:RelativeField>
+
+    <meta:Field>
+      <name>destinationId</name>
+      <type><LSID.type/></type>
+    </meta:Field>
+
+    <meta:RelativeField>
+      <name>destination
+      </name>
+      <type><swa-meta:Place.type/>
+      </type>
+      <fieldList>destinationId
+      </fieldList>
+    </meta:RelativeField>
+    
+    <meta:Field>
+      <name>title</name>
+      <type><String.type/>
+      </type>
+    </meta:Field>
+    
+    <meta:Field>
+      <name>description</name>
+      <type><String.type/>
+      </type>
+    </meta:Field>
+
+    <meta:Field>
+      <name>href
+      </name>
+      
+      <type><URI.type/>
+      </type>
+    </meta:Field>
+    
+    <meta:RelativeField>
+      <name>children
+      </name>
+      <type><swa-meta:Path.list.type/>
+      </type>
+      <referencedFieldList>parentId
+      </referencedFieldList>
+    </meta:RelativeField>
+    
+    <meta:RelativeField>
+      <name>parent
+      </name>
+      <type><swa-meta:Path.type/>
+      </type>
+      <fieldList>parentId
+      </fieldList>
+    </meta:RelativeField>
+    
+    <meta:CalculatedField>
+      <name>path
+      </name>
+      <type><swa-meta:Path.array.type/>
+      </type>
+      <expression>parent.path{ .!=null? .@add(@) : [{ @ }] }
+      </expression>
+    </meta:CalculatedField>
+  </fields>
+  
+  <keys>
+    <meta:Key>
+      <fieldList>id
+      </fieldList>
+      
+      <primary>true
+      </primary>
+    </meta:Key>
+  </keys>
+  
+</meta:Type>

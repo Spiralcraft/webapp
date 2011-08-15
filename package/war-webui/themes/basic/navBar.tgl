@@ -1,0 +1,16 @@
+<%@doclet
+  tgns:themeui="context:/WEB-INF/webui/spiralcraft-webapp/themes/basic/"
+  tgns:layout="context:/WEB-INF/webui/spiralcraft-webapp/layout/"
+  tgns:webui="class:/spiralcraft/servlet/webui"
+  tgns:swa-meta="class:/spiralcraft/webapp/meta/"  
+  textgen:trim="true"
+  %>
+  <%layout:navBar
+    mainTabListX='[swa-meta:NavigationContext].neighborPaths'
+    auxTabListX='[swa-meta:NavigationContext].contextPaths'
+    selectedX='.==[swa-meta:NavigationContext].activePath'
+    hrefX='.href'
+    labelX='.title'
+    classX='""'
+  /%>
+<%/@doclet%>

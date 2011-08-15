@@ -1,28 +1,32 @@
 <%@doclet
   tgns:webapp="context:/WEB-INF/webui/spiralcraft-webapp/"
   tgns:themeui="context:/WEB-INF/webui/spiralcraft-webapp/themes/basic/"
+  tgns:swa-meta="class:/spiralcraft/webapp/meta/"    
   textgen:trim="true"
   contextX='
     { 
       titleX:=`""`
+      ,navigationContextX:=`[@swa-meta:NavigationContext].()`
     }
     '
   %>
-  <%webapp:page
-    themeName="basic"
-    $titleX="[themeui:page].titleX"
-    %>
-    <%themeui:topBar/%>
-    <div id="sc-container">
-      <div id="sc-page">
-        <%themeui:page-header require="false"%>
-          <%themeui:header%>
-            <h1><%Out $x="[themeui:page].titleX"/%></h1>
-          <%/themeui:header%>
-        <%/themeui:page-header%>
-        <%@insert/%>
-        <%themeui:page-footer require="false"/%>
+  <%Constant $x="[themeui:page].navigationContextX"%>
+    <%webapp:page
+      themeName="basic"
+      $titleX="[themeui:page].titleX"
+      %>
+      <%themeui:topBar/%>
+      <div id="sc-container">
+        <div id="sc-page">
+          <%themeui:page-header require="false"%>
+            <%themeui:header%>
+              <h1><%Out $x="[themeui:page].titleX"/%></h1>
+            <%/themeui:header%>
+          <%/themeui:page-header%>
+          <%@insert/%>
+          <%themeui:page-footer require="false"/%>
+        </div>
       </div>
-    </div>
-  <%/webapp:page%>
+    <%/webapp:page%>
+  <%/Constant%>
 <%/@doclet%>

@@ -1,0 +1,14 @@
+<%@doclet
+  tgns:themeui="context:/WEB-INF/webui/spiralcraft-webapp/themes/basic/"
+  tgns:webui="class:/spiralcraft/servlet/webui"
+  textgen:trim="true"
+  %>
+  <%themeui:navBar
+    mainTabListX='[{"One","Two","Three"}]'
+    auxTabListX='[{"Infinity"}]'
+    selectedX='.==[webui:ServiceContext].getQuery().getFirst("nav")'
+    hrefX=' "?nav="+. '
+    labelX='.'
+    classX='""'
+  /%>
+<%/@doclet%>

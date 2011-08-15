@@ -19,6 +19,46 @@
         </revision>
         
         <scm:Notes>
+          <scm:Note>Data driven nav model
+          </scm:Note>
+          <scm:Note>Minimalist nav tab layout
+          </scm:Note>
+        </scm:Notes> 
+        
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>war-classes/spiralcraft/webapp/meta/NavigationContext.type.xml
+          </URI>
+          <URI>war-classes/spiralcraft/webapp/meta/Path.type.xml
+          </URI>
+          <URI>war-classes/spiralcraft/webapp/meta/Place.type.xml
+          </URI>
+          <URI>war-classes/spiralcraft/webapp/meta/WepApp.schema.xml
+          </URI>
+          <URI>war-css/themes/basic/layout.css
+          </URI>
+          <URI>war-css/themes/basic/navigation.css
+          </URI>
+          <URI>war-webui/layout/navBar.stub.tgl
+          </URI>
+          <URI>war-webui/layout/navBar.tgl
+          </URI>
+          <URI>war-webui/themes/basic/navBar.tgl
+          </URI>
+          <URI>war-webui/themes/basic/page.tgl
+          </URI>
+          <URI>war-webui/themes/basic/topBar.tgl
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
+        <revision>-dev1
+        </revision>
+        
+        <scm:Notes>
           <scm:Note>Development of basic theme
           </scm:Note>
           <scm:Note>Formalization of css selector naming

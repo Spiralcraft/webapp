@@ -25,8 +25,7 @@
 
 .sc-page-header {
   clear: both;
-  border-width:0;
-  border-bottom-width:1px;
+  border-width:0 0 0 0;
   border-style: solid;
   border-color: #EFEFEF;
   padding:0;
@@ -55,7 +54,7 @@
   text-align: center;
 }
 
-#navbar {
+div.sc-navbar-container {
   width: 100%;
   position: relative;
   list-style-type: none;
@@ -63,7 +62,7 @@
 }
 
 /* Force containing div to clear floats */
-#navbar:after {
+div.sc-navbar-container:after {
         content: ".";
         display: block;
         clear: both;
@@ -79,6 +78,10 @@
 
 .sc-panel-full {
   width:100%;
+}
+
+.sc-text-block {
+  padding: 10px;
 }
 
 #content-box {

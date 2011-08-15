@@ -1,17 +1,14 @@
 <%@doclet
-  tgns:jn="class:/java/net"
-  tgns:swa="dynamic:/spiralcraft/webapp/"
+  tgns:themeui="context:/WEB-INF/webui/spiralcraft-webapp/themes/basic/"
   textgen:trim="true"
-  contextX='
-    { 
-      [#swa:page]
-      cssURI:=[*jn:URI{"/css"}]
-      ,themePackage:="spiralcraft-webapp"
-      ,themeName:="basic"
-    }
-    '
   %>
   <div class="sc-topbar">
+    <div class="sc-topbar-left">
+      <%themeui:topbar-left require="false"/%>
+    </div>
+    <div class="sc-topbar-center">
+      <%themeui:topbar-center require="false"/%>
+    </div>
     <div class="sc-topbar-right">
       <%themeui:topbar-right require="false"/%>
     </div>

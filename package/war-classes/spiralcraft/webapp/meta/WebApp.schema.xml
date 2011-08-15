@@ -15,5 +15,15 @@
       </type>
     </meta:Entity>
      
+    <meta:Entity>
+      <type><webapp:Path.type/>
+      </type>
+    </meta:Entity>
+
+    <meta:Entity>
+      <type><webapp:Place.type/>
+      </type>
+    </meta:Entity>
+
   </entities>
 </meta:Schema>

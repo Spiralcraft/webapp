@@ -1,21 +1,21 @@
 
 
-.nav-menu {
+.sc-nav-menu {
   list-style: none outside none;
   position: relative; 
   overflow-y: visible; overflow-x: visible;
   display:block;
-  min-height: 2.8em; /* ie specific- won't expand UL with floats */
+   /* height: 2.9em; ie specific- won't expand UL with floats */
 }
 
-.nav-menu {
+.sc-nav-menu {
   list-style-type: none;
   padding: 0; 
   margin: 0;
 }
 
 /* Force containing div to clear floats */
-.nav-menu:after {
+.sc-nav-menu:after {
         content: ".";
         display: block;
         clear: both;
@@ -25,21 +25,18 @@
 }
 
 
-.nav-menu { z-index: 50 ; }
+.sc-nav-menu { z-index: 50 ; }
 
-.nav-menu li.nav-tab { 
+.sc-nav-menu li.sc-nav-tab { 
   display:inline;
 } /* horizontal */
 
-.nav-menu, .nav-menu a, .nav-menu li ul {
+.sc-nav-menu, .sc-nav-menu a, .sc-nav-menu li ul {
   border-color:#D4D4D4;
 }
 
-.nav-menu {
-  border-width:0 0 0.1em 0.1em;
-}
 
-.nav-menu a {
+.sc-nav-menu a {
   text-decoration:none;
   color:black;
   background:#EFEFEF;
@@ -48,8 +45,8 @@
 }
 
 	
-.nav-menu a {
-  border-width:0.091em 0.091em 0.091em 0;
+.sc-nav-menu a {
+  border-width:1px 1px 1px 0;
   border-style: solid;
   font-size:1.1em;
   line-height:1.273em;
@@ -58,50 +55,60 @@
 
 
 
-.ul.nav-menu li.nav-tab a {
+.ul.sc-nav-menu li.sc-nav-tab a {
   padding-left: 1em;
   padding-right: 1em;
+  z-index: 51;
 	
 }
 
-div.navbar-container {
+div.sc-navbar-container {
+
+  border-width:0 0 1px 1px; 
+  border-style: solid;
+  border-color: #D4D4D4;
+  padding: 0;
+	
 }
 
 
 
 
-.nav-menu li {
+.sc-nav-menu li {
   float:left; 
   position:relative;
+  margin-bottom: -1px; /* "Tab Effect" Border overlap */
+  
 }
 
-.nav-menu li.nav-tab-right {
+.sc-nav-menu li.sc-nav-tab-right {
   float:right; 
   position:relative;
 }
 
-.nav-menu li.nav-tab-right-first a {
-  border-left-width: 0.091em;
+.sc-nav-menu li.sc-nav-tab-right-first a {
+  border-left-width: 1px;
 }
 
-.nav-menu li.nav-tab {
+.sc-nav-menu li.sc-nav-tab {
   /* Should not depend on type size */
-  margin-bottom:-1px;
+  /* margin-bottom:-1px; */
 }
 
-.nav-menu a:hover {
+
+.sc-nav-menu a:hover {
   background:#CCCCFF;
 }
 
-.nav-menu, .nav-menu a, .nav-menu li ul {
+.sc-nav-menu, .sc-nav-menu a, .sc-nav-menu li ul {
   border-style:solid;
 }
 
-.nav-menu .current a {
+.sc-nav-menu .sc-nav-tab-current a {
   border-bottom-color: #FFFFFF;
   background: none repeat scroll 0 0 #FFFFFF;
 }
 
-.nav-menu li.spacer-tab {
+.sc-nav-menu li.sc-spacer-tab {
   width:100%;
 }
