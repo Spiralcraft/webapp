@@ -23,6 +23,10 @@
               <h1><%Out $x="[themeui:page].titleX"/%></h1>
             <%/themeui:header%>
           <%/themeui:page-header%>
+          <%themeui:page-navBar require="false"%>
+            <%themeui:navBar/%>
+          <%/themeui:page-navBar%>
+          
           <%@insert/%>
           <%themeui:page-footer require="false"/%>
         </div>
