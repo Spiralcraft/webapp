@@ -6,11 +6,11 @@
   contextX='
     { 
       titleX:=`""`
-      ,navigationContextX:=`[@swa-meta:NavigationContext].()`
+      ,navContextX:=`[@swa-meta:NavContext].()`
     }
     '
   %>
-  <%Constant $x="[themeui:page].navigationContextX"%>
+  <%Constant $x="[themeui:page].navContextX"%>
     <%webapp:page
       themeName="basic"
       $titleX="[themeui:page].titleX"

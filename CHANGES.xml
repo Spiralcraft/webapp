@@ -15,6 +15,30 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev2
+        </revision>
+        
+        <scm:Notes>
+          <scm:Note>Rename NavigationContext to NavContext
+          </scm:Note>
+        </scm:Notes> 
+        
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>war-classes/spiralcraft/webapp/meta/NavContext.type.xml
+          </URI>
+          <URI>war-classes/spiralcraft/webapp/meta/NavigationContext.type.xml
+          </URI>
+          <URI>war-webui/themes/basic/navBar.tgl
+          </URI>
+          <URI>war-webui/themes/basic/page.tgl
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev1
         </revision>
         
