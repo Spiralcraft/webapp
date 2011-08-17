@@ -6,8 +6,8 @@
   textgen:trim="true"
   %>
   <%layout:navBar
-    mainTabListX='[swa-meta:NavContext].neighborPaths'
-    auxTabListX='[swa-meta:NavContext].contextPaths'
+    mainTabListX='[swa-meta:NavContext].internalPaths'
+    auxTabListX='[swa-meta:NavContext].externalPaths'
     selectedX='.==[swa-meta:NavContext].activePath'
     hrefX='.href'
     labelX='.title'

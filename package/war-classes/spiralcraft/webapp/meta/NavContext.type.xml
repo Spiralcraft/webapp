@@ -11,15 +11,20 @@
   <fields>
     
     <meta:Field>
-      <name>neighborPaths
+      <name>internalPaths
       </name>
+      <description>Paths that lead deeper into the navigation hierarchy
+      </description>
       <type><swa-meta:Path.list.type/>
       </type>
     </meta:Field>
 
     <meta:Field>
-      <name>contextPaths
+      <name>externalPaths
       </name>
+      <description>Paths that lead to higher levels in the navigation 
+        hierarchy or to external resources.
+      </description>
       <type><swa-meta:Path.list.type/>
       </type>
     </meta:Field>
