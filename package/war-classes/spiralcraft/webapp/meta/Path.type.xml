@@ -13,11 +13,6 @@
     </meta:SequenceField>
     
     <meta:Field>
-      <name>parentId</name>
-      <type><LSID.type/></type>
-    </meta:Field>
-    
-    <meta:Field>
       <name>originId</name>
       <type><LSID.type/></type>
     </meta:Field>
@@ -46,6 +41,12 @@
     </meta:RelativeField>
     
     <meta:Field>
+      <name>name</name>
+      <type><String.type/>
+      </type>
+    </meta:Field>
+
+    <meta:Field>
       <name>title</name>
       <type><String.type/>
       </type>
@@ -56,41 +57,18 @@
       <type><String.type/>
       </type>
     </meta:Field>
-
+    
     <meta:Field>
-      <name>href
-      </name>
-      
+      <name>href</name>
       <type><URI.type/>
       </type>
     </meta:Field>
-    
-    <meta:RelativeField>
-      <name>children
-      </name>
-      <type><swa-meta:Path.list.type/>
+
+    <meta:Field>
+      <name>path</name>
+      <type><Path.type/>
       </type>
-      <referencedFieldList>parentId
-      </referencedFieldList>
-    </meta:RelativeField>
-    
-    <meta:RelativeField>
-      <name>parent
-      </name>
-      <type><swa-meta:Path.type/>
-      </type>
-      <fieldList>parentId
-      </fieldList>
-    </meta:RelativeField>
-    
-    <meta:CalculatedField>
-      <name>path
-      </name>
-      <type><swa-meta:Path.array.type/>
-      </type>
-      <expression>parent.path{ .!=null? .@add(@) : [{ @ }] }
-      </expression>
-    </meta:CalculatedField>
+    </meta:Field>
   </fields>
   
   <keys>

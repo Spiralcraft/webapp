@@ -3,13 +3,17 @@
   tgns:layout="context:/WEB-INF/webui/spiralcraft-webapp/layout/"
   tgns:webui="class:/spiralcraft/servlet/webui"
   tgns:swa-meta="class:/spiralcraft/webapp/meta/"  
+  tgns:ui="class:/spiralcraft/ui/"
+  tgns:util="class:/spiralcraft/util/"
   textgen:trim="true"
   %>
   <%layout:navBar
-    mainTabListX='[swa-meta:NavContext].internalPaths'
-    auxTabListX='[swa-meta:NavContext].externalPaths'
-    selectedX='.==[swa-meta:NavContext].activePath'
-    hrefX='.href'
+    mainTabListX='[ui:NavContext].options[.path==null || !.path.absolute]'
+    auxTabListX='[ui:NavContext].options[.path.absolute]'
+    selectedX='.name==[ui:NavContext].selectedKey
+               || .path==[ui:NavContext].absoluteSelectedPath
+               '
+    hrefX='[ui:NavContext].resolve(.path!=null?.path:[@util:Path].(name))'
     labelX='.title'
     classX='""'
   /%>

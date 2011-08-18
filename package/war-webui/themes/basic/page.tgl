@@ -6,31 +6,28 @@
   contextX='
     { 
       titleX:=`""`
-      ,navContextX:=`[@swa-meta:NavContext].()`
     }
     '
   %>
-  <%Constant $x="[themeui:page].navContextX"%>
-    <%webapp:page
-      themeName="basic"
-      $titleX="[themeui:page].titleX"
-      %>
-      <%themeui:topBar/%>
-      <div id="sc-container">
-        <div id="sc-page">
-          <%themeui:page-header require="false"%>
-            <%themeui:header%>
-              <h1><%Out $x="[themeui:page].titleX"/%></h1>
-            <%/themeui:header%>
-          <%/themeui:page-header%>
-          <%themeui:page-navBar require="false"%>
-            <%themeui:navBar/%>
-          <%/themeui:page-navBar%>
-          
-          <%@insert/%>
-          <%themeui:page-footer require="false"/%>
-        </div>
+  <%webapp:page
+    themeName="basic"
+    $titleX="[themeui:page].titleX"
+    %>
+    <%themeui:topBar/%>
+    <div id="sc-container">
+      <div id="sc-page">
+        <%themeui:page-header require="false"%>
+          <%themeui:header%>
+           <h1><%Out $x="[themeui:page].titleX"/%></h1>
+          <%/themeui:header%>
+        <%/themeui:page-header%>
+        <%themeui:page-navBar require="false"%>
+          <%themeui:navBar/%>
+        <%/themeui:page-navBar%>
+        
+        <%@insert/%>
+        <%themeui:page-footer require="false"/%>
       </div>
-    <%/webapp:page%>
-  <%/Constant%>
+    </div>
+  <%/webapp:page%>
 <%/@doclet%>

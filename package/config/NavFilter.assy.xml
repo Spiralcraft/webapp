@@ -1,0 +1,26 @@
+<af:ContextFilter
+  xmlns:af="class:/spiralcraft/servlet/autofilter/"
+  xmlns:webapp="context://config/spiralcraft-webapp/"
+  xmlns:swa-meta="class:/spiralcraft/webapp/meta/"
+  xmlns:jnet="class:/java/net/"
+  xmlns:http="class:/javax/servlet/http/"
+  xmlns:ui="class:/spiralcraft/ui/"
+  xmlns:util="class:/spiralcraft/util/"
+  >
+  <usesRequest>true
+  </usesRequest>
+  
+  <context>
+    <ui:NavContext>
+      <keyX>name
+      </keyX>
+      
+      <pathX>[@util:Path].([http:HttpServletRequest].requestURI,'/')
+      </pathX>
+      
+      <optionsType x="[@swa-meta:Path.array]"/>
+    </ui:NavContext>
+  </context>
+    
+</af:ContextFilter>
+  
