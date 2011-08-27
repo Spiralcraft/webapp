@@ -15,6 +15,29 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev3
+        </revision>
+        
+        <scm:Notes>
+          <scm:Note>Support additional contexts for editing registration data
+            and passwords.
+          </scm:Note>
+        </scm:Notes> 
+        
+        <path>package/war-webui/function/registration
+        </path>
+        
+        <resources>
+          <URI>LoginEditor.assy.xml
+          </URI>
+          <URI>MyLoginEditor.assy.xml
+          </URI>
+          <URI>UsernameHiddenInput.assy.xml
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev2
         </revision>
         
