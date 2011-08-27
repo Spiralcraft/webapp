@@ -1,0 +1,26 @@
+<swa-reg:LoginEditor
+  xmlns:html="class:/spiralcraft/servlet/webui/components/html"
+  xmlns:rules="class:/spiralcraft/rules/"
+  xmlns:lang="class:/spiralcraft/lang"
+  xmlns:sec="class:/spiralcraft/security/"
+  xmlns:secauth="class:/spiralcraft/security/auth/"
+  xmlns:swa-reg="context:/WEB-INF/webui/spiralcraft-webapp/function/registration/"
+  xmlns:codec="class:/spiralcraft/codec/text/"  
+  >
+  <publishedAssignments>
+    <lang:Assignment>
+      <source>[secauth:LoginEntry].username=.username
+      </source>
+    </lang:Assignment>
+    <lang:Assignment>
+      <source>[secauth:LoginEntry].passwordCleartext=.clearpass
+      </source>
+    </lang:Assignment>
+    <lang:Assignment>
+      <source>
+        [secauth:LoginEntry].saltedDigest
+          =[@codec:HexCodec].@decodeHex(.digestpass)
+      </source>
+    </lang:Assignment>
+  </publishedAssignments>
+</swa-reg:LoginEditor>     
