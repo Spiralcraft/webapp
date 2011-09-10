@@ -15,6 +15,56 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev4
+        </revision>
+        
+        <scm:Notes>
+          <scm:Note>Add config differentiated SMTP service to global config
+          </scm:Note>
+        </scm:Notes> 
+
+        <path>package/config
+        </path>
+        
+        <resources>
+          <URI>global.control.xml
+          </URI>
+          <URI>SMTPConnector.example.xml
+          </URI>
+          <URI>SMTPFilter.assy.xml
+          </URI>
+        </resources>
+        
+      </scm:Change>
+
+      <scm:Change>
+        <revision>-dev4
+        </revision>
+        
+        <scm:Notes>
+          <scm:Note>Support multiple types of forms for each function
+          </scm:Note>
+        </scm:Notes> 
+
+        <path>package/war-webui/function/
+        </path>
+        
+        <resources>
+          <URI>login/loginForm.tgl
+          </URI>
+          <URI>login/form.tgl
+          </URI>
+          <URI>registration/changePasswordForm.tgl
+          </URI>
+          <URI>registration/registrationForm.tgl
+          </URI>
+          <URI>registration/form.tgl
+          </URI>
+        </resources>
+        
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev3
         </revision>
         
