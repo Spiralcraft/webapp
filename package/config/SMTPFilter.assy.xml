@@ -1,0 +1,8 @@
+<af:ReferenceFocusFilter
+  xmlns:af="class:/spiralcraft/servlet/autofilter/">
+        
+  <instanceURI>context://config/SMTPConnector.${spiralcraft.config.id}.xml
+  </instanceURI>
+        
+</af:ReferenceFocusFilter>   
+  

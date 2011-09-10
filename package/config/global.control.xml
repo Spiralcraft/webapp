@@ -24,20 +24,13 @@
     <scope>CONSTANT
     </scope>
     
-  </af:ReferenceFocusFilter>
+  </af:ReferenceFocusFilter> 
   
-  <af:ReferenceFocusFilter>
-        
-    <instanceURI>context://config/SMTPConnector.xml
-    </instanceURI>
-    
-    <scope>CONSTANT
-    </scope>    
-        
-  </af:ReferenceFocusFilter>   
+  <webapp:SMTPFilter/>
   
   <config:SecurityFilter/>
  
+  <config:MainNavFilter/>
   
 
 </af:AutoFilter.list>

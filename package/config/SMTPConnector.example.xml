@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<smtp:SMTPClient
+  xmlns:smtp="class:/spiralcraft/net/smtp/"
+  >
+
+  <!-- SMTP Server name -->
+  <!-- 
+  <server>smtp.example.com
+  </server>
+  -->
+  
+  <!-- SMTP Server username -->
+  <!-- 
+  <username>mailuser@example.com
+  </username>
+  -->
+  
+  <!-- SMTP Server password -->
+  <!-- 
+  <password>mypassword
+  </password>
+  -->
+  
+  <!-- Connect using SSL to SSL port -->
+  <!-- 
+  <requireSSL>true
+  </requireSSL>
+  -->
+  
+  <!-- Don't send anything to the specified recipient, only
+    to testRecipients if specified, otherwise dump mail to log
+  -->
+  <!-- 
+  <testMode>true
+  </testMode>
+  -->
+  
+  <!-- bcc all messages to specified recipient -->
+  <!-- 
+  <testRecipients>qauser@example.com
+  </testRecipients>
+  -->
+  
+  <!-- bcc all messages to specified recipient -->
+  <!-- 
+  <testRecipients>qauser2@example.com
+  </testRecipients>
+  -->
+  
+</smtp:SMTPClient>
