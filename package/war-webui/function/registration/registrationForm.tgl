@@ -11,10 +11,6 @@
   tgns:webui="context:/WEB-INF/webui/spiralcraft-webapp/"    
   tgns:codec="class:/spiralcraft/codec/text/"
   tgns:swa-reg="context:/WEB-INF/webui/spiralcraft-webapp/function/registration/"
-  contextX=
-    '{
-      afterCommitX:=`{}`
-    }'
   %>
   <%swa-reg:Form%>
   
@@ -22,7 +18,7 @@
     
       <%swa-reg:context%>
         
-        <%swa-reg:LoginEditor%>
+        <%swa-reg:MyLoginEditor%>
                   
           <div class="sc-registration-panel">
           
@@ -73,7 +69,7 @@
             </div>
           </div>
           
-        <%/swa-reg:LoginEditor%>
+        <%/swa-reg:MyLoginEditor%>
       <%/swa-reg:context%>
       
     <%/html:Login%>
