@@ -15,7 +15,8 @@
       <keyX>name
       </keyX>
       
-      <pathX>[@util:Path].([http:HttpServletRequest].requestURI,'/')
+      <pathX>
+        [@util:Path].([http:HttpServletRequest].requestURI,'/')
       </pathX>
       
       <optionsType x="[@swa-meta:Path.array]"/>
