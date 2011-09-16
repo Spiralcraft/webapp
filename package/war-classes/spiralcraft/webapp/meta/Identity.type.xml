@@ -2,6 +2,7 @@
   xmlns:meta="class:/spiralcraft/data/types/meta/"
   xmlns:entity="class:/spiralcraft/archetype/entity/"
   xmlns:net="class:/spiralcraft/archetype/net/"
+  xmlns:wameta="class:/spiralcraft/webapp/meta/"
   >
   <baseType>
     <entity:Identity.type/>
@@ -31,5 +32,18 @@
       <type><Boolean.type/>
       </type>
     </meta:Field>
+    
+    <meta:RelativeField>
+      <name>roles
+      </name>
+
+      <type><wameta:ActorRole.list.type/>
+      </type>
+      
+      <referencedFieldList>actorId
+      </referencedFieldList>
+      
+    </meta:RelativeField>
   </fields>
+
 </meta:Type>

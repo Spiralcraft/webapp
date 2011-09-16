@@ -25,5 +25,9 @@
       </type>
     </meta:Entity>
 
+    <meta:Entity>
+      <type><webapp:ActorRole.type/>
+      </type>
+    </meta:Entity>
   </entities>
 </meta:Schema>

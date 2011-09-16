@@ -1,0 +1,24 @@
+<meta:Type
+  xmlns:meta="class:/spiralcraft/data/types/meta/"
+  xmlns:entity="class:/spiralcraft/archetype/entity/"
+  xmlns:net="class:/spiralcraft/archetype/net/"
+  >
+  <fields>
+    <meta:Field>
+      <name>actorId
+      </name>
+      
+      <type><LSID.type/>
+      </type>
+    </meta:Field>
+
+    <meta:Field>
+      <name>roleId
+      </name>
+      
+      <type><URI.type/>
+      </type>
+    </meta:Field>
+    
+  </fields>
+</meta:Type>

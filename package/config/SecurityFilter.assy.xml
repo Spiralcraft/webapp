@@ -45,6 +45,16 @@
           <roleBindings>superUser?[@secauth:SuperUserRole].typeURI:null
           </roleBindings>
           
+          <principalRoleType x="[@webapp:ActorRole].type">
+          </principalRoleType>
+          
+          <roleMapPrincipalIdFieldName>actorId
+          </roleMapPrincipalIdFieldName>
+
+          <roleIdFieldName>roleId
+          </roleIdFieldName>
+          
+          
         </secspi:DataAuthorizer>
       </authorizer> 
     </secauth:Authenticator>
