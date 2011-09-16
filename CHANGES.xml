@@ -10,10 +10,50 @@
     <authorId>miketoth
     </authorId>
     
-    <date>
+    <date>2011-09-15
     </date>
 
     <detail>
+      <scm:Change>
+        <revision>-dev4
+        </revision>
+        
+        <scm:Notes>
+          <scm:Note>Add standard set of Admin nav paths
+          </scm:Note>
+        </scm:Notes> 
+
+        <path>package/config/AdminNav.paths.xml
+        </path>
+        
+        
+      </scm:Change>
+
+      <scm:Change>
+        <revision>-dev4
+        </revision>
+        
+        <scm:Notes>
+          <scm:Note>Add identity role mapping data support
+          </scm:Note>
+        </scm:Notes> 
+
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>config/SecurityFilter.assy.xml
+          </URI>
+          <URI>war-classes/webapp/meta/ActorRole.type.xml
+          </URI>
+          <URI>war-classes/webapp/meta/Identity.type.xml
+          </URI>
+          <URI>war-classes/webapp/meta/WebApp.schema.xml
+          </URI>
+        </resources>
+        
+      </scm:Change>
+      
       <scm:Change>
         <revision>-dev4
         </revision>
