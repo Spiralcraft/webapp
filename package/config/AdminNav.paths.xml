@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<meta:Path.array xmlns:meta="class:/spiralcraft/webapp/meta/"
+  >
+  <meta:Path>
+    <title>Admin Home
+    </title>
+    
+    <name>index.webui
+    </name>
+    
+  </meta:Path>
+  
+  <meta:Path>
+    <title>Users
+    </title>
+    
+    <name>users.webui
+    </name>
+    
+  </meta:Path>
+
+  <meta:Path>
+    <title>Home
+    </title>
+     
+    <path>/index.webui
+    </path>
+  </meta:Path>
+
+  <meta:Path>
+    <title>Admin
+    </title>
+    
+    <name>admin
+    </name>
+     
+    <path>/admin/
+    </path>
+  </meta:Path>
+</meta:Path.array>
