@@ -1,0 +1,97 @@
+<httpd:MultiAliasHttpServiceContext
+  xmlns:httpd="class:/spiralcraft/pioneer/httpd/"
+  xmlns:autofilter="class:/spiralcraft/servlet/autofilter/"
+  >
+                  
+  <maxSessionInactiveInterval>7200
+  </maxSessionInactiveInterval>
+      
+  <debug>false
+  </debug>
+  
+  <securityConstraints>
+    <httpd:SecurityConstraint>
+      <resourceCollection>
+        <httpd:WebResourceCollection>
+        
+          <URLPatterns>/login.webui
+          </URLPatterns>
+          
+          <URLPatterns>/register.webui
+          </URLPatterns>
+                    
+        </httpd:WebResourceCollection>
+      </resourceCollection>
+     
+      <requireSecureChannel>true
+      </requireSecureChannel>
+    </httpd:SecurityConstraint> 
+  </securityConstraints>
+ 
+  <filterMappings>
+    <httpd:FilterMapping>
+      <filterName>controller
+      </filterName>
+    
+      <URLPattern>*
+      </URLPattern>
+    </httpd:FilterMapping>
+  </filterMappings>
+  
+  <filters>
+    <httpd:FilterHolder>
+      <filterName>controller
+      </filterName>
+      
+      <filterInstance>
+        <autofilter:Controller>
+          <dataURI>${spiralcraft.builder.dir}/../data/
+          </dataURI>
+          <configURI>${spiralcraft.builder.dir}/../config/
+          </configURI>
+          <filesURI>${spiralcraft.builder.dir}/../files/
+          </filesURI>
+        </autofilter:Controller>
+      </filterInstance>
+      
+    </httpd:FilterHolder>
+  </filters>
+  
+  <servletMappings>
+
+    <httpd:ServletMapping>
+       
+      <servletName>file
+      </servletName>
+        
+      <URLPatterns>/
+      </URLPatterns>
+
+    </httpd:ServletMapping>
+
+    <httpd:ServletMapping>
+       
+      <servletName>webui
+      </servletName>
+        
+      <URLPatterns>*.webui
+      </URLPatterns>
+        
+    </httpd:ServletMapping>
+
+  </servletMappings>
+                    
+  <servletHolders>
+                        
+    <httpd:ServletHolder>
+            
+      <servletName>webui
+      </servletName>
+            
+      <servletClass>spiralcraft.servlet.webui.UIServlet
+      </servletClass>
+            
+    </httpd:ServletHolder>
+    
+  </servletHolders>
+</httpd:MultiAliasHttpServiceContext>
