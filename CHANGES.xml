@@ -1,6 +1,37 @@
 <scm:Change.list
   xmlns:scm="class:/spiralcraft/scm/meta/"
   >
+  
+  <scm:Change>
+  
+    <revision>0.4.16
+    </revision>
+
+    <authorId>miketoth
+    </authorId>
+    
+    <date>
+    </date>
+
+    <detail>
+      <scm:Change>
+
+        <revision>-dev1
+        </revision>
+                
+        <scm:Notes>
+          <scm:Note>Add css classes for data tables
+          </scm:Note>
+        </scm:Notes> 
+
+        <path>package/war-css/themes/basic/style.css
+        </path>
+        
+        
+      </scm:Change>
+    </detail>
+  </scm:Change>
+  
 
   <scm:Change>
   
