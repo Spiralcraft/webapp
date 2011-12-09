@@ -1,6 +1,7 @@
 <%@doclet
   tgns:swa-reg="context:/WEB-INF/webui/spiralcraft-webapp/function/registration/"
   tgns:j="class:/java/lang/"
+  tgns:util="class:/spiralcraft/util/"
   %>
 
   <%With 
@@ -8,6 +9,7 @@
          passwordVerify:[@j:String] 
          ,digestVerify:[@j:String]
          ,passwordLength:=0
+         ,randomPassword:=[@util:RandomUtil].@generateString(10)
        }"
     %>
     <%@insert/%>

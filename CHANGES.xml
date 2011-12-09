@@ -20,6 +20,37 @@
         </revision>
                 
         <scm:Notes>
+          <scm:Note>Add random password generator to registration context
+          </scm:Note>
+        </scm:Notes> 
+
+        <path>package/war-webui/function/registration/context.tgl
+        </path>
+        
+      </scm:Change>
+
+      <scm:Change>
+
+        <revision>-dev1
+        </revision>
+                
+        <scm:Notes>
+          <scm:Note>Add base server Context.assy.xml
+          </scm:Note>
+        </scm:Notes> 
+
+        <path>package/config/Context.assy.xml
+        </path>
+        
+        
+      </scm:Change>
+
+      <scm:Change>
+
+        <revision>-dev1
+        </revision>
+                
+        <scm:Notes>
           <scm:Note>Add css classes for data tables
           </scm:Note>
         </scm:Notes> 
