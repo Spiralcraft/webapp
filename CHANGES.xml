@@ -16,6 +16,69 @@
     <detail>
       <scm:Change>
 
+        <revision>-dev2
+        </revision>
+                
+        <scm:Notes>
+          <scm:Note>page.tgl has a hook for custom css (dynamic:/spiralcraft/webapp/custom-css)
+          </scm:Note>
+        </scm:Notes> 
+
+        <path>package/war-webui/page.tgl
+        </path>
+        
+      </scm:Change>
+
+      <scm:Change>
+
+        <revision>-dev2
+        </revision>
+                
+        <scm:Notes>
+          <scm:Note>Provide data-based view resolution (incomplete)
+          </scm:Note>
+        </scm:Notes> 
+
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>config/NavFilter.assy.xml
+          </URI>
+          <URI>war-classes/spiralcraft/webapp/meta/Path.type.xml
+          </URI>
+        </resources>
+        
+      </scm:Change>
+
+      <scm:Change>
+
+        <revision>-dev2
+        </revision>
+                
+        <scm:Notes>
+          <scm:Note>Move to extension-less (no .webui) URI paths using the
+            UIServlet as the default servlet, permitting any static
+            resource to be served by a dynamic .webui file.
+          </scm:Note>
+        </scm:Notes> 
+
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>config/AdminNav.paths.xml
+          </URI>
+          <URI>config/Context.assy.xml
+          </URI>
+          <URI>war-webui/function/login/authMenu.tgl
+          </URI>
+        </resources>
+        
+      </scm:Change>
+
+      <scm:Change>
+
         <revision>-dev1
         </revision>
                 
