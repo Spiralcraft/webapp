@@ -29,6 +29,10 @@
           type="text/css" media="screen, projection" 
         />
       <%/swa:theme-css%>
+
+      <%swa:custom-css require="false"%>
+      <%/swa:custom-css%>
+
       <script
         type="text/javascript" 
         src="<%=[webapp:page].javascriptURI/%>/spiralcraft-jsclient/spiralcraft.js"
