@@ -69,6 +69,12 @@
       <type><Path.type/>
       </type>
     </meta:Field>
+
+    <meta:Field>
+      <name>viewURI</name>
+      <type><URI.type/>
+      </type>
+    </meta:Field>
   </fields>
   
   <keys>

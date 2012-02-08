@@ -19,7 +19,13 @@
         [@util:Path].([http:HttpServletRequest].requestURI,'/')
       </pathX>
       
+
+      
       <optionsType x="[@swa-meta:Path.array]"/>
+      
+      <viewResourceX>viewURI
+      </viewResourceX>
+      
     </ui:NavContext>
   </context>
     
