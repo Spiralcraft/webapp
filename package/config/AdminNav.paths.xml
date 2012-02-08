@@ -6,7 +6,7 @@
     <title>Admin Home
     </title>
     
-    <name>index.webui
+    <name>index
     </name>
     
   </meta:Path>
@@ -15,7 +15,7 @@
     <title>Users
     </title>
     
-    <name>users.webui
+    <name>users
     </name>
     
   </meta:Path>
@@ -24,7 +24,7 @@
     <title>Home
     </title>
      
-    <path>/index.webui
+    <path>/index
     </path>
   </meta:Path>
 

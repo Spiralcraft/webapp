@@ -14,10 +14,10 @@
       <resourceCollection>
         <httpd:WebResourceCollection>
         
-          <URLPatterns>/login.webui
+          <URLPatterns>/login
           </URLPatterns>
           
-          <URLPatterns>/register.webui
+          <URLPatterns>/register
           </URLPatterns>
                     
         </httpd:WebResourceCollection>
@@ -61,20 +61,10 @@
 
     <httpd:ServletMapping>
        
-      <servletName>file
-      </servletName>
-        
-      <URLPatterns>/
-      </URLPatterns>
-
-    </httpd:ServletMapping>
-
-    <httpd:ServletMapping>
-       
       <servletName>webui
       </servletName>
         
-      <URLPatterns>*.webui
+      <URLPatterns>/
       </URLPatterns>
         
     </httpd:ServletMapping>
