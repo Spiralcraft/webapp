@@ -19,14 +19,21 @@
         <revision>-dev3
         </revision>
                 
-        <scm:Notes>
-          <scm:Note>Load Controller filter within the WAR classloader (uses
-            init parameters instead of filter instance)
+        <notes>
+          <scm:Note>Clean up navigation path logic to account for default
+            resources (URI points to a container)
           </scm:Note>
-        </scm:Notes> 
+        </notes> 
 
-        <path>package/config/Context.assy.xml
+        <path>package
         </path>
+        
+        <resources>
+          <URI>config/AdminNav.paths.xml
+          </URI>
+          <URI>war-webui/themes/basic/navBar.tgl
+          </URI>
+        </resources>  
         
       </scm:Change>
 
@@ -35,11 +42,11 @@
         <revision>-dev3
         </revision>
                 
-        <scm:Notes>
+        <notes>
           <scm:Note>Migrate some standard top level request processing into
             "context://code" tree such as login.webui and register.webui
           </scm:Note>
-        </scm:Notes> 
+        </notes> 
 
         <path>package/war-webui
         </path>
@@ -49,6 +56,8 @@
           </URI>
           <URI>register.webui
           </URI>
+          <URI>function/login/authMenu.tgl
+          </URI>
         </resources>  
       </scm:Change>
 
@@ -57,10 +66,10 @@
         <revision>-dev2
         </revision>
                 
-        <scm:Notes>
+        <notes>
           <scm:Note>page.tgl has a hook for custom css (dynamic:/spiralcraft/webapp/custom-css)
           </scm:Note>
-        </scm:Notes> 
+        </notes> 
 
         <path>package/war-webui/page.tgl
         </path>
@@ -72,10 +81,10 @@
         <revision>-dev2
         </revision>
                 
-        <scm:Notes>
+        <notes>
           <scm:Note>Provide data-based view resolution (incomplete)
           </scm:Note>
-        </scm:Notes> 
+        </notes> 
 
         <path>package
         </path>
@@ -94,12 +103,12 @@
         <revision>-dev2
         </revision>
                 
-        <scm:Notes>
+        <notes>
           <scm:Note>Move to extension-less (no .webui) URI paths using the
             UIServlet as the default servlet, permitting any static
             resource to be served by a dynamic .webui file.
           </scm:Note>
-        </scm:Notes> 
+        </notes> 
 
         <path>package
         </path>
@@ -120,10 +129,10 @@
         <revision>-dev1
         </revision>
                 
-        <scm:Notes>
+        <notes>
           <scm:Note>Add random password generator to registration context
           </scm:Note>
-        </scm:Notes> 
+        </notes> 
 
         <path>package/war-webui/function/registration/context.tgl
         </path>
@@ -135,10 +144,10 @@
         <revision>-dev1
         </revision>
                 
-        <scm:Notes>
+        <notes>
           <scm:Note>Add base server Context.assy.xml
           </scm:Note>
-        </scm:Notes> 
+        </notes> 
 
         <path>package/config/Context.assy.xml
         </path>
@@ -151,10 +160,10 @@
         <revision>-dev1
         </revision>
                 
-        <scm:Notes>
+        <notes>
           <scm:Note>Add css classes for data tables
           </scm:Note>
-        </scm:Notes> 
+        </notes> 
 
         <path>package/war-css/themes/basic/style.css
         </path>
@@ -181,10 +190,10 @@
         <revision>-dev4
         </revision>
         
-        <scm:Notes>
+        <notes>
           <scm:Note>Add standard set of Admin nav paths
           </scm:Note>
-        </scm:Notes> 
+        </notes> 
 
         <path>package/config/AdminNav.paths.xml
         </path>
@@ -196,10 +205,10 @@
         <revision>-dev4
         </revision>
         
-        <scm:Notes>
+        <notes>
           <scm:Note>Add identity role mapping data support
           </scm:Note>
-        </scm:Notes> 
+        </notes> 
 
         <path>package
         </path>
@@ -221,10 +230,10 @@
         <revision>-dev4
         </revision>
         
-        <scm:Notes>
+        <notes>
           <scm:Note>Add config differentiated SMTP service to global config
           </scm:Note>
-        </scm:Notes> 
+        </notes> 
 
         <path>package/config
         </path>
@@ -244,10 +253,10 @@
         <revision>-dev4
         </revision>
         
-        <scm:Notes>
+        <notes>
           <scm:Note>Support multiple types of forms for each function
           </scm:Note>
-        </scm:Notes> 
+        </notes> 
 
         <path>package/war-webui/function/
         </path>
@@ -271,11 +280,11 @@
         <revision>-dev3
         </revision>
         
-        <scm:Notes>
+        <notes>
           <scm:Note>Support additional contexts for editing registration data
             and passwords.
           </scm:Note>
-        </scm:Notes> 
+        </notes> 
         
         <path>package/war-webui/function/registration
         </path>
@@ -294,11 +303,11 @@
         <revision>-dev2
         </revision>
         
-        <scm:Notes>
+        <notes>
           <scm:Note>Promoted NavContext mechanism to the component level in
             spiralcraft-core.
           </scm:Note>
-        </scm:Notes> 
+        </notes> 
         
         <path>package
         </path>
@@ -317,10 +326,10 @@
         <revision>-dev2
         </revision>
         
-        <scm:Notes>
+        <notes>
           <scm:Note>Rename NavigationContext to NavContext
           </scm:Note>
-        </scm:Notes> 
+        </notes> 
         
         <path>package
         </path>
@@ -341,12 +350,12 @@
         <revision>-dev1
         </revision>
         
-        <scm:Notes>
+        <notes>
           <scm:Note>Data driven nav model
           </scm:Note>
           <scm:Note>Minimalist nav tab layout
           </scm:Note>
-        </scm:Notes> 
+        </notes> 
         
         <path>package
         </path>
@@ -381,12 +390,12 @@
         <revision>-dev1
         </revision>
         
-        <scm:Notes>
+        <notes>
           <scm:Note>Development of basic theme
           </scm:Note>
           <scm:Note>Formalization of css selector naming
           </scm:Note>
-        </scm:Notes> 
+        </notes> 
         
         <path>package
         </path>
