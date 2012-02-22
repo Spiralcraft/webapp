@@ -1,0 +1,19 @@
+<%webui:page
+  tgns:webui="context:/WEB-INF/webui/"
+  tgns:swa-reg="context:/WEB-INF/webui/spiralcraft-webapp/function/registration/"
+  tgns:webuic="class:/spiralcraft/servlet/webui/components/"
+  titleX='"Template: Register"'
+  %> 
+  <%webui:contentFull%>
+    <%webui:taskPanel
+      titleX='"Register"'
+      %>
+  
+      <%webuic:DataSession%>
+        <%swa-reg:registrationForm/%>
+      <%/webuic:DataSession%>
+    <%/webui:taskPanel%>
+
+  <%/webui:contentFull%>
+<%/webui:page%>
+  

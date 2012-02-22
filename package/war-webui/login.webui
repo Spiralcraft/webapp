@@ -1,0 +1,14 @@
+<%webui:page
+  tgns:webui="context:/WEB-INF/webui/"
+  tgns:swa-login="context:/WEB-INF/webui/spiralcraft-webapp/function/login/"
+  titleX='"Template: Login"'  
+  %>
+  <%webui:contentFull%>
+    <%webui:taskPanel
+      titleX='"Login"'
+      %>
+      <%swa-login:loginForm/%>
+    <%/webui:taskPanel%>
+  <%/webui:contentFull%>
+<%/webui:page%>
+  
