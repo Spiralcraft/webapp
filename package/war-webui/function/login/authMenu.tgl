@@ -3,8 +3,8 @@
   tgns:jnet="class:/java/net/"
   tgns:webui="class:/spiralcraft/servlet/webui/"
   contextX='{
-    loginURI:=[*jnet:URI{"/login"}]
-    ,registerURI:=[*jnet:URI{"/register"}]
+    loginURI:=[*jnet:URI{"/spiracraft-webapp/login"}]
+    ,registerURI:=[*jnet:URI{"/spiralcraft-webapp/register"}]
   }'
   %>
   <ul class="sc-auth-menu">
