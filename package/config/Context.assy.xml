@@ -43,16 +43,9 @@
       <filterName>controller
       </filterName>
       
-      <filterInstance>
-        <autofilter:Controller>
-          <dataURI>${spiralcraft.builder.dir}/../data/
-          </dataURI>
-          <configURI>${spiralcraft.builder.dir}/../config/
-          </configURI>
-          <filesURI>${spiralcraft.builder.dir}/../files/
-          </filesURI>
-        </autofilter:Controller>
-      </filterInstance>
+      <filterClass>spiralcraft.servlet.autofilter.Controller
+      </filterClass>
+ 
       
     </httpd:FilterHolder>
   </filters>
@@ -65,6 +58,16 @@
       </servletName>
         
       <URLPatterns>/
+      </URLPatterns>
+        
+    </httpd:ServletMapping>
+
+    <httpd:ServletMapping>
+       
+      <servletName>webui
+      </servletName>
+        
+      <URLPatterns>*.webui
       </URLPatterns>
         
     </httpd:ServletMapping>
