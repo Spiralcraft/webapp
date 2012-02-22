@@ -16,6 +16,44 @@
     <detail>
       <scm:Change>
 
+        <revision>-dev3
+        </revision>
+                
+        <scm:Notes>
+          <scm:Note>Load Controller filter within the WAR classloader (uses
+            init parameters instead of filter instance)
+          </scm:Note>
+        </scm:Notes> 
+
+        <path>package/config/Context.assy.xml
+        </path>
+        
+      </scm:Change>
+
+      <scm:Change>
+
+        <revision>-dev3
+        </revision>
+                
+        <scm:Notes>
+          <scm:Note>Migrate some standard top level request processing into
+            "context://code" tree such as login.webui and register.webui
+          </scm:Note>
+        </scm:Notes> 
+
+        <path>package/war-webui
+        </path>
+        
+        <resources>
+          <URI>login.webui
+          </URI>
+          <URI>register.webui
+          </URI>
+        </resources>  
+      </scm:Change>
+
+      <scm:Change>
+
         <revision>-dev2
         </revision>
                 
