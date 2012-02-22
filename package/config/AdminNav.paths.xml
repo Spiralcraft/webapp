@@ -6,9 +6,6 @@
     <title>Admin Home
     </title>
     
-    <name>index
-    </name>
-    
   </meta:Path>
   
   <meta:Path>
@@ -24,7 +21,7 @@
     <title>Home
     </title>
      
-    <path>/index
+    <path>/
     </path>
   </meta:Path>
 

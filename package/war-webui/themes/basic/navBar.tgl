@@ -10,10 +10,17 @@
   <%layout:navBar
     mainTabListX='[ui:NavContext].options[.path==null || !.path.absolute]'
     auxTabListX='[ui:NavContext].options[.path.absolute]'
-    selectedX='.name==[ui:NavContext].selectedKey
+    selectedX='((.path==null || !.path.absolute) && .name==[ui:NavContext].selectedKey)
                || .path==[ui:NavContext].absoluteSelectedPath
                '
-    hrefX='[ui:NavContext].resolve(.path!=null?.path:[@util:Path].(name))'
+    hrefX='[ui:NavContext].resolve
+            (.path!=null
+              ?.path
+              :.name!=null
+              ?[@util:Path].(.name)
+              :[@util:Path].("")
+            )
+          '
     labelX='.title'
     classX='""'
   /%>
