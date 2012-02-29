@@ -16,6 +16,22 @@
     <detail>
       <scm:Change>
 
+        <revision>-dev4
+        </revision>
+                
+        <notes>
+          <scm:Note>Update security constraints to reflect new location for
+            login and register page
+          </scm:Note>
+        </notes> 
+
+        <path>package/config/Context.assy.xml
+        </path>
+        
+      </scm:Change>
+
+      <scm:Change>
+
         <revision>-dev3
         </revision>
                 
