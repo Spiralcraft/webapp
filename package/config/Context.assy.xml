@@ -14,10 +14,10 @@
       <resourceCollection>
         <httpd:WebResourceCollection>
         
-          <URLPatterns>/login
+          <URLPatterns>/spiralcraft-webapp/login
           </URLPatterns>
           
-          <URLPatterns>/register
+          <URLPatterns>/spiralcraft-webapp/register
           </URLPatterns>
                     
         </httpd:WebResourceCollection>
