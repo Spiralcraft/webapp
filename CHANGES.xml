@@ -20,6 +20,45 @@
         </revision>
                 
         <notes>
+          <scm:Note>Reflect upgraded integration mechanism for WebUI and
+            make webapp a functional application base.
+          </scm:Note>
+        </notes> 
+
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>config/Context.assy.xml
+          </URI>
+          <URI>config/global.control.xml
+          </URI>
+          <URI>config/Store.assy.xml
+          </URI>
+          <URI>war-classes/spiralcraft/webapp/meta/WebApp.schema.xml
+          </URI>
+          <URI>war-webui/admin/default.webui
+          </URI>
+          <URI>war-webui/function/login/authMenu.tgl
+          </URI>
+          <URI>war-webui/PathContext.assy.xml
+          </URI>
+          <URI>war-webui/Place.assy.xml
+          </URI>
+          <URI>war-webui/Plugin.assy.xml
+          </URI>
+          <URI>war-webui/Store.assy.xml
+          </URI>
+        </resources>
+        
+      </scm:Change>
+
+      <scm:Change>
+
+        <revision>-dev4
+        </revision>
+                
+        <notes>
           <scm:Note>Update security constraints to reflect new location for
             login and register page
           </scm:Note>
