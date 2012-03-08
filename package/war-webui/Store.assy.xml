@@ -7,12 +7,7 @@
   <name>spiralcraft-webapp
   </name>
   
-  <baseResourceURI>context://data/spiralcraft-webapp/live/
-  </baseResourceURI>
-
-  
   <schema dataURI="webapp:WebApp.schema.xml"/>
-  
   
   <debugLevel>INFO
   </debugLevel>

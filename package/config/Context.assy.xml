@@ -83,6 +83,16 @@
             
       <servletClass>spiralcraft.servlet.webui.UIServlet
       </servletClass>
+      
+      <initParameters>
+        <httpd:InitParameter>
+          <name>debugLevel
+          </name>
+          
+          <value>INFO
+          </value>
+        </httpd:InitParameter>
+      </initParameters>
             
     </httpd:ServletHolder>
     

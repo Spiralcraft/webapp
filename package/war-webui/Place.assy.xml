@@ -1,0 +1,29 @@
+<app:PlaceContext
+  xmlns:app="class:/spiralcraft/app/"
+  xmlns:vfsc="class:/spiralcraft/vfs/context/"
+  >
+
+  <plugins>
+    <Plugin/>
+  </plugins>
+  
+  <mounts>
+    <vfsc:Authority>
+      <authorityName>
+      </authorityName>
+     
+      <debugLevel>INFO
+      </debugLevel>
+      
+      <grafts>
+        <vfsc:Redirect>
+          <virtualURI>uploads/
+          </virtualURI>
+          <newBaseURI>context://files/uploads/
+          </newBaseURI>
+        </vfsc:Redirect>
+      </grafts>
+    </vfsc:Authority>  
+  </mounts>
+    
+</app:PlaceContext>

@@ -1,0 +1,30 @@
+<af:PathContext
+  xmlns:af="class:/spiralcraft/servlet/autofilter/"
+  >
+
+  <codeBaseURI>context://code/spiralcraft-webapp
+  </codeBaseURI>
+  
+  <contentBaseURI>context://code/spiralcraft-webapp/content
+  </contentBaseURI>
+
+  <placeContext>
+    <Place/>
+  </placeContext>
+  
+  <filters
+    xmlns:smtp="class:/spiralcraft/net/smtp/"
+    xmlns:webui="class:/spiralcraft/servlet/webui/"
+    xmlns:config="context://config/"
+    xmlns:webapp="context://config/spiralcraft-webapp/"
+    >
+  
+    <webapp:SMTPFilter/>
+  
+    <config:SecurityFilter/>
+ 
+    <config:MainNavFilter/>
+    
+  </filters>
+  
+</af:PathContext>

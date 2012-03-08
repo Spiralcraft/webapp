@@ -1,0 +1,7 @@
+<%swa:page
+  tgns:swa="context:/WEB-INF/webui/spiralcraft-webapp"
+  titleX='"Spiralcraft Admin"'  
+  %>
+  This is a test admin page for the frameworksss
+<%/swa:page%>
+  
