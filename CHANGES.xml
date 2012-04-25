@@ -4,6 +4,58 @@
   
   <scm:Change>
   
+    <revision>0.4.17
+    </revision>
+
+    <authorId>miketoth
+    </authorId>
+    
+    <date>
+    </date>
+
+    <detail>
+      <scm:Change>
+        <revision>-dev1
+        </revision>
+                
+        <notes>
+          <scm:Note>Refactor themes/basic to themes/default and integrate
+            new Page model and theming api
+          </scm:Note>
+        </notes> 
+
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>config/Context.assy.xml
+          </URI>
+          <URI>war-css/themes/basic/**
+          </URI>
+          <URI>war-css/themes/default/**
+          </URI>
+          <URI>war-webui/admin/default.webui
+          </URI>
+          <URI>war-webui/layout/navBar.stub.tgl
+          </URI>
+          <URI>war-webui/layout/navBar.tgl
+          </URI>
+          <URI>war-webui/themes/basic/**
+          </URI>
+          <URI>war-webui/themes/default/**
+          </URI>
+          <URI>war-webui/login.webui
+          </URI>
+          <URI>war-webui/page.tgl
+          </URI>
+        </resources>
+      </scm:Change>
+    </detail>
+  </scm:Change>
+      
+
+  <scm:Change>
+  
     <revision>0.4.16
     </revision>
 
