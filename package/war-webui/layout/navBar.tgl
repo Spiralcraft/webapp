@@ -18,13 +18,13 @@
   <div class="sc-navbar-container">
   
     <ul class="sc-nav-menu">
-      <%Iterate $x="[layout:navBar].mainTabListX"%>
+      <%Iterate $x="[layout:navBar].mainTabListX" ignoreBindError="true"%>
         <li class='sc-nav-tab <%Out $x="[layout:navBar].classX"/%> <%If $x="[layout:navBar].selectedX"%>sc-nav-tab-current<%/If%>'>
           <a href="<%Out $x='[layout:navBar].hrefX'/%>" title="<%Out $x='[layout:navBar].labelX'/%>"><%Out $x='[layout:navBar].labelX'/%></a>
         </li>
       <%/Iterate%>
       
-      <%Iterate $x="[layout:navBar].auxTabListX"%>
+      <%Iterate $x="[layout:navBar].auxTabListX" ignoreBindError="true"%>
         <li class='sc-nav-tab-right <%If x="[Iterate].first"%>sc-nav-tab-right-first<%/If%> <%Out $x="[layout:navBar].classX"/%> <%If $x="[layout:navBar].selectedX"%>sc-nav-tab-current<%/If%>'>
           <a href="<%Out $x='[layout:navBar].hrefX'/%>" title="<%Out $x='[layout:navBar].labelX'/%>"><%Out $x='[layout:navBar].labelX'/%></a>
         </li>

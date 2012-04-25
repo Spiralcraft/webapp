@@ -1,5 +1,5 @@
 <%@doclet
-  tgns:themeui="context:/WEB-INF/webui/spiralcraft-webapp/themes/basic/"
+  tgns:themeui="context://theme/"
   tgns:layout="context:/WEB-INF/webui/spiralcraft-webapp/layout/"
   tgns:webui="class:/spiralcraft/servlet/webui"
   tgns:swa-meta="class:/spiralcraft/webapp/meta/"  

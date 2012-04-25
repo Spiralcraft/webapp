@@ -3,46 +3,49 @@
   tgns:swa="dynamic:/spiralcraft/webapp/"
   tgns:webapp="context:/WEB-INF/webui/spiralcraft-webapp/"
   tgns:jsclient="context:/WEB-INF/webui/spiralcraft-jsclient/"
+  tgns:html="class:/spiralcraft/servlet/webui/components/html/"
+  tgns:st="class:/spiralcraft/text/"
+  tgns:su="class:/spiralcraft/util"
   textgen:trim="true"
   contextX='
     { 
       cssURI:=[*jn:URI{"/css"}]
-      ,javascriptURI:=[*jn:URI{"/js"}]
+      ,jsURI:=[*jn:URI{"/js"}]
       ,themePackage:="spiralcraft-webapp"
       ,themeName:="basic"
-      ,titleX:=`""`
+      ,title:=[@st:MessageFormat].("")
     }
     '
   %>
-  <?xml version="1.0" encoding="UTF-8"?>
-  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-  <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-      <title><%title require="false"/%><%Out $x="[webapp:page].titleX"/%></title>
-      <%swa:theme-css require="false"%>
-        <link rel="stylesheet" 
-          href="<%=[webapp:page].cssURI/%>/spiralcraft-webapp/reset.css" 
-          type="text/css" media="screen, projection" 
-        />
-        <link rel="stylesheet" 
-          href="<%=[webapp:page].cssURI/%>/<%=[webapp:page].themePackage/%>/themes/<%=[webapp:page].themeName/%>/style.css" 
-          type="text/css" media="screen, projection" 
-        />
-      <%/swa:theme-css%>
-
-      <%swa:custom-css require="false"%>
-      <%/swa:custom-css%>
-
-      <script
-        type="text/javascript" 
-        src="<%=[webapp:page].javascriptURI/%>/spiralcraft-jsclient/spiralcraft.js"
-        >
-      </script>
-      <%jsclient:spiralcraft-jsclient/%>
-      <%webapp:page-head require="false"/%>
-    </head>
-    <body onload="SPIRALCRAFT.dom.bodyOnLoad()">
-      <%@insert/%>
-    </body>
-  </html>
+  <%html:Page 
+    $title="[webapp:page].title" 
+    bodyOnLoad="SPIRALCRAFT.dom.bodyOnLoad()"
+    $css
+      ='[{[@su:URIUtil].@addPathSegment
+             ([webapp:page].cssURI
+             ,"spiralcraft-webapp/reset.css"
+             )
+          ,[@su:URIUtil].@addPathSegment
+             ([webapp:page].cssURI
+             ,[webapp:page].themePackage+"/themes/"
+               +[webapp:page].themeName+"/style.css"
+             )
+        }]
+       '
+    $scripts
+      ='[{[@su:URIUtil].@addPathSegment
+           ([webapp:page].jsURI
+           ,"spiralcraft-jsclient/spiralcraft.js"
+           )
+        }]
+       '
+    $cssBase
+      ='[webapp:page].cssURI'
+    $jsBase
+      ='[webapp:page].jsURI'
+    %>
+    
+    <%jsclient:spiralcraft-jsclient/%>
+    <%@insert/%>
+  <%/html:Page%>
 <%/@doclet%>

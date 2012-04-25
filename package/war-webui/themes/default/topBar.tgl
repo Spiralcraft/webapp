@@ -1,5 +1,5 @@
 <%@doclet
-  tgns:themeui="context:/WEB-INF/webui/spiralcraft-webapp/themes/basic/"
+  tgns:themeui="context://theme/"
   textgen:trim="true"
   %>
   <div class="sc-topbar">

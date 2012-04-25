@@ -9,6 +9,15 @@
   <debug>false
   </debug>
   
+  <initParameters>
+    <httpd:InitParameter>
+      <name>spiralcraft.instance.themeURI
+      </name>
+      <value>context:/WEB-INF/webui/spiralcraft-webapp/themes/default/
+      </value>
+    </httpd:InitParameter>
+  </initParameters>
+  
   <securityConstraints>
     <httpd:SecurityConstraint>
       <resourceCollection>
@@ -46,6 +55,15 @@
       <filterClass>spiralcraft.servlet.autofilter.Controller
       </filterClass>
  
+      <initParameters>
+        <httpd:InitParameter>
+          <name>debug
+          </name>
+          
+          <value>true
+          </value>
+        </httpd:InitParameter>
+      </initParameters>
       
     </httpd:FilterHolder>
   </filters>
