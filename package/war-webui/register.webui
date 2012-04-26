@@ -1,19 +1,19 @@
-<%webui:page
-  tgns:webui="context:/WEB-INF/webui/"
+<%theme:page
+  tgns:theme="context://theme"
   tgns:swa-reg="context:/WEB-INF/webui/spiralcraft-webapp/function/registration/"
   tgns:webuic="class:/spiralcraft/servlet/webui/components/"
-  titleX='"Template: Register"'
+  title='Register'
   %> 
-  <%webui:contentFull%>
-    <%webui:taskPanel
+  <%theme:contentFull%>
+    <%theme:taskPanel
       titleX='"Register"'
       %>
   
       <%webuic:DataSession%>
         <%swa-reg:registrationForm/%>
       <%/webuic:DataSession%>
-    <%/webui:taskPanel%>
+    <%/theme:taskPanel%>
 
-  <%/webui:contentFull%>
-<%/webui:page%>
+  <%/theme:contentFull%>
+<%/theme:page%>
   

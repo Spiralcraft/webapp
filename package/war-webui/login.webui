@@ -1,7 +1,7 @@
 <%themeui:page
   tgns:themeui="context://theme/"
   tgns:swa-login="context:/WEB-INF/webui/spiralcraft-webapp/function/login/"
-  title="Template: Login"
+  title="Login"
   %>
   <%themeui:contentFull%>
     <%themeui:taskPanel
