@@ -15,6 +15,63 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev2
+        </revision>
+                
+        <notes>
+          <scm:Note>context://theme/ will expose functional directories as
+            well in war-webui/function to provide a unified customization model
+          </scm:Note>
+          <scm:Note>Move non-modifiable configuration into war-webui
+          </scm:Note>
+          <scm:Note>Refactor Registration function to use theming system
+          </scm:Note>
+        </notes> 
+
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>PathContext.assy.xml
+          </URI>
+          <URI>SMTPFilter.assy.xml
+          </URI>
+          <URI>config/AdminNav.paths.xml
+          </URI>
+          <URI>config/Context.assy.xml
+          </URI>
+          <URI>config/HttpDaemon.assy.xml
+          </URI>
+          <URI>config/SMTPFilter.assy.xml
+          </URI>
+          <URI>war-webui/admin/AdminNav.paths.xml
+          </URI>
+          <URI>war-webui/function/registration/changePasswordForm.tgl
+          </URI>
+          <URI>war-webui/function/registration/context.tgl
+          </URI>
+          <URI>war-webui/function/registration/digestHiddenInputs.tgl
+          </URI>
+          <URI>war-webui/function/registration/DigestVerifyHiddenInput.assy.xml
+          </URI>
+          <URI>war-webui/function/registration/LoginEditor.assy.xml
+          </URI>
+          <URI>war-webui/function/registration/MyLoginEditor.assy.xml
+          </URI>
+          <URI>war-webui/function/registration/OnRegister.assy.xml
+          </URI>
+          <URI>war-webui/function/registration/PasswordLengthHiddenInput.assy.xml
+          </URI>
+          <URI>war-webui/function/registration/PasswordVerifyInput.assy.xml
+          </URI>
+          <URI>war-webui/function/registration/registrationForm.tgl
+          </URI>
+          <URI>war-webui/themes/default/package.xml
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev1
         </revision>
                 
