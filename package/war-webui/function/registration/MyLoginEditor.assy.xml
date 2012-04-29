@@ -4,7 +4,7 @@
   xmlns:lang="class:/spiralcraft/lang"
   xmlns:sec="class:/spiralcraft/security/"
   xmlns:secauth="class:/spiralcraft/security/auth/"
-  xmlns:swa-reg="context:/WEB-INF/webui/spiralcraft-webapp/function/registration/"
+  xmlns:swa-reg="context://code/function/registration/"
   xmlns:codec="class:/spiralcraft/codec/text/"  
   >
   <publishedAssignments>

@@ -1,5 +1,5 @@
 <%@doclet
-  tgns:swa-reg="context:/WEB-INF/webui/spiralcraft-webapp/function/registration/"
+  tgns:swa-reg="context://code/function/registration"
   %>
   <%swa-reg:DigestHiddenInput/%>
   <%swa-reg:DigestVerifyHiddenInput/%>

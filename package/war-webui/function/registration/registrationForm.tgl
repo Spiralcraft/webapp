@@ -10,7 +10,7 @@
   tgns:meta="class:/spiralcraft/webapp/meta/"  
   tgns:webui="context:/WEB-INF/webui/spiralcraft-webapp/"    
   tgns:codec="class:/spiralcraft/codec/text/"
-  tgns:swa-reg="context:/WEB-INF/webui/spiralcraft-webapp/function/registration/"
+  tgns:swa-reg="context://code/function/registration/"
   %>
   <%swa-reg:Form%>
   
@@ -18,7 +18,9 @@
     
       <%swa-reg:context%>
         
-        <%swa-reg:MyLoginEditor%>
+        <%swa-reg:MyLoginEditor
+          onSave="[*swa-reg:OnRegister].()"
+          %>
                   
           <div class="sc-registration-panel">
           

@@ -2,7 +2,7 @@
   xmlns:html="class:/spiralcraft/servlet/webui/components/html"
   xmlns:rules="class:/spiralcraft/rules/"
   xmlns:sec="class:/spiralcraft/security/"
-  xmlns:swa-reg="context:/WEB-INF/webui/spiralcraft-webapp/function/registration/"
+  xmlns:swa-reg="context://code/function/registration/"
   >
   <typeX>[@sec:Login].type
   </typeX>

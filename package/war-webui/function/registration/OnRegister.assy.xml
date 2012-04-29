@@ -1,0 +1,5 @@
+<task:Eval
+  xmlns:task="class:/spiralcraft/task/">
+  <x>@log("On Register "+.)
+  </x>
+</task:Eval>
