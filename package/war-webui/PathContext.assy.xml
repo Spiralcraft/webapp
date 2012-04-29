@@ -1,5 +1,6 @@
 <af:PathContext
   xmlns:af="class:/spiralcraft/servlet/autofilter/"
+  xmlns:code="context://code/"
   >
 
   <codeBaseURI>context://code/spiralcraft-webapp
@@ -16,10 +17,10 @@
     xmlns:smtp="class:/spiralcraft/net/smtp/"
     xmlns:webui="class:/spiralcraft/servlet/webui/"
     xmlns:config="context://config/"
-    xmlns:webapp="context://config/spiralcraft-webapp/"
+    xmlns:webapp="context://code"
     >
   
-    <webapp:SMTPFilter/>
+    <code:SMTPFilter/>
   
     <config:SecurityFilter/>
  
