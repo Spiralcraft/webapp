@@ -6,7 +6,7 @@
   %>
 
   <%With 
-    x="{ [#swa-reg:context]  
+    x="[#swa-reg:context] {  
          passwordVerify:[@j:String] 
          ,digestVerify:[@j:String]
          ,passwordLength:=0

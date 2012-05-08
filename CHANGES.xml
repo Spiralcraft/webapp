@@ -15,6 +15,29 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev3
+        </revision>
+                
+        <notes>
+          <scm:Note>Fix deprecated named struct constructs
+          </scm:Note>
+        </notes>
+        
+        <path>package/war-webui
+        </path>
+        
+        <resources>
+          <URI>function/registration/context.tgl
+          </URI>
+          <URI>dataField.tgl
+          </URI>
+          <URI>formField.tgl
+          </URI>
+        </resources>
+      </scm:Change>
+     
+
+      <scm:Change>
         <revision>-dev2
         </revision>
                 

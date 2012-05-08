@@ -6,8 +6,7 @@
   tgns:webui="context:/WEB-INF/webui/spiralcraft-webapp/"
   textgen:trim="true"
   contextX='
-    {
-      [#swa:dataField]
+    [#swa:dataField] {
       x:=`.`
       ,labelX:=`.[data:Field].name`
       ,idX:=`.[data:Field].name`

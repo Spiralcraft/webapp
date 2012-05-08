@@ -6,8 +6,7 @@
   tgns:j="class:/java/lang/"
   textgen:trim="true"
   contextX='
-    {
-      [#swa:formField]
+    [#swa:formField] {
       labelX:=`""`
       ,idX:=`""`
     }
