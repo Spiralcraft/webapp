@@ -2,8 +2,9 @@
 
 	
   <property name="module" value="webapp"/>
-  <property name="buildVersion" value="0.4.17-dev3"/>
-  <property name="publish.resolver.type" value="distrib"/>    
+  <property name="buildVersion" value="0.4.17-dev4"/>
+  <property name="publish.resolver.type" value="distrib"/>  
+  <property name="package.spiralcraft-jsclient.dest" value="lib"/>
 
   <import file="../../build/build-spiralcraft-common.xml"/>
 	

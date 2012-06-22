@@ -15,6 +15,74 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev4
+        </revision>
+                
+        <notes>
+          <scm:Note>Change self-references to bundle references
+          </scm:Note>
+        </notes>
+        
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>config/Context.assy.xml
+          </URI>
+          <URI>war-webui/function/login/authMenu.tgl
+          </URI>
+          <URI>war-webui/function/login/loginForm.tgl
+          </URI>
+          <URI>war-webui/function/registration/changePasswordForm.tgl
+          </URI>
+          <URI>war-webui/layout/horizontalSplit.tgl
+          </URI>
+          <URI>war-webui/layout/navBar.tgl
+          </URI>
+          <URI>war-webui/themes/default/navBar.tgl
+          </URI>
+          <URI>war-webui/themes/default/package.xml
+          </URI>
+          <URI>war-webui/themes/default/page.tgl
+          </URI>
+          <URI>war-webui/login.webui
+          </URI>
+          <URI>war-webui/page.tgl
+          </URI>
+          <URI>war-webui/PathContext.assy.xml
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
+        <revision>-dev4
+        </revision>
+                
+        <notes>
+          <scm:Note>Enhancements for embedded-mode operation
+          </scm:Note>
+        </notes>
+        
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>config/Authenticator.assy.xml
+          </URI>
+          <URI>config/DaemonAdminAgent.assy.xml
+          </URI>
+          <URI>config/SecurityFilter.assy.xml
+          </URI>
+          <URI>config/HttpDaemon.assy.xml
+          </URI>
+          <URI>war-webui/Place.assy.xml
+          </URI>
+          <URI>war-webui/function/registration/tasks/Register.assy.xml
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev3
         </revision>
                 
