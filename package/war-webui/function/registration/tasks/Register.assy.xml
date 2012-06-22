@@ -1,0 +1,34 @@
+<dtask:Session
+  xmlns:task="class:/spiralcraft/task/"
+  xmlns:j="class:/java/lang/"
+  xmlns:secauth="class:/spiralcraft/security/auth/"
+  xmlns:dtask="class:/spiralcraft/data/task"
+  xmlns:sec="class:/spiralcraft/security/"
+  >
+  <transactional>true
+  </transactional>
+
+  <contextX>
+    [#register] { 
+      username:[@j:String]
+      ,password:[@j:String]
+    }
+  </contextX>
+
+  <sequence>
+    <task:Eval>
+      <x>
+        [*dtask:Edit
+          {[@sec:Login].type
+          }
+        ].()
+        { .username=[register].username
+          ,.clearpass=[register].password
+          ,.securePassword([secauth:Authenticator].digestFunction)
+          ,.@tuple.save()
+        }
+      </x>
+    
+    </task:Eval>
+  </sequence>
+</dtask:Session>

@@ -3,6 +3,12 @@
   xmlns:vfsc="class:/spiralcraft/vfs/context/"
   >
 
+  <id>spiralcraft-webapp
+  </id>
+  
+  <version>0.4.17-dev4
+  </version>
+  
   <plugins>
     <Plugin/>
   </plugins>
