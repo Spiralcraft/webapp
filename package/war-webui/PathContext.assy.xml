@@ -3,10 +3,10 @@
   xmlns:code="context://code/"
   >
 
-  <codeBaseURI>context://code/spiralcraft-webapp
+  <codeBaseURI>bundle://spiralcraft-webapp.war-webui/
   </codeBaseURI>
   
-  <contentBaseURI>context://code/spiralcraft-webapp/content
+  <contentBaseURI>bundle://spiralcraft-webapp.war-webui/content/
   </contentBaseURI>
 
   <placeContext>

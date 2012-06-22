@@ -1,6 +1,6 @@
 <%@doclet
   tgns:themeui="context://theme/"
-  tgns:layout="context:/WEB-INF/webui/spiralcraft-webapp/layout/"
+  tgns:layout="bundle://spiralcraft-webapp.war-webui/layout/"
   tgns:webui="class:/spiralcraft/servlet/webui"
   tgns:swa-meta="class:/spiralcraft/webapp/meta/"  
   tgns:ui="class:/spiralcraft/ui/"

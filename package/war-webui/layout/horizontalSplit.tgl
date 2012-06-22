@@ -1,5 +1,5 @@
 <%@doclet
-  tgns:layout="context:/WEB-INF/webui/spiralcraft-webapp/layout/"
+  tgns:layout="bundle://spiralcraft-webapp.war-webui/layout/"
   textgen:trim="true"
   %>
 <div>

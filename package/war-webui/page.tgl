@@ -1,8 +1,8 @@
 <%@doclet
   tgns:jn="class:/java/net"
   tgns:swa="dynamic:/spiralcraft/webapp/"
-  tgns:webapp="context:/WEB-INF/webui/spiralcraft-webapp/"
-  tgns:jsclient="context:/WEB-INF/webui/spiralcraft-jsclient/"
+  tgns:webapp="bundle://spiralcraft-webapp.war-webui/"
+  tgns:jsclient="bundle://spiralcraft-jsclient.war-webui/"
   tgns:html="class:/spiralcraft/servlet/webui/components/html/"
   tgns:st="class:/spiralcraft/text/"
   tgns:su="class:/spiralcraft/util"

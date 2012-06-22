@@ -13,7 +13,7 @@
     <httpd:InitParameter>
       <name>spiralcraft.instance.themeURI
       </name>
-      <value>context:/WEB-INF/webui/spiralcraft-webapp/themes/default/
+      <value>bundle://spiralcraft-webapp.war-webui/themes/default/
       </value>
     </httpd:InitParameter>
   </initParameters>

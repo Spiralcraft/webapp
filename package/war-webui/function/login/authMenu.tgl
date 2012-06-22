@@ -1,5 +1,5 @@
 <%@doclet
-  tgns:swa-login="context:/WEB-INF/webui/spiralcraft-webapp/function/login/"
+  tgns:swa-login="bundle://spiralcraft-webapp.war-webui/function/login/"
   tgns:jnet="class:/java/net/"
   tgns:webui="class:/spiralcraft/servlet/webui/"
   contextX='{
