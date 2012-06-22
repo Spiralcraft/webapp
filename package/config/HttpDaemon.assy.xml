@@ -4,10 +4,12 @@
   xmlns:httpd="class:/spiralcraft/pioneer/httpd" 
   xmlns:net="class:/spiralcraft/pioneer/net"
   xmlns:config="context://config/"
+  xmlns:rmac="class:/spiralcraft/admin/rmac/httpd/"
   >
 
   <services>
   
+    <config:DaemonAdminAgent/>
     <config:HttpService/>
 
   </services>

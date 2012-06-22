@@ -1,0 +1,6 @@
+<rmac:Agent
+  xmlns:rmac="class:/spiralcraft/admin/rmac/httpd/"
+  >
+  <realmName>example.com
+  </realmName>
+</rmac:Agent>
