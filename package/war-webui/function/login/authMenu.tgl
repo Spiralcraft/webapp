@@ -14,7 +14,15 @@
       tgns:html="class:/spiralcraft/servlet/webui/components/html"
       %>
       Signed in as <%=[secauth:AuthSession].principal.name/%>
-      <%html:Link x="[filter:SecurityFilter].logoutCommand()"%>Sign Out<%/html:Link%>
+      <%html:Link 
+        onAction=
+          '{
+            [filter:SecurityFilter].logout()
+            ,[webui:ServiceContext].redirect
+              ([@jnet:URI].([webui:ServiceContext].absoluteBackLink))
+          }'
+        %>Sign Out
+      <%/html:Link%>
     <%Else/%>
       <li>
         <a href="<%=[swa-login:authMenu].registerURI/%>" alt="Register">Register</a>
