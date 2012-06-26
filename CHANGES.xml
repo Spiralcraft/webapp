@@ -19,6 +19,85 @@
         </revision>
                 
         <notes>
+          <scm:Note>Move to standardized namespace usage
+          </scm:Note>
+        </notes>
+        
+        <path>package/war-webui
+        </path>
+        
+        <resources>
+          <URI>register.webui
+          </URI>
+          <URI>function/registration/registrationForm.tgl
+          </URI>
+          <URI>dataField.tgl
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
+        <revision>-dev4
+        </revision>
+                
+        <notes>
+          <scm:Note>Change password functionality 
+          </scm:Note>
+        </notes>
+        
+        <path>package/war-webui
+        </path>
+        
+        <resources>
+          <URI>changeMyPassword.webui
+          </URI>
+          <URI>function/registration/changePasswordForm.tgl
+          </URI>
+          <URI>function/OnChangePassword.assy.xml
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
+        <revision>-dev4
+        </revision>
+                
+        <notes>
+          <scm:Note>Hide auth menu in login page
+          </scm:Note>
+        </notes>
+        
+        <path>package/war-webui
+        </path>
+        
+        <resources>
+          <URI>login.webui
+          </URI>
+          <URI>themes/default/topBar.tgl
+          </URI>
+          <URI>themes/default/topBarRight.tgl
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
+        <revision>-dev4
+        </revision>
+                
+        <notes>
+          <scm:Note>Redirect after logout
+          </scm:Note>
+        </notes>
+        
+        <path>package/war-webui/function/login/authMenu.tgl
+        </path>
+      </scm:Change>
+
+      <scm:Change>
+        <revision>-dev4
+        </revision>
+                
+        <notes>
           <scm:Note>Change self-references to bundle references
           </scm:Note>
         </notes>
