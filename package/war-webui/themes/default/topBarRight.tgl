@@ -1,0 +1,3 @@
+<%swa-login:authMenu
+  tgns:swa-login="context://code/function/login/"
+/%>

@@ -3,6 +3,9 @@
   tgns:swa-login="context://code/function/login/"
   title="Login"
   %>
+  <%$swa-login:authMenu%>
+  <%/$swa-login:authMenu%>
+  
   <%themeui:contentFull%>
     <%themeui:taskPanel
       titleX='"Login"'
