@@ -3,7 +3,7 @@
   tgns:swa="dynamic:/spiralcraft/webapp/"
   tgns:data="class:/spiralcraft/data/"
   tgns:lang="class:/spiralcraft/lang/"
-  tgns:webui="context:/WEB-INF/webui/spiralcraft-webapp/"
+  tgns:webui="bundle://spiralcraft-webapp.war-webui/"
   textgen:trim="true"
   contextX='
     [#swa:dataField] {

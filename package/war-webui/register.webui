@@ -1,6 +1,6 @@
 <%theme:page
   tgns:theme="context://theme"
-  tgns:swa-reg="context:/WEB-INF/webui/spiralcraft-webapp/function/registration/"
+  tgns:swa-reg="context://code/function/registration/"
   tgns:webuic="class:/spiralcraft/servlet/webui/components/"
   title='Register'
   %> 
