@@ -1,0 +1,10 @@
+<NavFilter
+  xmlns:j="class:/java/lang/"
+  xmlns:swa-meta="class:/spiralcraft/webapp/meta/"  
+  >
+  
+  <context.optionsX>[@swa-meta:Path][{}]
+  </context.optionsX>
+    
+</NavFilter>
+  
