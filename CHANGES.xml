@@ -19,6 +19,29 @@
         </revision>
                 
         <notes>
+          <scm:Note>Add configuration assemblies so that app can be run with a
+            default minimal configuration.
+          </scm:Note>
+        </notes>
+        
+        <path>package/config
+        </path>
+        
+        <resources>
+          <URI>HttpService.assy.xml
+          </URI>
+          <URI>MainNavFilter.assy.xml
+          </URI>
+          <URI>SMTPConnector.assy.xml
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
+        <revision>-dev4
+        </revision>
+                
+        <notes>
           <scm:Note>Move to standardized namespace usage
           </scm:Note>
         </notes>
