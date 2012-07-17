@@ -13,4 +13,6 @@
     <config:Authenticator/>
   </authenticator>
   
+  <debug>false
+  </debug>
 </af:SecurityFilter>
