@@ -13,7 +13,7 @@
       tgns:filter="class:/spiralcraft/servlet/autofilter/"
       tgns:html="class:/spiralcraft/servlet/webui/components/html"
       %>
-      Signed in as <%=[secauth:AuthSession].principal.name/%>
+      Signed in as <a href="/myAccount"><%=[secauth:AuthSession].principal.name/%></a>
       <%html:Link 
         onAction=
           '{

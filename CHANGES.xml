@@ -19,6 +19,31 @@
         </revision>
                 
         <notes>
+          <scm:Note>Provide "myAccount" page to change password linked to
+            from top bar. 
+          </scm:Note>
+        </notes>
+        
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>config/Context.assy.xml
+          </URI>
+          <URI>function/login/authMenu.tgl
+          </URI>
+          <URI>war-webui/changeMyPassword.webui
+          </URI>
+          <URI>war-webui/myAccount.webui
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
+        <revision>-dev4
+        </revision>
+                
+        <notes>
           <scm:Note>Add configuration assemblies so that app can be run with a
             default minimal configuration.
           </scm:Note>

@@ -23,10 +23,13 @@
       <resourceCollection>
         <httpd:WebResourceCollection>
         
-          <URLPatterns>/spiralcraft-webapp/login
+          <URLPatterns>/login
           </URLPatterns>
           
-          <URLPatterns>/spiralcraft-webapp/register
+          <URLPatterns>/register
+          </URLPatterns>
+
+          <URLPatterns>/myAccount
           </URLPatterns>
                     
         </httpd:WebResourceCollection>
