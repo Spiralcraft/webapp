@@ -1,11 +1,12 @@
 <app:PluginContext
   xmlns:app="class:/spiralcraft/app/"
+  xmlns:swa-code="context://code/spiralcraft-webapp"
   >
   <pluginId>spiralcraft-webapp
   </pluginId>
   
   <stores>
-    <Store/>
+    <swa-code:Store/>
   </stores>
 
 </app:PluginContext>

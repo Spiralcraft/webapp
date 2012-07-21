@@ -1,6 +1,7 @@
 <app:PlaceContext
   xmlns:app="class:/spiralcraft/app/"
   xmlns:vfsc="class:/spiralcraft/vfs/context/"
+  xmlns:swa-code="context://code/spiralcraft-webapp/"
   >
 
   <id>spiralcraft-webapp
@@ -10,7 +11,7 @@
   </version>
   
   <plugins>
-    <Plugin/>
+    <swa-code:Plugin/>
   </plugins>
   
   <mounts>
