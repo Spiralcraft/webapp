@@ -19,6 +19,52 @@
         </revision>
                 
         <notes>
+          <scm:Note>Provide for app-level overrides of key configuration
+            assemblies.
+          </scm:Note>
+        </notes>
+        
+        <path>package/war-webui
+        </path>
+        
+        <resources>
+          <URI>PathContext.assy.xml
+          </URI>
+          <URI>Place.assy.xml
+          </URI>
+          <URI>Plugin.assy.xml
+          </URI>
+        </resources>
+      </scm:Change>
+          
+      <scm:Change>
+        <revision>-dev4
+        </revision>
+                
+        <notes>
+          <scm:Note>Standardize on embedded HSQLDB for identity data model,
+            allow for override at app level
+          </scm:Note>
+        </notes>
+        
+        <path>package/war-webui
+        </path>
+        
+        <resources>
+          <URI>Store.assy.xml
+          </URI>
+          <URI>SqlStore.assy.xml
+          </URI>
+          <URI>XmlStore.assy.xml
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
+        <revision>-dev4
+        </revision>
+                
+        <notes>
           <scm:Note>Provide "myAccount" page to change password linked to
             from top bar. 
           </scm:Note>
