@@ -1,0 +1,6 @@
+<confbase:SqlStore>
+  <name>spiralcraft-webapp
+  </name>
+  
+  <schema dataURI="webapp:WebApp.schema.xml"/>
+</confbase:SqlStore>

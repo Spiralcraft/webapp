@@ -2,6 +2,7 @@
   xmlns:af="class:/spiralcraft/servlet/autofilter/"
   xmlns:code="context://code/"
   xmlns:swa-code="context://code/spiralcraft-webapp/"  
+  xmlns:swa-config="context://code/spiralcraft-webapp/config/"  
   >
 
   <codeBaseURI>bundle://spiralcraft-webapp.war-webui/
@@ -21,7 +22,7 @@
     xmlns:webapp="context://code"
     >
   
-    <code:SMTPFilter/>
+    <swa-config:SMTPFilter/>
   
     <config:SecurityFilter/>
  

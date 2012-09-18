@@ -4,10 +4,6 @@
   xmlns:webapp="class:/spiralcraft/webapp/meta/"
   xmlns:hsqlj="class:/org/hsqldb/jdbc/"  
   >
-  <name>spiralcraft-webapp
-  </name>
-  
-  <schema dataURI="webapp:WebApp.schema.xml"/>
   
   <debugLevel>INFO
   </debugLevel>
@@ -20,7 +16,6 @@
             +";sql.enforce_size=false;shutdown=true"
             +";hsqldb.default_table_type=cached"
             )
-            .@log("HSQLDB Resource URL="+.)
       }
     ]
   </dataSourceX>

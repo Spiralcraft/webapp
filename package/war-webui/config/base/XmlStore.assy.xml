@@ -4,10 +4,6 @@
   xmlns:bizm="class:/spiralcraft/biz/meta/"
   xmlns:webapp="class:/spiralcraft/webapp/meta/"
   >
-  <name>spiralcraft-webapp
-  </name>
-  
-  <schema dataURI="webapp:WebApp.schema.xml"/>
   
   <debugLevel>INFO
   </debugLevel>
