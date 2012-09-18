@@ -15,6 +15,43 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev5
+        </revision>
+                
+        <notes>
+          <scm:Note>Move base webapp configuration to war-webui/config and
+            war-webui/config/base
+          </scm:Note>
+        </notes>
+        
+        <path>package/war-webui
+        </path>
+        
+        <resources>
+          <URI>PathContext.assy.xml
+          </URI>
+          <URI>Plugin.assy.xml
+          </URI>
+          <URI>SMTPFilter.assy.xml
+          </URI>
+          <URI>SqlStore.assy.xml
+          </URI>
+          <URI>Store.assy.xml
+          </URI>
+          <URI>XmlStore.assy.xml
+          </URI>
+          <URI>config/SMTPFilter.assy.xml
+          </URI>
+          <URI>config/Store.assy.xml
+          </URI>
+          <URI>config/base/SqlStore.assy.xml
+          </URI>
+          <URI>config/base/XmlStore.assy.xml
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev4
         </revision>
                 
