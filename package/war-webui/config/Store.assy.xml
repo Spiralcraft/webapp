@@ -1,5 +1,7 @@
 <confbase:SqlStore
-   xmlns:confbase="context://code/spiralcraft-webapp/config/base/">
+   xmlns:confbase="context://code/spiralcraft-webapp/config/base/"
+   xmlns:webapp="class:/spiralcraft/webapp/meta/"
+   >
   <name>spiralcraft-webapp
   </name>
   
