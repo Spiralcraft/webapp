@@ -1,4 +1,5 @@
-<confbase:SqlStore>
+<confbase:SqlStore
+   xmlns:confbase="context://code/spiralcraft-webapp/config/base/">
   <name>spiralcraft-webapp
   </name>
   
