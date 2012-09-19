@@ -15,6 +15,20 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev6
+        </revision>
+                
+        <notes>
+          <scm:Note>Fix missing xmlns
+          </scm:Note>
+        </notes>
+        
+        <path>package/war-webui/config/base
+        </path>
+
+      </scm:Change>
+      
+      <scm:Change>
         <revision>-dev5
         </revision>
                 
