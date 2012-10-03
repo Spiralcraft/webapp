@@ -1,7 +1,7 @@
 <app:PlaceContext
   xmlns:app="class:/spiralcraft/app/"
   xmlns:vfsc="class:/spiralcraft/vfs/context/"
-  xmlns:swa-code="context://code/spiralcraft-webapp/"
+  xmlns:swa-code="context://code/"
   >
 
   <id>spiralcraft-webapp

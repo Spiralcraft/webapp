@@ -1,6 +1,6 @@
 <app:PluginContext
   xmlns:app="class:/spiralcraft/app/"
-  xmlns:swa-config="context://code/spiralcraft-webapp/config/"
+  xmlns:swa-config="context://code/config/"
   >
   <pluginId>spiralcraft-webapp
   </pluginId>

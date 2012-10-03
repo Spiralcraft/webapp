@@ -1,6 +1,6 @@
 <af:SecurityFilter
   xmlns:af="class:/spiralcraft/servlet/autofilter/"
-  xmlns:config="context://code/spiralcraft-webapp/config/"
+  xmlns:config="context://code/config/"
   >
   
   <preAuthenticate>true

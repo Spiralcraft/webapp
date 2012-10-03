@@ -1,8 +1,7 @@
 <af:PathContext
   xmlns:af="class:/spiralcraft/servlet/autofilter/"
   xmlns:code="context://code/"
-  xmlns:swa-code="context://code/spiralcraft-webapp/"  
-  xmlns:swa-config="context://code/spiralcraft-webapp/config/"  
+  xmlns:swa-config="context://code/config/"  
   >
 
   <codeBaseURI>bundle://spiralcraft-webapp.war-webui/
@@ -12,7 +11,7 @@
   </contentBaseURI>
 
   <placeContext>
-    <swa-code:Place/>
+    <code:Place/>
   </placeContext>
   
   <filters
