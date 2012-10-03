@@ -15,6 +15,56 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev7
+        </revision>
+                
+        <notes>
+          <scm:Note>Move filter definitions into war-webui/config
+          </scm:Note>
+        </notes>
+        
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>config/Authenticator.assy.xml
+          </URI>
+          <URI>config/MainNavFilter.assy.xml
+          </URI>
+          <URI>config/NavFilter.assy.xml
+          </URI>
+          <URI>config/SecurityFilter.assy.xml
+          </URI>
+          <URI>war-webui/config/Authenticator.assy.xml
+          </URI>
+          <URI>war-webui/config/MainNavFilter.assy.xml
+          </URI>
+          <URI>war-webui/config/SecurityFilter.assy.xml
+          </URI>
+          <URI>war-webui/config/base/NavFilter.assy.xml
+          </URI>
+          <URI>war-webui/PathContext.assy.xml
+          </URI>
+        </resources>
+
+      </scm:Change>
+
+      <scm:Change>
+        <revision>-dev7
+        </revision>
+                
+        <notes>
+          <scm:Note>Name the WebApp schema "spiralcraft-webapp" so the data
+            goes in the right place
+          </scm:Note>
+        </notes>
+        
+        <path>package/war-classes/spiralcraft/webapp/meta/WebApp.schema.xml
+        </path>
+
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev6
         </revision>
                 
