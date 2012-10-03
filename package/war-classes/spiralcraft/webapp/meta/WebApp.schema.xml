@@ -3,7 +3,7 @@
   xmlns:meta="class:/spiralcraft/data/types/meta/"
   xmlns:sec="class:/spiralcraft/security/"
   >
-  <name>base
+  <name>spiralcraft-webapp
   </name>
 
   <entities>
