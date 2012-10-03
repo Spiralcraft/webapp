@@ -24,9 +24,9 @@
   
     <swa-config:SMTPFilter/>
   
-    <config:SecurityFilter/>
+    <swa-config:SecurityFilter/>
  
-    <config:MainNavFilter/>
+    <swa-config:MainNavFilter/>
     
   </filters>
   
