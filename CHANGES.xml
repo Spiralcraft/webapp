@@ -45,6 +45,10 @@
           </URI>
           <URI>war-webui/PathContext.assy.xml
           </URI>
+          <URI>war-webui/Place.assy.xml
+          </URI>
+          <URI>war-webui/Plugin.assy.xml
+          </URI>
         </resources>
 
       </scm:Change>
