@@ -1,5 +1,5 @@
 <confbase:SqlStore
-   xmlns:confbase="context://code/spiralcraft-webapp/config/base/"
+   xmlns:confbase="bundle://spiralcraft-webapp.war-webui/config/base/"
    xmlns:webapp="class:/spiralcraft/webapp/meta/"
    >
   <name>spiralcraft-webapp
