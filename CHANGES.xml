@@ -15,6 +15,20 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev8
+        </revision>
+                
+        <notes>
+          <scm:Note>Use concrete path for Store base so Place is mountable
+            outside web app.
+          </scm:Note>
+        </notes>
+        
+        <path>package/war-webui/config/Store.assy.xml
+        </path>
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev7
         </revision>
                 
