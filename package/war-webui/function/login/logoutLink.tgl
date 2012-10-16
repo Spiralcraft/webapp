@@ -1,0 +1,14 @@
+<%@doclet
+  tgns:html="class:/spiralcraft/servlet/webui/components/html/"
+  tgns:af="class:/spiralcraft/servlet/autofilter/"
+  tgns:webui="class:/spiralcraft/servlet/webui/"
+  tgns:login="context://code/function/login/"
+  tgns:jnet="class:/java/net/"
+  contextX='{ redirectURI:=[@jnet:URI].(".") }'
+  %>
+  
+  <%html:Link onAction="{ [af:SecurityFilter].logout(), [webui:ServiceContext].redirect([login:logoutLink].redirectURI)}"%>
+    <%@insert/%>
+  <%/html:Link%>
+
+<%/@doclet%>
