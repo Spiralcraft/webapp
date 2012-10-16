@@ -1,0 +1,9 @@
+<confbase:SqlStore
+   xmlns:confbase="bundle://spiralcraft-webapp.war-webui/config/base/"
+   xmlns:webapp="class:/spiralcraft/webapp/meta/"
+   >
+  <name>spiralcraft-webapp
+  </name>
+  
+  <schema dataURI="webapp:WebApp.schema.xml"/>
+</confbase:SqlStore>
