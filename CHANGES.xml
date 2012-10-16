@@ -19,6 +19,26 @@
         </revision>
                 
         <notes>
+          <scm:Note>Added a SqlStore and XmlStore to to simplify extensions
+          </scm:Note>
+        </notes>
+        
+        <path>package/war-webui/config
+        </path>
+        
+        <resources>
+          <URI>SqlStore.assy.xml
+          </URI>
+          <URI>XmlStore.assy.xml
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
+        <revision>-dev9
+        </revision>
+                
+        <notes>
           <scm:Note>Add a logoutLink component
           </scm:Note>
         </notes>
