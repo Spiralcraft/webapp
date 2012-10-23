@@ -102,15 +102,15 @@
       <servletName>webui
       </servletName>
             
-      <servletClass>spiralcraft.servlet.webui.UIServlet
+      <servletClass>spiralcraft.servlet.BeanServlet
       </servletClass>
       
       <initParameters>
         <httpd:InitParameter>
-          <name>debugLevel
+          <name>typeURI
           </name>
           
-          <value>INFO
+          <value>context://config/UIServlet
           </value>
         </httpd:InitParameter>
       </initParameters>
