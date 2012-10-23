@@ -15,6 +15,42 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev10
+        </revision>
+                
+        <notes>
+          <scm:Note>Move user accessible paths like upload dir to exportMounts
+          </scm:Note>
+        </notes>
+        
+        <path>package/war-webui/Place.assy.xml
+        </path>
+      </scm:Change>
+
+      <scm:Change>
+        <revision>-dev10
+        </revision>
+                
+        <notes>
+          <scm:Note>Provide for UIServlet and FileServlet direct
+            configuration
+          </scm:Note>
+        </notes>
+        
+        <path>package/config
+        </path>
+        
+        <resources>
+          <URI>Context.assy.xml
+          </URI>
+          <URI>FileServlet.assy.xml
+          </URI>
+          <URI>UIServlet.assy.xml
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev9
         </revision>
                 
