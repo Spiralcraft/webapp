@@ -14,7 +14,7 @@
     <swa-code:Plugin/>
   </plugins>
   
-  <mounts>
+  <exportMounts>
     <vfsc:Authority>
       <authorityName>
       </authorityName>
@@ -31,6 +31,8 @@
         </vfsc:Redirect>
       </grafts>
     </vfsc:Authority>  
-  </mounts>
+  </exportMounts>
     
+  <logLevel>INFO
+  </logLevel>
 </app:PlaceContext>
