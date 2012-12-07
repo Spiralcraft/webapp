@@ -15,6 +15,20 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev11
+        </revision>
+                
+        <notes>
+          <scm:Note>Move SmtpConnector to prefilters because Place may
+            depend on it.
+          </scm:Note>
+        </notes>
+        
+        <path>package/war-webui/PathContext.assy.xml
+        </path>
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev10
         </revision>
                 
