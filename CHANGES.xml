@@ -15,6 +15,27 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev12
+        </revision>
+                
+        <notes>
+          <scm:Note>Give the admin dir a default PathContext and hook up the
+            NavFilter for a default menu
+          </scm:Note>
+        </notes>
+        
+        <path>package/war-webui
+        </path>
+        
+        <resources>
+          <URI>admin/PathContext.assy.xml
+          </URI>
+          <URI>config/AdminNavFilter.assy.xml
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev11
         </revision>
                 
