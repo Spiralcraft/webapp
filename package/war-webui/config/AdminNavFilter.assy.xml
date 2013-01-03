@@ -1,0 +1,10 @@
+<base:NavFilter
+  xmlns:j="class:/java/lang/"
+  xmlns:admin="context://code/admin/"
+  xmlns:base="context://code/config/base/"
+  >
+  
+  <context.options dataURI="admin:AdminNav.paths.xml"/>
+    
+</base:NavFilter>
+  

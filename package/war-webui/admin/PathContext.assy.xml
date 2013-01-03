@@ -1,0 +1,23 @@
+<af:PathContext
+  xmlns:af="class:/spiralcraft/servlet/autofilter/"
+  xmlns:config="context://code/config/"
+  xmlns:admin="context://code/admin/"
+  >
+
+  <filters>
+    
+    <af:GuardFilter>
+      <pattern>*
+      </pattern>
+      
+      <authenticate>true
+      </authenticate>
+      
+      <loginURI>/login
+      </loginURI>
+    </af:GuardFilter>
+
+    
+    <config:AdminNavFilter/>
+  </filters>
+</af:PathContext>
