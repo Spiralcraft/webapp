@@ -19,6 +19,35 @@
         </revision>
                 
         <notes>
+          <scm:Note>Layout component inner definitions now use a standard 
+            namespace context://code/layout
+          </scm:Note>
+        </notes>
+        
+        <path>package/war-webui/layout/horizontalSplit.tgl
+        </path>
+      </scm:Change>
+
+      <scm:Change>
+        <revision>-dev12
+        </revision>
+                
+        <notes>
+          <scm:Note>Make sure the navBar element associated with an absolute 
+            path is selected whenever the navContext absolute selected path 
+            starts with the element's absolute path.
+          </scm:Note>
+        </notes>
+        
+        <path>package/war-webui/themes/default/navBar.tgl
+        </path>
+      </scm:Change>
+
+      <scm:Change>
+        <revision>-dev12
+        </revision>
+                
+        <notes>
           <scm:Note>Give the admin dir a default PathContext and hook up the
             NavFilter for a default menu
           </scm:Note>
