@@ -11,7 +11,7 @@
     mainTabListX='[ui:NavContext].options[.path==null || !.path.absolute]'
     auxTabListX='[ui:NavContext].options[.path.absolute]'
     selectedX='((.path==null || !.path.absolute) && .name==[ui:NavContext].selectedKey)
-               || .path==[ui:NavContext].absoluteSelectedPath
+               || (.path.size()>0 && [ui:NavContext].absoluteSelectedPath.startsWith(.path))
                '
     hrefX='[ui:NavContext].resolve
             (.path!=null
