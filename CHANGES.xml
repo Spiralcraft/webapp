@@ -15,6 +15,37 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev13
+        </revision>
+                
+        <notes>
+          <scm:Note>Move to reliable SMTP queueing system for in-app messages.
+          </scm:Note>
+        </notes>
+        
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>config/SMTPConnector.assy.xml
+          </URI>
+          <URI>config/SMTPConnector.example.xml
+          </URI>
+          <URI>config/SMTPGateway.assy.xml
+          </URI>
+          <URI>war-webui/config/MailQueueStore.assy.xml
+          </URI>
+          <URI>war-webui/config/SMTPFilter.assy.xml
+          </URI>
+          <URI>war-webui/PathContext.assy.xml
+          </URI>
+          <URI>war-webui/Plugin.assy.xml
+          </URI>
+
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev12
         </revision>
                 
