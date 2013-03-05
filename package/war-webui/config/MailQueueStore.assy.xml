@@ -1,0 +1,10 @@
+<confbase:SqlStore
+  xmlns:confbase="bundle://spiralcraft-webapp.war-webui/config/base/"
+  xmlns:webapp="class:/spiralcraft/webapp/meta/"
+  xmlns:smtp="class:/spiralcraft/net/smtp"
+  >
+  <name>spiralcraft-net-smtp
+  </name>
+  
+  <schema dataURI="smtp:SMTP.schema.xml"/>
+</confbase:SqlStore>

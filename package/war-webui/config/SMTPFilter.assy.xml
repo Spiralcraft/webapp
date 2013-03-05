@@ -1,7 +1,7 @@
 <af:ReferenceFocusFilter
   xmlns:af="class:/spiralcraft/servlet/autofilter/">
         
-  <typeURI>context://config/SMTPConnector
+  <typeURI>context://config/SMTPGateway
   </typeURI>
         
 </af:ReferenceFocusFilter>   

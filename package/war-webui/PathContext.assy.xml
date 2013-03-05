@@ -14,9 +14,6 @@
     <code:Place/>
   </placeContext>
   
-  <preFilters>
-    <swa-config:SMTPFilter/>  
-  </preFilters>
   
   <filters
     xmlns:smtp="class:/spiralcraft/net/smtp/"
