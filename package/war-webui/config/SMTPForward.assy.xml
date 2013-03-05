@@ -1,0 +1,25 @@
+<dtask:Session
+  xmlns:task="class:/spiralcraft/task/"
+  xmlns:dtask="class:/spiralcraft/data/task/"
+  xmlns:smtp="class:/spiralcraft/net/smtp/"
+  xmlns:conf="context://config/"
+  >
+  <transactional>true
+  </transactional>
+  <sequence>
+    <task:Eval>
+      <x>
+        [*dtask:Fetch{[@smtp:Queue.list]}].()#
+          {
+            .{ [*conf:SMTPGateway].send(.envelope.[*dtask:Internalize])
+               ,.[*dtask:Edit].()
+                 { 
+                  .@tuple.delete()
+                  ,.@tuple.save()
+                 }
+            }
+          }
+      </x>
+    </task:Eval>
+  </sequence>
+</dtask:Session>
