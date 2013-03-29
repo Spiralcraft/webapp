@@ -15,6 +15,45 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev14
+        </revision>
+                
+        <notes>
+          <scm:Note>Associate label "for" attribute with input control
+          </scm:Note>
+        </notes>
+        
+        <path>package/war-webui/formField.tgl
+        </path>
+      </scm:Change>
+
+      <scm:Change>
+        <revision>-dev14
+        </revision>
+                
+        <notes>
+          <scm:Note>Add struct field for email verification
+          </scm:Note>
+        </notes>
+        
+        <path>package/war-webui/function/registration/context.tgl
+        </path>
+      </scm:Change>
+          
+      <scm:Change>
+        <revision>-dev14
+        </revision>
+                
+        <notes>
+          <scm:Note>Add css class to button bar
+          </scm:Note>
+        </notes>
+        
+        <path>package/war-webui/function/login/loginForm.tgl
+        </path>
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev13
         </revision>
                 
