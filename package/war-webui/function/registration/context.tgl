@@ -11,6 +11,7 @@
          ,digestVerify:[@j:String]
          ,passwordLength:=0
          ,randomPassword:=[@util:RandomUtil].@generateString(10)
+         ,emailVerify:[@j:String]
        }"
     %>
     <%@insert/%>
