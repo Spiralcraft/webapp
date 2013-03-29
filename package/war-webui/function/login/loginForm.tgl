@@ -26,7 +26,7 @@
         Keep me signed in on this browser
       <%/swa:formField%>
       
-      <div class="sc-form-button-bar">
+      <div class="sc-form-button-bar sc-login-form-button-bar">
         <%html:Button 
           x="[html:Login].loginCommand()" 
           tag.clazz="sc-form-completion-button"
