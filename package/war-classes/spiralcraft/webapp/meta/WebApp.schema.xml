@@ -11,6 +11,11 @@
       <type><sec:Login.type/>
       </type>
     </meta:Entity>
+    
+    <meta:Entity>
+      <type><sec:Ticket.type/>
+      </type>
+    </meta:Entity>
       
     <meta:Entity>
       <type><webapp:Identity.type/>
