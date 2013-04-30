@@ -2,14 +2,14 @@
   xmlns:store="class:/spiralcraft/sql/data/store/"
   xmlns:data="class:/spiralcraft/data/"
   xmlns:webapp="class:/spiralcraft/webapp/meta/"
-  xmlns:hsqlj="class:/org/hsqldb/jdbc/"  
+  xmlns:hsqlj="class:/org/hsqldb/jdbc/pool/"  
   >
   
   <debugLevel>INFO
   </debugLevel>
   
   <dataSourceX>
-    [*hsqlj:JDBCDataSource
+    [*hsqlj:JDBCXADataSource
       {url:=("jdbc:hsqldb:file:"
             +[store:SqlStore].localResourceURI.path
             +"/hsqldb/"
