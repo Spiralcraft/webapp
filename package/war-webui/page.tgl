@@ -2,7 +2,7 @@
   tgns:jn="class:/java/net"
   tgns:swa="dynamic:/spiralcraft/webapp/"
   tgns:webapp="bundle://spiralcraft-webapp.war-webui/"
-  tgns:jsclient="bundle://spiralcraft-jsclient.war-webui/"
+  tgns:jsclient="context://code/spiralcraft-jsclient/"
   tgns:html="class:/spiralcraft/servlet/webui/components/html/"
   tgns:st="class:/spiralcraft/text/"
   tgns:su="class:/spiralcraft/util"
