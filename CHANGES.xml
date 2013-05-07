@@ -15,6 +15,29 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev17
+        </revision>
+                
+        <notes>
+          <scm:Note>Include stubbed "components" package used to access
+            servlet components library
+          </scm:Note>
+          <scm:Note>Use context://code/ prefix to refer to jsclient library
+          </scm:Note>
+        </notes>
+        
+        <path>package/war-webui
+        </path>
+        
+        <resource>
+          <URI>components/package.xml
+          </URI>
+          <URI>page.tgl
+          </URI>
+        </resource>
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev16
         </revision>
                 
