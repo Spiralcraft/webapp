@@ -1,0 +1,21 @@
+<af:PathContext
+  xmlns:af="class:/spiralcraft/servlet/autofilter/"
+  xmlns:code="context://code/"
+  xmlns:saconf="context://code/sysadmin/config/"
+  xmlns:wameta="class:/spiralcraft/webapp/meta/"
+  >
+
+
+  <placeContext>
+    <saconf:PlaceContext/>
+  </placeContext>
+  
+  <filters>
+    <af:DataSessionFilter>
+      <dataType x="[@wameta:SysadminSession].type" /> 
+    </af:DataSessionFilter>
+  </filters>
+
+  <logLevel>FINE
+  </logLevel>
+</af:PathContext>

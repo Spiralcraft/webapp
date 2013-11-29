@@ -23,6 +23,11 @@
     </meta:Entity>
      
     <meta:Entity>
+      <type><webapp:SysadminUser.type/>
+      </type>
+    </meta:Entity>
+
+    <meta:Entity>
       <type><webapp:Path.type/>
       </type>
     </meta:Entity>

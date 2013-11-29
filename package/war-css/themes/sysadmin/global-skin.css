@@ -1,0 +1,203 @@
+body {
+  color: #333333;
+  font-family: Arial,sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+*::-moz-placeholder {
+    color: #939393;
+    font-family: PlutoSansCondRegular;
+    font-size: 13px;
+}
+
+a {
+  color: #1283bf;
+}
+
+a:hover, a:focus {
+  color: #1283bf;
+}
+
+.wrap-header {
+  background-color: #FFFFFF;	
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.wrap-header  {
+  
+}
+
+.wrap-header a {
+  font-weight: bold;
+}
+
+.wrap-header a:visited {
+  color: #D05E29;
+}
+
+.wrap-header a:hover, .wrap-header a:focus {
+  color: #F07E49;
+  
+}
+
+.wrap-footer {
+  background-color: #EEEEEE;
+}
+
+
+.header-brand .brand {
+  border: 0 none;
+  color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  font: 0px/0 a;
+  text-shadow: none;
+}
+
+.header-auth-panel {
+  color: #FFFFFF;
+
+}
+
+.header-auth-panel .links {
+  color: #FFFFFF;
+  font-weight: bold;
+  vertical-align: middle;
+  padding-top: 15px;
+}
+
+.header-auth-panel .header-auth-dropdown {
+  vertical-align: middle;
+  padding-top: 10px;
+
+}
+
+.center-dialog {
+
+  border: 1px solid #000000;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  box-shadow: 10px 10px 5px #888888;
+}
+
+.button {
+    -moz-user-select: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px 2px 2px 2px;
+    -moz-border-radius: 2px 2px 2px 2px;
+    cursor: default !important;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 11px;
+    height: 29px;
+    line-height: 29px;
+    min-width: 54px;
+    padding: 0 8px;
+    text-align: center;
+    text-decoration: none !important;
+    background: -moz-linear-gradient(center top , #F5F5F5, #F1F1F1) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: #444444 !important;
+}
+
+.button:focus {
+    border: 1px solid #4D90FE;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+    outline: medium none;
+}
+
+.button:hover {
+    background: -moz-linear-gradient(center top , #F8F8F8, #F1F1F1) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border-color: #C6C6C6;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+    color: #222222 !important;
+}
+
+.button:hover:focus {
+    box-shadow: 0 0 0 1px #FFFFFF inset, 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.button:active {
+    background-color: inherit;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15) inset;
+}
+
+.button::-moz-focus-inner {
+    border: 0 none;
+}
+
+.sc-webui-form fieldset {
+  border: none;	
+}
+
+.sc-webui-form fieldset > label {
+  display: block;
+  font-weight: bold;
+}
+
+.header-auth-dropdown ul {
+  list-style: none;
+  display: none;
+  background: #3D1F00;
+  border: 1px solid #000000;
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+
+}
+
+.header-auth-dropdown:hover ul {
+  display: block;
+  position: absolute;
+
+}
+
+.header-auth-dropdown:hover li {
+  float: none;
+  background: #3D1F00;
+  padding: 5px 10px 5px 30px;
+  outline: 1px solid #3D1F00;
+  border-bottom: 1px dashed #FFFFFF;
+  border-top: 1px dashed #FFFFFF;
+  margin-top: -1px;
+
+}
+
+.header-auth-dropdown:hover li a {
+  text-decoration: none;
+  color: #FFFFFF;
+  width:100%;
+  height:100%;
+  font-weight: normal;
+  font-size: 9pt;
+}
+
+.header-auth-dropdown:hover li a:hover {
+}
+
+.header-auth-dropdown:hover li:hover {
+  background: #F07E49;
+  text-decoration: underline;
+}
+
+
+
+.form-dialog form input {
+  font-size: 16pt;
+  font-weight: bold; 
+  margin:2px; 
+  width:19em;    
+}
+
+
+.form-dialog .button-bar {
+  text-align: center;   
+  padding-top: 5px;
+}
+
+div.error {
+  font-size: 12pt;
+  font-weight: normal;
+  color: red;   
+  margin: 2px;
+}

@@ -1,0 +1,96 @@
+.wrap-header {
+  height: 64px;
+  min-width: 491px;
+}
+
+.wrap-header > .inner {
+  padding: 6px 50px 6px 50px;        
+}
+
+.wrap-footer {
+  height: 64px;
+}
+
+.wrap-body {
+  padding-bottom: 59px;
+}
+
+
+.main-content {
+
+}
+
+/* Float main-footer at bottom */
+.wrap-footer {
+  position: fixed;
+  bottom:0;
+  left:0;
+  right:0;
+}
+
+.header-brand .brand {
+  height: 48px;
+  margin-left: 0;
+  width: 193px;
+  float: left;
+  display: inline-block;
+}
+
+.header-brand {
+  display: inline-block;	
+}
+
+.header-auth-panel {
+  height: 48px;
+  width: 193px;
+  display: inline-block;
+  float: right;
+  position: absolute;
+  right: 0;
+
+}
+
+
+.header-auth-dropdown .dropdown-anchor:after {
+  content: url("/images/spiralcraft-webapp/sysadmin/caret-down.png");
+  padding-left: 4px;
+}
+
+ul.sc-field-grid {
+  list-style: none;	
+}
+
+
+
+.center-dialog {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:20px;
+  width: 40%;
+  padding: 10px;
+}
+
+.center-dialog h2.title {
+  margin-top:0px;
+  margin-bottom: 10px;
+  text-align: center;	
+}
+
+.center-dialog p {
+  text-align: center;	
+}
+	
+.login-dialog {
+  width: 25em;
+}
+
+.form-dialog {
+  width: 31em;	
+}
+
+.sc-form-button-bar {
+  text-align: center;
+  
+}
+
+

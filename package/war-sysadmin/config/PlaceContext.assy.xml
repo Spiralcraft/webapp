@@ -1,0 +1,12 @@
+<app:PlaceContext
+  xmlns:app="class:/spiralcraft/app/"
+  >
+
+  <id>spiralcraft-webapp-sysadmin
+  </id>
+  
+  <version>0.4.17-dev18
+  </version>
+  
+
+</app:PlaceContext>

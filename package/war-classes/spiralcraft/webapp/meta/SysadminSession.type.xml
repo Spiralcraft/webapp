@@ -1,0 +1,15 @@
+<meta:Type
+  xmlns:meta="class:/spiralcraft/data/types/meta/"
+  xmlns:entity="class:/spiralcraft/archetype/entity/"
+  xmlns:net="class:/spiralcraft/archetype/net/"
+  xmlns:swa-meta="class:/spiralcraft/webapp/meta/"
+  >
+
+  
+  <fields>
+    <meta:Field>
+      <name>user</name>
+      <type><swa-meta:SysadminUser.type/></type>
+    </meta:Field>
+  </fields>
+</meta:Type>
