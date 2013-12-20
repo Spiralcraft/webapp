@@ -2,7 +2,6 @@ body {
   color: #333333;
   font-family: Arial,sans-serif;
   font-size: 14px;
-  line-height: 20px;
 }
 
 *::-moz-placeholder {
@@ -12,16 +11,16 @@ body {
 }
 
 a {
-  color: #1283bf;
+  color: #000088;
 }
 
 a:hover, a:focus {
-  color: #1283bf;
+  color: #0000FF;
 }
 
 .wrap-header {
-  background-color: #FFFFFF;	
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  background-color: #5B69A8;	
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .wrap-header  {
@@ -30,6 +29,7 @@ a:hover, a:focus {
 
 .wrap-header a {
   font-weight: bold;
+  color: #DDDDDD;
 }
 
 .wrap-header a:visited {
@@ -37,7 +37,7 @@ a:hover, a:focus {
 }
 
 .wrap-header a:hover, .wrap-header a:focus {
-  color: #F07E49;
+  color: #FFFFFF;
   
 }
 
@@ -45,13 +45,21 @@ a:hover, a:focus {
   background-color: #EEEEEE;
 }
 
+.header-brand img {
+	background-color: #FFFFFF;
+}
 
 .header-brand .brand {
-  border: 0 none;
-  color: rgba(0, 0, 0, 0);
-  cursor: pointer;
-  font: 0px/0 a;
-  text-shadow: none;
+  color: #FFFFFF;
+}
+
+.header-brand .company {
+  font-size: 16pt;	
+}
+
+.header-brand .product {
+  font-size: 12pt;  
+  font-style: italic;
 }
 
 .header-auth-panel {
@@ -67,8 +75,6 @@ a:hover, a:focus {
 }
 
 .header-auth-panel .header-auth-dropdown {
-  vertical-align: middle;
-  padding-top: 10px;
 
 }
 
@@ -77,7 +83,7 @@ a:hover, a:focus {
   border: 1px solid #000000;
   -moz-border-radius: 15px;
   border-radius: 15px;
-  box-shadow: 10px 10px 5px #888888;
+  box-shadow: 2px 2px 3px 0px #888888;
 }
 
 .button {
@@ -137,7 +143,6 @@ a:hover, a:focus {
 .header-auth-dropdown ul {
   list-style: none;
   display: none;
-  background: #3D1F00;
   border: 1px solid #000000;
   margin: 0;
   padding: 0;
@@ -154,12 +159,12 @@ a:hover, a:focus {
 
 .header-auth-dropdown:hover li {
   float: none;
-  background: #3D1F00;
+  background: #1F003D;
   padding: 5px 10px 5px 30px;
-  outline: 1px solid #3D1F00;
-  border-bottom: 1px dashed #FFFFFF;
-  border-top: 1px dashed #FFFFFF;
-  margin-top: -1px;
+  /** outline: 1px solid #EEEEEE; **/
+  border-bottom: 1px solid #EEEEEE;
+  margin-top: 0px;
+  list-style: none outside none;
 
 }
 
@@ -176,17 +181,14 @@ a:hover, a:focus {
 }
 
 .header-auth-dropdown:hover li:hover {
-  background: #F07E49;
+  background: #100088; 
   text-decoration: underline;
 }
 
 
 
 .form-dialog form input {
-  font-size: 16pt;
-  font-weight: bold; 
-  margin:2px; 
-  width:19em;    
+  margin:2px;  
 }
 
 

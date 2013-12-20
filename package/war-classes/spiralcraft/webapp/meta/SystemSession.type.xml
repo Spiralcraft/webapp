@@ -3,13 +3,15 @@
   xmlns:entity="class:/spiralcraft/archetype/entity/"
   xmlns:net="class:/spiralcraft/archetype/net/"
   xmlns:swa-meta="class:/spiralcraft/webapp/meta/"
+  xmlns:secauth="class:/spiralcraft/security/auth/"
   >
 
   
   <fields>
-    <meta:Field>
+    <meta:CalculatedField>
       <name>user</name>
-      <type><swa-meta:SysadminUser.type/></type>
-    </meta:Field>
+      <type><swa-meta:SystemUser.type/></type>
+      <expression>[@swa-meta:SystemUser].@findByPrincipalId([secauth:AuthSession].principal.id)</expression>
+    </meta:CalculatedField>
   </fields>
 </meta:Type>

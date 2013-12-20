@@ -23,7 +23,7 @@
     </meta:Entity>
      
     <meta:Entity>
-      <type><webapp:SysadminUser.type/>
+      <type><webapp:SystemUser.type/>
       </type>
     </meta:Entity>
 

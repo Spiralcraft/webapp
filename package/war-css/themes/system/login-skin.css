@@ -1,0 +1,76 @@
+
+
+.form-dialog .text-row {
+  font-size: 14pt;      
+  font-weight: bold;
+  padding: 10px; 
+}
+
+
+.form-dialog .text-row input
+,.form-dialog fieldset input
+{
+  font-size: 16pt;
+  margin:2px;     
+  box-shadow: inset 1px 1px 1px 0px #888888;  
+  padding: 1px 3px 3px 3px;
+}
+
+.form-dialog .text-row input
+{ width:90%;
+}
+
+.form-dialog fieldset input
+{ width:100%;
+}
+
+.form-dialog .text-row label {
+  display: block;
+  width:5em;
+  margin:2px;
+}
+
+.form-dialog .check-row {
+  font-size: 12pt;      
+  font-weight: bold;
+  padding: 10px;
+  padding-bottom: 4px; 
+}
+
+.form-dialog .check-row input {
+  font-size: 23pt;
+  padding: 20px;
+  font-weight: bold; 
+  margin:2px;     
+  float: left;
+  height: .5em;
+  width: .5em;
+}
+
+.form-dialog .check-row label {
+  font-size: 12pt;      
+  font-weight: bold;
+  padding: 10px; 
+  width:5em;
+  margin:2px;
+}
+
+
+.form-dialog .check-row p {
+  font-size: 12pt;      
+  font-weight: normal;
+  margin-top: .3em;
+  margin-bottom: .3em;
+}
+
+.login-form-footer {
+  text-align: center;   
+  padding-top: 5px;
+}
+
+.form-dialog button {
+  font-size: 14pt;
+  font-weight: normal;
+}
+
+

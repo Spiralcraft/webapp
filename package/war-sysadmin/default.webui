@@ -1,6 +1,0 @@
-<%comp:main-page
-  tgns:comp="bundle://spiralcraft-webapp.war-sysadmin/components/"
-  title='Spiralcraft WebApp Admin'  
-  %>
-  Embedded Sysadmin App Home Page
-<%/comp:main-page%>

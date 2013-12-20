@@ -1,10 +1,15 @@
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
 .wrap-header {
-  height: 64px;
+  height: 65px;
   min-width: 491px;
 }
 
 .wrap-header > .inner {
-  padding: 6px 50px 6px 50px;        
+  padding: 6px;        
 }
 
 .wrap-footer {
@@ -28,31 +33,48 @@
   right:0;
 }
 
-.header-brand .brand {
-  height: 48px;
-  margin-left: 0;
-  width: 193px;
-  float: left;
+.header-brand {
   display: inline-block;
 }
 
-.header-brand {
-  display: inline-block;	
+.header-brand .image {
+	display: inline-block;
+	height: 48px;
+	top:0;
+	
+}
+
+.header-brand .image img {
+  display: inline-block;
+  line-height: auto;
+}
+
+.header-brand .brand {
+  display: inline-block;
+  position: relative;
+  top: -5px;
+}
+
+.brand .company {
+	display: block;
+}
+
+.brand .product {
+  display: block;
 }
 
 .header-auth-panel {
-  height: 48px;
-  width: 193px;
   display: inline-block;
   float: right;
-  position: absolute;
-  right: 0;
-
 }
 
 
+.header-auth-dropdown .dropdown-anchor {
+  padding-left: 20px;
+}
+
 .header-auth-dropdown .dropdown-anchor:after {
-  content: url("/images/spiralcraft-webapp/sysadmin/caret-down.png");
+  content: url("/images/spiralcraft-webapp/system/caret-down-white.png");
   padding-left: 4px;
 }
 
@@ -79,6 +101,10 @@ ul.sc-field-grid {
 .center-dialog p {
   text-align: center;	
 }
+
+.center-dialog a {
+  text-align: center; 
+} 
 	
 .login-dialog {
   width: 25em;

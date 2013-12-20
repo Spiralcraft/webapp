@@ -1,0 +1,83 @@
+<meta:Type
+  xmlns:meta="class:/spiralcraft/data/types/meta/"
+  xmlns:entity="class:/spiralcraft/archetype/entity/"
+  xmlns:net="class:/spiralcraft/archetype/net/"
+  xmlns:wameta="class:/spiralcraft/webapp/meta/"
+  xmlns:j="class:/java/lang/"
+  xmlns:dtask="class:/spiralcraft/data/task/"
+  >
+  <baseType>
+    <wameta:Identity.type/>
+  </baseType>
+  
+  <fields>
+    <meta:Field>
+      <name>principalId
+      </name>
+      <type><String.type/>
+      </type>
+    </meta:Field>
+  </fields>
+  <methods>
+    <meta:Method>
+      <name>register
+      </name>
+
+      <static>true
+      </static>
+    
+      <parameterTypes>
+        <String.type/>
+        <String.type/>
+        <String.type/>
+        <String.type/>
+      </parameterTypes>
+      
+      <returnType>
+        <wameta:SystemUser.type/>
+      </returnType>
+      
+      <contextX>
+        [#register]
+        { 
+          commonName:[@j:String]
+          ,principalName:[@j:String]
+          ,email:[@j:String]
+          ,principalId:[@j:String]
+        }
+      </contextX>     
+       
+      <x>[*dtask:Edit{[@wameta:SystemUser].type}].()
+          { .commonName=[register].commonName
+          ,.principalName=[register].principalName
+          ,.principalId=[register].principalId
+          ,.email=[register].email
+          ,.@tuple.save()
+          ,.
+        }
+      </x>
+    </meta:Method>
+  
+    <meta:Method>
+      <name>findByPrincipalId</name>
+      
+      <static>true
+      </static>
+      
+      <parameterTypes>
+        <String.type/>
+      </parameterTypes>
+      
+      <returnType>
+        <wameta:SystemUser.type/>
+      </returnType>
+      
+      <contextX>{ principalId:[@j:String] }
+      </contextX>
+          
+      <x>[*dtask:Fetch{[@wameta:SystemUser],[{`principalId:=principalId`}]}].()
+      </x>
+          
+    </meta:Method>  
+  </methods>
+</meta:Type>

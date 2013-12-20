@@ -16,6 +16,18 @@
       <value>bundle://spiralcraft-webapp.war-webui/themes/default/
       </value>
     </httpd:InitParameter>
+    <httpd:InitParameter>
+      <name>spiralcraft.instance.publicURI
+      </name>
+      <value>http://localhost:8080
+      </value>
+    </httpd:InitParameter>
+    <httpd:InitParameter>
+      <name>spiralcraft.sysadmin.email
+      </name>
+      <value>root@localhost.localdomain
+      </value>
+    </httpd:InitParameter>
   </initParameters>
   
   <securityConstraints>
