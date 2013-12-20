@@ -15,6 +15,111 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev19
+        </revision>
+                
+        <notes>
+          <scm:Note>Second pass system console
+          </scm:Note>
+        </notes>
+        
+        <path>package
+        </path>
+        
+        <resource>
+          <URI>config/Context.assy.xml
+          </URI>
+          <URI>war-classes/spiralcraft/webapp/meta/SystemSession.type.xml
+          </URI>
+          <URI>war-classes/spiralcraft/webapp/meta/SystemUser.type.xml
+          </URI>
+          <URI>war-classes/spiralcraft/webapp/meta/WebApp.schema.xml
+          </URI>
+          <URI>war-css/themes/system/global.css
+          </URI>
+          <URI>war-css/themes/system/global-skin.css
+          </URI>
+          <URI>war-css/themes/system/global-wf.css
+          </URI>
+          <URI>war-css/themes/system/login-skin.css
+          </URI>
+          <URI>war-css/themes/system/reset.css
+          </URI>
+          <URI>war-public-images/system/caret-down-white.png
+          </URI>
+          <URI>war-system/components/dialog-page.tgl
+          </URI>
+          <URI>war-system/components/header-auth-panel.tgl
+          </URI>
+          <URI>war-system/components/main-page.tgl
+          </URI>
+          <URI>war-system/components/package.xml
+          </URI>
+          <URI>war-system/components/page.tgl
+          </URI>
+          <URI>war-system/components/resetPassword-email.tgl
+          </URI>
+          <URI>war-system/components/resetPassword-panel.tgl
+          </URI>
+          <URI>war-system/components/resetPassword-sendCode.assy.xml
+          </URI>
+          <URI>war-system/config/PlaceContext.assy.xml
+          </URI>
+          <URI>war-system/function/InitSystemUser.assy.xml
+          </URI>
+          <URI>war-system/default.webui
+          </URI>
+          <URI>war-system/login.webui
+          </URI>
+          <URI>war-system/noauth.webui
+          </URI>
+          <URI>war-system/PathContext.assy.xml
+          </URI>
+          <URI>war-system/resetPassword.webui
+          </URI>
+          <URI>war-webui/config/PlaceContext.assy.xml
+          </URI>
+          <URI>war-webui/config/SecurityFilter.assy.xml
+          </URI>
+          <URI>war-webui/function/registration/tasks/Register.assy.xml
+          </URI>
+          <URI>war-webui/PathContext.assy.xml
+          </URI>
+          <URI>war-webui/Place.assy.xml
+          </URI>
+        
+          <URI>war-classes/spiralcraft/webapp/meta/SysadminSession.type.xml
+          </URI>
+          <URI>war-classes/spiralcraft/webapp/meta/SysadminUser.type.xml
+          </URI>
+          <URI>war-css/themes/sysadmin/global.css
+          </URI>
+          <URI>war-css/themes/sysadmin/global-skin.css
+          </URI>
+          <URI>war-css/themes/sysadmin/global-wf.css
+          </URI>
+          <URI>war-css/themes/sysadmin/reset.css
+          </URI>
+          
+          
+          <URI>war-sysadmin/components/header-auth-panel.tgl
+          </URI>
+          <URI>war-sysadmin/components/main-page.tgl
+          </URI>
+          <URI>war-sysadmin/components/package.xml
+          </URI>
+          <URI>war-sysadmin/components/page.tgl
+          </URI>
+          <URI>war-sysadmin/config/PlaceContext.assy.xml
+          </URI>
+          <URI>war-sysadmin/default.webui
+          </URI>
+          <URI>war-sysadmin/PathContext.assy.xml
+          </URI>
+        </resource>
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev18
         </revision>
                 
