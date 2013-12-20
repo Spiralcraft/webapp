@@ -1,0 +1,21 @@
+<%@doclet
+  textgen:trim="true"
+  tgns:comp="bundle://spiralcraft-webapp.war-system/components/"
+  tgns:html="bundle://spiralcraft-webapp.war-system/components/html"
+  tgns:j="class:/java/lang"
+  contextX='{ 
+      id:[@j:String]
+      ,dialogClass:[@j:String]
+      ,dialogTitle:=""
+      ,dialogTitleX:=`[comp:dialog-page].dialogTitle`
+    }'
+  %>
+  <%comp:main-page $id="[comp:dialog-page].id"%>
+    <div class="main-content">
+      <%html:Div tag.clazz="center-dialog" tag.classX="[comp:dialog-page].dialogClass"%>
+        <h2 class="title"><%=[comp:dialog-page].dialogTitleX.()/%></h2>
+        <%@insert/%>
+      <%/html:Div%>
+    </div>
+  <%/comp:main-page%>
+<%/@doclet%>

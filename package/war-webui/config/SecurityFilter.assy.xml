@@ -8,10 +8,6 @@
 
   <ticketAuthModuleName>local
   </ticketAuthModuleName>
-    
-  <authenticator>
-    <config:Authenticator/>
-  </authenticator>
   
   <debug>false
   </debug>

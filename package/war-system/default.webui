@@ -1,0 +1,6 @@
+<%comp:main-page
+  tgns:comp="bundle://spiralcraft-webapp.war-system/components/"
+  title='Spiralcraft WebApp Admin'  
+  %>
+  Embedded System Console Home Page
+<%/comp:main-page%>

@@ -1,0 +1,41 @@
+<af:PathContext
+  xmlns:af="class:/spiralcraft/servlet/autofilter/"
+  xmlns:code="context://code/"
+  xmlns:saconf="context://code/system/config/"
+  xmlns:wameta="class:/spiralcraft/webapp/meta/"
+  >
+
+
+  <placeContext>
+    <saconf:PlaceContext/>
+  </placeContext>
+  
+  <filters>
+    <af:DataSessionFilter>
+      <dataType x="[@wameta:SystemSession].type" /> 
+    </af:DataSessionFilter>
+    <af:GuardFilter>
+      <authenticate>true
+      </authenticate>
+      
+      <loginURI>/system/login
+      </loginURI>
+      
+      <guardX>[wameta:SystemSession].user!=null
+      </guardX>
+      
+      <redirectUri>/system/noauth
+      </redirectUri>
+           
+      <bypassPaths>noauth
+      </bypassPaths>      
+      <bypassPaths>login
+      </bypassPaths>      
+      <bypassPaths>resetPassword
+      </bypassPaths>      
+    </af:GuardFilter>     
+  </filters>
+
+  <logLevel>FINE
+  </logLevel>
+</af:PathContext>

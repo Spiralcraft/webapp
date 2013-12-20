@@ -11,7 +11,7 @@
   </contentBaseURI>
 
   <placeContext>
-    <code:Place/>
+    <swa-config:PlaceContext/>
   </placeContext>
   
   

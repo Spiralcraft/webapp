@@ -1,0 +1,20 @@
+<%@doclet
+  tgns:comp="bundle://spiralcraft-webapp.war-system/components/"
+  tgns:wa="class:/spiralcraft/webapp/meta/"
+  tgns:login="context://code/function/login/"
+  textgen:trim="true"
+  %>
+  <%If x="[wa:SystemSession].user!=null"%>
+    <div class="header-auth-dropdown">
+      <a class="dropdown-anchor" href="#"><%=[wa:SystemSession].user.commonName/%></a>
+      <ul class="dropdown">
+        <li><a href="#">Option1</a></li>
+        <li><a href="#">Option2</a></li>
+        <li><a href="#">Option3</a></li>
+      </ul>
+      
+    </div>
+  <%Else/%>
+
+  <%/If%>
+<%/@doclet%>

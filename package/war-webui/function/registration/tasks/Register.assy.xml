@@ -8,6 +8,9 @@
   <transactional>true
   </transactional>
 
+  <addChainResult>true
+  </addChainResult>
+  
   <contextX>
     [#register] { 
       username:[@j:String]
@@ -15,6 +18,9 @@
     }
   </contextX>
 
+  <resultReflectorX>[@sec:Login]
+  </resultReflectorX>
+  
   <sequence>
     <task:Eval>
       <x>
@@ -26,6 +32,7 @@
           ,.clearpass=[register].password
           ,.securePassword([secauth:Authenticator].digestFunction)
           ,.@tuple.save()
+          ,.
         }
       </x>
     

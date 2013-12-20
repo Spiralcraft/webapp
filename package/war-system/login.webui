@@ -1,0 +1,55 @@
+<%@doclet
+  tgns:comp="bundle://spiralcraft-webapp.war-system/components/"
+  tgns:html="bundle://spiralcraft-webapp.war-system/components/html/"
+  tgns:login="bundle://spiralcraft-webapp.war-webui/function/login/"
+  tgns:swa="bundle://spiralcraft-webapp.war-webui/"  
+  %>
+  <%comp:dialog-page id="login" dialogClass="form-dialog login-dialog"%>
+    <%html:Stylesheet href="/css/spiralcraft-webapp/themes/system/login-skin.css" target="HEAD"/%>
+    <%login:Form tag.clazz="login-form" reloadAfterAction="true"
+      %>
+      <%html:Login
+        requireLoginPermission="true"
+        errorTag.tagName="div"
+        errorTag.clazz="error"
+        %>
+        <ul class="sc-field-grid">
+          <li class="sc-field-row text-row">
+            <%swa:formField labelX='"Username"'%>
+              <%login:UsernameInput /%>
+            <%/swa:formField%>
+          </li>
+          <li class="sc-field-row text-row">
+            <%swa:formField labelX='"Password"'%>
+              <%login:PasswordInput /%>
+            <%/swa:formField%>
+          </li>
+          <li class="sc-field-row">
+            <%login:DigestHiddenInput/%>
+          </li>
+          <li class="sc-field-row check-row">
+            
+            <%swa:formField labelX='"Remember me"'%>
+              <%login:PersistentInput /%>
+            <%/swa:formField%>
+            <p>Keep me signed in on this browser</p>
+          </li>
+  
+        </ul>
+        
+        <div class="sc-form-button-bar sc-login-form-button-bar">
+          <%html:Button 
+            x="[html:Login].loginCommand()" 
+            tag.clazz="sc-form-completion-button button"
+            %>Sign In
+          <%/html:Button%>
+        </div>
+
+        <div class="login-form-footer">
+          <span><a href="resetPassword">I forgot my password</a></span>
+        </div>
+        
+      <%/html:Login%>
+    <%/login:Form%>
+  <%/comp:dialog-page%>
+<%/@doclet%>

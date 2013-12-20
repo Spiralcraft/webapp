@@ -1,0 +1,51 @@
+<dtask:Session
+  xmlns:app="class:/spiralcraft/app/"
+  xmlns:regtask="bundle://spiralcraft-webapp.war-webui/function/registration/tasks/"
+  xmlns:su="class:/spiralcraft/util/"
+  xmlns:wameta="class:/spiralcraft/webapp/meta/"
+  xmlns:dtask="class:/spiralcraft/data/task/"
+  xmlns:task="class:/spiralcraft/task"
+  xmlns:sec="class:/spiralcraft/security/"
+  xmlns:st="class:/spiralcraft/time/"
+  xmlns:util="class:/spiralcraft/util/"
+  xmlns:comp="bundle://spiralcraft-webapp.war-system/components/"
+  >
+
+  <transactional>true
+  </transactional>
+  
+  <sequence>
+    <task:Eval>
+      <x>
+        []{ 
+          @log("postInitialize: "
+            +[app:PlaceContext].id+" version "+[app:PlaceContext].version
+            )
+      
+          ,{ password:=[@su:RandomUtil].@generateString(16)
+              ,login:=[*regtask:Register].(username:="system",password:=.password).@log(.)
+              ,user:=[@wameta:SystemUser].@register
+                ("system"
+                  ,"system"
+                  ,[@util:ContextDictionary].@getInstance().find
+                     ("spiralcraft.sysadmin.email"
+                     ,"root@localhost.localdomain"
+                     )
+                  ,.login.principalId
+                ).@log(.)
+              ,ticket:=[@sec:Ticket].@create
+                   (.login.principalId
+                   ,[@st:Chronom].@MINUTE.times(30)
+                   )
+              ,@log("System password reset code is "+..ticket.code)
+              ,[*comp:resetPassword-sendCode].(.user.email,.user.commonName,.ticket.code)
+           }
+        }
+      
+      </x>
+    </task:Eval>
+  </sequence>
+
+</dtask:Session>
+
+

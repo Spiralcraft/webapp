@@ -2,6 +2,9 @@
   xmlns:app="class:/spiralcraft/app/"
   xmlns:vfsc="class:/spiralcraft/vfs/context/"
   xmlns:swa-code="context://code/"
+  xmlns:swa-conf="context://code/config/"
+  xmlns:config="context://config/"
+  xmlns:smtp="class:/spiralcraft/net/smtp/"
   >
 
   <id>spiralcraft-webapp
@@ -13,6 +16,14 @@
   <plugins>
     <swa-code:Plugin/>
   </plugins>
+  
+  <imports>
+    [*config:SMTPGateway]
+  </imports>
+  
+  <authenticator>
+    <swa-conf:Authenticator/>
+  </authenticator>
   
   <exportMounts>
     <vfsc:Authority>
@@ -33,6 +44,10 @@
     </vfsc:Authority>  
   </exportMounts>
     
+  <exports>
+    [*smtp:QueueConnector]
+  </exports>
+  
   <logLevel>INFO
   </logLevel>
 </app:PlaceContext>
