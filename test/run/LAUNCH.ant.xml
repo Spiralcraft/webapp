@@ -7,8 +7,8 @@
 -->  
   <property name="launchArgs" value="--gui"/>
   <target name="launch">
-    <del dir="../data"/>
-    <del dir="../packages"/>
+    <!-- <delete dir="../data"/> -->
+    <delete dir="../packages"/>
     <copy  todir="../packages">
       <fileset dir="../../packages" includes="*.zip"/>
     </copy>
