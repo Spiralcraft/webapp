@@ -15,6 +15,69 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev20
+        </revision>
+                
+        <notes>
+          <scm:Note>inProcess flag for SMTP queue failsafe to prevent
+            repeated resending of messages when encountering an exception
+            post-send.
+          </scm:Note>
+          <scm:Note>Add SMTP queue processing task to default PlaceContext
+          </scm:Note>
+        </notes>
+        
+        <path>package
+        </path>
+        
+        <resource>
+          <URI>war-webui/config/PlaceContext.assy.xml
+          </URI>
+          <URI>war-webui/config/SMTPForward.assy.xml
+          </URI>
+        </resource>
+      </scm:Change>
+
+      <scm:Change>
+        <revision>-dev20
+        </revision>
+                
+        <notes>
+          <scm:Note>Third pass system console
+          </scm:Note>
+        </notes>
+        
+        <path>package
+        </path>
+        
+        <resource>
+          <URI>war-css/themes/system/global-skin.css
+          </URI>
+          <URI>war-css/themes/system/global-wf.css
+          </URI>
+          <URI>war-css/themes/system/login-skin.css
+          </URI>
+          <URI>war-system/components/dialog-page.tgl
+          </URI>
+          <URI>war-system/components/header-auth-panel.tgl
+          </URI>
+          <URI>war-system/components/header-local-id.tgl
+          </URI>
+          <URI>war-system/components/main-page.tgl
+          </URI>
+          <URI>war-system/components/page.tgl
+          </URI>
+          <URI>war-system/login.webui
+          </URI>
+          <URI>war-system/noauth.webui
+          </URI>
+          <URI>war-system/resetPassword-webui
+          </URI>
+        </resource>
+      </scm:Change>
+      
+
+      <scm:Change>
         <revision>-dev19
         </revision>
                 
