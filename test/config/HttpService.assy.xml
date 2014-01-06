@@ -50,7 +50,15 @@
           </value>
         </httpd:InitParameter>
       
+        <httpd:InitParameter>
+          <name>spiralcraft.sysadmin.email
+          </name>
+          <value>test.admin@domain.example
+          </value>
+        </httpd:InitParameter>
+      
       </initParameters>
+
     </config:Context>
         
   </serviceContext>
