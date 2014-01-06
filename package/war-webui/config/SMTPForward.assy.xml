@@ -1,25 +1,66 @@
-<dtask:Session
+<task:Batch
   xmlns:task="class:/spiralcraft/task/"
   xmlns:dtask="class:/spiralcraft/data/task/"
   xmlns:smtp="class:/spiralcraft/net/smtp/"
   xmlns:conf="context://config/"
   >
-  <transactional>true
-  </transactional>
+  <source>
+    [*dtask:Fetch{[@smtp:Queue.list]}].()
+  </source>
+  
   <sequence>
-    <task:Eval>
-      <x>
-        [*dtask:Fetch{[@smtp:Queue.list]}].()#
-          {
-            .{ [*conf:SMTPGateway].send(.envelope.[*dtask:Internalize])
-               ,.[*dtask:Edit].()
-                 { 
-                  .@tuple.delete()
-                  ,.@tuple.save()
-                 }
-            }
-          }
+    <task:If>
+      <x>inProcess!=true
       </x>
-    </task:Eval>
+      
+      <then>
+        <dtask:Session
+          >
+          <transactional>true
+          </transactional>
+          <sequence>
+            <task:Eval>
+              <x>.[*dtask:Edit].()
+                  { 
+                    .inProcess=true
+                    ,.@tuple.save()
+                  }
+              </x>
+            </task:Eval>
+          </sequence>
+        </dtask:Session>
+      
+        <dtask:Session>
+          <transactional>true
+          </transactional>
+          <sequence>
+            <task:Eval>
+              <x>
+                .{ 
+                  [*conf:SMTPGateway].send(.envelope.[*dtask:Internalize])
+                  ,.[*dtask:Edit].()
+                    { 
+                      .@tuple.delete()
+                      ,.@tuple.save()
+                    }
+                 }    
+              </x>
+            </task:Eval>
+          </sequence>
+        </dtask:Session>
+      </then>
+      
+      <else>
+        <task:Log>
+          <x>"Already in process, skipping "+.
+          </x>
+        </task:Log>
+      </else>
+      
+    
+    </task:If>
+    
+  
   </sequence>
-</dtask:Session>
+
+</task:Batch>
