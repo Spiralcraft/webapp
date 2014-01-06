@@ -10,7 +10,7 @@
       ,dialogTitleX:=`[comp:dialog-page].dialogTitle`
     }'
   %>
-  <%comp:main-page $id="[comp:dialog-page].id"%>
+  <%comp:main-page $id="[comp:dialog-page].id" bodyClass="sc-dialog-body"%>
     <div class="main-content">
       <%html:Div tag.clazz="center-dialog" tag.classX="[comp:dialog-page].dialogClass"%>
         <h2 class="title"><%=[comp:dialog-page].dialogTitleX.()/%></h2>

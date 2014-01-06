@@ -1,0 +1,16 @@
+<%@doclet
+  tgns:comp="bundle://spiralcraft-webapp.war-system/components/"
+  tgns:wa="class:/spiralcraft/webapp/meta/"
+  tgns:login="context://code/function/login/"
+  tgns:net="class:/java/net/"
+  tgns:webui="class:/spiralcraft/servlet/webui/"
+  tgns:vfs="class:/spiralcraft/vfs/"
+  textgen:trim="true"
+  %>
+  <div>
+    <%=[webui:ServiceContext].publicLocator.standardLink("",[webui:ServiceContext].request)/%>
+  </div>
+  <div>
+    <%=[@net:InetAddress].@getLocalHost().hostName/%> - <%=[@net:InetAddress].@getLocalHost().hostAddress/%> 
+  </div>
+<%/@doclet%>

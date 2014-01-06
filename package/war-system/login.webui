@@ -10,6 +10,7 @@
       %>
       <%html:Login
         requireLoginPermission="true"
+        defaultURI="/system"
         errorTag.tagName="div"
         errorTag.clazz="error"
         %>

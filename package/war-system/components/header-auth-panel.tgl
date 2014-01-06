@@ -1,16 +1,32 @@
 <%@doclet
   tgns:comp="bundle://spiralcraft-webapp.war-system/components/"
+  tgns:html="bundle://spiralcraft-webapp.war-system/components/html/"
   tgns:wa="class:/spiralcraft/webapp/meta/"
   tgns:login="context://code/function/login/"
+  tgns:filter="class:/spiralcraft/servlet/autofilter/"
+  tgns:webui="class:/spiralcraft/servlet/webui/"
+  tgns:jnet="class:/java/net/"
   textgen:trim="true"
   %>
   <%If x="[wa:SystemSession].user!=null"%>
     <div class="header-auth-dropdown">
       <a class="dropdown-anchor" href="#"><%=[wa:SystemSession].user.commonName/%></a>
       <ul class="dropdown">
+        <!--
         <li><a href="#">Option1</a></li>
         <li><a href="#">Option2</a></li>
-        <li><a href="#">Option3</a></li>
+        -->
+        <li>     
+          <%html:Link 
+            onAction=
+              '{
+                [filter:SecurityFilter].logout()
+                ,[webui:ServiceContext].redirect
+                  ([webui:ServiceContext].absoluteBackLink)
+              }'
+            %>Sign Out
+          <%/html:Link%>
+        </li>
       </ul>
       
     </div>

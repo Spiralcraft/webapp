@@ -17,12 +17,14 @@
       ,themeName:="system"
       ,title:=[@st:MessageFormat].("")
       ,id:[@j:String]
+      ,bodyClass:=[@st:MessageFormat].("sc-generic-body")
     }
     '
   %>
   <%html:Page 
     $title="[webapp:page].title" 
     bodyOnLoad="SPIRALCRAFT.dom.bodyOnLoad()"
+    $bodyTag.clazz="[{[webapp:page].bodyClass}]"
     $css
       ='[{[@su:URIUtil].@addPathSegment
              ([webapp:page].cssURI

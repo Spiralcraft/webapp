@@ -10,6 +10,7 @@
 
 .wrap-header > .inner {
   padding: 6px;        
+  display: block;
 }
 
 .wrap-footer {
@@ -53,6 +54,15 @@
   display: inline-block;
   position: relative;
   top: -5px;
+}
+
+.header-local-id {
+	display: inline-block;
+	color: #FFFFFF;
+	height: 48px;
+	width: 66%;
+	vertical-align: top;
+	text-align: center;
 }
 
 .brand .company {
@@ -120,3 +130,14 @@ ul.sc-field-grid {
 }
 
 
+/* 
+ * Default Skin 
+ */
+.sc-dialog-body {
+	background-color: #CCCCCC;
+}
+
+.center-dialog {
+	background-color: #FFFFFF;
+}
+}
