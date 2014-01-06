@@ -5,6 +5,7 @@
   xmlns:swa-conf="context://code/config/"
   xmlns:config="context://config/"
   xmlns:smtp="class:/spiralcraft/net/smtp/"
+  xmlns:task="class:/spiralcraft/task/"
   >
 
   <id>spiralcraft-webapp
@@ -24,6 +25,16 @@
   <authenticator>
     <swa-conf:Authenticator/>
   </authenticator>
+  
+  <schedulers>
+    <task:TaskScheduler>
+      <period>5000
+      </period>
+      <scenario>
+        <swa-conf:SMTPForward/>
+      </scenario>
+    </task:TaskScheduler>
+  </schedulers>  
   
   <exportMounts>
     <vfsc:Authority>
