@@ -30,6 +30,7 @@
         <div class="header-auth-panel">
           <%comp:header-auth-panel/%>
         </div>
+        <div class="stretcher"></div>
       </div>
     </div>  
     <div class="wrap-body">

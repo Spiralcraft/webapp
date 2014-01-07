@@ -19,7 +19,7 @@ a:hover, a:focus {
 }
 
 .wrap-header {
-  background-color: #5B69A8;	
+  background-color: #5B69A8;  
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -46,7 +46,7 @@ a:hover, a:focus {
 }
 
 .header-brand img {
-	background-color: #FFFFFF;
+  background-color: #FFFFFF;
 }
 
 .header-brand .brand {
@@ -54,7 +54,7 @@ a:hover, a:focus {
 }
 
 .header-brand .company {
-  font-size: 16pt;	
+  font-size: 16pt;  
 }
 
 .header-brand .product {
@@ -132,7 +132,7 @@ a:hover, a:focus {
 }
 
 .sc-webui-form fieldset {
-  border: none;	
+  border: none;  
 }
 
 .sc-webui-form fieldset > label {
@@ -140,29 +140,41 @@ a:hover, a:focus {
   font-weight: bold;
 }
 
+.header-auth-dropdown {
+  text-align: right;
+  position: relative;
+}
+
 .header-auth-dropdown ul {
   list-style: none;
   display: none;
-  border: 1px solid #000000;
+  border: 1px solid #AAAAAA;
   margin: 0;
   padding: 0;
   border-radius: 5px;
   -moz-border-radius: 5px;
-
+  box-shadow: 1px 1px 2px 0px #000000;
 }
 
 .header-auth-dropdown:hover ul {
   display: block;
+  text-align: right;
+  width:100px;
   position: absolute;
+  border-radius: 5px;
+  border: 1px solid #AAAAAA;
+  right: 0;
+  padding: 1px;
+  background: #8C8C8C;
 
 }
 
 .header-auth-dropdown:hover li {
   float: none;
-  background: #1F003D;
+  /** background: #1F003D; **/
   padding: 5px 10px 5px 30px;
   /** outline: 1px solid #EEEEEE; **/
-  border-bottom: 1px solid #EEEEEE;
+  /** border-bottom: 1px solid #EEEEEE; **/
   margin-top: 0px;
   list-style: none outside none;
 
@@ -181,7 +193,9 @@ a:hover, a:focus {
 }
 
 .header-auth-dropdown:hover li:hover {
-  background: #100088; 
+  /**  background: #100088;  **/
+  background: #999999;
+  border-radius: 3px;
   text-decoration: underline;
 }
 

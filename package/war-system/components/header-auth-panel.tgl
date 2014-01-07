@@ -31,6 +31,8 @@
       
     </div>
   <%Else/%>
-
+    <%If x='[comp:page].id!="login"'%>
+      <a class="dropdown-anchor" href="login">System Login</a>
+    <%/If%>
   <%/If%>
 <%/@doclet%>

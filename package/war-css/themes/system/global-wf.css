@@ -1,6 +1,6 @@
 * {
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 .wrap-header {
@@ -11,8 +11,16 @@
 .wrap-header > .inner {
   padding: 6px;        
   display: block;
+  max-height: 65px;
+  whitespace: no-wrap;
+  width: 100%;
+  min-width: 872px;
+  text-align: center;
 }
 
+.wrap-header > .inner > .stretcher {
+  clear: both;
+}
 .wrap-footer {
   height: 64px;
 }
@@ -36,13 +44,15 @@
 
 .header-brand {
   display: inline-block;
+  float: left;
+  text-align: left;
 }
 
 .header-brand .image {
-	display: inline-block;
-	height: 48px;
-	top:0;
-	
+  display: inline-block;
+  height: 48px;
+  top:0;
+  
 }
 
 .header-brand .image img {
@@ -57,16 +67,16 @@
 }
 
 .header-local-id {
-	display: inline-block;
-	color: #FFFFFF;
-	height: 48px;
-	width: 66%;
-	vertical-align: top;
-	text-align: center;
+  display: inline-block;
+  color: #FFFFFF;
+  height: 48px;
+  vertical-align: top;
+  text-align: center;
+  min-width: 348px;
 }
 
 .brand .company {
-	display: block;
+  display: block;
 }
 
 .brand .product {
@@ -76,9 +86,14 @@
 .header-auth-panel {
   display: inline-block;
   float: right;
+  min-width: 252px;
+  text-align: right;
+} 
+
+
+.header-auth-dropdown {
+  text-align: right;
 }
-
-
 .header-auth-dropdown .dropdown-anchor {
   padding-left: 20px;
 }
@@ -89,7 +104,7 @@
 }
 
 ul.sc-field-grid {
-  list-style: none;	
+  list-style: none;  
 }
 
 
@@ -105,23 +120,27 @@ ul.sc-field-grid {
 .center-dialog h2.title {
   margin-top:0px;
   margin-bottom: 10px;
-  text-align: center;	
+  text-align: center;  
 }
 
 .center-dialog p {
-  text-align: center;	
+  text-align: center;  
 }
 
 .center-dialog a {
   text-align: center; 
 } 
-	
+  
 .login-dialog {
   width: 25em;
 }
 
 .form-dialog {
-  width: 31em;	
+  width: 31em;  
+}
+
+.form-dialog input[type="text"] {
+  width: 66%;
 }
 
 .sc-form-button-bar {
@@ -134,9 +153,9 @@ ul.sc-field-grid {
  * Default Skin 
  */
 .sc-dialog-body {
-	background-color: #CCCCCC;
+  background-color: #CCCCCC;
 }
 
 .center-dialog {
-	background-color: #FFFFFF;
+  background-color: #FFFFFF;
 }
