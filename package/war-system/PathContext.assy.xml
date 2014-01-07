@@ -36,6 +36,6 @@
     </af:GuardFilter>     
   </filters>
 
-  <logLevel>FINE
+  <logLevel>INFO
   </logLevel>
 </af:PathContext>

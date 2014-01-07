@@ -1,0 +1,31 @@
+<%@doclet
+  tgns:comp="bundle://spiralcraft-webapp.war-system/components/"
+  tgns:html="bundle://spiralcraft-webapp.war-system/components/html/"
+  tgns:login="bundle://spiralcraft-webapp.war-webui/function/login/"
+  tgns:swa="bundle://spiralcraft-webapp.war-webui/" 
+  tgns:swm="class:/spiralcraft/webapp/meta/"
+  %>
+  <%comp:dialog-page id="profile" dialogClass="form-dialog"%>
+    <h2>Profile for "<%=[swm:SystemSession].user.commonName/%>"</h2>
+    <%html:Form%>
+      <%html:TupleEditor x="[swm:SystemSession].user"%>
+        <ul class="sc-field-grid">
+          <li class="sc-field-row text-row">
+            <%swa:formField labelX='"Email"'%>
+              <%html:TextInput x=".email"/%>
+            <%/swa:formField%>
+          </li>
+        </ul>
+        
+        <div class="sc-form-button-bar sc-login-form-button-bar">
+          <%html:Button 
+            onAction="[html:Form].save()" 
+            tag.clazz="sc-form-completion-button button"
+            %>Save
+          <%/html:Button%>
+        </div>
+      <%/html:TupleEditor%>
+    <%/html:Form%>
+    
+  <%/comp:dialog-page%>
+<%/@doclet%>
