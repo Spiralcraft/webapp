@@ -15,6 +15,50 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev21
+        </revision>
+                
+        <notes>
+          <scm:Note>Edit system user profile (email address)
+          </scm:Note>
+        </notes>
+        
+        <path>package/war-system
+        </path>
+        
+        <resource>
+          <URI>PathContext.assy.xml
+          </URI>
+          <URI>profile.webui
+          </URI>
+        </resource>
+      </scm:Change>
+
+      <scm:Change>
+        <revision>-dev21
+        </revision>
+                
+        <notes>
+          <scm:Note>System console UI visual enhancements
+          </scm:Note>
+        </notes>
+        
+        <path>package
+        </path>
+        
+        <resource>
+          <URI>war-css/themes/system/global-skin.css
+          </URI>
+          <URI>war-css/themes/system/global-wf.css
+          </URI>
+          <URI>war-system/components/header-auth-panel.tgl
+          </URI>
+          <URI>war-system/components/main-page.tgl
+          </URI>
+        </resource>
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev20
         </revision>
                 

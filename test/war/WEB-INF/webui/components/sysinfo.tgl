@@ -1,0 +1,51 @@
+<%@doclet
+  tgns:comp="context://code/components/"
+  tgns:wa="class:/spiralcraft/webapp/meta/"
+  tgns:login="context://code/function/login/"
+  tgns:net="class:/java/net/"
+  tgns:servlet="class:/javax/servlet/"
+  textgen:trim="true"
+  %>
+  <h2>System Info</h2>
+  <h3>Host</h3>
+  <div class="labeled-value-panel">
+    <div class="labeled-value">
+      <label>Host:</label> <%=[@net:InetAddress].@getLocalHost().hostName/%> - <%=[@net:InetAddress].@getLocalHost().hostAddress/%> 
+    </div>
+  </div>
+  <br/>
+  <div class="labeled-value-panel">
+    <h3>Servlet Context</h3>
+    <div class="labeled-value">
+      <label>Context Path</label> <%=[servlet:ServletContext].contextPath/%>
+    </div>
+    <div class="labeled-value">
+      <label>Servlet API Version</label> <%=[servlet:ServletContext]{""+.majorVersion+"."+.minorVersion}/%>
+    </div>
+    
+    <%Iterate x='[servlet:ServletContext].attributeNames#{""+.}'%>
+      <div class="labeled-value">
+        <label>Attribute:&nbsp;<i><%=./%></i></label> 
+        <%=[servlet:ServletContext].getAttribute(.)/%>
+      </div>
+    
+    <%/Iterate%>
+
+    <%Iterate x='[servlet:ServletContext].initParameterNames#{""+.}'%>
+      <div class="labeled-value">
+        <label>Init Parameter:&nbsp; <i><%=./%></i></label> 
+        <%=[servlet:ServletContext].getInitParameter(.)/%>
+      </div>
+    
+    <%/Iterate%>
+    <div class="labeled-value">
+      <label>Server Info</label> <%=[servlet:ServletContext].serverInfo/%>
+    </div>
+    <div class="labeled-value">
+      <label>Servlet Context Name</label> <%=[servlet:ServletContext].servletContextName/%>
+    </div>
+    <div class="labeled-value">
+      <label>Implementation Class</label> <%=[servlet:ServletContext].@subtype.contentType/%>
+    </div>
+  </div>
+<%/@doclet%>

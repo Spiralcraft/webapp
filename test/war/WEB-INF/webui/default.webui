@@ -1,0 +1,19 @@
+<%theme:page
+  tgns:theme="context://theme/"
+  tgns:comp="context://code/components/"
+  %>
+  <style>
+
+.labeled-value {
+  padding-left: 10px;
+}
+.labeled-value label {
+  display: block;
+	padding-right: 5px;
+	margin-left: -10px;
+	
+}  
+  
+  </style>
+  <%comp:sysinfo/%>
+<%/theme:page%>
