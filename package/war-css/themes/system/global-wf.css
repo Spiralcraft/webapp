@@ -30,9 +30,6 @@
 }
 
 
-.main-content {
-
-}
 
 /* Float main-footer at bottom */
 .wrap-footer {
@@ -104,7 +101,7 @@
 }
 
 ul.sc-field-grid {
-  list-style: none;  
+  list-style: none;	
 }
 
 
@@ -120,23 +117,23 @@ ul.sc-field-grid {
 .center-dialog h2.title {
   margin-top:0px;
   margin-bottom: 10px;
-  text-align: center;  
+  text-align: center;	
 }
 
 .center-dialog p {
-  text-align: center;  
+  text-align: center;	
 }
 
 .center-dialog a {
   text-align: center; 
 } 
-  
+
 .login-dialog {
   width: 25em;
 }
 
 .form-dialog {
-  width: 31em;  
+  width: 31em;	
 }
 
 .form-dialog input[type="text"] {
@@ -148,6 +145,46 @@ ul.sc-field-grid {
   
 }
 
+.activity-container {
+  width: 98%;
+  margin: auto;
+  padding: 10px;
+  margin-top: 5px;
+    
+}
+
+.activity-container .title {
+  margin-top: 0;
+}
+
+.search-criteria-panel {
+  padding: 5px;
+  padding-bottom: 10px;
+}
+
+.search-criteria-panel .sc-form-button-bar {
+  text-align: left;
+  margin: 4px;
+}
+
+.search-result-table {
+  border-collapse: collapse;
+  border: 1px solid #CCCCCC;
+}
+
+.search-result-table td {
+  border: 1px solid #CCCCCC;
+  padding:2px;
+}
+
+.search-result-table tr {
+  border: 1px solid #CCCCCC;
+}
+
+.search-result-table th {
+  border: 1px solid #CCCCCC;
+  padding: 2px;
+}
 
 /* 
  * Default Skin 
@@ -158,4 +195,9 @@ ul.sc-field-grid {
 
 .center-dialog {
   background-color: #FFFFFF;
+}
+
+.activity-container {
+  background-color: #FFFFFF;
+    
 }
