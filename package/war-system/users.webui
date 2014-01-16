@@ -1,0 +1,26 @@
+<%@doclet
+  tgns:comp="bundle://spiralcraft-webapp.war-system/components/"
+  tgns:html="bundle://spiralcraft-webapp.war-system/components/html/"
+  tgns:login="bundle://spiralcraft-webapp.war-webui/function/login/"
+  tgns:swa="bundle://spiralcraft-webapp.war-webui/" 
+  tgns:swm="class:/spiralcraft/webapp/meta/"
+  tgns:dtask="class:/spiralcraft/data/task/"
+  tgns:sec="class:/spiralcraft/security/"
+  tgns:af="class:/spiralcraft/servlet/autofilter/"
+  tgns:j="class:/java/lang/"
+  %>
+  <%comp:activity-page id="users" activityTitle="Manage Logins and Users"%>
+    <%comp:RequestData
+      x='[#request] 
+         { id:[@j:String]
+         }
+        '
+      %>
+      <%If x=".id==null"%>
+        <%comp:userSearch-panel/%>
+      <%Else/%>
+        <%comp:userEdit-panel/%>
+      <%/If%>
+    <%/comp:RequestData%>
+  <%/comp:activity-page%>
+<%/@doclet%>

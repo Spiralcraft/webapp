@@ -22,7 +22,7 @@
     '
   %>
   <%html:Page 
-    $title="[webapp:page].title" 
+    $title='[webapp:page].title'
     bodyOnLoad="SPIRALCRAFT.dom.bodyOnLoad()"
     $bodyTag.clazz="[{[webapp:page].bodyClass}]"
     $css

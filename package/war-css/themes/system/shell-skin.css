@@ -1,0 +1,12 @@
+form.shell .commandBuffer textarea {
+  width: 100%;
+}
+
+form.shell .error {
+  font-family: monospace;
+}
+
+form.shell .resultDetail {
+  margin-top: 10px;
+  font-family: monospace;
+}

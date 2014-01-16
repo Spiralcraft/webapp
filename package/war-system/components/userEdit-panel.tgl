@@ -1,0 +1,72 @@
+<%@doclet
+  tgns:comp="bundle://spiralcraft-webapp.war-system/components/"
+  tgns:h="bundle://spiralcraft-webapp.war-system/components/html/"
+  tgns:login="bundle://spiralcraft-webapp.war-webui/function/login/"
+  tgns:swa="bundle://spiralcraft-webapp.war-webui/" 
+  tgns:swm="class:/spiralcraft/webapp/meta/"
+  tgns:dtask="class:/spiralcraft/data/task/"
+  tgns:sec="class:/spiralcraft/security/"
+  tgns:af="class:/spiralcraft/servlet/autofilter/"
+  tgns:j="class:/java/lang/"
+  %>
+  <div class="user-edit-panel">
+    <%h:Form
+      x='[#model] 
+          { user:=[@swm:SystemUser].@findByPrincipalId([request].id)
+          , login:=[@sec:Login].@findById([request].id)
+          }
+        '
+      %>
+      <h2>Username: <%=login.username/%></h2>
+      
+      <%If x="user!=null"%>
+        <%h:TupleEditor 
+          x="user"
+          %>
+          <%h:FormField%>
+            <%h:Label%>Common name<%/h:Label%>
+            <%h:TextInput x="commonName"/%>
+          <%/h:FormField%>
+            
+          <div class="sc-form-button-bar">
+            <%h:Button
+               type="submit"
+               onAction='[h:TupleEditor].save()'
+               %>Save
+            <%/h:Button%>
+            
+            <%h:Button
+               type="submit"
+               onAction='[]{ .@tuple.delete(), .@tuple.save() }
+                        '
+              %>Remove System Access
+            <%/h:Button%>
+          </div>
+        <%/h:TupleEditor%>
+
+      
+      <%Else/%>
+        <%With x='[#register] { login:=[model].login, email:[@j:String] }'%>
+          <%h:FormField%>
+            <%h:Label%>email<%/h:Label%>
+            <%h:TextInput x="[register].email"/%>
+            <%h:Button
+              type="submit"
+              onAction='[@swm:SystemUser].@register
+                         (login.username
+                         ,login.username
+                         ,email
+                         ,login.principalId
+                         )
+                       '
+              %>Grant System Access
+            <%/h:Button%>
+          <%/h:FormField%>
+        <%/With%>
+      <%/If%>
+      
+
+      
+    <%/h:Form%>
+  </div>
+<%/@doclet%>

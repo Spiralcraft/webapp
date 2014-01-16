@@ -23,16 +23,24 @@
             )
       
           ,{ password:=[@su:RandomUtil].@generateString(16)
-              ,login:=[*regtask:Register].(username:="system",password:=.password).@log(.)
-              ,user:=[@wameta:SystemUser].@register
-                ("system"
-                  ,"system"
-                  ,[@util:ContextDictionary].@getInstance().find
-                     ("spiralcraft.sysadmin.email"
-                     ,"root@localhost.localdomain"
-                     )
-                  ,.login.principalId
-                ).@log(.)
+              ,login:=[*dtask:Fetch{[@sec:Login],`.username=="system"`}].()
+                { .==null
+                  ?[*regtask:Register].(username:="system",password:=..password)
+                  :. 
+                }
+              ,user:=[*dtask:Fetch{[@wameta:SystemUser],`.principalId==..login.principalId`}].()
+                { .==null
+                  ?[@wameta:SystemUser].@register
+                    ("system"
+                      ,"system"
+                      ,[@util:ContextDictionary].@getInstance().find
+                         ("spiralcraft.sysadmin.email"
+                         ,"root@localhost.localdomain"
+                         )
+                      ,..login.principalId
+                    ).@log(.)
+                  :.
+                }
               ,ticket:=[@sec:Ticket].@create
                    (.login.principalId
                    ,[@st:Chronom].@MINUTE.times(30)

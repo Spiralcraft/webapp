@@ -1,6 +1,13 @@
-<%comp:main-page
+<%comp:activity-page
   tgns:comp="bundle://spiralcraft-webapp.war-system/components/"
-  title='Spiralcraft WebApp Admin'  
+  activityTitle='Home - Spiralcraft WebApp Admin'  
   %>
-  Embedded System Console Home Page
-<%/comp:main-page%>
+  <div class="expanded-menu-panel">
+    <ul>
+      <li><a href="users">Users</a>
+      </li>
+      <li><a href="shell">Shell</a>
+      </li>
+    </ul>
+  </div>
+<%/comp:activity-page%>

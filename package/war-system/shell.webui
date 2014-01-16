@@ -1,0 +1,64 @@
+<%c:activity-page
+  tgns:c="bundle://spiralcraft-webapp.war-system/components/"
+  tgns:h="bundle://spiralcraft-webapp.war-system/components/html/"
+  tgns:json="class:/spiralcraft/json/"
+  tgns:webui="class:/spiralcraft/servlet/webui/"
+  tgns:shell="class:/spiralcraft/shell/"
+  tgns:ul="class:/spiralcraft/util/lang/"
+  activityTitle="System Shell"
+  %>
+  <%h:Stylesheet href="/css/spiralcraft-webapp/themes/system/shell-skin.css" target="HEAD"/%>
+  <%c:Session
+    x='{  }'
+    %>
+    <%shell:ShellService sandbox="false"%>
+      <%h:Form tag.clazz="shell"%>
+        <div class="mappings">
+          <h3>Mappings</h3>
+          <ul>
+          <%Iterate x="[shell:ShellService].context.prefixResolver.computeMappings().entrySet()"%>
+            <li><%=./%></li>
+          <%/Iterate%>
+          </ul>
+        </div>
+        <div class="commandBuffer">
+          <h3>Expression</h3>
+          <%h:TextArea  x='[shell:ShellService].context.commandBuffer'/%>
+        </div>
+        <div class="button-strip">
+          <%h:SubmitButton label="eval" onAction='[shell:ShellService].eval()'/%>
+        </div>
+        <div class="result">
+          <%With x='[shell:ShellService].context'%>
+            <h3>Result</h3>
+            <%If x='exception!=null'%>
+              <div class="error">
+                <%=[@ul:ExceptionUtil].@toText(exception)/%>
+              </div>
+            <%Else/%>
+              <div class="resultType">
+                Type: <%=lastResult.@subtype.typeURI/%> 
+              </div>
+              <div class="resultDetail">
+                <%=lastResult.@subtype.stringConverter{.!=null?.toString(lastResult):lastResult}/%>
+              </div>
+            <%/If%>
+          <%/With%>
+        </div>
+        <div class="history">
+          <h3>History</h3>
+          <ul>
+          <%Iterate x="[shell:ShellService].context.history"%>
+            <li>
+              <%h:Link onAction="[shell:ShellService].context.commandBuffer=."%>
+                <%=./%>
+              <%/h:Link%>
+            </li>
+          <%/Iterate%>
+          </ul>
+        </div>
+      <%/h:Form%>
+    <%/shell:ShellService%>
+    
+  <%/c:Session%>
+<%/c:activity-page%>

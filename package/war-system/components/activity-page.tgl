@@ -1,0 +1,21 @@
+<%@doclet
+  textgen:trim="true"
+  tgns:comp="bundle://spiralcraft-webapp.war-system/components/"
+  tgns:html="bundle://spiralcraft-webapp.war-system/components/html"
+  tgns:j="class:/java/lang"
+  contextX='{ 
+      id:[@j:String]
+      ,activityClass:[@j:String]
+      ,activityTitle:=""
+      ,activityTitleX:=`[comp:activity-page].activityTitle`
+    }'
+  %>
+  <%comp:main-page $id="[comp:activity-page].id" bodyClass="sc-dialog-body" title='{|[comp:activity-page].activityTitleX.()|}'%>
+    <div class="main-content">
+      <%html:Div tag.clazz="activity-container" tag.classX="[comp:activity-page].activityClass"%>
+        <h2 class="title"><%=[comp:activity-page].activityTitleX.()/%></h2>
+        <%@insert/%>
+      <%/html:Div%>
+    </div>
+  <%/comp:main-page%>
+<%/@doclet%>

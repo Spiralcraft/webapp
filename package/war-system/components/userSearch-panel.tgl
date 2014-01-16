@@ -1,0 +1,65 @@
+<%@doclet
+  tgns:comp="bundle://spiralcraft-webapp.war-system/components/"
+  tgns:html="bundle://spiralcraft-webapp.war-system/components/html/"
+  tgns:login="bundle://spiralcraft-webapp.war-webui/function/login/"
+  tgns:swa="bundle://spiralcraft-webapp.war-webui/" 
+  tgns:swm="class:/spiralcraft/webapp/meta/"
+  tgns:dtask="class:/spiralcraft/data/task/"
+  tgns:sec="class:/spiralcraft/security/"
+  tgns:af="class:/spiralcraft/servlet/autofilter/"
+  %>
+  <div class="user-search-panel">
+    <%Session 
+      x='[#session] 
+        { 
+        systemOnly:=false
+        ,users:=
+          [*dtask:Fetch
+            {[@sec:Login.list]
+            ,`![session].systemOnly
+              || [@swm:SystemUser].@findByPrincipalId(.principalId)!=null
+             `
+            }
+          ]
+        }
+        '
+      %>
+      <div class="search-criteria-panel">
+        <%html:Form%>
+          <%html:FormField%>
+            <%html:Label%>System Logins Only<%/html:Label%>
+            <%html:CheckboxInput x="[session].systemOnly"/%>
+          <%/html:FormField%>
+          <div class="sc-form-button-bar">
+            <%html:Button type="submit" onAction="null"%>Apply<%/html:Button%>
+          </div>
+        <%/html:Form%>
+      </div>
+      <table class="search-result-table">
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>username</th>
+            <th>system id</th>
+            <th>actions</th>
+          </tr>
+        </thead>
+        
+        <%Iterate x="users()"%>
+          <tr>
+            <td><%=.principalId/%>
+            </td>
+            <td><%=.username/%>
+            </td>
+            <td>
+              <%=[@swm:SystemUser].@findByPrincipalId(.principalId).id/%>
+            </td>
+            <td>
+              <a href="users?id=<%=.principalId/%>">View/Edit</a>
+            </td>
+          </tr>
+        <%/Iterate%>
+      <table>
+    <%/Session%>
+  </div>
+<%/@doclet%>
