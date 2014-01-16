@@ -18,7 +18,7 @@
   
   <authorizer>
     <secspi:DataAuthorizer>
-      <principalType x="[@webapp:Identity].type"/>
+      <principalType x="[@webapp:User].type"/>
       
       <principalNameFieldName>principalName
       </principalNameFieldName>

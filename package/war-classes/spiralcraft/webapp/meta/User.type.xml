@@ -11,16 +11,6 @@
     <wameta:AbstractUser.type/>
   </baseType>
   
-  <fields>
-
-    <meta:Field>
-      <name>fixed
-      </name>
-      <type><Boolean.type/>
-      </type>
-    </meta:Field>
-
-  </fields>
   <methods>
     <meta:Method>
       <name>register
@@ -37,7 +27,7 @@
       </parameterTypes>
       
       <returnType>
-        <wameta:SystemUser.type/>
+        <wameta:User.type/>
       </returnType>
       
       <contextX>
@@ -50,7 +40,7 @@
         }
       </contextX>     
        
-      <x>[*dtask:Edit{[@wameta:SystemUser].type}].()
+      <x>[*dtask:Edit{[@wameta:User].type}].()
           { .commonName=[register].commonName
           ,.principalName=[register].principalName
           ,.principalId=[register].principalId
@@ -78,7 +68,7 @@
       <contextX>{ principalId:[@j:String] }
       </contextX>
           
-      <x>[*dtask:Fetch{[@wameta:SystemUser],[{`principalId:=principalId`}]}].()
+      <x>[*dtask:Fetch{[@wameta:User],[{`principalId:=principalId`}]}].()
       </x>
           
     </meta:Method>  

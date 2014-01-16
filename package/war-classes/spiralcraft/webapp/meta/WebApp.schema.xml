@@ -18,7 +18,7 @@
     </meta:Entity>
       
     <meta:Entity>
-      <type><webapp:Identity.type/>
+      <type><webapp:User.type/>
       </type>
     </meta:Entity>
      

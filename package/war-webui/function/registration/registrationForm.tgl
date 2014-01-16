@@ -41,7 +41,7 @@
             
             <%swa-reg:form-identityEditor require="false"%>
               <%html:TupleEditor
-                typeX='[@meta:Identity].type'
+                typeX='[@meta:User].type'
                 errorTag.tagName="div"
                 errorTag.clazz="error"
                 %>
