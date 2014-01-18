@@ -5,6 +5,8 @@
   tgns:webui="class:/spiralcraft/servlet/webui/"
   tgns:shell="class:/spiralcraft/shell/"
   tgns:ul="class:/spiralcraft/util/lang/"
+  tgns:u="class:/spiralcraft/util/"
+  tgns:fn="class:/spiralcraft/lang/functions/"
   activityTitle="System Shell"
   %>
   <%h:Stylesheet href="/css/spiralcraft-webapp/themes/system/shell-skin.css" target="HEAD"/%>
@@ -21,6 +23,18 @@
           <%/Iterate%>
           </ul>
         </div>
+        <div class="history">
+          <h3>History</h3>
+          <ul>
+          <%Iterate x="[shell:ShellService].context.history.[*fn:Reverse]"%>
+            <li>
+              <%h:Link onAction="[shell:ShellService].context.commandBuffer=."%>
+                <%=./%>
+              <%/h:Link%>
+            </li>
+          <%/Iterate%>
+          </ul>
+        </div>
         <div class="commandBuffer">
           <h3>Expression</h3>
           <%h:TextArea  x='[shell:ShellService].context.commandBuffer'/%>
@@ -33,7 +47,9 @@
             <h3>Result</h3>
             <%If x='exception!=null'%>
               <div class="error">
+                <pre>
                 <%=[@ul:ExceptionUtil].@toText(exception)/%>
+                </pre>
               </div>
             <%Else/%>
               <div class="resultType">
@@ -44,18 +60,6 @@
               </div>
             <%/If%>
           <%/With%>
-        </div>
-        <div class="history">
-          <h3>History</h3>
-          <ul>
-          <%Iterate x="[shell:ShellService].context.history"%>
-            <li>
-              <%h:Link onAction="[shell:ShellService].context.commandBuffer=."%>
-                <%=./%>
-              <%/h:Link%>
-            </li>
-          <%/Iterate%>
-          </ul>
         </div>
       <%/h:Form%>
     <%/shell:ShellService%>

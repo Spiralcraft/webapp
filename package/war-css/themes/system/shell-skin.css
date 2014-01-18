@@ -2,6 +2,12 @@ form.shell .commandBuffer textarea {
   width: 100%;
 }
 
+form.shell .commandBuffer {
+  width: 100%;  
+  display: block;
+  clear: both;
+}
+
 form.shell .error {
   font-family: monospace;
 }
@@ -10,3 +16,34 @@ form.shell .resultDetail {
   margin-top: 10px;
   font-family: monospace;
 }
+
+form.shell .mappings {
+  display: inline-block;
+  width: 49%;
+  float: left;
+}
+
+form.shell .history {
+  display: inline-block;
+  width: 49%;
+  float:right;
+}
+
+form.shell .history ul {
+  display: none;
+  z-index: 9999;
+}
+
+form.shell .history:hover ul {
+  display: block;
+}
+
+form.shell .mappings ul {
+  display: none;
+  z-index: 9999;
+}
+
+form.shell .mappings:hover ul {
+  display: block;
+}
+

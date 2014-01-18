@@ -9,8 +9,9 @@
   tgns:af="class:/spiralcraft/servlet/autofilter/"
   tgns:j="class:/java/lang/"
   %>
-  <div class="user-edit-panel">
-    <%h:Form
+  <div class="user-edit-panel formlet-panel">
+    <%h:Form 
+      tag.clazz="userEdit"
       x='[#model] 
           { user:=[@swm:SystemUser].@findByPrincipalId([request].id)
           , login:=[@sec:Login].@findById([request].id)
@@ -32,13 +33,14 @@
             <%h:Button
                type="submit"
                onAction='[h:TupleEditor].save()'
+               tag.clazz="button"
                %>Save
             <%/h:Button%>
             
             <%h:Button
                type="submit"
-               onAction='[]{ .@tuple.delete(), .@tuple.save() }
-                        '
+               onAction='[]{ .@tuple.delete(), .@tuple.save() }'
+               tag.clazz="button"
               %>Remove System Access
             <%/h:Button%>
           </div>
@@ -59,7 +61,8 @@
                          ,login.principalId
                          )
                        '
-              %>Grant System Access
+              tag.clazz="button"
+              %>Register for System Access
             <%/h:Button%>
           <%/h:FormField%>
         <%/With%>
@@ -68,5 +71,12 @@
 
       
     <%/h:Form%>
+    
+  </div>
+  <div class="change-password-panel formlet-panel">
+    <h2>Change Password</h2>
+    <%comp:changePassword-form
+      loginX="[@sec:Login].@findById([request].id)"
+    /%>
   </div>
 <%/@doclet%>
