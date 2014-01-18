@@ -15,6 +15,39 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev22
+        </revision>
+                
+        <notes>
+          <scm:Note>Change a login password as a system user, shell usability
+            improvements
+          </scm:Note>
+        </notes>
+        
+        <path>package
+        </path>
+        
+        <resource>
+          <URI>war-css/themes/system/shell-skin.css
+          </URI>
+          <URI>war-css/themes/system/global-skin.css
+          </URI>
+          <URI>war-css/themes/system/global-wf.css
+          </URI>
+          <URI>war-system/components/changePassword-form
+          </URI>
+          <URI>war-system/components/resetPassword-panel.tgl
+          </URI>
+          <URI>war-system/components/userEdit-panel.tgl
+          </URI>
+          <URI>war-system/shell.webui
+          </URI>
+          <URI>war-system/resetPassword.webui
+          </URI>
+        </resource>
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev21
         </revision>
                 
