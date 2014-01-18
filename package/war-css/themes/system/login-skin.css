@@ -73,4 +73,16 @@
   font-weight: normal;
 }
 
+.reset-password-dialog fieldset {
+
+  text-align: left;
+}
+
+.reset-password-dialog label {
+  min-width: 70px;
+  display: inline-block;
+  text-align: right;
+  font-weight: bold;
+}
+
 
