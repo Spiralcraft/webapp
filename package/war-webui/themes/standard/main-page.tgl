@@ -1,0 +1,20 @@
+<%@doclet
+  tgns:comp="context://code/components/"
+  tgns:theme="context://theme/"
+  textgen:trim="true"
+  tgns:j="class:/java/lang/"
+  tgns:st="class:/spiralcraft/text/"
+  contextX='
+    { id:[@j:String]
+    , title:=[@st:MessageFormat].("") 
+    , bodyClass:=[@st:MessageFormat].("sc-main-body") 
+    }'
+  %>
+  <%comp:page $id="[theme:main-page].id" $title="[theme:main-page].title" $bodyClass="[theme:main-page].bodyClass"%>
+    <%theme:wrap-header/%>
+    <div class="wrap-body">
+      <%@insert/%>
+    </div>
+    <%theme:wrap-footer/%>
+  <%/comp:page%>
+<%/@doclet%>

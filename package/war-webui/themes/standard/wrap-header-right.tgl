@@ -1,0 +1,10 @@
+<%@doclet
+  tgns:comp="context://code/components/"
+  tgns:theme="context://theme/"
+  textgen:trim="true"
+  %>
+  <div class="wrap-header-right header-auth-panel">
+    <%comp:header-auth-panel/%>
+  </div>
+          
+<%/@doclet%>

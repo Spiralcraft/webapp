@@ -1,17 +1,58 @@
-<%themeui:page
-  tgns:themeui="context://theme/"
-  tgns:swa-login="context://code/function/login/"
-  title="Login"
+<%@doclet
+  tgns:c="context://code/components/"
+  tgns:h="context://code/components/html/"
+  tgns:t="context://theme/"
+  tgns:login="context://code/function/login/" 
   %>
-  <%$swa-login:authMenu%>
-  <%/$swa-login:authMenu%>
-  
-  <%themeui:contentFull%>
-    <%themeui:taskPanel
-      titleX='"Login"'
+  <%t:dialog-page id="login" dialogClass="form-dialog magnum-dialog"%>
+    <%login:Form tag.clazz="login-form" reloadAfterAction="true"
       %>
-      <%swa-login:loginForm/%>
-    <%/themeui:taskPanel%>
-  <%/themeui:contentFull%>
-<%/themeui:page%>
+      <%h:Login
+        requireLoginPermission="true"
+        defaultURI="/"
+        errorTag.tagName="div"
+        errorTag.clazz="error"
+        %>
+        <ul class="sc-field-grid">
+          <li class="sc-field-row text-row">
+            <%h:FormField%>
+              <%h:Label%>Username<%/h:Label%>
+              <%login:UsernameInput /%>
+            <%/h:FormField%>
+          </li>
+          <li class="sc-field-row text-row">
+            <%h:FormField%>
+              <%h:Label%>Password<%/h:Label%>
+              <%login:PasswordInput /%>
+            <%/h:FormField%>
+          </li>
+          <li class="sc-field-row">
+            <%login:DigestHiddenInput/%>
+          </li>
+          <li class="sc-field-row check-row">
+            
+            <%h:FormField%>
+              <%h:Label%>Remember Me<%/h:Label%>
+              <%login:PersistentInput /%>
+            <%/h:FormField%>
+            <p>Keep me signed in on this browser</p>
+          </li>
   
+        </ul>
+        
+        <div class="sc-form-button-bar sc-login-form-button-bar">
+          <%h:Button 
+            x="[h:Login].loginCommand()" 
+            tag.clazz="sc-form-completion-button button"
+            %>Sign In
+          <%/h:Button%>
+        </div>
+
+        <div class="login-form-footer">
+          <span><a href="resetPassword">I forgot my password</a></span>
+        </div>
+        
+      <%/h:Login%>
+    <%/login:Form%>
+  <%/t:dialog-page%>
+<%/@doclet%>

@@ -1,0 +1,15 @@
+<%@doclet
+  tgns:comp="context://code/components/"
+  tgns:theme="context://theme/"
+  textgen:trim="true"
+  %>
+    <div class="wrap-header">
+      <div class="inner">
+        <%theme:wrap-header-left/%>
+        <%theme:wrap-header-center/%>
+        <%theme:wrap-header-right/%>
+
+        <div class="stretcher"></div>
+      </div>
+    </div>  
+<%/@doclet%>

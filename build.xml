@@ -1,9 +1,9 @@
 <project name="spiralcraft-webapp" default="pack" basedir=".">
-
+  <property file="build-local.properties"/>
 	
   <property name="module" value="webapp"/>
-  <property name="buildVersion" value="0.4.17-dev22"/>
-  <property name="build.status" value="milestone"/>
+  <property name="buildVersion" value="0.4.17-dev23"/>
+  <property name="build.status" value="integration"/>
 
   <property name="publish.resolver.type" value="distrib"/>  
   <property name="package.spiralcraft-jsclient.dest" value="lib"/>

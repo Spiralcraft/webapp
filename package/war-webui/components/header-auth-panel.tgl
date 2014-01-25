@@ -1,0 +1,40 @@
+<%@doclet
+  tgns:comp="context://code/components/"
+  tgns:html="context://code/components/html/"
+  tgns:wa="class:/spiralcraft/webapp/meta/"
+  tgns:login="context://code/function/login/"
+  tgns:filter="class:/spiralcraft/servlet/autofilter/"
+  tgns:webui="class:/spiralcraft/servlet/webui/"
+  tgns:jnet="class:/java/net/"
+  textgen:trim="true"
+  contextX='
+    {
+      authUser:=`null`
+      ,displayName:=`"Logged In"`
+    }'
+  %>
+  <%If x="[comp:header-auth-panel].authUser.()!=null"%>
+    <div class="header-auth-dropdown">
+      <a class="dropdown-anchor" href="#"><%Out $x="[comp:header-auth-panel].displayName"/%></a>
+      <ul class="dropdown">
+        <%comp:header-auth-menu-options/%>
+        <li>     
+          <%html:Link 
+            onAction=
+              '{
+                [filter:SecurityFilter].logout()
+                ,[webui:ServiceContext].redirect
+                  ([webui:ServiceContext].absoluteBackLink)
+              }'
+            %>Sign Out
+          <%/html:Link%>
+        </li>
+      </ul>
+      
+    </div>
+  <%Else/%>
+    <%If x='[comp:page].id!="login"'%>
+      <a class="dropdown-anchor" href="login">Login</a>
+    <%/If%>
+  <%/If%>
+<%/@doclet%>

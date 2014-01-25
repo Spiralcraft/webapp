@@ -1,48 +1,49 @@
 <%@doclet
   tgns:jn="class:/java/net"
   tgns:swa="dynamic:/spiralcraft/webapp/"
-  tgns:webapp="bundle://spiralcraft-webapp.war-webui/"
+  tgns:comp="context://code/components/"
   tgns:jsclient="context://code/spiralcraft-jsclient/"
   tgns:html="class:/spiralcraft/servlet/webui/components/html/"
   tgns:st="class:/spiralcraft/text/"
   tgns:su="class:/spiralcraft/util"
+  tgns:j="class:/java/lang/"
   textgen:trim="true"
   contextX='
     { 
       cssURI:=[*jn:URI{"/css"}]
       ,jsURI:=[*jn:URI{"/js"}]
+      ,imageURI:=[*jn:URI{"/images"}]
       ,themePackage:="spiralcraft-webapp"
-      ,themeName:="basic"
+      ,themeName:="standard"
       ,title:=[@st:MessageFormat].("")
+      ,id:[@j:String]
+      ,bodyClass:=[@st:MessageFormat].("sc-generic-body")
     }
     '
   %>
   <%html:Page 
-    $title="[webapp:page].title" 
+    $title='[comp:page].title'
     bodyOnLoad="SPIRALCRAFT.dom.bodyOnLoad()"
+    $bodyTag.clazz="[{[comp:page].bodyClass}]"
     $css
       ='[{[@su:URIUtil].@addPathSegment
-             ([webapp:page].cssURI
-             ,"spiralcraft-webapp/reset.css"
-             )
-          ,[@su:URIUtil].@addPathSegment
-             ([webapp:page].cssURI
-             ,[webapp:page].themePackage+"/themes/"
-               +[webapp:page].themeName+"/style.css"
+             ([comp:page].cssURI
+             ,[comp:page].themePackage+"/themes/"
+               +[comp:page].themeName+"/global.css"
              )
         }]
        '
     $scripts
       ='[{[@su:URIUtil].@addPathSegment
-           ([webapp:page].jsURI
+           ([comp:page].jsURI
            ,"spiralcraft-jsclient/spiralcraft.js"
            )
         }]
        '
     $cssBase
-      ='[webapp:page].cssURI'
+      ='[comp:page].cssURI'
     $jsBase
-      ='[webapp:page].jsURI'
+      ='[comp:page].jsURI'
     %>
     
     <%jsclient:spiralcraft-jsclient/%>
