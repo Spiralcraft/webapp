@@ -4,11 +4,6 @@
   xmlns:swa-config="context://code/config/"  
   >
 
-  <codeBaseURI>bundle://spiralcraft-webapp.war-webui/
-  </codeBaseURI>
-  
-  <contentBaseURI>bundle://spiralcraft-webapp.war-webui/content/
-  </contentBaseURI>
 
   <placeContext>
     <swa-config:PlaceContext/>

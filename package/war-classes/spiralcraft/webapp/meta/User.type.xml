@@ -62,7 +62,7 @@
       </parameterTypes>
       
       <returnType>
-        <wameta:SystemUser.type/>
+        <wameta:User.type/>
       </returnType>
       
       <contextX>{ principalId:[@j:String] }
