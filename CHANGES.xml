@@ -15,6 +15,45 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev23
+        </revision>
+                
+        <notes>
+          <scm:Note>Create a standard theme and default set of components for
+            out-of-the-box functionality
+          </scm:Note>
+        </notes>
+        
+        <path>package
+        </path>
+        
+        <resource>
+          <URI>war-public-images/Spiralcraft-Logo.24x24.gif
+          </URI>
+          <URI>war-webui/components/header-banner-panel.tgl
+          </URI>
+          <URI>war-webui/components/header-brand-panel.tgl
+          </URI>
+          <URI>war-webui/components/header-nav-panel.tgl
+          </URI>
+          <URI>war-webui/components/page.tgl
+          </URI>
+          <URI>war-webui/components/page-body.tgl
+          </URI>
+          <URI>war-webui/themes/standard/activity-page.tgl
+          </URI>
+          <URI>war-webui/themes/standard/main-footer.tgl
+          </URI>
+          <URI>war-webui/themes/standard/main-header.tgl
+          </URI>
+          <URI>war-webui/themes/standard/main-page.tgl
+          </URI>
+          <URI>war-webui/themes/standard/wrap-header-left.tgl
+          </URI>
+        </resource>
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev22
         </revision>
                 
