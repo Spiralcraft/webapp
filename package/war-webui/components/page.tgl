@@ -47,6 +47,8 @@
     %>
     
     <%jsclient:spiralcraft-jsclient/%>
-    <%@insert/%>
+    <%comp:page-body%>
+      <%@insert/%>
+    <%/comp:page-body%>
   <%/html:Page%>
 <%/@doclet%>

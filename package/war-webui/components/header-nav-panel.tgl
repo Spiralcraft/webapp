@@ -3,7 +3,5 @@
   tgns:theme="context://theme/"
   textgen:trim="true"
   %>
-    <div class="wrap-header-left header-brand">
-      <%comp:header-brand-panel/%>
-    </div>
+  <!-- Nav goes here -->
 <%/@doclet%>

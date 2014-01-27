@@ -13,7 +13,9 @@
   <%comp:page $id="[theme:main-page].id" $title="[theme:main-page].title" $bodyClass="[theme:main-page].bodyClass"%>
     <%theme:wrap-header/%>
     <div class="wrap-body">
+      <%theme:main-header/%>
       <%@insert/%>
+      <%theme:main-footer/%>
     </div>
     <%theme:wrap-footer/%>
   <%/comp:page%>

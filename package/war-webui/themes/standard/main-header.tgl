@@ -1,0 +1,14 @@
+<%@doclet
+  tgns:comp="context://code/components/"
+  tgns:theme="context://theme/"
+  textgen:trim="true"
+  %>
+  <div class="main-header">
+    <div class="banner-panel">
+      <%comp:header-banner-panel/%>
+    </div>
+    <div class="nav-panel">
+      <%comp:header-nav-panel/%>
+    </div>
+  </div>          
+<%/@doclet%>

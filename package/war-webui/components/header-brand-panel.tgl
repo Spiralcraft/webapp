@@ -1,0 +1,16 @@
+<%@doclet
+  tgns:comp="context://code/components/"
+  tgns:theme="context://theme/"
+  textgen:trim="true"
+  %>
+  <div class="image">
+    <img src="<%=[comp:page].imageURI/%>/spiralcraft-webapp/Spiralcraft-Logo.48x48.png"
+      width="48px"
+      alt="Spiralcraft logo"
+    />
+  </div>
+  <div class="brand">
+    <div class="company">Spiralcraft</div>
+    <div class="product">Web Application Framework</div>
+  </div>
+<%/@doclet%>
