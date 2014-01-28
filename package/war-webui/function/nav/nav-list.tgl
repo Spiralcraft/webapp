@@ -1,0 +1,29 @@
+<%@doclet
+  tgns:nav="context://code/function/nav"
+  tgns:jn="class:/java/net"
+  tgns:swa="dynamic:/spiralcraft/webapp/"
+  tgns:comp="context://code/components/"
+  tgns:lang="class:/spiralcraft/lang/"
+  
+  textgen:trim="true"
+  contextX=
+    '{
+      listX:[@lang:Expression]
+      ,selectedX:[@lang:Expression]
+      ,hrefX:[@lang:Expression]
+      ,labelX:[@lang:Expression]
+      ,liClassX:=`null`
+      ,liSelectedClassX:=`"selected"`
+    }'
+  %>
+  <%$nav:item%>
+    <%Out $x='[nav:nav-list].labelX'/%>
+  <%/$nav:item%>
+  <ul class="sc-nav-list">
+    <%Iterate $x="[nav:nav-list].listX" %>
+      <li class='sc-nav-item<%=" "/%><%Out $x="[nav:nav-list].liClassX"/%> <%If $x="[nav:nav-list].selectedX"%><%=" "/%><%Out $x='[nav:nav-list].liSelectedClassX'/%><%/If%>'>
+        <a href="<%Out $x='[nav:nav-list].hrefX'/%>" title="<%Out $x='[nav:nav-list].labelX'/%>"><%nav:item/%></a>
+      </li>
+    <%/Iterate%>
+  </ul>
+<%/@doclet%>

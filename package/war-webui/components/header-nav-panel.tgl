@@ -1,7 +1,23 @@
 <%@doclet
   tgns:comp="context://code/components/"
   tgns:theme="context://theme/"
+  tgns:nav="context://code/function/nav/"
+  tgns:ui="class:/spiralcraft/ui"
+  tgns:util="class:/spiralcraft/util"
   textgen:trim="true"
   %>
-  <!-- Nav goes here -->
+  <!--navlist-->
+  <%nav:nav-list
+    listX="[ui:NavContext].options"
+    selectedX=".name==[ui:NavContext].selectedKey"
+    hrefX='[ui:NavContext].resolve
+            (.path!=null
+              ?.path
+              :.name!=null
+              ?[@util:Path].(.name)
+              :[@util:Path].("")
+            )
+          '
+    labelX='.title'
+  /%>
 <%/@doclet%>

@@ -284,3 +284,60 @@ ul.sc-field-grid {
   height: .5em;
   width: .5em;
 }
+
+.main-header .nav-panel {
+
+  padding: 0;
+  margin: auto; 
+  display: block;
+  position: relative;
+  border-bottom: 1px solid #000000; 
+}
+
+/* Force containing div to clear floats */
+.main-header .nav-panel:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+}
+
+.main-header .nav-panel ul {
+  list-style: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-header .nav-panel li {
+  display: inline;
+  float:left; 
+  position:relative;
+  margin-bottom: -1px; /* "Tab Effect" Border overlap */
+  padding: 0;
+}
+
+.main-header .nav-panel li a {
+  border-width:1px 1px 1px 0px;
+  border-style: solid;
+  font-size:1.1em;
+  text-decoration: none;
+  padding: 4px;
+  background: none repeat scroll 0 0 #CCCCCC;
+  display: block;
+  min-width: 50px;
+  text-align: center;
+}
+
+.main-header .nav-panel li:hover a {
+  background-color: #DDDDDD;
+  color: #000000;	
+}
+
+.main-header .nav-panel li.selected a {
+  border-bottom-color: #FFFFFF;
+  background: none repeat scroll 0 0 #FFFFFF;
+}
+
+

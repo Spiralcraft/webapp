@@ -1,0 +1,36 @@
+<base:NavFilter
+  xmlns:j="class:/java/lang/"
+  xmlns:swm="class:/spiralcraft/webapp/meta/"  
+  xmlns:base="context://code/spiralcraft-webapp/config/base/"
+  >
+  
+  <context.optionsX>
+      [{ 
+        [*swm:Path
+          { name:="one"
+           ,path:="one"
+           ,title:="First"
+           }
+        ]
+        ,
+        [*swm:Path
+          { name:="two"
+           ,path:="two"
+           ,title:="Second"
+           ,viewURI:=""
+          }
+        ]
+        ,      
+        [*swm:Path
+          { name:="three"
+           ,path:="three"
+           ,title:="Third"
+           ,viewURI:=""
+          }
+        ]
+      }]
+    
+  </context.optionsX>
+    
+</base:NavFilter>
+  

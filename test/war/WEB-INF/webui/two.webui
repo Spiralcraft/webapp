@@ -1,0 +1,6 @@
+<%theme:main-page
+  tgns:theme="context://theme/"
+  tgns:comp="context://code/components/"
+  %>
+  two
+<%/theme:main-page%>
