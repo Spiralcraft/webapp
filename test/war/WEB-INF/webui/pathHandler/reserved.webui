@@ -1,0 +1,7 @@
+<%@doclet
+  tgns:comp="context://code/components/"
+  tgns:af="class:/spiralcraft/servlet/autofilter/"
+  %>
+  Reserved URI segment:
+  PathInfo: <%=[af:PathContext].pathInfo/%>
+<%/@doclet%>

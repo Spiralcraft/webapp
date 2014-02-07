@@ -1,0 +1,8 @@
+<%@doclet
+  tgns:comp="context://code/components/"
+  tgns:af="class:/spiralcraft/servlet/autofilter/"
+  %>
+  PathContext: <%=[af:PathContext]/%>
+  Default handler:
+  PathInfo: <%=[af:PathContext].pathInfo/%>
+<%/@doclet%>
