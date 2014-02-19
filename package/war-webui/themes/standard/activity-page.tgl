@@ -8,15 +8,15 @@
       id:[@j:String]
       ,activityClass:[@j:String]
       ,activityTitle:=""
-      ,activityTitleX:=`[comp:activity-page].activityTitle`
+      ,activityTitleX:=`[theme:activity-page].activityTitle`
     }'
   %>
-  <%comp:main-page $id="[theme:activity-page].id" bodyClass="sc-dialog-body" title='{|[theme:activity-page].activityTitleX.()|}'%>
+  <%theme:main-page $id="[theme:activity-page].id" bodyClass="sc-dialog-body" title='{|[theme:activity-page].activityTitleX.()|}'%>
     <div class="main-content">
       <%html:Div tag.clazz="activity-container" tag.classX="[theme:activity-page].activityClass"%>
         <h2 class="title"><%=[theme:activity-page].activityTitleX.()/%></h2>
         <%@insert/%>
       <%/html:Div%>
     </div>
-  <%/comp:main-page%>
+  <%/theme:main-page%>
 <%/@doclet%>
