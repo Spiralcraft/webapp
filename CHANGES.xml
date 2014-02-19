@@ -15,6 +15,21 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev24
+        </revision>
+                
+        <notes>
+          <scm:Note>Fix bad reference to comp:main-page instead of
+            theme:main-page
+          </scm:Note>
+        </notes>
+        
+        <path>package/war-webui/themes/standard/activity-page.tgl
+        </path>
+
+      </scm:Change>
+      
+      <scm:Change>
         <revision>-dev23
         </revision>
                 
