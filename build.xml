@@ -3,7 +3,7 @@
 	
   <property name="module" value="webapp"/>
   <property name="buildVersion" value="0.4.17-dev25"/>
-  <property name="build.status" value="integration"/>
+  <property name="build.status" value="milestone"/>
 
   <property name="publish.resolver.type" value="distrib"/>  
   <property name="package.spiralcraft-jsclient.dest" value="lib"/>
