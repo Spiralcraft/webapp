@@ -15,6 +15,36 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev25
+        </revision>
+                
+        <notes>
+          <scm:Note>Provide a minimal Session data object and init the admin
+            user so app can be functional out of the box.
+          </scm:Note>
+        </notes>
+        
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>war-classes/spiralcraft/webapp/meta/Session.type.xml
+          </URI>
+          <URI>war-webui/components/header-auth-panel.tgl
+          </URI>
+          <URI>war-webui/config/DataSessionFilter.assy.xml
+          </URI>
+          <URI>war-webui/config/PlaceContext.assy.xml
+          </URI>
+          <URI>war-webui/function/registration/tasks/InitAdminUser.assy.xml
+          </URI>
+          <URI>war-webui/PathContext.assy.xml
+          </URI>
+        </resources>
+
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev24
         </revision>
                 
