@@ -9,8 +9,8 @@
   textgen:trim="true"
   contextX='
     {
-      authUser:=`null`
-      ,displayName:=`"Logged In"`
+      authUser:=`[wa:Session].user`
+      ,displayName:=`[wa:Session].user.commonName{.!=null?.:"Logged In"}`
     }'
   %>
   <%If x="[comp:header-auth-panel].authUser.()!=null"%>

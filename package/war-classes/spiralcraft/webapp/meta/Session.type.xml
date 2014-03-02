@@ -1,0 +1,25 @@
+<meta:Type
+  xmlns:meta="class:/spiralcraft/data/types/meta/"
+  xmlns:swm="class:/spiralcraft/webapp/meta/"
+  xmlns:dtask="class:/spiralcraft/data/task"
+  xmlns:auth="class:/spiralcraft/security/auth"
+  >
+  <fields>
+    <meta:CalculatedField>
+      <name>user
+      </name>
+      
+      <expression>
+        [*dtask:Fetch
+          { [@swm:User]
+            ,`.principalId == [auth:AuthSession].principal.id` 
+          }   
+        ].()
+      </expression>
+
+      <type><swm:User.type/>
+      </type>
+      
+    </meta:CalculatedField>
+  </fields>
+</meta:Type>

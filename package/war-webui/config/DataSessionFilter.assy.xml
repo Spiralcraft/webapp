@@ -1,0 +1,6 @@
+<af:DataSessionFilter
+  xmlns:af="class:/spiralcraft/servlet/autofilter/"
+  xmlns:swm="class:/spiralcraft/webapp/meta/"
+  >
+  <dataType x="[@swm:Session].type"/>    
+</af:DataSessionFilter>

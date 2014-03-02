@@ -6,14 +6,19 @@
   xmlns:config="context://config/"
   xmlns:smtp="class:/spiralcraft/net/smtp/"
   xmlns:task="class:/spiralcraft/task/"
+  xmlns:regt="context://code/function/registration/tasks/"
   >
 
   <id>spiralcraft-webapp
   </id>
   
-  <version>0.4.17-dev4
+  <version>0.4.17-dev18
   </version>
   
+  <postInitialize>
+    [*regt:InitAdminUser].()
+  </postInitialize>
+    
   <plugins>
     <swa-code:Plugin/>
   </plugins>

@@ -1,7 +1,8 @@
 <af:PathContext
   xmlns:af="class:/spiralcraft/servlet/autofilter/"
   xmlns:code="context://code/"
-  xmlns:swa-config="context://code/config/"  
+  xmlns:swa-config="context://code/config/" 
+  xmlns:swm="class:/spiralcraft/webapp/meta/" 
   >
 
 
@@ -17,11 +18,13 @@
     xmlns:webapp="context://code"
     >
   
-
   
     <swa-config:SecurityFilter/>
  
+    <swa-config:DataSessionFilter/>
+
     <swa-config:MainNavFilter/>
+    
     
   </filters>
   
