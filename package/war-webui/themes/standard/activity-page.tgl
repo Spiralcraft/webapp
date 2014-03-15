@@ -9,14 +9,23 @@
       ,activityClass:[@j:String]
       ,activityTitle:=""
       ,activityTitleX:=`[theme:activity-page].activityTitle`
+      ,includeSecondaryContentX:=`true`
     }'
   %>
-  <%theme:main-page $id="[theme:activity-page].id" bodyClass="sc-dialog-body" title='{|[theme:activity-page].activityTitleX.()|}'%>
+  <%theme:main-page $id="[theme:activity-page].id" bodyClass="sc-activity-body" title='{|[theme:activity-page].activityTitleX.()|}'%>
     <div class="main-content">
       <%html:Div tag.clazz="activity-container" tag.classX="[theme:activity-page].activityClass"%>
         <h2 class="title"><%=[theme:activity-page].activityTitleX.()/%></h2>
         <%@insert/%>
       <%/html:Div%>
+      <%html:Div tag.clazz="activity-container-secondary" tag.classX='[theme:activity-page].activityClass+"-secondary"'%>
+        <%comp:activity-secondary-content-panel require="false"/%>
+      <%/html:Div%>
     </div>
+    <%If x="[theme:activity-page].includeSecondaryContentX.()"%>
+      <div class="secondary-content">
+        <%comp:secondary-content-panel/%>
+      </div>
+    <%/If%>
   <%/theme:main-page%>
 <%/@doclet%>

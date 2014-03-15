@@ -1,0 +1,7 @@
+<%@doclet
+  tgns:comp="context://code/components/"
+  tgns:theme="context://theme/"
+  textgen:trim="true"
+  %>
+  
+<%/@doclet%>

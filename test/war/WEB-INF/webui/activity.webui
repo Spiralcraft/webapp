@@ -1,0 +1,8 @@
+<%t:activity-page
+  tgns:t="context://theme/"
+  tgns:c="context://code/components/"
+  tgns:h="context://code/components/html/"
+  %>
+  <%h:Stylesheet href="/css/custom.css"/%>
+  Some activity
+ <%/t:activity-page%>
