@@ -1,6 +1,7 @@
 <project name="spiralcraft-webapp" default="pack" basedir=".">
   <property file="build-local.properties"/>
 	
+  <property name="organization" value="spiralcraft"/>
   <property name="module" value="webapp"/>
   <property name="buildVersion" value="0.4.17-dev26"/>
   <property name="build.status" value="integration"/>
@@ -8,7 +9,8 @@
   <property name="publish.resolver.type" value="distrib"/>  
   <property name="package.spiralcraft-jsclient.dest" value="lib"/>
 
-  <import file="../../build/build-spiralcraft-common.xml"/>
+  <property name="depends.dir" location="../../repo"/>
+  <import file="../../build/build-common.xml"/>
 	
 
 
