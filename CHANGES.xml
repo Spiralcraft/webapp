@@ -33,7 +33,9 @@
           </URI>
           <URI>war-classes/spiralcraft/webapp/analytics/LogService.assy.xml
           </URI>
-          <URI>war-classes/spiralcraft/webapp/analytics/SessionEvent.type.xml
+          <URI>war-classes/spiralcraft/webapp/analytics/LogEvent.type.xml
+          </URI>
+          <URI>war-classes/spiralcraft/webapp/meta/Session.type.xml
           </URI>
           <URI>war-webui/Plugin.assy.xml
           </URI>

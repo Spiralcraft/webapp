@@ -3,7 +3,7 @@
   xmlns:wa="class:/spiralcraft/webapp/analytics/"
   >
 
-  <dataTypeX>[@wa:SessionEvent].type
+  <dataTypeX>[@wa:LogEvent].type
   </dataTypeX>
 
   <processingFunction>[*wa:Flush].()

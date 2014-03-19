@@ -13,7 +13,7 @@
       </source>
       <sequence>
         <t:Eval>
-          <x>[*du:StoredCopy{[@wa:SessionEvent]}]=.
+          <x>[*du:StoredCopy{[@wa:LogEvent]}]=.
           </x>
         </t:Eval>
       </sequence>

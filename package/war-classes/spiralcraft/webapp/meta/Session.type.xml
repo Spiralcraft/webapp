@@ -3,6 +3,8 @@
   xmlns:swm="class:/spiralcraft/webapp/meta/"
   xmlns:dtask="class:/spiralcraft/data/task"
   xmlns:auth="class:/spiralcraft/security/auth"
+  xmlns:wa="class:/spiralcraft/webapp/analytics"
+  xmlns:http="class:/javax/servlet/http/"
   >
   <fields>
     <meta:CalculatedField>
@@ -22,4 +24,30 @@
       
     </meta:CalculatedField>
   </fields>
+  
+  <methods>
+    <meta:Method>
+      <name>log
+      </name>
+    
+      <returnType><Void.type/>
+      </returnType>
+      
+      <parameterTypes>
+        <wa:LogEvent.type/>
+      </parameterTypes>
+      
+      <contextX>{ event:[@wa:LogEvent] }
+      </contextX>
+
+      <x>
+        event{ 
+          .sessionId=[http:HttpSession].id
+          ,.userId=[swm:Session].user.id
+          ,.log()
+        }
+      </x>
+    </meta:Method>
+  
+  </methods>
 </meta:Type>

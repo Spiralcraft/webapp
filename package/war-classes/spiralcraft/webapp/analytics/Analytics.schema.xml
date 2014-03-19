@@ -9,7 +9,7 @@
   <entities>
 
     <meta:Entity>
-      <type><wa:SessionEvent.type/>
+      <type><wa:LogEvent.type/>
       </type>
     </meta:Entity>
     
