@@ -1,0 +1,14 @@
+<du:BatchQueueService
+  xmlns:du="class:/spiralcraft/data/util/"
+  xmlns:wa="class:/spiralcraft/webapp/analytics/"
+  >
+
+  <dataTypeX>[@wa:SessionEvent].type
+  </dataTypeX>
+
+  <processingFunction>[*wa:Flush].()
+  </processingFunction>
+  
+  <debug>true
+  </debug>
+</du:BatchQueueService>

@@ -1,0 +1,91 @@
+<meta:Type
+  xmlns:meta="class:/spiralcraft/data/types/meta/"
+  xmlns:wa="class:/spiralcraft/webapp/analytics/"
+  xmlns:dtask="class:/spiralcraft/data/task"
+  xmlns:auth="class:/spiralcraft/security/auth"
+  xmlns:ju="class:/java/util/"
+  xmlns:st="class:/spiralcraft/time/"
+  >
+  <fields>
+    <meta:SequenceField>
+      <name>id
+      </name>
+      <type><LSID.type/>
+      </type>
+    </meta:SequenceField>
+    
+    <meta:Field>
+      <name>sessionId
+      </name>
+      
+      <type><String.type/>
+      </type>
+    </meta:Field>
+    
+    <meta:Field>
+      <name>timestamp
+      </name>
+      
+      <type><Date.type/>
+      </type>
+      
+      <defaultExpression>[@ju:Date].([@st:Clock].@instance().approxTimeMillis())
+      </defaultExpression>
+    </meta:Field>
+    
+    <meta:Field>
+      <name>userId
+      </name>
+      
+      <type><String.type/>
+      </type>
+    </meta:Field>
+    
+    <meta:Field>
+      <name>eventCode
+      </name>
+      
+      <type><String.type/>
+      </type>
+    </meta:Field>
+    
+    <meta:Field>
+      <name>eventData
+      </name>
+      
+      <type><String.type/>
+      </type>
+    </meta:Field>
+
+    <meta:Field>
+      <name>message
+      </name>
+      
+      <type><String.type/>
+      </type>
+    </meta:Field>
+
+  </fields>
+  
+  <keys>
+    <meta:Key>
+      <primary>true
+      </primary>
+      <fieldList>id
+      </fieldList>
+    </meta:Key>
+  </keys>
+  <methods>
+    <meta:Method>
+      <name>log
+      </name>
+      
+      <returnType><Void.type/>
+      </returnType>
+      
+      <x>[wa:LogService].accept(.)
+      </x>
+    </meta:Method>
+    
+  </methods>
+</meta:Type>

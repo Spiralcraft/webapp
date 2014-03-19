@@ -1,0 +1,17 @@
+<meta:Schema
+  xmlns:wa="class:/spiralcraft/webapp/analytics/"
+  xmlns:meta="class:/spiralcraft/data/types/meta/"
+  xmlns:sec="class:/spiralcraft/security/"
+  >
+  <name>spiralcraft-webapp-analytics
+  </name>
+
+  <entities>
+
+    <meta:Entity>
+      <type><wa:SessionEvent.type/>
+      </type>
+    </meta:Entity>
+    
+  </entities>
+</meta:Schema>

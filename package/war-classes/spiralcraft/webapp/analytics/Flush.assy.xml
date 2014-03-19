@@ -1,0 +1,23 @@
+<dt:Session
+  xmlns:dt="class:/spiralcraft/data/task/"
+  xmlns:t="class:/spiralcraft/task/"
+  xmlns:du="class:/spiralcraft/data/util/"
+  xmlns:wa="class:/spiralcraft/webapp/analytics/"
+  >
+  <transactional>true
+  </transactional>
+
+  <sequence>
+    <t:Batch>
+      <source>.
+      </source>
+      <sequence>
+        <t:Eval>
+          <x>[*du:StoredCopy{[@wa:SessionEvent]}]=.
+          </x>
+        </t:Eval>
+      </sequence>
+    </t:Batch>
+  </sequence>
+  
+</dt:Session>

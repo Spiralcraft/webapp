@@ -1,6 +1,8 @@
 <%theme:main-page
   tgns:theme="context://theme/"
   tgns:comp="context://code/components/"
+  tgns:wa="class:/spiralcraft/webapp/analytics/"
   %>
   one
+  <%=[@wa:SessionEvent].(message:="Page One").log()/%>
 <%/theme:main-page%>

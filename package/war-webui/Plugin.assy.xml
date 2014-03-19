@@ -8,6 +8,7 @@
   <stores>
     <swa-config:Store/>
     <swa-config:MailQueueStore/>
+    <swa-config:AnalyticsStore/>
   </stores>
 
 </app:PluginContext>
