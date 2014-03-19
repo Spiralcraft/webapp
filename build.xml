@@ -10,6 +10,7 @@
   <property name="package.spiralcraft-jsclient.dest" value="lib"/>
 
   <property name="depends.dir" location="../../repo"/>
+  <property file="../../build.local/build.properties"/>
   <import file="../../build/build-common.xml"/>
 	
 

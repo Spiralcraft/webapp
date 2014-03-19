@@ -15,6 +15,36 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev26
+        </revision>
+                
+        <notes>
+          <scm:Note>Added basic high level analytics logging mechanism
+          </scm:Note>
+        </notes>
+        
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>war-classes/spiralcraft/webapp/analytics/Analytics.schema.xml
+          </URI>
+          <URI>war-classes/spiralcraft/webapp/analytics/Flush.assy.xml
+          </URI>
+          <URI>war-classes/spiralcraft/webapp/analytics/LogService.assy.xml
+          </URI>
+          <URI>war-classes/spiralcraft/webapp/analytics/SessionEvent.type.xml
+          </URI>
+          <URI>war-webui/Plugin.assy.xml
+          </URI>
+          <URI>war-webui/config/PlaceContext.assy.xml
+          </URI>
+          <URI>war-webui/config/AnalyticsStore.assy.xml
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev25
         </revision>
                 
