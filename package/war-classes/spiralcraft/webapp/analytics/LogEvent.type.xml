@@ -20,6 +20,7 @@
       
       <type><String.type/>
       </type>
+
     </meta:Field>
     
     <meta:Field>
@@ -31,14 +32,6 @@
       
       <defaultExpression>[@ju:Date].([@st:Clock].@instance().approxTimeMillis())
       </defaultExpression>
-    </meta:Field>
-    
-    <meta:Field>
-      <name>userId
-      </name>
-      
-      <type><String.type/>
-      </type>
     </meta:Field>
     
     <meta:Field>

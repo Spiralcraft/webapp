@@ -35,11 +35,17 @@
           </URI>
           <URI>war-classes/spiralcraft/webapp/analytics/LogEvent.type.xml
           </URI>
+          <URI>war-classes/spiralcraft/webapp/analytics/Session.type.xml
+          </URI>
           <URI>war-classes/spiralcraft/webapp/meta/Session.type.xml
           </URI>
           <URI>war-webui/Plugin.assy.xml
           </URI>
+          <URI>war-webui/PathContext.assy.xml
+          </URI>
           <URI>war-webui/config/PlaceContext.assy.xml
+          </URI>
+          <URI>war-webui/config/AnalyticsFilter.assy.xml
           </URI>
           <URI>war-webui/config/AnalyticsStore.assy.xml
           </URI>

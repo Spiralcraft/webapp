@@ -5,5 +5,5 @@
   tgns:swm="class:/spiralcraft/webapp/meta/"
   %>
   one
-  <%=[swm:Session].log([@wa:LogEvent].(message:="Page One"))/%>
+  <%=[swm:Session].logActivity("activity-one")/%>
 <%/theme:main-page%>

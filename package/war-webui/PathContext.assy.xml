@@ -3,8 +3,9 @@
   xmlns:code="context://code/"
   xmlns:swa-config="context://code/config/" 
   xmlns:swm="class:/spiralcraft/webapp/meta/" 
+  xmlns:sec="class:/spiralcraft/security/auth/"
+  xmlns:swan="class:/spiralcraft/webapp/analytics/"
   >
-
 
   <placeContext>
     <swa-config:PlaceContext/>
@@ -18,8 +19,14 @@
     xmlns:webapp="context://code"
     >
   
+    <swa-config:AnalyticsFilter/>
   
-    <swa-config:SecurityFilter/>
+    <swa-config:SecurityFilter>
+      <afterAuthenticate>
+        [swan:Session].associatePrincipal([sec:AuthSession].principal.id)
+      </afterAuthenticate>
+    </swa-config:SecurityFilter>
+    
  
     <swa-config:DataSessionFilter/>
 

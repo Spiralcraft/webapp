@@ -5,6 +5,7 @@
   xmlns:auth="class:/spiralcraft/security/auth"
   xmlns:wa="class:/spiralcraft/webapp/analytics"
   xmlns:http="class:/javax/servlet/http/"
+  xmlns:j="class:/java/lang/"
   >
   <fields>
     <meta:CalculatedField>
@@ -27,24 +28,24 @@
   
   <methods>
     <meta:Method>
-      <name>log
+      <name>logActivity
       </name>
     
       <returnType><Void.type/>
       </returnType>
       
       <parameterTypes>
-        <wa:LogEvent.type/>
+        <String.type/>
       </parameterTypes>
       
-      <contextX>{ event:[@wa:LogEvent] }
+      <contextX>{ eventData:[@j:String] }
       </contextX>
 
       <x>
-        event{ 
-          .sessionId=[http:HttpSession].id
-          ,.userId=[swm:Session].user.id
-          ,.log()
+        [@wa:LogEvent].() { 
+        .eventCode="spiralcraft.webapp.activity"
+        ,.eventData=eventData
+        ,[wa:Session].log(.)
         }
       </x>
     </meta:Method>
