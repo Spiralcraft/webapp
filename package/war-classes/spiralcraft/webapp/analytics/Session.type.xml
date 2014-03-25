@@ -1,0 +1,141 @@
+<meta:Type
+  xmlns:meta="class:/spiralcraft/data/types/meta/"
+  xmlns:wa="class:/spiralcraft/webapp/analytics/"
+  xmlns:dt="class:/spiralcraft/data/task"
+  xmlns:auth="class:/spiralcraft/security/auth"
+  xmlns:ju="class:/java/util/"
+  xmlns:st="class:/spiralcraft/time/"
+  xmlns:j="class:/java/lang/"
+  >
+  <fields>
+    <meta:SequenceField>
+      <name>id
+      </name>
+      <type><LSID.type/>
+      </type>
+    </meta:SequenceField>
+    
+    <meta:Field>
+      <name>cookie
+      </name>
+      
+      <type><String.type/>
+      </type>
+    </meta:Field>
+    
+    <meta:Field>
+      <name>startTime
+      </name>
+      
+      <type><Date.type/>
+      </type>
+      
+      <defaultExpression>[@ju:Date].([@st:Clock].@instance().approxTimeMillis())
+      </defaultExpression>
+    </meta:Field>
+    
+    <meta:Field>
+      <name>clientAddress
+      </name>
+      
+      <type><String.type/>
+      </type>
+      
+    </meta:Field>
+
+    <meta:Field>
+      <name>userAgent
+      </name>
+      
+      <type><String.type/>
+      </type>
+      
+    </meta:Field>
+
+    <meta:Field>
+      <name>referrer
+      </name>
+      
+      <type><String.type/>
+      </type>
+      
+    </meta:Field>
+
+    <meta:Field>
+      <name>requestURL
+      </name>
+      
+      <type><String.type/>
+      </type>
+      
+    </meta:Field>
+
+    <meta:Field>
+      <name>principalId
+      </name>
+      
+      <type><String.type/>
+      </type>
+    </meta:Field>
+    
+  </fields>
+  
+  <methods>
+    <meta:Method>
+      <name>log
+      </name>
+    
+      <returnType><Void.type/>
+      </returnType>
+      
+      <parameterTypes>
+        <wa:LogEvent.type/>
+      </parameterTypes>
+      
+      <contextX>{ event:[@wa:LogEvent] }
+      </contextX>
+
+      <x>
+        event{ 
+          .sessionId=[wa:Session].id
+          ,.log()
+        }
+      </x>
+    </meta:Method>
+  
+    <meta:Method>
+      <name>associatePrincipal
+      </name>
+    
+      <returnType><Void.type/>
+      </returnType>
+      
+      <parameterTypes>
+        <String.type/>
+      </parameterTypes>
+      
+      <contextX>[#params]{ principalId:[@j:String] }
+      </contextX>
+
+      <x>
+        [wa:Session]
+          .[*dt:Edit
+            {forceSave:=true
+            ,autoSave:=true
+            ,preSave:=`.principalId=[params].principalId`
+            ,debug:=true
+            }
+           ].()
+      </x>
+    </meta:Method>
+  </methods>  
+  <keys>
+    <meta:Key>
+      <primary>true
+      </primary>
+      <fieldList>id
+      </fieldList>
+    </meta:Key>
+  </keys>
+
+</meta:Type>

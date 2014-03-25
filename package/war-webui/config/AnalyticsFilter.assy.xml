@@ -1,0 +1,28 @@
+<af:SessionStateFilter
+  xmlns:af="class:/spiralcraft/servlet/autofilter/"
+  xmlns:waan="class:/spiralcraft/webapp/analytics/"
+  xmlns:dt="class:/spiralcraft/data/task/"
+  xmlns:http="class:/javax/servlet/http/"
+  xmlns:fn="class:/spiralcraft/lang/functions/">
+        
+  <constructor>
+    [@waan:Session].@nil
+      .[*dt:Edit{autoCreate:=true}].()
+      {.cookie=[http:HttpSession].id
+       ,.clientAddress=[http:HttpServletRequest].remoteAddr
+       ,.userAgent=[http:HttpServletRequest].getHeader("User-Agent")
+       ,.referrer=[http:HttpServletRequest].getHeader("Referer")
+       ,.requestURL=[http:HttpServletRequest].getRequestURL().toString()
+       ,.
+      }
+      .@log("Constructed "+.)
+  </constructor>
+        
+  <onBind>[@waan:LogEvent].(eventCode:="spiralcraft.webapp.start").log()
+  </onBind>
+  
+  <onEstablish>
+    [waan:Session].[*dt:Edit{autoSave:=true,forceSave:=true}].()
+  </onEstablish>
+  
+</af:SessionStateFilter>  
