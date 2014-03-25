@@ -123,7 +123,6 @@
             {forceSave:=true
             ,autoSave:=true
             ,preSave:=`.principalId=[params].principalId`
-            ,debug:=true
             }
            ].()
       </x>
