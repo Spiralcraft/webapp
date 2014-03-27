@@ -1,0 +1,60 @@
+<meta:Type
+  xmlns:meta="class:/spiralcraft/data/types/meta/"
+  xmlns:swan="class:/spiralcraft/webapp/analytics/"
+  xmlns:dtask="class:/spiralcraft/data/task/"
+  >
+  <fields>
+    <meta:Field>
+      <name>from
+      </name>
+      <type><Date.type/>
+      </type>
+    </meta:Field>
+    <meta:Field>
+      <name>to
+      </name>
+      <type><Date.type/>
+      </type>
+    </meta:Field>
+    <meta:Field>
+      <name>principalId
+      </name>
+      <type><String.type/>
+      </type>
+    </meta:Field>
+  </fields>
+  <methods>
+    <meta:Method>
+      <name>search
+      </name>
+      <returnType><swan:Session.list.type/>
+      </returnType>
+      <x>
+        (principalId!=null
+          ? [*dtask:Fetch
+              {[@swan:Session.list]
+              ,`.principalId==[swan:SessionSearch].principalId`
+              }
+            ].()
+          :from!=null
+          ?[*dtask:Fetch
+              {[@swan:Session.list]
+              ,`.startTime &gt;=[swan:SessionSearch].from`
+              }
+            ].()
+          :to!=null
+          ?[*dtask:Fetch
+              {[@swan:Session.list]
+              ,`.startTime &lt;=[swan:SessionSearch].to`
+              }
+            ].()
+          :[*dtask:Fetch
+              {[@swan:Session.list]
+              }
+           ].()
+        )
+      </x>
+    </meta:Method>
+  
+  </methods>
+</meta:Type>

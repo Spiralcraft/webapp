@@ -1,0 +1,24 @@
+<%@doclet
+  tgns:dt="class:/spiralcraft/data/task/"
+  tgns:swan="class:/spiralcraft/webapp/analytics/"
+  tgns:c="bundle://spiralcraft-webapp.war-system/components/"
+  tgns:h="bundle://spiralcraft-webapp.war-system/components/html/"
+  tgns:dt="class:/spiralcraft/data/task/"
+  tgns:fn="class:/spiralcraft/lang/functions/"
+  %>
+  <div class="sc-form-field-panel searchQuery-fieldPanel">
+    <%h:FormField%>
+      <%h:Label%>PrincipalId<%/h:Label%>
+      <%h:TextInput x="principalId"/%>
+    <%/h:FormField%>
+    <%h:FormField%>
+      <%h:Label%>Start Date From<%/h:Label%>
+      <%h:TextInput x="from"/%>
+    <%/h:FormField%>
+    <%h:FormField%>
+      <%h:Label%>Start Date To<%/h:Label%>
+      <%h:TextInput x="to"/%>
+    <%/h:FormField%>
+  </div>
+<%/@doclet%>        
+        

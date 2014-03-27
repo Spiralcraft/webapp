@@ -1,0 +1,6 @@
+<%@doclet
+  textgen:trim="true"
+  %>
+  <div class="main-footer">
+  </div>          
+<%/@doclet%>

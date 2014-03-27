@@ -1,0 +1,15 @@
+<%c:activity-page
+  tgns:c="bundle://spiralcraft-webapp.war-system/components/"
+  tgns:af="class:/spiralcraft/servlet/autofilter/"
+  activityClass="session-view"
+  %>
+  <%c:RequestData x="[#params] { id:=[af:PathContext].pathInfo }"%>
+     <div class="dataItemView-info">
+       <%c:sessionView-panel idX="[params].id"/%>
+     </div>
+     <div class="dataItemView-actions">
+
+       
+     </div>
+  <%/c:RequestData%>
+<%/c:activity-page%>

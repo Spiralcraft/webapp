@@ -1,0 +1,6 @@
+<%@doclet
+  tgns:c="bundle://spiralcraft-webapp.war-system/components/"
+  textgen:trim="true"
+  %>
+  <!-- Banner goes here -->
+<%/@doclet%>

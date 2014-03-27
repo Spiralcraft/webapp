@@ -10,7 +10,7 @@
       ,activityTitleX:=`[comp:activity-page].activityTitle`
     }'
   %>
-  <%comp:main-page $id="[comp:activity-page].id" bodyClass="sc-dialog-body" title='{|[comp:activity-page].activityTitleX.()|}'%>
+  <%comp:main-page $id="[comp:activity-page].id" bodyClass="sc-activity-body" title='{|[comp:activity-page].activityTitleX.()|}'%>
     <div class="main-content">
       <%html:Div tag.clazz="activity-container" tag.classX="[comp:activity-page].activityClass"%>
         <h2 class="title"><%=[comp:activity-page].activityTitleX.()/%></h2>

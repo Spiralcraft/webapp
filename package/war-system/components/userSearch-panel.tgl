@@ -59,7 +59,7 @@
             </td>
           </tr>
         <%/Iterate%>
-      <table>
+      </table>
     <%/Session%>
   </div>
 <%/@doclet%>

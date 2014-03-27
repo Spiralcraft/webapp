@@ -1,0 +1,13 @@
+<af:PathContext
+  xmlns:af="class:/spiralcraft/servlet/autofilter/"
+  >
+  <handleAllRequests>true
+  </handleAllRequests>
+
+  <defaultResource>session.webui
+  </defaultResource>
+
+  <indexResource>index.webui
+  </indexResource>
+
+</af:PathContext>

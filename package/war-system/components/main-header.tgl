@@ -1,0 +1,13 @@
+<%@doclet
+  tgns:c="bundle://spiralcraft-webapp.war-system/components/"
+  textgen:trim="true"
+  %>
+  <div class="main-header">
+    <div class="banner-panel">
+      <%c:header-banner-panel/%>
+    </div>
+    <div class="nav-panel">
+      <%c:header-nav-panel/%>
+    </div>
+  </div>          
+<%/@doclet%>

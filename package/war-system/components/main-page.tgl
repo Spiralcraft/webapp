@@ -1,5 +1,5 @@
 <%@doclet
-  tgns:comp="bundle://spiralcraft-webapp.war-system/components/"
+  tgns:c="bundle://spiralcraft-webapp.war-system/components/"
   textgen:trim="true"
   tgns:j="class:/java/lang/"
   tgns:st="class:/spiralcraft/text/"
@@ -9,13 +9,13 @@
     , bodyClass:=[@st:MessageFormat].("sc-main-body") 
     }'
   %>
-  <%comp:page $id="[comp:main-page].id" $title="[comp:main-page].title" $bodyClass="[comp:main-page].bodyClass"%>
+  <%c:page $id="[c:main-page].id" $title="[c:main-page].title" $bodyClass="[c:main-page].bodyClass"%>
     <div class="wrap-header">
       <div class="inner">
         <div class="header-brand">
           <div class="image">
-            <img src="<%=[comp:page].imageURI/%>/spiralcraft-webapp/Spiralcraft-Logo.48x48.png"
-              width="48px"
+            <img src="<%=[c:page].imageURI/%>/spiralcraft-webapp/Spiralcraft-Logo.48x48.png"
+              width="48"
               alt="Spiralcraft logo"
             />
           </div>
@@ -25,18 +25,20 @@
           </div>
         </div>
         <div class="header-local-id">
-          <%comp:header-local-id/%>
+          <%c:header-local-id/%>
         </div>
         <div class="header-auth-panel">
-          <%comp:header-auth-panel/%>
+          <%c:header-auth-panel/%>
         </div>
         <div class="stretcher"></div>
       </div>
     </div>  
     <div class="wrap-body">
+      <%main-header/%>
       <%@insert/%>
+      <%main-footer/%>
     </div>
     <div class="wrap-footer">
     </div>
-  <%/comp:page%>
+  <%/c:page%>
 <%/@doclet%>

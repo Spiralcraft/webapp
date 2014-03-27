@@ -2,7 +2,9 @@
   xmlns:af="class:/spiralcraft/servlet/autofilter/"
   xmlns:code="context://code/"
   xmlns:saconf="context://code/system/config/"
-  xmlns:wameta="class:/spiralcraft/webapp/meta/"
+  xmlns:swm="class:/spiralcraft/webapp/meta/"
+  xmlns:base="bundle://spiralcraft-webapp.war-webui/config/base/"
+  xmlns:j="class:/java/lang/"
   >
 
 
@@ -12,7 +14,7 @@
   
   <filters>
     <af:DataSessionFilter>
-      <dataType x="[@wameta:SystemSession].type" /> 
+      <dataType x="[@swm:SystemSession].type" /> 
     </af:DataSessionFilter>
     <af:GuardFilter>
       <authenticate>true
@@ -21,7 +23,7 @@
       <loginURI>/system/login
       </loginURI>
       
-      <guardX>[wameta:SystemSession].user!=null
+      <guardX>[swm:SystemSession].user!=null
       </guardX>
       
       <redirectUri>/system/noauth
@@ -33,7 +35,37 @@
       </bypassPaths>      
       <bypassPaths>resetPassword
       </bypassPaths>      
-    </af:GuardFilter>     
+    </af:GuardFilter>
+    <base:NavFilter>
+  
+      <context.optionsX>
+        [{ 
+          [*swm:Path
+            { name:="users"
+             ,path:="users"
+             ,title:="Users"
+             }
+          ]
+          ,
+          [*swm:Path
+            { name:="shell"
+             ,path:="shell"
+             ,title:="Shell"
+             ,viewURI:=""
+            }
+          ]
+          ,
+          [*swm:Path
+            { name:="sessions"
+             ,path:="sessions"
+             ,title:="Sessions"
+             ,viewURI:=""
+            }
+          ]
+        }]
+      </context.optionsX>
+    
+    </base:NavFilter>
   </filters>
 
   <logLevel>INFO

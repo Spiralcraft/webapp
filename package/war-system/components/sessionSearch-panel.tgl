@@ -1,0 +1,44 @@
+<%@doclet
+  tgns:dt="class:/spiralcraft/data/task/"
+  tgns:swan="class:/spiralcraft/webapp/analytics/"
+  tgns:c="bundle://spiralcraft-webapp.war-system/components/"
+  tgns:h="bundle://spiralcraft-webapp.war-system/components/html/"
+  tgns:dt="class:/spiralcraft/data/task/"
+  %>
+  <%c:Session 
+    x=
+      '[#session] 
+        { 
+          query:[@swan:SessionSearch]
+          ,result:[@swan:Session.list]
+        }
+      '
+    %>
+  
+    <%h:Form tag.clazz="search" reloadAfterAction="true"%>
+      
+      <%With x="[session].query"%>
+        <%c:sessionSearchQuery-fieldPanel/%>
+      <%/With%>
+      <div class="sc-form-button-bar">
+        <%h:Button tag.clazz="button" onAction="[session].result=[session].query.search()[0.!4000]"%>
+          Search
+        <%/h:Button%>
+      </div>
+    <%/h:Form%>
+    
+    <%With x='[session].result'%>
+      <div class="searchResultSummary-panel">
+        <%If x=".!=null"%>
+          <%=@size()/%> results.
+        <%/If%>
+      </div>
+      <%If x="!@empty()"%>
+        <div class="searchResult-panel">
+          <%c:sessionSearchResult-table/%>
+        </div>
+      <%/If%>
+    <%/With%>
+  <%/c:Session%>
+
+<%/@doclet%>

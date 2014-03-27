@@ -1,0 +1,6 @@
+<%c:activity-page
+  tgns:c="bundle://spiralcraft-webapp.war-system/components/"
+  activityClass="sessionSearch"
+  %>
+  <%c:sessionSearch-panel/%>
+<%/c:activity-page%>

@@ -1,0 +1,31 @@
+<%@doclet
+  tgns:dt="class:/spiralcraft/data/task/"
+  %>
+    <table class="searchResult">
+      <thead>
+        <tr>
+          <th>Cookie</th>
+          <th>Started</th>
+          <th>Principal Id</th>
+          <th>Referrer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%Iterate%>
+          <tr>
+            <td><a href="<%=.id/%>"><%=cookie/%></a>
+            </td>
+            <td> 
+              <%DateFormat x="startTime" format="yyyy-MM-dd HH:mm:ss"/%>
+            </td>
+            <td>
+              <%=principalId/%>
+            </td>
+            <td>
+             <%=referrer/%>
+            </td>
+          </tr>
+        <%/Iterate%>
+      </tbody>
+    </table>
+<%/@doclet%>

@@ -1,0 +1,51 @@
+<%@doclet
+  tgns:dt="class:/spiralcraft/data/task/"
+  tgns:swan="class:/spiralcraft/webapp/analytics/"
+  tgns:c="bundle://spiralcraft-webapp.war-system/components/"
+  contextX=
+    '{
+      idX:=`null`
+    }'
+  %>
+  <div class="crumbtrail"><a href="/system/sessions/">Session Search</a> &raquo; <%=id/%> </div>
+  <%With x='[*dt:Fetch{[@swan:Session],[{`id:=[c:sessionView-panel].idX.()`}] }].()'%>
+   
+    <h2>Session #<%=id/%>
+      <%If x=".principalId!=null"%>
+        <br/>Login: <%=.principalId/%>
+      <%/If%>
+    </h2>
+    
+    <ul class="name-value">
+      <li>
+        <label>Start Time</label>
+        <div class="data">
+          <%DateFormat x="startTime"
+            format="yyyy-MM-dd HH:mm:ss"
+          /%>
+        </div>
+      </li>
+      <li>
+        <label>Client IP</label>
+        <div class="data"><%=clientAddress/%></div>
+      </li>
+      <li>
+        <label>Referrer</label>
+        <div class="data"><%=referrer/%></div>
+      </li>
+      <li>
+        <label>Landing</label>
+        <div class="data"><%=requestURL/%></div>
+      </li>
+      <li>
+        <label>User Agent</label>
+        <div class="data"><%=userAgent/%></div>
+      </li>
+      <li>
+        <label>Cookie</label>
+        <div class="data"><%=cookie/%></div>
+      </li>
+    <ul>
+    
+  <%/With%>
+<%/@doclet%>
