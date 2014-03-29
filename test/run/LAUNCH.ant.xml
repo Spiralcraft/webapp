@@ -5,7 +5,7 @@
       -XX:+UnlockDiagnosticVMOptions -XX:+PrintCompilation" 
       vmargs="-Dspiralcraft.vfs.context.ContextResourceMap.debugLevel=FINE"
 -->  
-  <property name="launchArgs" value="--gui"/>
+  <property name="launchArgs" value="--gui --lock httpd.lck"/>
   <target name="launch">
     <!-- <delete dir="../data"/> -->
     <delete dir="../packages"/>
