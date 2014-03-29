@@ -379,7 +379,7 @@ ul.name-value li {
 ul.name-value li label {
   display: block;
   font-weight: bold;
-  font-size: 80%;
+  font-size: 90%;
   text-align: left;
 }
 
@@ -387,7 +387,7 @@ ul.name-value li label {
 ul.name-value li div.data {
   display: block;
   text-align: left;
-  font-size: 125%;
+  font-size: 110%;
   padding-left: .25em;
 }
 

@@ -1,5 +1,6 @@
 <%@doclet
   tgns:dt="class:/spiralcraft/data/task/"
+  tgns:fn="class:/spiralcraft/lang/functions/"
   %>
     <table class="searchResult">
       <thead>
@@ -11,7 +12,7 @@
         </tr>
       </thead>
       <tbody>
-        <%Iterate%>
+        <%Iterate x=".[*fn:Sort{`.startTime`,true}]"%>
           <tr>
             <td><a href="<%=.id/%>"><%=cookie/%></a>
             </td>

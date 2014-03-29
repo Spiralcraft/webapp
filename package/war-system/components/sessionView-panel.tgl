@@ -2,6 +2,7 @@
   tgns:dt="class:/spiralcraft/data/task/"
   tgns:swan="class:/spiralcraft/webapp/analytics/"
   tgns:c="bundle://spiralcraft-webapp.war-system/components/"
+  tgns:sec="class:/spiralcraft/security"
   contextX=
     '{
       idX:=`null`
@@ -11,9 +12,6 @@
   <%With x='[*dt:Fetch{[@swan:Session],[{`id:=[c:sessionView-panel].idX.()`}] }].()'%>
    
     <h2>Session #<%=id/%>
-      <%If x=".principalId!=null"%>
-        <br/>Login: <%=.principalId/%>
-      <%/If%>
     </h2>
     
     <ul class="name-value">
@@ -25,6 +23,15 @@
           /%>
         </div>
       </li>
+      
+      <%If x=".principalId!=null"%>
+        <li>
+          <label>Login</label>
+          <div class="data">
+            <%=[@sec:Login].@findById(.principalId).username/%>
+          </div>
+        </li>
+      <%/If%>
       <li>
         <label>Client IP</label>
         <div class="data"><%=clientAddress/%></div>
