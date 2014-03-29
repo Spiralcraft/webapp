@@ -1,0 +1,39 @@
+<%@doclet
+  tgns:dt="class:/spiralcraft/data/task/"
+  tgns:fn="class:/spiralcraft/lang/functions/"
+  %>
+    <table class="searchResult">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>sessionId</th>
+          <th>timestamp</th>
+          <th>eventCode</th>
+          <th>eventData</th>
+          <th>message</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%Iterate x=".[*fn:Sort{`.timestamp`,true}]"%>
+          <tr>
+            <td><%=id/%>
+            </td>
+            <td><%=sessionId/%></a>
+            </td>
+            <td> 
+              <%DateFormat x="timestamp" format="yyyy-MM-dd HH:mm:ss"/%>
+            </td>
+            <td>
+              <%=eventCode/%>
+            </td>
+            <td>
+              <%=eventData/%>
+            </td>
+            <td>
+              <%=message/%>
+            </td>
+          </tr>
+        <%/Iterate%>
+      </tbody>
+    </table>
+<%/@doclet%>
