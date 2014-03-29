@@ -15,6 +15,85 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev28
+        </revision>
+                
+        <notes>
+          <scm:Note>Display LogEvent detail for session viewer
+          </scm:Note>
+        </notes>
+        
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>war-css/themes/system/global-wf.css
+          </URI>
+          <URI>war-system/components/logEventSearchResult-table.tgl
+          </URI>
+          <URI>war-system/components/sessionSearchResult-table.tgl
+          </URI>
+          <URI>war-system/components/sessionView-panel.tgl
+          </URI>
+          <URI>war-system/sessions/session.webui
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
+        <revision>-dev27
+        </revision>
+                
+        <notes>
+          <scm:Note>Clean up css, add navigation bar, add search and view of logged sessions
+           in analytics module
+          </scm:Note>
+        </notes>
+        
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>war-classes/spiralcraft/webapp/analytics/SessionSearch.type.xml
+          </URI>
+          <URI>war-css/themes/system/global-skin.css
+          </URI>
+          <URI>war-css/themes/system/global-wf.css
+          </URI>
+          <URI>war-system/PathContext.assy.xml
+          </URI>
+          <URI>war-system/components/activity-page.tgl
+          </URI>
+          <URI>war-system/components/header-banner-panel.tgl
+          </URI>
+          <URI>war-system/components/header-nav-panel.tgl
+          </URI>
+          <URI>war-system/components/main-footer.tgl
+          </URI>
+          <URI>war-system/components/main-header.tgl
+          </URI>
+          <URI>war-system/components/main-page.tgl
+          </URI>
+          <URI>war-system/components/sessionSearch-panel.tgl
+          </URI>
+          <URI>war-system/components/sessionSearchQuery-fieldPanel.tgl
+          </URI>
+          <URI>war-system/components/sessionSearchResult-table.tgl
+          </URI>
+          <URI>war-system/components/sessionView-panel.tgl
+          </URI>
+          <URI>war-system/components/userSearch-panel.tgl
+          </URI>
+          <URI>war-system/sessions/PathContext.assy.xml
+          </URI>
+          <URI>war-system/sessions/index.webui
+          </URI>
+          <URI>war-system/sessions/session.webui
+          </URI>
+        </resources>
+      </scm:Change>
+    
+      <scm:Change>
         <revision>-dev26
         </revision>
                 
