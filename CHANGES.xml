@@ -15,6 +15,32 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev29
+        </revision>
+                
+        <notes>
+          <scm:Note>Sync up standard and system UI styling
+          </scm:Note>
+        </notes>
+        
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>war-css/themes/standard/layout.css
+          </URI>
+          <URI>war-css/themes/standard/style.css
+          </URI>
+          <URI>war-css/themes/system/global-skin.css
+          </URI>
+          <URI>war-css/themes/system/global-wf.css
+          </URI>
+          <URI>war-webui/components/header-brand-panel.tgl
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev28
         </revision>
                 

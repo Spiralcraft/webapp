@@ -1,4 +1,4 @@
-<%theme:main-page
+<%theme:activity-page
   tgns:theme="context://theme/"
   tgns:comp="context://code/components/"
   tgns:wa="class:/spiralcraft/webapp/analytics/"
@@ -6,4 +6,4 @@
   %>
   one
   <%=[swm:Session].logActivity("activity-one")/%>
-<%/theme:main-page%>
+<%/theme:activity-page%>

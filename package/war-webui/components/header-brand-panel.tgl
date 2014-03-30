@@ -5,7 +5,7 @@
   %>
   <div class="image">
     <img src="<%=[comp:page].imageURI/%>/spiralcraft-webapp/Spiralcraft-Logo.48x48.png"
-      width="48px"
+      width="48"
       alt="Spiralcraft logo"
     />
   </div>

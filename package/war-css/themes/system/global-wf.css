@@ -235,6 +235,65 @@ ul.sc-field-grid {
   padding: 5px;
 }
 
+.magnum-dialog {
+  text-align: center;   
+}
+
+.magnum-dialog .sc-field-grid {
+  text-align: left; 
+}
+
+.magnum-dialog .sc-form-button-bar {
+  margin-bottom: 5px;
+}
+
+.magnum-dialog .sc-field-row {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.magnum-dialog .sc-field-row p {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.magnum-dialog .check-row p {
+  font-size: 9pt;
+  display: inline-block;
+  font-style: italic;
+}
+
+.magnum-dialog label {
+  display: block;
+  font-size: 15pt;
+}
+
+.magnum-dialog .check-row label {
+  display: inline-block;
+  font-size: 15pt;
+}
+
+.magnum-dialog input[type=text]
+,.magnum-dialog input[type=password] 
+{
+  display: table-cell;
+  font-size: 18pt;
+  width: 90%;
+}
+
+.form-dialog .check-row input {
+  font-size: 23pt;
+  padding: 20px;
+  font-weight: bold; 
+  margin:2px; 
+  margin-top: 5px;
+  margin-right: 10px;
+  vertical-align: baseline;    
+  float: left;
+  height: .5em;
+  width: .5em;
+}
+
 .main-header .nav-panel {
 
   padding: 0;
@@ -415,4 +474,3 @@ div.dataItemView-actions a.button:after {
 div.session-view .dataItemView-info {
   min-width: 800px;
 }
-

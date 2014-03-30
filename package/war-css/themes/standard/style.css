@@ -23,9 +23,6 @@ a:hover, a:focus {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.wrap-header  {
-  
-}
 
 .wrap-header a {
   font-weight: bold;
@@ -39,6 +36,10 @@ a:hover, a:focus {
 .wrap-header a:hover, .wrap-header a:focus {
   color: #FFFFFF;
   
+}
+
+.wrap-body {
+  background-color: #EAEAEA;
 }
 
 .wrap-footer {
@@ -229,4 +230,20 @@ div.error {
   font-weight: normal;
   color: red;   
   margin: 2px;
+}
+
+.main-header .nav-panel li a {
+  background-color: #BBBBBB;
+  font-weight: bold;
+  color: #000000;
+}
+
+.main-header .nav-panel 
+{
+  background-color: #888888;
+}
+
+.main-header .nav-panel li.selected a {
+  background-color: #EAEAEA;
+  border-bottom-color: #EAEAEA;
 }

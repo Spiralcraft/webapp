@@ -3,6 +3,10 @@
   -moz-box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 .wrap-header {
   height: 65px;
   min-width: 491px;
@@ -22,11 +26,12 @@
   clear: both;
 }
 .wrap-footer {
-  height: 64px;
+  height: 1%;
 }
 
 .wrap-body {
-  padding-bottom: 59px;
+  height: 99%;
+  padding-bottom: 1%;
 }
 
 
@@ -226,6 +231,10 @@ ul.sc-field-grid {
   margin-top: 5px;
 }
 
+.main-content {
+  padding: 5px;
+}
+
 .magnum-dialog {
   text-align: center;   
 }
@@ -326,13 +335,13 @@ ul.sc-field-grid {
   padding: 4px;
   background: none repeat scroll 0 0 #CCCCCC;
   display: block;
-  min-width: 50px;
+  min-width: 15em;
   text-align: center;
 }
 
 .main-header .nav-panel li:hover a {
   background-color: #DDDDDD;
-  color: #000000;	
+  color: #000000; 
 }
 
 .main-header .nav-panel li.selected a {
@@ -340,4 +349,128 @@ ul.sc-field-grid {
   background: none repeat scroll 0 0 #FFFFFF;
 }
 
+form.search {
+  width: 400px; 
+  margin: 10px auto;
+  padding: 10px;
+}
 
+form.search .sc-form-button-bar {
+  margin-top: 5px;
+}
+
+form.search .sc-form-field-panel {
+  display: table;
+}
+
+form.search .sc-webui-form-field {
+  display: table-row;
+}
+
+form.search .sc-webui-form-field label {
+  display: table-cell;
+  padding: 4px;
+  text-align: right;
+  min-width: 7em;
+}
+
+form.search .sc-webui-form-field input {
+  display: table-cell;
+}
+
+form.search .sc-webui-form-field select {
+  display: table-cell;
+}
+
+table.searchResult {
+  border-collapse: collapse;
+}
+
+table.searchResult th {
+  text-align: left;
+  padding: 4px;
+}
+
+table.searchResult td {
+  vertical-align: top;
+  text-align: left;
+  margin: 0;
+  padding: 6px;
+  border-bottom: 1px solid #000000;
+  border-top: 1px solid #000000;
+  font-size: 10pt;
+}
+
+table.searchResult tr:hover {
+  background-color: #EEEEFF;
+}
+
+
+div.searchResult-panel {
+  height: 300px;
+  width: 800px;
+  margin: auto;
+  overflow: auto;
+  border: 1px solid #000000;    
+}
+
+div.searchResultSummary-panel {
+  height: 20px;
+  width: 100px;
+  margin: auto;
+  overflow: auto;
+  border: none;
+  text-align: center;
+}
+
+
+ul.name-value {
+  list-style:none;
+  padding-left: 5px;
+}
+
+ul.name-value li {
+  list-style:none;
+  padding: 5px;
+  
+}
+
+ul.name-value li label {
+  display: block;
+  font-weight: bold;
+  font-size: 90%;
+  text-align: left;
+}
+
+
+ul.name-value li div.data {
+  display: block;
+  text-align: left;
+  font-size: 110%;
+  padding-left: .25em;
+}
+
+div.dataItemView-info {
+  display: inline-block;
+  
+}
+
+div.dataItemView-actions {
+  display: inline-block;
+  vertical-align: top;
+}
+
+div.dataItemView-actions a.button {
+  min-width: 200px;
+  font-size: 110%;
+  margin: 40px;
+  display: block;
+}
+
+div.dataItemView-actions a.button:after {
+  content: "   \00BB";
+}
+
+div.session-view .dataItemView-info {
+  min-width: 800px;
+}
