@@ -1,0 +1,30 @@
+<af:PathContext
+  xmlns:af="class:/spiralcraft/servlet/autofilter/"
+  xmlns:config="context://config/"
+  xmlns:swa-config="context://code/config/"
+  xmlns:swam="class:/spiralcraft/webapp/meta/"
+  xmlns:li="class:/spiralcraft/linkedin/"
+  xmlns:swan="class:/spiralcraft/webapp/analytics/"
+  xmlns:sec="class:/spiralcraft/security/auth/"
+  >
+
+  
+  <placeContext>
+    <swa-config:Place/>
+  </placeContext>
+
+  <filters>   
+    <swa-config:AnalyticsFilter/>
+    <swa-config:SecurityFilter>
+      <afterAuthenticate>
+        [swan:Session].associatePrincipal([sec:AuthSession].principal.id)
+      </afterAuthenticate>
+    </swa-config:SecurityFilter>
+
+    <af:DataSessionFilter>
+      <dataType x="[@swam:Session].type"/>
+    </af:DataSessionFilter>
+  </filters>
+  
+
+</af:PathContext>
