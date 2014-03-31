@@ -5,6 +5,8 @@
   xmlns:swm="class:/spiralcraft/webapp/meta/"
   xmlns:base="bundle://spiralcraft-webapp.war-webui/config/base/"
   xmlns:j="class:/java/lang/"
+  xmlns:util="class:/spiralcraft/util/"
+  xmlns:http="class:/javax/servlet/http/"
   >
 
 
@@ -38,6 +40,9 @@
     </af:GuardFilter>
     <base:NavFilter>
   
+      <context.pathX>
+        [@util:Path].([http:HttpServletRequest].requestURI.substring("/system".length()),'/')
+      </context.pathX>
       <context.optionsX>
         [{ 
           [*swm:Path
