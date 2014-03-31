@@ -42,14 +42,14 @@
         [{ 
           [*swm:Path
             { name:="users"
-             ,path:="users"
+             ,path:="/system/users"
              ,title:="Users"
              }
           ]
           ,
           [*swm:Path
             { name:="shell"
-             ,path:="shell"
+             ,path:="/system/shell"
              ,title:="Shell"
              ,viewURI:=""
             }
@@ -57,7 +57,7 @@
           ,
           [*swm:Path
             { name:="sessions"
-             ,path:="sessions"
+             ,path:="/system/sessions/"
              ,title:="Sessions"
              ,viewURI:=""
             }
