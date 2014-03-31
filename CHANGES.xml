@@ -15,6 +15,31 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev33
+        </revision>
+                
+        <notes>
+          <scm:Note>Fixes and enhancements to system session search - join
+            sessions with logins
+          </scm:Note>
+        </notes>
+        
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>war-classes/spiralcraft/webapp/analytics/SessionSearch.type.xml
+          </URI>
+          <URI>war-system/components/sessionSearch-panel.tgl
+          </URI>
+          <URI>war-system/components/sessionSearchQuery-fieldPanel.tgl
+          </URI>
+          <URI>war-system/components/sessionSearchResult-table.tgl
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev31
         </revision>
                 
