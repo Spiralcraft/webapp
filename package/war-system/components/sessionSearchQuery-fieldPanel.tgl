@@ -12,6 +12,10 @@
       <%h:TextInput x="principalId"/%>
     <%/h:FormField%>
     <%h:FormField%>
+      <%h:Label%>Username<%/h:Label%>
+      <%h:TextInput x="username"/%>
+    <%/h:FormField%>
+    <%h:FormField%>
       <%h:Label%>Start Date From<%/h:Label%>
       <%h:TextInput x="from"/%>
     <%/h:FormField%>

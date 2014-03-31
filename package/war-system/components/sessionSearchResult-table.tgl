@@ -1,13 +1,14 @@
 <%@doclet
   tgns:dt="class:/spiralcraft/data/task/"
   tgns:fn="class:/spiralcraft/lang/functions/"
+  tgns:sec="class:/spiralcraft/security/"
   %>
     <table class="searchResult">
       <thead>
         <tr>
           <th>Cookie</th>
           <th>Started</th>
-          <th>Principal Id</th>
+          <th>Username</th>
           <th>Referrer</th>
         </tr>
       </thead>
@@ -20,7 +21,7 @@
               <%DateFormat x="startTime" format="yyyy-MM-dd HH:mm:ss"/%>
             </td>
             <td>
-              <%=principalId/%>
+              <%=[@sec:Login].@findById(principalId).username/%>
             </td>
             <td>
              <%=referrer/%>

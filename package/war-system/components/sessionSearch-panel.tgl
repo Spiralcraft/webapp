@@ -9,7 +9,7 @@
     x=
       '[#session] 
         { 
-          query:[@swan:SessionSearch]
+          query:=[@swan:SessionSearch].()
           ,result:[@swan:Session.list]
         }
       '
