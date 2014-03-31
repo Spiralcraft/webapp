@@ -15,6 +15,20 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev30
+        </revision>
+                
+        <notes>
+          <scm:Note>Make system nav paths absolute to survive variations in
+            root path config.
+          </scm:Note>
+        </notes>
+        
+        <path>package/war-system/PathContext.assy.xml
+        </path>
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev29
         </revision>
                 
