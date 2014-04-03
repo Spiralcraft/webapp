@@ -66,6 +66,15 @@
               }
            ].()
         )
+        { [swan:SessionSearch].from!=null
+          ?[.][ .startTime &gt;=[swan:SessionSearch].from ]
+          :.
+        }
+        { [swan:SessionSearch].to!=null
+          ?[.][ .startTime &lt;=[swan:SessionSearch].to ]
+          :.
+        }
+        
       </x>
     </meta:Method>
   

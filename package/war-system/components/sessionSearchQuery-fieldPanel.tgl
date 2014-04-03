@@ -17,11 +17,11 @@
     <%/h:FormField%>
     <%h:FormField%>
       <%h:Label%>Start Date From<%/h:Label%>
-      <%h:TextInput x="from"/%>
+      <%h:DateInput x="from"  format="yyyy-MM-dd"/%>
     <%/h:FormField%>
     <%h:FormField%>
       <%h:Label%>Start Date To<%/h:Label%>
-      <%h:TextInput x="to"/%>
+      <%h:DateInput x="to" format="yyyy-MM-dd"/%>
     <%/h:FormField%>
   </div>
 <%/@doclet%>        

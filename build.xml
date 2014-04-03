@@ -3,7 +3,7 @@
 	
   <property name="organization" value="spiralcraft"/>
   <property name="module" value="webapp"/>
-  <property name="buildVersion" value="0.4.17-dev34"/>
+  <property name="buildVersion" value="0.4.17-dev35"/>
   <property name="build.status" value="milestone"/>
 
   <property name="publish.resolver.type" value="distrib"/>  
