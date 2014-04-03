@@ -1,0 +1,51 @@
+<%t:activity-page
+  tgns:t="context://theme"
+  tgns:h="context://code/components/html"
+  activityTitle="Standard Property Lists"
+  %>
+  <div class="activity-module">
+    <ul class="name-value">
+      <li>
+        <label>Foo</label>
+        <div class="data">Value of Foo</div>
+      </li>
+      <li>
+        <label>Bar</label>
+        <div class="data">Value of Bar</div>
+      </li>
+      <li>
+        <label>Baz</label>
+        <div class="data">Value of Baz</div>
+      </li>
+      <li>
+        <label>Bazooka</label>
+        <div class="data">Value of Foo, Value of Bar, Value of Baz, etc,....</div>
+      </li>
+      <li>
+        <label>BazookaBR</label>
+        <div class="data">Value of Foo,<br/> Value of Bar, <br/>Value of Baz, <br/>etc,....</div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="activity-module">
+    <ul class="name-value-grid">
+      <li>
+        <label>Foo</label>
+        <div class="data">Value of Foo</div>
+      </li>
+      <li>
+        <label>Bar</label>
+        <div class="data">Value of Bar</div>
+      </li>
+      <li>
+        <label>Baz</label>
+        <div class="data">Value of Baz</div>
+      </li>
+      <li>
+        <label>Bazooka</label>
+        <div class="data">Value of Foo,<br/> Value of Bar, <br/>Value of Baz, <br/>etc,....</div>
+      </li>
+    </ul>
+  </div>
+<%/t:activity-page%>

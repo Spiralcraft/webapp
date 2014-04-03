@@ -1,0 +1,45 @@
+<%t:activity-page
+  tgns:t="context://theme"
+  tgns:h="context://code/components/html"
+  activityClass="standardDataBrowsing-activity"
+  activityTitle="Standard Data Table"
+  %>
+  <div class="activity-module height-constrained-module">
+    <table class="data-output">
+      <thead>
+        <tr>
+          <th>Count</th>
+          <th>Foo</th>
+          <th>Bar</th>
+          <th>Baz</th>
+        </tr>
+        <tr>
+          <th colspan="4">Bazooka</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%Iterate x='
+          [{0,1,2,3,4,5,6,7,8,9
+            ,10,11,12,13,14,15,16,17,18,19,20
+            ,21,22,23,24,25,26,27,28,29,30,31
+          }]#{ { count:=.., foo:="ipsum"+.count,bar:="lorem"+.count,baz:="fudgem"+.count } }
+          '%>
+          <tr class="data-item-start gridded">
+            <td class="number"><%=count/%>
+            </td>
+            <td><%=foo/%>
+            </td>
+            <td><%=bar/%>
+            </td>
+            <td><%=baz/%>
+            </td>
+            
+          </tr>
+          <tr class="data-item-end">
+            <td colspan="4">Foo bar baz blah blah blah ipsum lorem</td>
+          </tr>
+        <%/Iterate%>
+      </tbody>
+    </table>
+    </div>
+<%/t:activity-page%>

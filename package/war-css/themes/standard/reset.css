@@ -2,10 +2,28 @@ body {
   margin:0;	
 }
 
-input[type="checkbox"] {-moz-appearance: none;}
+input[type="checkbox"] 
+{ -moz-appearance: none;
+}
 
-input { 
+input 
+{ 
   border: 1px solid #000000;
 }
 
-button { border: 1px solid #000000;}
+button 
+{ 
+  border: 1px solid #000000;
+}
+
+textarea 
+{
+  border: 1px solid #000000;
+}
+
+select 
+{
+  -moz-appearance: none;
+  border: 1px solid #000000;
+  padding: 0;
+}

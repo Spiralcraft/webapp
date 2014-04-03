@@ -220,9 +220,26 @@ a:hover, a:focus {
 
 input[type=text]
 ,input[type=password]
+,textarea
 {
   box-shadow: inset 1px 1px 1px 0px #888888;  
   padding: 1px 3px 3px 3px;
+}
+
+select
+{
+  box-shadow: inset 1px 1px 1px 0px #888888;  
+}
+
+input:focus, textarea:focus, select:focus {
+  background   : rgba(191,191,255,.1);
+  border      : 1px solid #00AAFF;
+  box-shadow: inset 1px 1px 1px 0px #CCCCFF;  
+}
+
+form.data-entry .sc-form-button-bar 
+{
+  background-color: #BBCCFF;
 }
 
 div.error {

@@ -1,0 +1,52 @@
+<%t:activity-page
+  tgns:t="context://theme"
+  tgns:h="context://code/components/html"
+  activityTitle="Standard Data Entry Form"
+  %>
+  <%h:Form tag.clazz="data-entry"%>
+    <div class="sc-labeled-control-grid">
+      <%h:FormField%>
+        <%h:Label%>FooFooIdId<%/h:Label%>
+        <div class="output-control">12345</div>
+      <%/h:FormField%>
+      <%h:FormField%>
+        <%h:Label%>FooFooDescription<%/h:Label%>
+        <div class="output-control">I haz my cheesburger</div>
+      <%/h:FormField%>
+      <%h:FormField%>
+        <%h:Label%>FooFooFoo<%/h:Label%>
+        <%h:TextInput x='"blah"'/%>
+      <%/h:FormField%>
+      <%h:FormField%>
+        <%h:Label%>BarFooFoo<%/h:Label%>
+        <%h:TextInput x='"blah blah blah blah blah blah blah blah blah"' tag.size="80"/%>
+      <%/h:FormField%>
+      <%h:FormField%>
+        <%h:Label%>BazFooFoo<%/h:Label%>
+        <%h:Select x='"foo"'%>
+          <%h:Option value='"foo"'%>foo<%/h:Option%>
+          <%h:Option value='"bar"'%>bar<%/h:Option%>
+          <%h:Option value='"baz"'%>baz<%/h:Option%>
+        <%/h:Select%>
+      <%/h:FormField%>
+      <%h:FormField%>
+        <%h:Label%>FooBarFoo<%/h:Label%>
+        <%h:CheckboxInput x='true'/%>
+      <%/h:FormField%>
+      <%h:FormField%>
+        <%h:Label%>FooBazFoo<%/h:Label%>
+        <%h:CheckboxInput x='false'/%>
+      <%/h:FormField%>
+      <%h:FormField%>
+        <%h:Label%>BarBarFoo<%/h:Label%>
+        <%h:TextArea x='"ipsum lorem postum forem"' tag.rows="5" tag.cols="40"/%>
+      <%/h:FormField%>
+    </div>
+    <div class="sc-form-button-bar">
+      <%h:Button onAction="null"%>Save<%/h:Button%>
+      <%h:Button onAction="null"%>Foo<%/h:Button%>
+      <%h:Button onAction="null"%>Bar<%/h:Button%>
+      <%h:Button onAction="null"%>Baz<%/h:Button%>
+    </div>
+  <%/h:Form%>
+<%/t:activity-page%>

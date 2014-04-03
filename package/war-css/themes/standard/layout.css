@@ -105,9 +105,6 @@ html, body {
   padding-left: 4px;
 }
 
-ul.sc-field-grid {
-  list-style: none;  
-}
 
 
 
@@ -145,51 +142,32 @@ ul.sc-field-grid {
   width: 66%;
 }
 
-.sc-form-button-bar {
-  text-align: center;
-  
-}
 
 .activity-container {
   width: 98%;
   margin: auto;
   padding: 10px;
   margin-top: 5px;
-    
+  overflow: auto;    
 }
 
 .activity-container .title {
   margin-top: 0;
 }
 
-.search-criteria-panel {
-  padding: 5px;
-  padding-bottom: 10px;
+
+.activity-module
+{
+  display: inline-block;
+  margin: auto;
+  overflow: auto;
+  vertical-align: top;
 }
 
-.search-criteria-panel .sc-form-button-bar {
-  text-align: left;
-  margin: 4px;
+.height-constrained-module
+{ max-height: 500px;
 }
 
-.search-result-table {
-  border-collapse: collapse;
-  border: 1px solid #CCCCCC;
-}
-
-.search-result-table td {
-  border: 1px solid #CCCCCC;
-  padding:2px;
-}
-
-.search-result-table tr {
-  border: 1px solid #CCCCCC;
-}
-
-.search-result-table th {
-  border: 1px solid #CCCCCC;
-  padding: 2px;
-}
 
 /* 
  * Default Skin 
@@ -349,61 +327,134 @@ ul.sc-field-grid {
   background: none repeat scroll 0 0 #FFFFFF;
 }
 
-form.search {
-  width: 400px; 
+
+/* 
+  Labeled Control Grid aligns labels and controls into a 2 column grid
+*/
+div.sc-labeled-control-grid
+{
+  display: table;
+}
+
+div.sc-labeled-control-grid > .sc-webui-form-field 
+{
+  display: table-row;
+  text-align: left;
+}
+
+div.sc-labeled-control-grid .sc-webui-form-field > label 
+,div.sc-labeled-control-grid .sc-webui-form-field > .label
+{
+  display: table-cell;
+  padding: 0 10px 4px 4px;
+  text-align: right;
+  min-width: 7em;
+  vertical-align: top;
+  padding-bottom: 4px;
+}
+
+/* For misc blocks  */
+div.sc-labeled-control-grid .sc-webui-form-field > .labeled-control 
+{
+  display: table-cell;
+  margin-bottom: 4px;
+}
+
+div.sc-labeled-control-grid .sc-webui-form-field > .output-field 
+{
+  display: table-cell;
+  margin-bottom: 4px;
+}
+
+div.sc-labeled-control-grid .sc-webui-form-field > input
+{
+  display: table-cell;
+  margin-bottom: 4px;
+}
+
+div.sc-labeled-control-grid .sc-webui-form-field > select 
+{
+  display: table-cell;
+  margin-bottom: 4px;
+}
+
+div.sc-labeled-control-grid .sc-webui-form-field > textarea 
+{
+  display: table-cell;
+  margin-bottom: 4px;
+}
+
+
+/*
+ Data entry forms
+*/
+form.data-entry {
+  display: inline-block;
   margin: 10px auto;
   padding: 10px;
 }
 
-form.search .sc-form-button-bar {
+form.data-entry .sc-form-button-bar {
   margin-top: 5px;
+  padding: 4px 10px;
 }
 
-form.search .sc-form-field-panel {
-  display: table;
+ul.sc-field-grid {
+  list-style: none;  
 }
 
-form.search .sc-webui-form-field {
-  display: table-row;
-}
 
-form.search .sc-webui-form-field label {
-  display: table-cell;
-  padding: 4px;
-  text-align: right;
-  min-width: 7em;
-}
+/*
+  Data Output Tables
+*/
 
-form.search .sc-webui-form-field input {
-  display: table-cell;
-}
-
-form.search .sc-webui-form-field select {
-  display: table-cell;
-}
-
-table.searchResult {
+table.data-output {
   border-collapse: collapse;
-}
-
-table.searchResult th {
-  text-align: left;
-  padding: 4px;
-}
-
-table.searchResult td {
-  vertical-align: top;
-  text-align: left;
-  margin: 0;
-  padding: 6px;
   border-bottom: 1px solid #000000;
   border-top: 1px solid #000000;
-  font-size: 10pt;
+  text-align: left;
+  vertical-align: top;
+  padding: 6px;
+  margin: 0;
 }
 
-table.searchResult tr:hover {
+table.data-output tr:hover {
   background-color: #EEEEFF;
 }
+
+
+table.data-output > thead > tr > th
+,table.data-output > tbody > tr > td
+{
+  padding: 4px;
+}
+
+table.data-output > tbody > tr.gridded > td {
+  border: 1px solid #CCCCCC;
+}
+
+table.data-output > thead > tr.gridded > th {
+  border: 1px solid #CCCCCC;
+}
+
+table.data-output > tbody > tr.data-item-start > td
+, table.data-output > tbody > tr.data-item > td {
+  border-top: 1px solid #000000;
+}
+
+table.data-output > tbody > tr.data-item-end > td
+, table.data-output > tbody > tr.data-item > td {
+  border-bottom: 1px solid #000000;
+}
+
+td.number
+{ text-align: right;
+}
+
+
+
+
+
 
 
 div.searchResult-panel {
@@ -429,13 +480,13 @@ ul.name-value {
   padding-left: 5px;
 }
 
-ul.name-value li {
+ul.name-value > li {
   list-style:none;
   padding: 5px;
   
 }
 
-ul.name-value li label {
+ul.name-value > li > label {
   display: block;
   font-weight: bold;
   font-size: 90%;
@@ -443,12 +494,49 @@ ul.name-value li label {
 }
 
 
-ul.name-value li div.data {
+ul.name-value > li > div.data {
   display: block;
   text-align: left;
   font-size: 110%;
   padding-left: .25em;
 }
+
+ul.name-value-grid
+{
+  list-style:none;
+  padding-left: 5px;
+  display: table;
+}
+
+ul.name-value-grid > li
+{
+  list-style:none;
+  padding: 5px;
+  display: table-row;
+}
+
+ul.name-value-grid > li > label
+{
+  display: table-cell;
+  text-align: right;
+  font-weight: bold;
+  font-size: 90%;
+  padding: 4px;
+}
+
+ul.name-value-grid > li > .data
+{
+  display: table-cell;
+  text-align: left;
+  font-size: 110%;
+  padding: 4px;
+}
+
+
+
+/*
+  Context for viewing data items
+*/
 
 div.dataItemView-info {
   display: inline-block;
