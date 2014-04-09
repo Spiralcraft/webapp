@@ -1,0 +1,14 @@
+<%t:activity-page
+  tgns:t="context://theme"
+  tgns:h="context://code/components/html"
+  activityClass="standardDataBrowsing-activity"
+  activityTitle="Standard Data Table"
+  %>
+  <div class="activity-module height-constrained-module">
+    <%h:Script target="HEAD" debug="true"%>
+      // This script should go in the header and not be rendered inline
+      function testFn() { return false;}
+    <%/h:Script%>
+  </div>
+  
+<%/t:activity-page%>
