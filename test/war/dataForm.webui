@@ -42,6 +42,56 @@
         <%h:TextArea x='"ipsum lorem postum forem"' tag.rows="5" tag.cols="40"/%>
       <%/h:FormField%>
     </div>
+
+    <ul class="sc-labeled-control-flow">
+      <li>
+        <%h:FormField%>
+          <%h:Label%>FooFooIdId<%/h:Label%>
+          <div class="output-control">12345</div>
+        <%/h:FormField%>
+        <%h:FormField%>
+          <%h:Label%>FooFooDescription<%/h:Label%>
+          <div class="output-control">I haz my cheesburger</div>
+        <%/h:FormField%>
+      </li>
+      <li>
+        <%h:FormField%>
+          <%h:Label%>FooFooFoo<%/h:Label%>
+          <%h:TextInput x='"blah"'/%>
+        <%/h:FormField%>
+      </li>
+      <li>
+        <%h:FormField%>
+          <%h:Label%>BarFooFoo<%/h:Label%>
+          <%h:TextInput x='"blah blah blah blah blah blah blah blah blah"' tag.size="80"/%>
+        <%/h:FormField%>
+        <%h:FormField%>
+          <%h:Label%>BazFooFoo<%/h:Label%>
+          <%h:Select x='"foo"'%>
+            <%h:Option value='"foo"'%>foo<%/h:Option%>
+            <%h:Option value='"bar"'%>bar<%/h:Option%>
+            <%h:Option value='"baz"'%>baz<%/h:Option%>
+          <%/h:Select%>
+        <%/h:FormField%>
+      </li>
+      <li>
+        <%h:FormField%>
+          <%h:Label%>FooBarFoo<%/h:Label%>
+          <%h:CheckboxInput x='true'/%>
+        <%/h:FormField%>
+        <%h:FormField%>
+          <%h:Label%>FooBazFoo<%/h:Label%>
+          <%h:CheckboxInput x='false'/%>
+        <%/h:FormField%>
+      </li>
+      <li>
+        <%h:FormField%>
+          <%h:Label%>BarBarFoo<%/h:Label%>
+          <%h:TextArea x='"ipsum lorem postum forem"' tag.rows="5" tag.cols="40"/%>
+        <%/h:FormField%>
+      </li>
+    </ul>
+
     <div class="sc-form-button-bar">
       <%h:Button onAction="null"%>Save<%/h:Button%>
       <%h:Button onAction="null"%>Foo<%/h:Button%>

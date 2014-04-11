@@ -264,3 +264,9 @@ div.error {
   background-color: #EAEAEA;
   border-bottom-color: #EAEAEA;
 }
+
+ul.sc-labeled-control-flow > li > .sc-webui-form-field > label
+{
+  font-size: 80%;
+  font-weight: bold; 
+}
