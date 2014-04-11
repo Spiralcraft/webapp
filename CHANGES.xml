@@ -15,6 +15,27 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev36
+        </revision>
+                
+        <notes>
+          <scm:Note>Add a labeled-control-flow css class to create a standard
+            multi-line flowing form control format
+          </scm:Note>
+        </notes>
+        
+        <path>package/war-css/themes/standard
+        </path>
+        
+        <resources>
+          <URI>layout.css
+          </URI>
+          <URI>style.css
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev34
         </revision>
                 
