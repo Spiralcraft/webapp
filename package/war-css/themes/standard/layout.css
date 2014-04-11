@@ -391,6 +391,7 @@ div.sc-labeled-control-grid .sc-webui-form-field > textarea
 ul.sc-labeled-control-flow
 {
   padding-left: 0;
+  margin: 0;
   list-style: none;
   text-align: left;
 }
