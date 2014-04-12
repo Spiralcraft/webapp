@@ -19,7 +19,7 @@
         </revision>
                 
         <notes>
-          <scm:Note>Fix regression in system app
+          <scm:Note>Fix regression in system app and change password function
           </scm:Note>
         </notes>
         
@@ -30,6 +30,8 @@
           <URI>war-system/login.webui
           </URI>
           <URI>war-system/profile.webui
+          </URI>
+          <URI>war-webui/myAccount.webui
           </URI>
           <URI>war-webui/function/registration/changePasswordForm.tgl
           </URI>
