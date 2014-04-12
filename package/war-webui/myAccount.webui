@@ -1,24 +1,19 @@
-<%theme:page
-  tgns="class:/spiralcraft/servlet/webui/components/"
+<%theme:dialog-page
+  tgns:c="context://code/components/"
   tgns:theme="context://theme"
   tgns:swa-reg="context://code/function/registration/"
   tgns:sec="class:/spiralcraft/security"
   tgns:secauth="class:/spiralcraft/security/auth"
-  title='Change My Password'
+  id="myAccount"
+  dialogTitle='My Account'
+  dialogClass="myAccount-dialog"
   %> 
-  <%theme:contentFull%>
-    <%theme:taskPanel
-      titleX='"Change My Password"'
-      %>
-      <%Guard loginURI="/login"%>
-        <%DataSession%>
-          <%With x="[@sec:Login].@findById([secauth:AuthSession].accountId)"%>
-            <%swa-reg:changePasswordForm/%>
-          <%/With%>
-        <%/DataSession%>
-      <%/Guard%>
-    <%/theme:taskPanel%>
-
-  <%/theme:contentFull%>
-<%/theme:page%>
+  <%c:Guard loginURI="/login"%>
+    <%c:DataSession%>
+      <%With x="[@sec:Login].@findById([secauth:AuthSession].accountId)"%>
+        <%swa-reg:changePasswordForm/%>
+      <%/With%>
+    <%/c:DataSession%>
+  <%/c:Guard%>
+<%/theme:dialog-page%>
   
