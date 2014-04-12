@@ -1,6 +1,6 @@
 <%@doclet
-  tgns:webuic="class:/spiralcraft/servlet/webui/components/"
-  tgns:html="class:/spiralcraft/servlet/webui/components/html/"
+  tgns:c="context://code/components/"
+  tgns:h="context://code/components/html/"
   tgns:lang="class:/spiralcraft/lang/"
   tgns:sec="class:/spiralcraft/security/"
   tgns:secauth="class:/spiralcraft/security/auth/"
@@ -11,10 +11,11 @@
   tgns:webui="bundle://spiralcraft-webapp.war-webui/"    
   tgns:codec="class:/spiralcraft/codec/text/"
   tgns:swa-reg="context://code/function/registration/"
+  tgns:rule="class:/spiralcraft/rules/"
   %>
-  <%swa-reg:Form%>
+  <%swa-reg:Form tag.clazz="data-entry"%>
   
-    <%html:Login%> 
+    <%h:Login%> 
     
       <%swa-reg:context%>
         
@@ -23,58 +24,103 @@
           %>
                   
           <div class="sc-registration-panel">
-          
-            <%webui:dataField x="username" labelX='"Username"'%>
-              <%swa-reg:UsernameInput/%>
-            <%/webui:dataField%>
-            
-            <%webui:dataField x="clearpass" labelX='"Password"'%>
-              <%swa-reg:PasswordInput/%>
-            <%/webui:dataField%>
-            
-
-            <%webui:formField labelX='"Verify Password"'%>
-              <%swa-reg:PasswordVerifyInput/%>
-            <%/webui:formField%>
-
+            <ul class="sc-labeled-control-flow">
+              <li>
+                <%h:FormField x="username"%>
+                  <%h:Label%>Username<%/h:Label%>
+                  <%swa-reg:UsernameInput
+                    tag.size="40"
+                    errorTag.tagName="div"
+                    errorTag.clazz="error"
+                    %>
+                    <%.rules%>
+                      <%rule:ExpressionRule 
+                        expression="[@sec:Login].@findBySearchName(.)==null" 
+                        message="Username has already been registered"
+                      /%>
+                    <%/.rules%>
+                  <%/swa-reg:UsernameInput%>
+                <%/h:FormField%>
+              </li>
+              <li>
+                <%h:FormField x="clearpass"%>
+                  <%h:Label%>Password<%/h:Label%>
+                  <%swa-reg:PasswordInput
+                    tag.size="40"
+                  /%>
+                <%/h:FormField%>
+              </li>
+              <li>
+                <%h:FormField%>
+                  <%h:Label%>Re-enter Password<%/h:Label%>
+                  <%swa-reg:PasswordVerifyInput
+                    tag.size="40"
+                  /%>
+                <%/h:FormField%>
+              </li>
             <%swa-reg:digestHiddenInputs/%>
             
             <%swa-reg:form-identityEditor require="false"%>
-              <%html:TupleEditor
+              <%h:TupleEditor
                 typeX='[@meta:User].type'
                 errorTag.tagName="div"
                 errorTag.clazz="error"
                 %>
                 <%.preSaveAssignments%>
                   <%lang:Assignment source=".principalName=[sec:Login].username"/%>
+                  <%lang:Assignment source=".principalId=[sec:Login].principalId"/%>
                 <%/.preSaveAssignments%>
-              
-                <%webui:dataField x="email"%>
-                  <%html:TextInput 
-                    name="email"
-                    required="true" 
-                    errorTag.tagName="div"
-                    errorTag.clazz="error"
-                    tag.autocomplete="off" 
-                  /%>
-                <%/webui:dataField%>
-              
-              <%/html:TupleEditor%>
+                <li>
+                  <%h:FormField%>
+                    <%h:Label%>Email Address<%/h:Label%>
+                    <%h:TextInput 
+                      x="email"
+                      name="email"
+                      required="true" 
+                      errorTag.tagName="div"
+                      errorTag.clazz="error"
+                      tag.autocomplete="off" 
+                      tag.size="40"
+                    /%>
+                  <%/h:FormField%>
+                </li>
+                <li>
+                  <%h:FormField%>
+                    <%h:Label%>Re-enter Email Address<%/h:Label%>
+                    <%h:TextInput 
+                      x="[swa-reg:context].emailVerify"
+                      name="emailVerify"
+                      required="true"
+                      errorTag.tagName="div"
+                      errorTag.clazz="error"
+                      tag.autocomplete="off" 
+                      tag.size="40"
+                      %>
+                      <%.rules%>
+                        <%rule:ExpressionRule 
+                          expression=".==[meta:User].email" 
+                          message="Email doesn't match"
+                        /%>
+                      <%/.rules%>
+                    <%/h:TextInput%>
+                  <%/h:FormField%>
+                </li>
+              <%/h:TupleEditor%>
             <%/swa-reg:form-identityEditor%>
-            
+            </ul>
             <div class="sc-form-button-bar">
-              <%html:Button 
-                x="[html:TupleEditor].saveCommand([html:Login].loginCommand())" 
-                tag.clazz="sc-form-completion-button"
+              <%h:Button 
+                x="[swa-reg:MyLoginEditor].saveCommand([h:Login].loginCommand())" 
+                tag.clazz="sc-form-completion-button button"
                 %>Register
-              <%/html:Button%>
+              <%/h:Button%>
             </div>
           </div>
           
         <%/swa-reg:MyLoginEditor%>
       <%/swa-reg:context%>
       
-    <%/html:Login%>
+    <%/h:Login%>
   <%/swa-reg:Form%>
 
 <%/@doclet%>

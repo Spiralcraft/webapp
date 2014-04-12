@@ -1,40 +1,42 @@
 <%@doclet
   tgns:webuic="class:/spiralcraft/servlet/webui/components/"
-  tgns:html="class:/spiralcraft/servlet/webui/components/html/"
+  tgns:h="context://code/components/html/"
   tgns:swa-login="bundle://spiralcraft-webapp.war-webui/function/login/"
   tgns:swa="bundle://spiralcraft-webapp.war-webui/"  
   %>
   <%swa-login:Form 
     %>
-    <%html:Login
+    <%h:Login
       requireLoginPermission="true"
       errorTag.tagName="div"
       errorTag.clazz="error"
       %>
-      <%swa:formField labelX='"Username"'%>
+      <%h:FormField%>
+        <%h:Label%>Username<%/h:Label%>
         <%swa-login:UsernameInput/%>
-      <%/swa:formField%>
+      <%/h:FormField%>
       
-      <%swa:formField labelX='"Password"'%>
+      <%h:FormField labelX='"Password"'%>
+        <%h:Label%>Password<%/h:Label%>
         <%swa-login:PasswordInput/%>
-      <%/swa:formField%>
+      <%/h:FormField%>
 
       <%swa-login:DigestHiddenInput/%>
             
-      <%swa:formField%>
+      <%h:FormField%>
         <%swa-login:PersistentInput/%>
         Keep me signed in on this browser
-      <%/swa:formField%>
+      <%/h:FormField%>
       
       <div class="sc-form-button-bar sc-login-form-button-bar">
-        <%html:Button 
-          x="[html:Login].loginCommand()" 
+        <%h:Button 
+          x="[h:Login].loginCommand()" 
           tag.clazz="sc-form-completion-button"
           %>Sign In
-        <%/html:Button%>
+        <%/h:Button%>
       </div>
           
-    <%/html:Login%>
+    <%/h:Login%>
   <%/swa-login:Form%>
 
 <%/@doclet%>

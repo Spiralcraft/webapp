@@ -1,19 +1,10 @@
-<%theme:page
-  tgns:theme="context://theme"
+<%t:dialog-page
+  tgns:t="context://theme"
   tgns:swa-reg="context://code/function/registration/"
-  tgns:webuic="class:/spiralcraft/servlet/webui/components/"
-  title='Register'
+  id="register" 
+  dialogTitle='Register'
+  dialogClass="form-dialog register-dialog"
   %> 
-  <%theme:contentFull%>
-    <%theme:taskPanel
-      titleX='"Register"'
-      %>
-  
-      <%webuic:DataSession%>
-        <%swa-reg:registrationForm/%>
-      <%/webuic:DataSession%>
-    <%/theme:taskPanel%>
-
-  <%/theme:contentFull%>
-<%/theme:page%>
+  <%swa-reg:registrationForm/%>
+<%/t:dialog-page%>
   

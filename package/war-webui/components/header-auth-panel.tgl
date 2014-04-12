@@ -11,6 +11,7 @@
     {
       authUser:=`[wa:Session].user`
       ,displayName:=`[wa:Session].user.commonName{.!=null?.:"Logged In"}`
+      ,publicRegistration:=true
     }'
   %>
   <%If x="[comp:header-auth-panel].authUser.()!=null"%>
@@ -33,8 +34,11 @@
       
     </div>
   <%Else/%>
+    <%If x='[comp:page].id!="register" && [comp:header-auth-panel].publicRegistration'%>
+      <a class="dropdown-anchor" href="/register">Register</a>
+    <%/If%>
     <%If x='[comp:page].id!="login"'%>
-      <a class="dropdown-anchor" href="login">Login</a>
+      <a class="dropdown-anchor" href="/login">Login</a>
     <%/If%>
   <%/If%>
 <%/@doclet%>

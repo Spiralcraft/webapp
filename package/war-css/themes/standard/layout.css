@@ -85,22 +85,28 @@ html, body {
   display: block;
 }
 
-.header-auth-panel {
+div.header-auth-panel {
   display: inline-block;
   float: right;
   min-width: 252px;
   text-align: right;
 } 
 
+div.header-auth-panel > a.dropdown-anchor {
+  padding-left: 10px; 
+}
 
-.header-auth-dropdown {
+div.header-auth-dropdown {
   text-align: right;
 }
-.header-auth-dropdown .dropdown-anchor {
+
+div.header-auth-dropdown .dropdown-anchor {
   padding-left: 20px;
 }
 
-.header-auth-dropdown .dropdown-anchor:after {
+
+
+div.header-auth-dropdown .dropdown-anchor:after {
   content: url("/images/spiralcraft-webapp/system/caret-down-white.png");
   padding-left: 4px;
 }
@@ -134,14 +140,14 @@ html, body {
   width: 25em;
 }
 
-.form-dialog {
-  width: 31em;  
+.register-dialog {
+	width: 342px;
 }
 
-.form-dialog input[type="text"] {
-  width: 66%;
+.form-dialog form.data-entry {
+	padding-top: 0;
+	padding-bottom: 0;
 }
-
 
 .activity-container {
   width: 98%;
