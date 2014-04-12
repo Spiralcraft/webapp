@@ -15,6 +15,36 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev37
+        </revision>
+                
+        <notes>
+          <scm:Note>Clean up registration UI and flow
+          </scm:Note>
+        </notes>
+        
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>war-css/themes/standard/layout.css
+          </URI>
+          <URI>war-webui/dataField.tgl
+          </URI>
+          <URI>war-webui/formField.tgl
+          </URI>
+          <URI>war-webui/register.webui
+          </URI>
+          <URI>war-webui/components/header-auth-panel.tgl
+          </URI>
+          <URI>war-webui/function/login/loginForm.tgl
+          </URI>
+          <URI>war-webui/function/registration/registrationForm.tgl
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev36
         </revision>
                 
