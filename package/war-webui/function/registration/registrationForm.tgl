@@ -69,6 +69,7 @@
                 <%.preSaveAssignments%>
                   <%lang:Assignment source=".principalName=[sec:Login].username"/%>
                   <%lang:Assignment source=".principalId=[sec:Login].principalId"/%>
+                  <%lang:Assignment source=".commonName=[sec:Login].username"/%>
                 <%/.preSaveAssignments%>
                 <li>
                   <%h:FormField%>
