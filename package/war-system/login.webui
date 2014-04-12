@@ -16,23 +16,26 @@
         %>
         <ul class="sc-field-grid">
           <li class="sc-field-row text-row">
-            <%swa:formField labelX='"Username"'%>
+            <%html:FormField%>
+              <%html:Label%>Username<%/html:Label%>
               <%login:UsernameInput /%>
-            <%/swa:formField%>
+            <%/html:FormField%>
           </li>
           <li class="sc-field-row text-row">
-            <%swa:formField labelX='"Password"'%>
+            <%html:FormField%>
+              <%html:Label%>Password<%/html:Label%>
               <%login:PasswordInput /%>
-            <%/swa:formField%>
+            <%/html:FormField%>
           </li>
           <li class="sc-field-row">
             <%login:DigestHiddenInput/%>
           </li>
           <li class="sc-field-row check-row">
             
-            <%swa:formField labelX='"Remember me"'%>
+            <%html:FormField%>
+              <%html:Label%>Remember me<%/html:Label%>
               <%login:PersistentInput /%>
-            <%/swa:formField%>
+            <%/html:FormField%>
             <p>Keep me signed in on this browser</p>
           </li>
   

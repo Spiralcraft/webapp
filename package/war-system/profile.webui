@@ -11,9 +11,10 @@
       <%html:TupleEditor x="[swm:SystemSession].user"%>
         <ul class="sc-field-grid">
           <li class="sc-field-row text-row">
-            <%swa:formField labelX='"Email"'%>
+            <%html:FormField%>
+              <%html:Label%>Email<%/html:Label%>
               <%html:TextInput x=".email"/%>
-            <%/swa:formField%>
+            <%/html:FormField%>
           </li>
         </ul>
         
