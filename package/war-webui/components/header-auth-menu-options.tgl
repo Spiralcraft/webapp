@@ -1,0 +1,20 @@
+<%@doclet 
+  tgns:h="context://code/components/html/"
+  tgns:af="class:/spiralcraft/servlet/autofilter/"
+  tgns:webui="class:/spiralcraft/servlet/webui/"
+  %>
+  <li>
+    <a href="/myAccount/">My Account</a>
+  </li>
+  <li>     
+    <%h:Link 
+      onAction=
+        '{
+          [af:SecurityFilter].logout()
+          ,[webui:ServiceContext].redirect
+            ([webui:ServiceContext].absoluteBackLink)
+        }'
+      %>Sign Out
+    <%/h:Link%>
+  </li>
+<%/@doclet%>

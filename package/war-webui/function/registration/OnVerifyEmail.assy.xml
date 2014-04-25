@@ -1,0 +1,25 @@
+<dt:Session
+  xmlns:dt="class:/spiralcraft/data/task/"
+  xmlns:t="class:/spiralcraft/task/"
+  xmlns:ju="class:/java/util/"
+  xmlns:j="class:/java/lang/"
+  xmlns:reg="context://code/function/registration/"
+  >
+  <transactional>true
+  </transactional>
+  
+  <contextX>
+    [#params]
+    { principalId:[@j:String]
+    , emailAddress:[@j:String]
+    }
+  </contextX>
+  
+  <sequence>
+    <t:Eval>
+      <x>
+        @log("Verified email "+emailAddress+" "+principalId)
+      </x>
+    </t:Eval>
+  </sequence>
+</dt:Session>

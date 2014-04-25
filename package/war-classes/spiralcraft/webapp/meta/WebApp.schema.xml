@@ -18,6 +18,11 @@
     </meta:Entity>
       
     <meta:Entity>
+      <type><webapp:EmailVerification.type/>
+      </type>
+    </meta:Entity>
+
+    <meta:Entity>
       <type><webapp:User.type/>
       </type>
     </meta:Entity>

@@ -2,7 +2,7 @@
   xmlns:meta="class:/spiralcraft/data/types/meta/"
   xmlns:entity="class:/spiralcraft/archetype/entity/"
   xmlns:net="class:/spiralcraft/archetype/net/"
-  xmlns:wameta="class:/spiralcraft/webapp/meta/"
+  xmlns:swm="class:/spiralcraft/webapp/meta/"
   xmlns:sec="class:/spiralcraft/security/"
   >
   <baseType>
@@ -41,11 +41,21 @@
       </type>
     </meta:Field>
     
+    <meta:CalculatedField>
+      <name>emailVerified
+      </name>
+      <type><Boolean.type/></type>
+      <expression>
+        [@swm:EmailVerification].@findByPrincipalIdEmail(.principalId,.email)
+          .verified
+      </expression>
+    </meta:CalculatedField>
+    
     <meta:RelativeField>
       <name>roles
       </name>
 
-      <type><wameta:ActorRole.list.type/>
+      <type><swm:ActorRole.list.type/>
       </type>
       
       <fieldList>id

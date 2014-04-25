@@ -1,0 +1,50 @@
+<%theme:activity-page
+  tgns:c="context://code/components/"
+  tgns:h="context://code/components/html/"
+  tgns:theme="context://theme"
+  tgns:reg="context://code/function/registration/"
+  tgns:sec="class:/spiralcraft/security"
+  tgns:secauth="class:/spiralcraft/security/auth"
+  tgns:swm="class:/spiralcraft/webapp/meta/"
+  id="myAccount"
+  activityTitle='My Account'
+  activityClass="myAccount-activity"
+  %> 
+  <%c:Guard loginURI="/login"%>
+    <%With x="[swm:Session].user"%>
+      <ul class="name-value">
+        <li>
+          <label>Username</label>
+          <div class="data"><%=[@sec:Login].@findById([secauth:AuthSession].accountId).username/%>
+          </div>
+        </li>
+        <li>
+          <label>Email</label>
+          <div class="data"><%=.email/%> 
+            <%If x=".emailVerified"%>
+              (verified)
+            <%Else/%>
+              (not verified) 
+              <%h:Link 
+                onAction=
+                  "[*reg:emailVerify-action]
+                    .([secauth:AuthSession].accountId
+                      ,.email
+                      ,.commonName
+                     )
+                   " 
+                tag.clazz="button"
+                %>
+                Verify
+              <%/h:Link%>
+            <%/If%>
+          </div>
+        </li>
+        <li>
+          <a href="changePassword">Change my password</a>
+        </li>
+      </ul>
+    <%/With%>
+  <%/c:Guard%>
+<%/theme:activity-page%>
+  

@@ -92,6 +92,15 @@ div.header-auth-panel {
   text-align: right;
 } 
 
+
+.header-auth-dropdown:hover > ul {
+  z-index: 9999;
+}
+
+.header-auth-dropdown:hover > ul > li > a {
+	display: block;
+}
+
 div.header-auth-panel > a.dropdown-anchor {
   padding-left: 10px; 
 }
@@ -114,42 +123,43 @@ div.header-auth-dropdown .dropdown-anchor:after {
 
 
 
-.center-dialog {
+div.center-dialog {
   margin-left: auto;
   margin-right: auto;
   margin-top:20px;
   width: 40%;
   padding: 10px;
+  text-align: center;
 }
 
-.center-dialog h2.title {
+div.center-dialog h2.title {
   margin-top:0px;
   margin-bottom: 10px;
   text-align: center;  
 }
 
-.center-dialog p {
+div.center-dialog p {
   text-align: center;  
 }
 
-.center-dialog a {
+div.center-dialog a {
   text-align: center; 
 } 
   
-.login-dialog {
+div.login-dialog {
   width: 25em;
 }
 
-.register-dialog {
+div.register-dialog {
 	width: 342px;
 }
 
-.form-dialog form.data-entry {
+div.form-dialog form.data-entry {
 	padding-top: 0;
 	padding-bottom: 0;
 }
 
-.activity-container {
+div.activity-container {
   width: 98%;
   margin: auto;
   padding: 10px;
@@ -157,12 +167,12 @@ div.header-auth-dropdown .dropdown-anchor:after {
   overflow: auto;    
 }
 
-.activity-container .title {
+div.activity-container .title {
   margin-top: 0;
 }
 
 
-.activity-module
+div.activity-module
 {
   display: inline-block;
   margin: auto;
@@ -170,7 +180,7 @@ div.header-auth-dropdown .dropdown-anchor:after {
   vertical-align: top;
 }
 
-.height-constrained-module
+div.height-constrained-module
 { max-height: 500px;
 }
 

@@ -4,6 +4,11 @@
 
 .activity-container
 {
-  text-align: center;
+  text-align: left;
 }
 
+
+.header-auth-dropdown:hover > ul > li > a {
+	display: block;
+  
+}

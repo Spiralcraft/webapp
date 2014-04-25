@@ -166,7 +166,6 @@ a:hover, a:focus {
 .header-auth-dropdown:hover ul {
   display: block;
   text-align: right;
-  width:100px;
   position: absolute;
   border-radius: 5px;
   border: 1px solid #AAAAAA;

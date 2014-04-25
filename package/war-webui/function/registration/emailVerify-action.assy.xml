@@ -1,0 +1,30 @@
+<dt:Session
+  xmlns:dt="class:/spiralcraft/data/task/"
+  xmlns:t="class:/spiralcraft/task/"
+  xmlns:ju="class:/java/util/"
+  xmlns:j="class:/java/lang/"
+  xmlns:reg="context://code/function/registration/"
+  xmlns:swm="class:/spiralcraft/webapp/meta/"
+  >
+  <transactional>true
+  </transactional>
+  
+  <contextX>
+    [#params]
+    { 
+      principalId:[@j:String]
+      ,email:[@j:String]
+      ,displayName:[@j:String]
+    }
+  </contextX>
+  
+  <sequence>
+    <t:Eval>
+      <x>
+        [@swm:EmailVerification].@forPrincipalIdEmail(principalId,email)
+          { [*reg:emailVerify-sendCode].(email,displayName,.code)
+          }
+      </x>
+    </t:Eval>
+  </sequence>
+</dt:Session>

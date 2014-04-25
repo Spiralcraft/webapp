@@ -1,0 +1,29 @@
+<%theme:dialog-page
+  tgns:c="context://code/components/"
+  tgns:theme="context://theme"
+  tgns:reg="context://code/function/registration/"
+  tgns:sec="class:/spiralcraft/security"
+  tgns:secauth="class:/spiralcraft/security/auth"
+  tgns:swm="class:/spiralcraft/webapp/meta/"
+  tgns:j="class:/java/lang/"
+  id="verifyEmail"
+  dialogTitle='Verify Email Address'
+  dialogClass="verifyEmail-dialog"
+  %> 
+  <%c:Guard loginURI="/login"%>
+    <%c:RequestData 
+      x="{code:[@j:String] }"
+      onRequest="[*reg:emailVerify-verify].([secauth:AuthSession].accountId,.code)"
+      %>
+      <%If x="[swm:Session].user.emailVerified"%>
+        Your email was successfully verified.<br/>
+      <%Else/%>
+        We're sorry, we were not able to verify your email address using the
+          provided link. Please try again.<br/>
+      <%/If%>
+      <a href="/myAccount/" class="button">Return to My Account</a>    
+       
+    <%/c:RequestData%>
+  <%/c:Guard%>
+<%/theme:dialog-page%>
+  

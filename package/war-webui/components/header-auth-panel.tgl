@@ -19,17 +19,6 @@
       <a class="dropdown-anchor" href="#"><%Out $x="[comp:header-auth-panel].displayName"/%></a>
       <ul class="dropdown">
         <%comp:header-auth-menu-options/%>
-        <li>     
-          <%html:Link 
-            onAction=
-              '{
-                [filter:SecurityFilter].logout()
-                ,[webui:ServiceContext].redirect
-                  ([webui:ServiceContext].absoluteBackLink)
-              }'
-            %>Sign Out
-          <%/html:Link%>
-        </li>
       </ul>
       
     </div>

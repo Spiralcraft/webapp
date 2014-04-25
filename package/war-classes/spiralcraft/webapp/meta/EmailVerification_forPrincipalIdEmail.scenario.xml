@@ -1,0 +1,44 @@
+<dt:Session
+  xmlns:dt="class:/spiralcraft/data/task/"
+  xmlns:t="class:/spiralcraft/task/"
+  xmlns:swm="class:/spiralcraft/webapp/meta/"
+  xmlns:j="class:/java/lang/"
+  xmlns:su="class:/spiralcraft/util/"
+  >
+  <transactional>true</transactional>
+  <contextX>
+    [#params] {
+      principalId:[@j:String] 
+      ,email:[@j:String]
+    }
+  </contextX>
+
+  <resultX>[@swm:EmailVerification].@findByPrincipalIdEmail(principalId,email)
+  </resultX>          
+  
+  <sequence>
+    <t:Eval>
+      <x>[@swm:EmailVerification].@findByPrincipalIdEmail(principalId,email)
+      </x>
+      <sequence>
+        <dt:Edit>
+          <whenX>.==null
+          </whenX>
+          <x>.
+          </x>
+          <autoCreate>true
+          </autoCreate>
+          <forceSave>true
+          </forceSave>
+          <preSave>
+            .{ .principalId=[params].principalId
+               ,.email=[params].email.toLowerCase()
+               ,.code=[@su:RandomUtil].@generateString(16)
+            }
+          </preSave>
+        </dt:Edit>
+      </sequence>
+    </t:Eval>
+ </sequence>
+</dt:Session>
+ 

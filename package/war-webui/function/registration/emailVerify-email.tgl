@@ -1,0 +1,15 @@
+<%With 
+  tgns="context://code/components/"
+  tgns:reg="context://code/function/registration/"
+  tgns:net="class:/java/net/"
+  x='[reg:emailVerify]'
+  %>
+  
+Hello <%=.displayName/%>,
+
+Please click this link or paste it into your browser to verify your email address.
+
+<%="${spiralcraft.instance.publicURI}/myAccount/verifyEmail?code="+.code/%>
+
+
+<%/With%>
