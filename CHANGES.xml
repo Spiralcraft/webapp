@@ -15,6 +15,55 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev39
+        </revision>
+                
+        <notes>
+          <scm:Note>Add email verification and related UX changes to "myAccount"
+            function and the auth menu
+          </scm:Note>
+        </notes>
+        
+        <path>package
+        </path>
+        
+        <resources>
+					<URI>war-classes/spiralcraft/webapp/meta/AbstractUser.type.xml
+					</URI>
+					<URI>war-classes/spiralcraft/webapp/meta/EmailVerification.type.xml
+					</URI>
+					<URI>war-classes/spiralcraft/webapp/meta/EmailVerification_forPrincipalIdEmail.scenario.xml
+					</URI>
+					<URI>war-classes/spiralcraft/webapp/meta/WebApp.schema.xml
+					</URI>
+					<URI>war-css/themes/standard/layout.css
+					</URI>
+					<URI>war-css/themes/standard/style.css
+					</URI>
+					<URI>war-webui/components/header-auth-menu-options.tgl
+					</URI>
+					<URI>war-webui/components/header-auth-panel.tgl
+					</URI>
+					<URI>war-webui/function/registration/OnVerifyEmail.assy.xml
+					</URI>
+					<URI>war-webui/function/registration/changePasswordForm.tgl
+					</URI>
+					<URI>war-webui/function/registration/emailVerify-action.assy.xml
+					</URI>
+					<URI>war-webui/function/registration/emailVerify-email.tgl
+					</URI>
+					<URI>war-webui/function/registration/emailVerify-sendCode.assy.xml
+					</URI>
+					<URI>war-webui/function/registration/emailVerify-verify.assy.xml
+					</URI>
+					<URI>war-webui/myAccount/changePassword.webui
+					</URI>
+					<URI>war-webui/myAccount/default.webui
+					</URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev38
         </revision>
                 
