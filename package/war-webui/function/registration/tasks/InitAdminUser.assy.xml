@@ -39,6 +39,7 @@
                          )
                       ,..login.principalId
                     ).@log(.)
+                    .[*dtask:Edit{forceSave:=true,preSave:=`superUser=true`}].()
                   :.
                 }
               ,ticket:=[@sec:Ticket].@create

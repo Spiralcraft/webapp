@@ -1,0 +1,23 @@
+<%@doclet
+  tgns:t="context://theme/"
+  tgns:comp="context://code/components/"
+  tgns:html="context://code/components/html/"
+  tgns:login="bundle://spiralcraft-webapp.war-webui/function/login/"
+  tgns:swa="bundle://spiralcraft-webapp.war-webui/" 
+  tgns:af="class:/spiralcraft/servlet/autofilter/"
+  %>
+  <%t:dialog-page id="noauth" dialogClass="form-dialog center-dialog"%>
+      <h2 class="title">Not Authorized</h2>
+      <p>Your account is not authorized to access the admin panel</p>
+      <p>Please contact your system administrator.</p>
+      <p>
+      <%html:Link
+        onAction='@{ [af:SecurityFilter].logout()
+                  , [*comp:UI].redirect(".")
+                  }'
+        %>
+        Sign in as a different user.
+      <%/html:Link%>
+      </p>
+  <%/t:dialog-page%>
+<%/@doclet%>

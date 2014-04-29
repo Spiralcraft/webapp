@@ -2,10 +2,16 @@
   tgns:h="context://code/components/html/"
   tgns:af="class:/spiralcraft/servlet/autofilter/"
   tgns:webui="class:/spiralcraft/servlet/webui/"
+  tgns:swm="class:/spiralcraft/webapp/meta/"
   %>
   <li>
     <a href="/myAccount/">My Account</a>
   </li>
+  <%If x="[swm:Session].user.superUser"%>
+    <li>     
+      <a href="/admin/">Admin</a>
+    </li>
+  <%/If%>
   <li>     
     <%h:Link 
       onAction=

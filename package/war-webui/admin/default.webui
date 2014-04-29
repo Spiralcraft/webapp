@@ -1,9 +1,8 @@
-<%themeui:page
-  tgns:themeui="context://theme/"
-  title='Spiralcraft Admin Home'  
+<%t:activity-page
+  tgns:t="context://theme/"
+  activityTitle='Admin Index'
+  activityClass='adminIndex-activity'
   %>
-  <%themeui:contentFull%>
   This is a test admin page for the framework
-  <%/themeui:contentFull%>
-<%/themeui:page%>
+<%/t:activity-page%>
   

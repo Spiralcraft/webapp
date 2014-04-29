@@ -2,11 +2,13 @@
   xmlns:af="class:/spiralcraft/servlet/autofilter/"
   xmlns:config="context://code/config/"
   xmlns:admin="context://code/admin/"
+  xmlns:swm="class:/spiralcraft/webapp/meta/"
   >
 
   <filters>
     
     <af:GuardFilter>
+      
       <pattern>*
       </pattern>
       
@@ -15,9 +17,17 @@
       
       <loginURI>/login
       </loginURI>
+      
+      <guardX>[swm:Session].user.superUser
+      </guardX>
+      
+      <redirectUri>/admin/noauth
+      </redirectUri>
+      
+      <bypassPaths>noauth
+      </bypassPaths>      
     </af:GuardFilter>
 
     
-    <config:AdminNavFilter/>
   </filters>
 </af:PathContext>

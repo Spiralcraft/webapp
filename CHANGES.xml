@@ -15,6 +15,44 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev40
+        </revision>
+                
+        <notes>
+          <scm:Note>Generic admin functionality refresh (incomplete)
+          </scm:Note>
+        </notes>
+        
+        <path>package/war-webui
+        </path>
+        
+        <resources>
+          <URI>admin/AdminNav.paths.xml
+          </URI>
+          <URI>admin/default.webui
+          </URI>
+          <URI>admin/noauth.webui
+          </URI>
+          <URI>admin/PathContext.assy.xml
+          </URI>
+          <URI>admin/users/index.webui
+          </URI>
+          <URI>admin/users/item.webui
+          </URI>
+          <URI>admin/users/PathContext.assy.xml
+          </URI>
+          <URI>components/header-auth-menu-options.tgl
+          </URI>
+          <URI>config/AdminNavFilter.assy.xml
+          </URI>
+          <URI>config/SessionFilter.assy.xml
+          </URI>
+          <URI>function/registration/tasks/InitAdminUser.assy.xml
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev39
         </revision>
                 
