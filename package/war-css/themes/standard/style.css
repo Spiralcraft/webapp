@@ -205,7 +205,10 @@ a:hover, a:focus {
   text-decoration: underline;
 }
 
-
+div.crumbtrail-container {
+  font-weight: bold;
+  font-size: 110%;
+}
 
 .form-dialog form input {
   margin:2px;  

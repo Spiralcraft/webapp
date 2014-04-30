@@ -1,4 +1,4 @@
-<%t:activity-page
+<%@doclet
   tgns:t="context://theme/"
   tgns:h="context://code/components/html/"
   tgns:c="context://code/components/"
@@ -6,45 +6,66 @@
   tgns:af="class:/spiralcraft/servlet/autofilter/"
   tgns:swm="class:/spiralcraft/webapp/meta/"
   tgns:w="class:/spiralcraft/servlet/webui/"
-  activityTitle="User Info"
-  activityClass="admin-user-edit-activity"
+  tgns:uc="context://code/admin/users/components/"
   %>
   <%c:RequestData 
     x="[#params] { id:=[af:PathContext].pathInfo }"
     %>
+    
     <%With x="[*dt:Fetch{[@swm:User],`.id==[params].id`}].()"%>
-      <div class="dataItemView-info">
-        <%h:Form tag.clazz="data-entry" reloadAfterAction="true"%>
-          <%h:TupleEditor%>
-            <ul class="sc-labeled-control-flow">
-              <li>
-                <%h:FormField%>
-                  <label>id</label>
-                  <div class="data"><%=.id/%></div>
-                <%/h:FormField%>
-                <%h:FormField%>
-                  <label>Name</label>
-                  <div class="data"><%=.commonName/%></div>
-                <%/h:FormField%>
-                <%h:FormField%>
-                  <label>Email</label>
-                  <div class="data"><%=.email/%></div>
-                <%/h:FormField%>
-              </li>
-              <li>
-                <%h:FormField%>
-                  <%h:Label%>SuperUser<%/h:Label%>
-                  <div class="data"><%h:CheckboxInput x="superUser"/%></div>
-                <%/h:FormField%>
-              </li>
-            </ul>
-            <div class="sc-form-button-bar">
-              <%h:Button onAction='[h:Form].save()'%>Save<%/h:Button%>
-            </div>
-          <%/h:TupleEditor%>
-        <%/h:Form%>
-      </div>
+      <%t:activity-page
+        activityTitle="User Info"
+        activityClass="admin-user-edit-activity"
+        crumbTrailX='[{ [@swm:Path].(path:="/",name:="Home")
+                      ,[@swm:Path].(path:="/admin/",name:="Admin")
+                      ,[@swm:Path].(path:="/admin/users/",name:="Users")
+                      ,[@swm:Path].(path:="/admin/users/"+[swm:User].id,name:=[swm:User].id)
+                     }]
+                    '
+        %>
+    
+        <div class="dataItemView-info">
+          <%h:Form 
+            tag.clazz="data-entry" 
+            reloadAfterAction="true"
+            onSave='[w:ServiceContext].redirect(".")'
+            %>
+            <%h:TupleEditor%>
+              <ul class="sc-labeled-control-flow">
+                <li>
+                  <%h:FormField%>
+                    <label>id</label>
+                    <div class="data"><%=.id/%></div>
+                  <%/h:FormField%>
+                  <%h:FormField%>
+                    <label>Name</label>
+                    <div class="data"><%=.commonName/%></div>
+                  <%/h:FormField%>
+                  <%h:FormField%>
+                    <label>Email</label>
+                    <div class="data"><%=.email/%></div>
+                  <%/h:FormField%>
+                </li>
+                <li>
+                  <%h:FormField%>
+                    <%h:Label%>SuperUser<%/h:Label%>
+                    <%If x=".id==[swm:Session].user.id"%>
+                      <%=superUser?"X":""/%>
+                    <%Else/%>
+                      <%h:CheckboxInput x="superUser"/%>
+                    <%/If%>
+                  <%/h:FormField%>
+                </li>
+                <%uc:item-control-flow-custom/%>
+              </ul>
+              <div class="sc-form-button-bar">
+                <%h:Button onAction='[h:Form].save()'%>Save<%/h:Button%>
+              </div>
+            <%/h:TupleEditor%>
+          <%/h:Form%>
+        </div>
+      <%/t:activity-page%>
     <%/With%>
 
   <%/c:RequestData%>
-<%/t:activity-page%>
+<%/@doclet%>

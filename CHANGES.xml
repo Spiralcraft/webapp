@@ -19,7 +19,40 @@
         </revision>
                 
         <notes>
-          <scm:Note>Generic admin functionality refresh (incomplete)
+          <scm:Note>Generic admin functionality refresh pass 2, customization
+            hooks, crumbtrails
+          </scm:Note>
+        </notes>
+        
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>war-css/themes/standard/layout.css
+          </URI>
+          <URI>war-css/themes/standard/style.css
+          </URI>
+          <URI>war-webui/admin/components/index-toc-nav-menu-custom.tgl
+          </URI>
+          <URI>war-webui/admin/users/components/item-control-flow-custom.tgl
+          </URI>
+          <URI>war-webui/admin/users/index.webui
+          </URI>
+          <URI>war-webui/admin/users/item.webui
+          </URI>
+          <URI>war-webui/admin/default.webui
+          </URI>
+          <URI>war-webui/themes/standard/activity-page.tgl
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
+        <revision>-dev40
+        </revision>
+                
+        <notes>
+          <scm:Note>Generic admin functionality refresh pass 1
           </scm:Note>
         </notes>
         

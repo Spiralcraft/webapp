@@ -4,6 +4,11 @@
   tgns:swm="class:/spiralcraft/webapp/meta/"
   activityTitle='Users'
   activityClass='admin-users-activity'
+  crumbTrailX='[{ [@swm:Path].(path:="/",name:="Home")
+                 ,[@swm:Path].(path:="/admin/",name:="Admin")
+                 ,[@swm:Path].(path:="/admin/users/",name:="Users")
+               }]
+              '
   %>
   
   <%With x="[*dt:Fetch{[@swm:User.list]}].()"%>
@@ -13,7 +18,7 @@
           <th>Name</th>
           <th>Email</th>
           <th>Admin</th>
-        <tr>
+        </tr>
       </thead>
       <tbody>
         <%Iterate%>

@@ -1,8 +1,14 @@
 <%t:activity-page
   tgns:t="context://theme/"
+  tgns:ac="context://code/admin/components/"
   activityTitle='Admin Index'
   activityClass='adminIndex-activity'
   %>
-  This is a test admin page for the framework
+  <ul class="toc-nav-menu">
+    <li>
+      <a href="users/">Users</a>
+    </li>
+    <%ac:index-toc-nav-menu-custom/%>
+  </ul>
 <%/t:activity-page%>
   

@@ -121,6 +121,9 @@ div.header-auth-dropdown .dropdown-anchor:after {
 }
 
 
+div.crumbtrail-container {
+  margin: 4px 4px 8px 4px;
+}
 
 
 div.center-dialog {
