@@ -493,6 +493,57 @@ table.data-output > tbody > tr.data-item-end > td
   border-bottom: 1px solid #000000;
 }
 
+table.data-output > tbody > tr.deleted > td {
+  text-decoration: line-through;
+}
+
+/*
+  Data Grids
+*/
+
+table.data-grid {
+  border-collapse: collapse;
+  border-bottom: 1px solid #000000;
+  border-top: 1px solid #000000;
+  text-align: left;
+  vertical-align: top;
+  padding: 6px;
+  margin: 0;
+}
+
+table.data-grid tr:hover {
+  background-color: #EEEEFF;
+}
+
+
+table.data-grid > thead > tr > th
+,table.data-grid > tbody > tr > td
+{
+  padding: 4px;
+}
+
+table.data-grid > tbody > tr.gridded > td {
+  border: 1px solid #CCCCCC;
+}
+
+table.data-grid > thead > tr.gridded > th {
+  border: 1px solid #CCCCCC;
+}
+
+table.data-grid > tbody > tr.data-item-start > td
+, table.data-grid > tbody > tr.data-item > td {
+  border-top: 1px solid #000000;
+}
+
+table.data-grid > tbody > tr.data-item-end > td
+, table.data-grid > tbody > tr.data-item > td {
+  border-bottom: 1px solid #000000;
+}
+
+table.data-grid > tbody > tr.deleted > td {
+  text-decoration: line-through;
+}
+
 td.number
 { text-align: right;
 }
