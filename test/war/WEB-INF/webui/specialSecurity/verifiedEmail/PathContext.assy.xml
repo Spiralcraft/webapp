@@ -1,0 +1,30 @@
+<af:PathContext
+  xmlns:af="class:/spiralcraft/servlet/autofilter/"
+  xmlns:swm="class:/spiralcraft/webapp/meta/"
+  >
+  <filters>     
+    
+    <af:GuardFilter>
+      <authenticate>true
+      </authenticate>
+      
+      <loginURI>/login
+      </loginURI>
+               
+      <conditions>
+        <af:GuardCondition>
+          <guardX>[swm:Session].user
+            { .superUser
+                || .emailVerified
+            }
+          </guardX>
+          
+          <redirectUri>/emailVerificationRequired
+          </redirectUri>
+        </af:GuardCondition>
+      </conditions>
+    </af:GuardFilter> 
+    
+  </filters>
+
+</af:PathContext>

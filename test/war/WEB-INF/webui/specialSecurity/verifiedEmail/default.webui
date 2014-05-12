@@ -1,0 +1,11 @@
+<%@doclet
+  tgns:comp="context://code/components/"
+  tgns:af="class:/spiralcraft/servlet/autofilter/"
+  tgns:t="context://theme/"
+  tgns:swm="class:/spiralcraft/webapp/meta/"
+  %>
+  <%t:dialog-page%>
+    Congrats- your email address is verified (<%=[swm:Session].user.email/%>), and
+      you can reach this page.
+  <%/t:dialog-page%>
+<%/@doclet%>
