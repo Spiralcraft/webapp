@@ -423,6 +423,7 @@ ul.sc-labeled-control-flow > li > .sc-webui-form-field
 {
   display: inline-block;  
   margin-right: 6px;
+  vertical-align: top;
 }
 
 ul.sc-labeled-control-flow > li > .sc-webui-form-field > label
@@ -430,6 +431,15 @@ ul.sc-labeled-control-flow > li > .sc-webui-form-field > label
   display: block; 
 }
 
+ul.sc-labeled-control-flow > li > .sc-webui-form-field > div.data
+{
+  display: inline-block; 
+}
+
+ul.sc-labeled-control-flow > li > .sc-webui-form-field > input
+{
+  display: inline-block; 
+}
 
 /*
  Data entry forms
