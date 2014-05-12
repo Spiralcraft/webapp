@@ -15,6 +15,36 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev41
+        </revision>
+                
+        <notes>
+          <scm:Note>Fix layout issues when mixing data divs and controls on
+            same line of an sc-labeled-control-flow
+          </scm:Note>
+        </notes>
+        
+        <path>package/war-css/themes/standard/layout.css
+        </path>
+        
+      </scm:Change>
+
+      <scm:Change>
+        <revision>-dev41
+        </revision>
+                
+        <notes>
+          <scm:Note>Generic failure page for "verified email address required" 
+            security check.
+          </scm:Note>
+        </notes>
+        
+        <path>package/war-webui/emailVerificationRequired.webui
+        </path>
+        
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev40
         </revision>
                 
