@@ -15,6 +15,27 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev42
+        </revision>
+                
+        <notes>
+          <scm:Note>Add customization point for registration form.
+          </scm:Note>
+        </notes>
+        
+        <path>package/war-webui/function/registration
+        </path>
+        
+        <resources>
+          <URI>registrationForm.tgl
+          </URI> 
+          <URI>registration-controlFlow-custom.tgl
+          </URI> 
+        </resources>
+        
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev41
         </revision>
                 
