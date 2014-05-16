@@ -106,6 +106,7 @@
                     <%/h:TextInput%>
                   <%/h:FormField%>
                 </li>
+                <%swa-reg:registration-controlFlow-custom/%>
               <%/h:TupleEditor%>
             <%/swa-reg:form-identityEditor%>
             </ul>
