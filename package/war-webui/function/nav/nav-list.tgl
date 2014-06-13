@@ -12,14 +12,15 @@
       ,selectedX:[@lang:Expression]
       ,hrefX:[@lang:Expression]
       ,labelX:[@lang:Expression]
-      ,liClassX:=`null`
+      ,liClassX:=`""`
       ,liSelectedClassX:=`"selected"`
+      ,ulClassX:=`""`
     }'
   %>
   <%$nav:item%>
     <%Out $x='[nav:nav-list].labelX'/%>
   <%/$nav:item%>
-  <ul class="sc-nav-list">
+  <ul class='sc-nav-list<%=" "/%><%Out $x="[nav:nav-list].ulClassX"/%>'>
     <%Iterate $x="[nav:nav-list].listX" %>
       <li class='sc-nav-item<%=" "/%><%Out $x="[nav:nav-list].liClassX"/%> <%If $x="[nav:nav-list].selectedX"%><%=" "/%><%Out $x='[nav:nav-list].liSelectedClassX'/%><%/If%>'>
         <a href="<%Out $x='[nav:nav-list].hrefX'/%>" title="<%Out $x='[nav:nav-list].labelX'/%>"><%nav:item/%></a>
