@@ -15,6 +15,20 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev43
+        </revision>
+                
+        <notes>
+          <scm:Note>Parameterize the css class name of the nav list UL tag
+          </scm:Note>
+        </notes>
+        
+        <path>package/war-webui/function/nav/nav-list.tgl
+        </path>
+        
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev42
         </revision>
                 
