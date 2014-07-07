@@ -46,6 +46,10 @@
       ='[comp:page].jsURI'
     %>
     
+    <%RenderTo target="[html:Page].head"%>
+      <%comp:page-head/%>  
+    <%/RenderTo%>
+    
     <%jsclient:spiralcraft-jsclient/%>
     <%comp:page-body%>
       <%@insert/%>
