@@ -15,6 +15,29 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev44
+        </revision>
+                
+        <notes>
+          <scm:Note>Add an overridable doclet for code that goes in the head
+            section of all pages.
+          </scm:Note>
+        </notes>
+        
+        <path>package/war-webui/components/
+        </path>
+        
+        <resources>
+          <URI>page.tgl
+          </URI>
+          <URI>page-head.tgl
+          </URI>
+        </resources>
+        
+      </scm:Change>
+
+
+      <scm:Change>
         <revision>-dev43
         </revision>
                 
