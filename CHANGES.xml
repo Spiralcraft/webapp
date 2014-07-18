@@ -19,6 +19,21 @@
         </revision>
                 
         <notes>
+          <scm:Note>Make sure the Controller filter runs for error requests so
+            pages invoked as error handlers can contain full functionality.
+          </scm:Note>
+        </notes>
+        
+        <path>package/config/Context.assy.xml
+        </path>
+        
+      </scm:Change>
+
+      <scm:Change>
+        <revision>-dev44
+        </revision>
+                
+        <notes>
           <scm:Note>Add an overridable doclet for code that goes in the head
             section of all pages.
           </scm:Note>
