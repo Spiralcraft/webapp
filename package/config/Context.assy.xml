@@ -59,6 +59,9 @@
     
       <URLPattern>*
       </URLPattern>
+      
+      <onError>true
+      </onError>
     </httpd:FilterMapping>
   </filterMappings>
   
