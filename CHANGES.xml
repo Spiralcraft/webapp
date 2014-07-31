@@ -15,6 +15,28 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev46
+        </revision>
+                
+        <notes>
+          <scm:Note>Provide an extension point for customization of the 
+            myAccount main menu.
+          </scm:Note>
+        </notes>
+        
+        <path>package/war-webui/myAccount
+        </path>
+        
+        <resources>
+          <URI>default.webui
+          </URI>
+          <URI>components/main-menu-custom.tgl
+          </URI>
+        </resources>
+        
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev44
         </revision>
                 
