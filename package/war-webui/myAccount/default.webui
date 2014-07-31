@@ -1,6 +1,7 @@
 <%theme:activity-page
   tgns:c="context://code/components/"
   tgns:h="context://code/components/html/"
+  tgns:my="context://code/myAccount/components/"
   tgns:theme="context://theme"
   tgns:reg="context://code/function/registration/"
   tgns:sec="class:/spiralcraft/security"
@@ -43,7 +44,9 @@
         <li>
           <a href="changePassword">Change my password</a>
         </li>
+        <%my:main-menu-custom/%>
       </ul>
+      
     <%/With%>
   <%/c:Guard%>
 <%/theme:activity-page%>
