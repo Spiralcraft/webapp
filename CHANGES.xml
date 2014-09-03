@@ -15,6 +15,40 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev47
+        </revision>
+                
+        <notes>
+          <scm:Note>Enhance the system subapp to provide a basic view of the
+            data subsystem (work in progress)
+          </scm:Note>
+        </notes>
+        
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>war-css/themes/system/global-wf.css
+          </URI>
+          <URI>package/war-system/default.webui
+          </URI>
+          <URI>package/war-system/PathContext.assy.xml
+          </URI>
+          <URI>package/war-system/components/activity-page.tgl
+          </URI>
+          <URI>package/war-system/data/aggregate.webui
+          </URI>
+          <URI>package/war-system/data/index.webui
+          </URI>
+          <URI>package/war-system/data/PathContext.assy.xml
+          </URI>
+          <URI>package/war-system/data/tuple.webui
+          </URI>
+        </resources>
+        
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev46
         </revision>
                 
