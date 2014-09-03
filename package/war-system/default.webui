@@ -4,9 +4,11 @@
   %>
   <div class="expanded-menu-panel">
     <ul>
-      <li><a href="users">Users</a>
+      <li><a href="users/">Users</a>
       </li>
-      <li><a href="shell">Shell</a>
+      <li><a href="shell/">Shell</a>
+      </li>
+      <li><a href="data/">Data</a>
       </li>
     </ul>
   </div>

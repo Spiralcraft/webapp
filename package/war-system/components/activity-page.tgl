@@ -3,15 +3,35 @@
   tgns:comp="bundle://spiralcraft-webapp.war-system/components/"
   tgns:html="bundle://spiralcraft-webapp.war-system/components/html"
   tgns:j="class:/java/lang"
+  tgns:swm="class:/spiralcraft/webapp/meta/"
   contextX='{ 
       id:[@j:String]
       ,activityClass:[@j:String]
       ,activityTitle:=""
       ,activityTitleX:=`[comp:activity-page].activityTitle`
+      ,crumbTrailX:=`[@swm:Path][{}]`      
     }'
   %>
   <%comp:main-page $id="[comp:activity-page].id" bodyClass="sc-activity-body" title='{|[comp:activity-page].activityTitleX.()|}'%>
     <div class="main-content">
+      <%With x="[comp:activity-page].crumbTrailX.().@cast([@swm:Path][])"%>
+        <%If x=".!=null"%>
+          <div class="crumbtrail-container">
+            <%Iterate%>
+              <%If x="![Iterate].last"%>
+                <span class="crumb crumb-back"><a href="<%=path/%>"><%=name/%></a></span>
+                &nbsp;&raquo;&nbsp;
+              <%Else/%>
+                <span class="crumb crumb-last"><%=name/%></span>
+              <%/If%>
+            <%/Iterate%>
+          </div>
+        <%Else/%>
+          <!-- <%=[comp:activity-page].crumbTrailX.()/%> -->
+        <%/If%>
+      <%/With%>
+    
+    
       <%html:Div tag.clazz="activity-container" tag.classX="[comp:activity-page].activityClass"%>
         <h2 class="title"><%=[comp:activity-page].activityTitleX.()/%></h2>
         <%@insert/%>

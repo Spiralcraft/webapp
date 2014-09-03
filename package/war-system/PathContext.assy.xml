@@ -67,6 +67,14 @@
              ,viewURI:=""
             }
           ]
+          ,
+          [*swm:Path
+            { name:="data"
+             ,path:="/system/data/"
+             ,title:="Data"
+             ,viewURI:=""
+            }
+          ]
         }]
       </context.optionsX>
     
