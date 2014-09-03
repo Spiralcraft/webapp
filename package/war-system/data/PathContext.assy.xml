@@ -1,0 +1,26 @@
+<af:PathContext
+  xmlns:af="class:/spiralcraft/servlet/autofilter/"
+  xmlns:su="class:/spiralcraft/util/"
+  >
+  <handleAllRequests>true
+  </handleAllRequests>
+
+
+  <indexResource>index.webui
+  </indexResource>
+
+  <resourceMappingX>
+    pathInfo.empty
+      ?null
+      :[@su:Path].(pathInfo)
+        { 
+          .size()==1
+          ?createResourceMapping(pathInfo,"store.webui")
+          :.size()==2
+          ?createResourceMapping(pathInfo,"aggregate.webui")
+          :.size()==3
+          ?createResourceMapping((.parentPath().toString()+"/*").@log(.),"tuple.webui")
+          :null
+        }
+  </resourceMappingX>
+</af:PathContext>

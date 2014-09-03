@@ -1,0 +1,33 @@
+<%c:activity-page
+  tgns:c="bundle://spiralcraft-webapp.war-system/components/"
+  tgns:d="class:/spiralcraft/data/"
+  tgns:a="class:/spiralcraft/app/"
+  tgns:da="class:/spiralcraft/data/access/"
+  tgns:swm="class:/spiralcraft/webapp/meta/"
+  activityClass="data-index-activity"
+  activityTitle='Data Index'
+  crumbTrailX='[{ [@swm:Path].(path:="/",name:="Home")
+                 ,[@swm:Path].(path:="/system/",name:="System")
+                 ,[@swm:Path].(path:="/system/data/",name:="Data")
+               }]
+              '
+  %>
+
+  
+  <%With x="[d:Space].stores"%>
+    <ul>
+      <%Iterate%>
+        <li>
+          <h2><a href="<%=.name/%>"><%=.name/%></a></h2>
+          <ul>
+            <%Iterate x=".schema.entities"%>
+              <li><a href="<%=[da:Store].name/%>/<%=.name/%>/"><%=.name/%>( <%=.type.URI/%> )</a>
+              </li>
+            <%/Iterate%>
+          </ul>
+        </li>
+      <%/Iterate%>
+    </ul>
+  <%/With%> 
+  
+<%/c:activity-page%>

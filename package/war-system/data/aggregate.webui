@@ -1,0 +1,69 @@
+<%@doclet
+  tgns:c="bundle://spiralcraft-webapp.war-system/components/"
+  tgns:d="class:/spiralcraft/data/"
+  tgns:a="class:/spiralcraft/app/"
+  tgns:da="class:/spiralcraft/data/access/"
+  tgns:swm="class:/spiralcraft/webapp/meta/"
+  tgns:su="class:/spiralcraft/util/"
+  tgns:dt="class:/spiralcraft/data/task/"
+  contextX='
+    [#context] 
+    {  path:=[@su:Path].([a:PathContext].pathInfo) 
+       , storeName:=.path.elements[0]
+       , entityName:=.path.elements[1]
+       , store:=[d:Space].getStore(.storeName)
+       , entity:=.store.schema.getEntity(.entityName)
+       , type:=.entity.type
+       , fetchType:=[@d:Type].@getAggregateType(.type)
+    }'
+  %>
+  <%c:activity-page
+    activityClass="data-index-activity"
+    activityTitle='Data Index'
+    crumbTrailX='[{ [@swm:Path].(path:="/",name:="Home")
+                   ,[@swm:Path].(path:="/system/",name:="System")
+                   ,[@swm:Path].(path:="/system/data/",name:="Data")
+                   ,[@swm:Path].(path:="/system/data/"+[a:PathContext].pathInfo,name:=[a:PathContext].pathInfo)
+                 }]
+                '
+      
+    %>
+
+    <h1><%=[a:PathContext].pathInfo/%></h1>
+    
+    <ul class="name-value">
+      <li><label>Store</label> <%=[context].storeName/%></li>
+      <li><label>Location</label> <%=[context].store.localResourceURI/%></li>
+      <li><label>Entity</label> <%=[context].entityName/%></li>
+      <li><label>Type</label> <%=[context].type.URI/%></li>
+    </ul>
+    
+    <%With x="[*dt:Fetch{[context].fetchType}].()"%>
+      <%If x=".@empty"%>
+        No Results
+      <%Else/%>
+        <table class="data-output">
+          <thead>
+            <tr>
+              <th>Row</th>
+              <%Iterate x="[context].type.fieldSet.fieldNames"%>
+                <th><%=./%></th>
+              <%/Iterate%>
+            </tr>
+          </thead>
+          <%Iterate%>
+            <tr class="data-item">
+              <td><a href="<%=[Iterate].index/%>">#<%=[Iterate].index/%>.</a></td>
+              <%Iterate x="[context].type.fieldSet.fieldNames"%>
+                <td><%=[context].type.fieldSet.getFieldByName(.).getValue(..)/%></td>
+              <%/Iterate%>
+            </tr>
+          <%/Iterate%>
+        <table>
+      <%/If%>
+    <%/With%>
+
+  
+  
+  <%/c:activity-page%>
+<%/@doclet%>

@@ -1,0 +1,68 @@
+<%@doclet
+  tgns:c="bundle://spiralcraft-webapp.war-system/components/"
+  tgns:h="bundle://spiralcraft-webapp.war-system/components/html/"
+  tgns:d="class:/spiralcraft/data/"
+  tgns:a="class:/spiralcraft/app/"
+  tgns:da="class:/spiralcraft/data/access/"
+  tgns:swm="class:/spiralcraft/webapp/meta/"
+  tgns:su="class:/spiralcraft/util/"
+  tgns:dt="class:/spiralcraft/data/task/"
+  tgns:j="class:/java/lang/"
+  contextX='
+    [#context] 
+    {  path:=[@su:Path].([a:PathContext].pathInfo) 
+       , storeName:=.path.elements[0]
+       , entityName:=.path.elements[1]
+       , store:=[d:Space].getStore(.storeName)
+       , entity:=.store.schema.getEntity(.entityName)
+       , type:=.entity.type
+       , fetchType:=[@d:Type].@getAggregateType(.type)
+    }'
+  %>
+  <%c:activity-page
+    activityClass="data-index-activity"
+    activityTitle='Data Index'
+    crumbTrailX='[{ [@swm:Path].(path:="/",name:="Home")
+                   ,[@swm:Path].(path:="/system/",name:="System")
+                   ,[@swm:Path].(path:="/system/data/",name:="Data")
+                   ,[@swm:Path].(path:="/system/data/"+[@su:Path].([a:PathContext].pathInfo).parentPath(),name:=[@su:Path].([a:PathContext].pathInfo).parentPath().toString())
+                   ,[@swm:Path].(path:="/system/data/"+[a:PathContext].pathInfo,name:="Data Item")
+                 }]
+                '
+      
+    %>
+    <%With x="[#q] { row:=[@j:Integer].@valueOf([@su:Path].([a:PathContext].pathInfo).lastElement()) }"%>
+      <h1><%=[a:PathContext].pathInfo/%></h1>
+    
+      <ul class="name-value">
+        <li><label>Store</label> <%=[context].storeName/%></li>
+        <li><label>Location</label> <%=[context].store.localResourceURI/%></li>
+        <li><label>Entity</label> <%=[context].entityName/%></li>
+        <li><label>Type</label> <%=[context].type.URI/%></li>
+      </ul>
+    
+      <%With x="[*dt:Fetch{[context].fetchType}].()#{.}[ [q].row ]"%>
+        <%If x=".==null"%>
+          No Result
+        <%Else/%>
+          <%h:Form tag.clazz="data-entry" reloadAfterAction="true"%>
+            <%h:TupleEditor x="."%>
+              <div class="sc-labeled-control-grid">
+                <%Iterate x="[context].type.fieldSet.fieldNames"%>
+                    <%h:FormField%>
+                      <%h:Label%><%=./%><%/h:Label%>
+                      <div class="labeled-control"><%=[context].type.fieldSet.getFieldByName(.).getValue(...)/%></div>
+                    <%/h:FormField%>
+                <%/Iterate%>
+              </div>
+              <div class="sc-form-button-bar">
+                <%h:Button onAction="[h:Form].save()"%>Save<%/h:Button%>
+              </div>
+            <%/h:TupleEditor%>
+          <%/h:Form%>
+        <%/If%>
+      <%/With%>
+    <%/With%>
+  
+  <%/c:activity-page%>
+<%/@doclet%>
