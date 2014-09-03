@@ -1,0 +1,14 @@
+<package-base:Context
+  xmlns:package-base="context://package-base/"
+  xmlns:httpd="class:/spiralcraft/pioneer/httpd/"
+  >
+  <initParameters>
+    <httpd:InitParameter>
+      <name>spiralcraft.servlet.showExceptions
+      </name>
+      <value>true
+      </value>
+    </httpd:InitParameter>
+  </initParameters>
+
+</package-base:Context>
