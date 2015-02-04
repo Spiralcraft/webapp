@@ -16,7 +16,6 @@ html, body {
   padding: 6px;        
   display: block;
   max-height: 65px;
-  whitespace: no-wrap;
   width: 100%;
   min-width: 872px;
   text-align: center;
@@ -59,7 +58,7 @@ html, body {
 
 .header-brand .image img {
   display: inline-block;
-  line-height: auto;
+  line-height: normal;
 }
 
 .header-brand .brand {

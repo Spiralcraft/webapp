@@ -82,14 +82,14 @@ a:hover, a:focus {
 .center-dialog {
 
   border: 1px solid #000000;
-  border-radius: 15px;
-  box-shadow: 2px 2px 3px 0px #888888;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px 0px #888888;
 }
 
 .activity-container {
   border: 1px solid #000000;
-  border-radius: 15px;
-  box-shadow: 2px 2px 3px 0px #888888;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px 0px #888888;
   
 }
 
@@ -97,7 +97,6 @@ a:hover, a:focus {
     -moz-user-select: none;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 2px 2px 2px 2px;
-    -moz-border-radius: 2px 2px 2px 2px;
     cursor: default !important;
     display: inline-block;
     font-weight: bold;
@@ -159,7 +158,6 @@ a:hover, a:focus {
   margin: 0;
   padding: 0;
   border-radius: 5px;
-  -moz-border-radius: 5px;
   box-shadow: 1px 1px 2px 0px #000000;
 }
 
