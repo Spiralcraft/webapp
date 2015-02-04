@@ -15,6 +15,31 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev48
+        </revision>
+                
+        <notes>
+          <scm:Note>Tighten up the "standard" theme css styles
+          </scm:Note>
+        </notes>
+        
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>war-css/themes/standard/style.css
+          </URI>
+          <URI>war-css/themes/standard/layout.css
+          </URI>
+          <URI>war-webui/layout/navBar.stub.tgl
+          </URI>
+          <URI>war-webui/layout/navBar.tgl
+          </URI>
+        </resources>
+        
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev47
         </revision>
                 
