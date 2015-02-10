@@ -83,7 +83,7 @@ a:hover, a:focus {
 
   border: 1px solid #000000;
   border-radius: 3px;
-  box-shadow: 1px 1px 1px 0px #888888;
+  box-shadow: 1px 1px 1px 0 #888888;
 }
 
 .activity-container {
@@ -93,49 +93,8 @@ a:hover, a:focus {
   
 }
 
-.button {
-    -moz-user-select: none;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 2px 2px 2px 2px;
-    cursor: default !important;
-    display: inline-block;
-    font-weight: bold;
-    font-size: 11px;
-    height: 29px;
-    line-height: 29px;
-    min-width: 54px;
-    padding: 0 8px;
-    text-align: center;
-    text-decoration: none !important;
-    background: -moz-linear-gradient(center top , #F5F5F5, #F1F1F1) repeat scroll 0 0 rgba(0, 0, 0, 0);
-    color: #444444 !important;
-}
 
-.button:focus {
-    border: 1px solid #4D90FE;
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5) inset;
-    outline: medium none;
-}
 
-.button:hover {
-    background: -moz-linear-gradient(center top , #F8F8F8, #F1F1F1) repeat scroll 0 0 rgba(0, 0, 0, 0);
-    border-color: #C6C6C6;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
-    color: #222222 !important;
-}
-
-.button:hover:focus {
-    box-shadow: 0 0 0 1px #FFFFFF inset, 0 1px 1px rgba(0, 0, 0, 0.1);
-}
-
-.button:active {
-    background-color: inherit;
-    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15) inset;
-}
-
-.button::-moz-focus-inner {
-    border: 0 none;
-}
 
 .sc-webui-form fieldset {
   border: none;  
@@ -231,15 +190,15 @@ select
   box-shadow: inset 1px 1px 1px 0px #888888;  
 }
 
-input:focus, textarea:focus, select:focus {
-  background   : rgba(191,191,255,.1);
+input:focus, textarea:focus, select:focus 
+{
   border      : 1px solid #00AAFF;
   box-shadow: inset 1px 1px 1px 0px #CCCCFF;  
 }
 
 form.data-entry .sc-form-button-bar 
 {
-  background-color: #BBCCFF;
+  background-color: #DDEEFF;
 }
 
 div.error {
@@ -269,4 +228,63 @@ ul.sc-labeled-control-flow > li > .sc-webui-form-field > label
 {
   font-size: 80%;
   font-weight: bold; 
+}
+
+
+button
+, .button
+, input[type="submit"]
+, input[type="reset"]
+, input[type="button"] 
+{
+    border: none;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 1px 1px 2px 0 #000000;
+    cursor: default !important;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 11px;
+    height: 2em;
+    line-height: 2em;
+    padding: 0 0.5em;
+    min-width: 54px;
+    text-align: center;
+    text-decoration: none !important;
+    color: #EEEEEE;
+    background-color: #6B79B8;
+}
+
+button:focus
+, .button:focus 
+, input[type="submit"]:focus
+, input[type="reset"]:focus
+, input[type="button"]:focus
+{
+    color: #FFFFFF;
+}
+
+
+button:hover
+, .button:hover 
+, input[type="submit"]:hover
+, input[type="reset"]:hover
+, input[type="button"]:hover
+{
+    box-shadow: 2px 2px 2px 0 #000000;
+    color: #FFFFFF !important;
+}
+
+button:active
+, .button:active 
+, input[type="submit"]:active
+, input[type="reset"]:active
+, input[type="button"]:active
+{
+    box-shadow: 1px 1px 1px #000000 inset;
+}
+
+table.data-output 
+{
+  border: 1px solid #000000;
+  box-shadow: 1px 1px 2px 0 #000000;
 }
