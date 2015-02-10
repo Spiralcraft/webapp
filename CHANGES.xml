@@ -13,7 +13,73 @@
     <date>
     </date>
 
+
     <detail>
+      <scm:Change>
+        <revision>-dev49
+        </revision>
+                
+        <notes>
+          <scm:Note>Convert the system embedded app styling to fit the
+            standard theme
+          </scm:Note>
+        </notes>
+        
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>war-css/themes/system/global.css
+          </URI>
+          <URI>war-css/themes/system/global-skin.css
+          </URI>
+          <URI>war-css/themes/system/global-wf.css
+          </URI>
+          <URI>war-css/themes/system/layout.css
+          </URI>
+          <URI>war-css/themes/system/login-skin.css
+          </URI>
+          <URI>war-css/themes/system/reset.css
+          </URI>
+          <URI>war-css/themes/system/style.css
+          </URI>
+          <URI>war-system/login.webui
+          </URI>
+          <URI>war-system/shell.webui
+          </URI>
+          <URI>war-system/components/sessionSearch-panel.tgl
+          </URI>
+          <URI>war-system/components/sessionSearchQuery-fieldPanel.tgl
+          </URI>
+          <URI>war-system/components/sessionSearchResult-table.tgl
+          </URI>
+          <URI>war-system/components/userEdit-panel.tgl
+          </URI>
+          <URI>war-system/components/userSearch-panel.tgl
+          </URI>
+        </resources>
+        
+      </scm:Change>
+
+      <scm:Change>
+        <revision>-dev49
+        </revision>
+                
+        <notes>
+          <scm:Note>Improve the button styling in the standard theme
+          </scm:Note>
+        </notes>
+        
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>war-css/themes/standard/style.css
+          </URI>
+        </resources>
+        
+      </scm:Change>
+
       <scm:Change>
         <revision>-dev48
         </revision>
