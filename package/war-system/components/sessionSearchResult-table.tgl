@@ -3,7 +3,7 @@
   tgns:fn="class:/spiralcraft/lang/functions/"
   tgns:sec="class:/spiralcraft/security/"
   %>
-    <table class="searchResult">
+    <table class="searchResult data-output">
       <thead>
         <tr>
           <th>Cookie</th>
@@ -14,7 +14,7 @@
       </thead>
       <tbody>
         <%Iterate x=".[*fn:Sort{`.startTime`,true}]"%>
-          <tr>
+          <tr class="data-item">
             <td><a href="<%=.id/%>"><%=cookie/%></a>
             </td>
             <td> 

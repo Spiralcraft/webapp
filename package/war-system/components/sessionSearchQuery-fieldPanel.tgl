@@ -7,22 +7,27 @@
   tgns:fn="class:/spiralcraft/lang/functions/"
   %>
   <div class="sc-form-field-panel searchQuery-fieldPanel">
-    <%h:FormField%>
-      <%h:Label%>PrincipalId<%/h:Label%>
-      <%h:TextInput x="principalId"/%>
-    <%/h:FormField%>
-    <%h:FormField%>
-      <%h:Label%>Username<%/h:Label%>
-      <%h:TextInput x="username"/%>
-    <%/h:FormField%>
-    <%h:FormField%>
-      <%h:Label%>Start Date From<%/h:Label%>
-      <%h:DateInput x="from"  format="yyyy-MM-dd"/%>
-    <%/h:FormField%>
-    <%h:FormField%>
-      <%h:Label%>Start Date To<%/h:Label%>
-      <%h:DateInput x="to" format="yyyy-MM-dd"/%>
-    <%/h:FormField%>
+    <ul class="sc-labeled-control-flow">
+      <li>
+        <%h:FormField%>
+          <%h:Label%>PrincipalId<%/h:Label%>
+          <%h:TextInput x="principalId"/%>
+        <%/h:FormField%>
+        <%h:FormField%>
+          <%h:Label%>Username<%/h:Label%>
+          <%h:TextInput x="username"/%>
+        <%/h:FormField%>
+        <%h:FormField%>
+          <%h:Label%>Start Date From<%/h:Label%>
+          <%h:DateInput x="from"  format="yyyy-MM-dd"/%>
+        <%/h:FormField%>
+        <%h:FormField%>
+          <%h:Label%>Start Date To<%/h:Label%>
+          <%h:DateInput x="to" format="yyyy-MM-dd"/%>
+        <%/h:FormField%>
+      </li>
+        
+    </ul>
   </div>
 <%/@doclet%>        
         

@@ -11,7 +11,7 @@
   %>
   <div class="user-edit-panel formlet-panel">
     <%h:Form 
-      tag.clazz="userEdit"
+      tag.clazz="userEdit data-entry"
       x='[#model] 
           { user:=[@swm:SystemUser].@findByPrincipalId([request].id)
           , login:=[@sec:Login].@findById([request].id)

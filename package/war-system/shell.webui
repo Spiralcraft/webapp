@@ -40,7 +40,7 @@
           <%h:TextArea  x='[shell:ShellService].context.commandBuffer'/%>
         </div>
         <div class="button-strip">
-          <%h:SubmitButton label="eval" onAction='[shell:ShellService].eval()'/%>
+          <%h:SubmitButton tag.clazz="button" label="eval" onAction='[shell:ShellService].eval()'/%>
         </div>
         <div class="result">
           <%With x='[shell:ShellService].context'%>

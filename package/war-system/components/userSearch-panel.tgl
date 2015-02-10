@@ -25,17 +25,21 @@
         '
       %>
       <div class="search-criteria-panel">
-        <%html:Form%>
-          <%html:FormField%>
-            <%html:Label%>System Logins Only<%/html:Label%>
-            <%html:CheckboxInput x="[session].systemOnly"/%>
-          <%/html:FormField%>
+        <%html:Form tag.clazz="data-entry"%>
+          <ul class="sc-labeled-control-flow">
+            <li>
+              <%html:FormField%>
+                <%html:Label%>System Logins Only<%/html:Label%>
+                <%html:CheckboxInput x="[session].systemOnly"/%>
+              <%/html:FormField%>
+            </li>
+          </ul>
           <div class="sc-form-button-bar">
             <%html:Button type="submit" onAction="null"%>Apply<%/html:Button%>
           </div>
         <%/html:Form%>
       </div>
-      <table class="search-result-table">
+      <table class="data-output">
         <thead>
           <tr>
             <th>id</th>
@@ -46,7 +50,7 @@
         </thead>
         
         <%Iterate x="users()"%>
-          <tr>
+          <tr class="data-item">
             <td><%=.principalId/%>
             </td>
             <td><%=.username/%>

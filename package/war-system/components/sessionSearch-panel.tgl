@@ -15,7 +15,7 @@
       '
     %>
   
-    <%h:Form tag.clazz="search" reloadAfterAction="true"%>
+    <%h:Form tag.clazz="search data-entry" reloadAfterAction="true"%>
       
       <%With x="[session].query"%>
         <%c:sessionSearchQuery-fieldPanel/%>
