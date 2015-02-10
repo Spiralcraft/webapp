@@ -1,0 +1,647 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+.wrap-header {
+  height: 65px;
+  min-width: 491px;
+}
+
+.wrap-header > .inner {
+  padding: 6px;        
+  display: block;
+  max-height: 65px;
+  width: 100%;
+  min-width: 872px;
+  text-align: center;
+}
+
+.wrap-header > .inner > .stretcher {
+  clear: both;
+}
+.wrap-footer {
+  height: 1%;
+}
+
+.wrap-body {
+  height: 99%;
+  padding-bottom: 1%;
+}
+
+
+
+/* Float main-footer at bottom */
+.wrap-footer {
+  position: fixed;
+  bottom:0;
+  left:0;
+  right:0;
+}
+
+.header-brand {
+  display: inline-block;
+  float: left;
+  text-align: left;
+}
+
+.header-brand .image {
+  display: inline-block;
+  height: 48px;
+  top:0;
+  
+}
+
+.header-brand .image img {
+  display: inline-block;
+  line-height: normal;
+}
+
+.header-brand .brand {
+  display: inline-block;
+  position: relative;
+  top: -5px;
+}
+
+.header-local-id {
+  display: inline-block;
+  color: #FFFFFF;
+  height: 48px;
+  vertical-align: top;
+  text-align: center;
+  min-width: 348px;
+}
+
+.brand .company {
+  display: block;
+}
+
+.brand .product {
+  display: block;
+}
+
+div.header-auth-panel {
+  display: inline-block;
+  float: right;
+  min-width: 252px;
+  text-align: right;
+} 
+
+
+.header-auth-dropdown:hover > ul {
+  z-index: 9999;
+}
+
+.header-auth-dropdown:hover > ul > li > a {
+	display: block;
+}
+
+div.header-auth-panel > a.dropdown-anchor {
+  padding-left: 10px; 
+}
+
+div.header-auth-dropdown {
+  text-align: right;
+}
+
+div.header-auth-dropdown .dropdown-anchor {
+  padding-left: 20px;
+}
+
+
+
+div.header-auth-dropdown .dropdown-anchor:after {
+  content: url("/images/spiralcraft-webapp/system/caret-down-white.png");
+  padding-left: 4px;
+}
+
+
+div.crumbtrail-container {
+  margin: 4px 4px 8px 4px;
+}
+
+
+div.center-dialog {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:20px;
+  width: 40%;
+  padding: 10px;
+  text-align: center;
+}
+
+div.center-dialog h2.title {
+  margin-top:0px;
+  margin-bottom: 10px;
+  text-align: center;  
+}
+
+div.center-dialog p {
+  text-align: center;  
+}
+
+div.center-dialog a {
+  text-align: center; 
+} 
+  
+div.login-dialog {
+  width: 25em;
+}
+
+div.register-dialog {
+	width: 342px;
+}
+
+div.form-dialog form.data-entry {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+div.activity-container {
+  width: 98%;
+  margin: auto;
+  padding: 10px;
+  margin-top: 5px;
+  overflow: auto;    
+}
+
+div.activity-container .title {
+  margin-top: 0;
+}
+
+
+div.activity-module
+{
+  display: inline-block;
+  margin: auto;
+  overflow: auto;
+  vertical-align: top;
+}
+
+div.height-constrained-module
+{ max-height: 500px;
+}
+
+
+/* 
+ * Default Skin 
+ */
+.sc-dialog-body {
+  background-color: #CCCCCC;
+}
+
+.center-dialog {
+  background-color: #FFFFFF;
+}
+
+.activity-container {
+  background-color: #FFFFFF;
+    
+}
+
+
+.formlet-panel {
+  text-align: left;  
+}
+
+.formlet-panel .sc-webui-form-field {
+  display: table-row;
+}
+
+.formlet-panel .sc-webui-form-field label {
+  display: table-cell;
+  text-align: right;
+  padding: 2px;
+}
+
+.formlet-panel .sc-webui-form-field input {
+  margin: 2px;
+}
+
+.formlet-panel .sc-form-button-bar {
+  text-align: inherit;
+  margin-top: 5px;
+}
+
+.main-content {
+  padding: 5px;
+}
+
+.magnum-dialog {
+  text-align: center;   
+}
+
+.magnum-dialog .sc-field-grid {
+  text-align: left; 
+}
+
+.magnum-dialog .sc-form-button-bar {
+  margin-bottom: 5px;
+}
+
+.magnum-dialog .sc-field-row {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.magnum-dialog .sc-field-row p {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.magnum-dialog .check-row p {
+  font-size: 9pt;
+  display: inline-block;
+  font-style: italic;
+}
+
+.magnum-dialog label {
+  display: block;
+  font-size: 15pt;
+}
+
+.magnum-dialog .check-row label {
+  display: inline-block;
+  font-size: 15pt;
+}
+
+.magnum-dialog input[type=text]
+,.magnum-dialog input[type=password] 
+{
+  display: table-cell;
+  font-size: 18pt;
+  width: 90%;
+}
+
+.form-dialog .check-row input {
+  font-size: 23pt;
+  padding: 20px;
+  font-weight: bold; 
+  margin:2px; 
+  margin-top: 5px;
+  margin-right: 10px;
+  vertical-align: baseline;    
+  float: left;
+  height: .5em;
+  width: .5em;
+}
+
+.main-header .nav-panel {
+
+  padding: 0;
+  margin: auto; 
+  display: block;
+  position: relative;
+  border-bottom: 1px solid #000000; 
+}
+
+/* Force containing div to clear floats */
+.main-header .nav-panel:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+}
+
+.main-header .nav-panel ul {
+  list-style: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-header .nav-panel li {
+  display: inline;
+  float:left; 
+  position:relative;
+  margin-bottom: -1px; /* "Tab Effect" Border overlap */
+  padding: 0;
+}
+
+.main-header .nav-panel li a {
+  border-width:1px 1px 1px 0px;
+  border-style: solid;
+  font-size:1.1em;
+  text-decoration: none;
+  padding: 4px;
+  background: none repeat scroll 0 0 #CCCCCC;
+  display: block;
+  min-width: 15em;
+  text-align: center;
+}
+
+.main-header .nav-panel li:hover a {
+  background-color: #DDDDDD;
+  color: #000000; 
+}
+
+.main-header .nav-panel li.selected a {
+  border-bottom-color: #FFFFFF;
+  background: none repeat scroll 0 0 #FFFFFF;
+}
+
+
+/* 
+  Labeled Control Grid aligns labels and controls into a 2 column grid
+*/
+div.sc-labeled-control-grid
+{
+  display: table;
+}
+
+div.sc-labeled-control-grid > .sc-webui-form-field 
+{
+  display: table-row;
+  text-align: left;
+}
+
+div.sc-labeled-control-grid .sc-webui-form-field > label 
+,div.sc-labeled-control-grid .sc-webui-form-field > .label
+{
+  display: table-cell;
+  padding: 0 10px 4px 4px;
+  text-align: right;
+  min-width: 7em;
+  vertical-align: top;
+  padding-bottom: 4px;
+}
+
+/* For misc blocks  */
+div.sc-labeled-control-grid .sc-webui-form-field > .labeled-control 
+{
+  display: table-cell;
+  margin-bottom: 4px;
+}
+
+div.sc-labeled-control-grid .sc-webui-form-field > .output-field 
+{
+  display: table-cell;
+  margin-bottom: 4px;
+}
+
+div.sc-labeled-control-grid .sc-webui-form-field > input
+{
+  display: table-cell;
+  margin-bottom: 4px;
+}
+
+div.sc-labeled-control-grid .sc-webui-form-field > select 
+{
+  display: table-cell;
+  margin-bottom: 4px;
+}
+
+div.sc-labeled-control-grid .sc-webui-form-field > textarea 
+{
+  display: table-cell;
+  margin-bottom: 4px;
+}
+
+/*
+  Labeled control flow puts labels on top of controls and allows for multiple
+    controls on a single row of a multi-row set of controls 
+*/
+ul.sc-labeled-control-flow
+{
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+  text-align: left;
+}
+
+ul.sc-labeled-control-flow > li
+{ padding-bottom: 6px;  
+}
+
+ul.sc-labeled-control-flow > li > .sc-webui-form-field
+{
+  display: inline-block;  
+  margin-right: 6px;
+  vertical-align: top;
+}
+
+ul.sc-labeled-control-flow > li > .sc-webui-form-field > label
+{
+  display: block; 
+}
+
+ul.sc-labeled-control-flow > li > .sc-webui-form-field > div.data
+{
+  display: inline-block; 
+}
+
+ul.sc-labeled-control-flow > li > .sc-webui-form-field > input
+{
+  display: inline-block; 
+}
+
+/*
+ Data entry forms
+*/
+form.data-entry {
+  display: inline-block;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+form.data-entry .sc-form-button-bar {
+  margin-top: 5px;
+  padding: 4px 10px;
+}
+
+ul.sc-field-grid {
+  list-style: none;  
+}
+
+
+/*
+  Data Output Tables
+*/
+
+table.data-output {
+  border-collapse: collapse;
+  border-bottom: 1px solid #000000;
+  border-top: 1px solid #000000;
+  text-align: left;
+  vertical-align: top;
+  padding: 6px;
+  margin: 0;
+}
+
+table.data-output tr:hover {
+  background-color: #EEEEFF;
+}
+
+
+table.data-output > thead > tr > th
+,table.data-output > tbody > tr > td
+{
+  padding: 4px;
+}
+
+table.data-output > tbody > tr.gridded > td {
+  border: 1px solid #CCCCCC;
+}
+
+table.data-output > thead > tr.gridded > th {
+  border: 1px solid #CCCCCC;
+}
+
+table.data-output > tbody > tr.data-item-start > td
+, table.data-output > tbody > tr.data-item > td {
+  border-top: 1px solid #000000;
+}
+
+table.data-output > tbody > tr.data-item-end > td
+, table.data-output > tbody > tr.data-item > td {
+  border-bottom: 1px solid #000000;
+}
+
+table.data-output > tbody > tr.deleted > td {
+  text-decoration: line-through;
+}
+
+/*
+  Data Grids
+*/
+
+table.data-grid {
+  border-collapse: collapse;
+  border-bottom: 1px solid #000000;
+  border-top: 1px solid #000000;
+  text-align: left;
+  vertical-align: top;
+  padding: 6px;
+  margin: 0;
+}
+
+table.data-grid tr:hover {
+  background-color: #EEEEFF;
+}
+
+
+table.data-grid > thead > tr > th
+,table.data-grid > tbody > tr > td
+{
+  padding: 4px;
+}
+
+table.data-grid > tbody > tr.gridded > td {
+  border: 1px solid #CCCCCC;
+}
+
+table.data-grid > thead > tr.gridded > th {
+  border: 1px solid #CCCCCC;
+}
+
+table.data-grid > tbody > tr.data-item-start > td
+, table.data-grid > tbody > tr.data-item > td {
+  border-top: 1px solid #000000;
+}
+
+table.data-grid > tbody > tr.data-item-end > td
+, table.data-grid > tbody > tr.data-item > td {
+  border-bottom: 1px solid #000000;
+}
+
+table.data-grid > tbody > tr.deleted > td {
+  text-decoration: line-through;
+}
+
+td.number
+{ text-align: right;
+}
+
+
+ul.name-value {
+  list-style:none;
+  padding-left: 5px;
+}
+
+ul.name-value > li {
+  list-style:none;
+  padding: 5px;
+  
+}
+
+ul.name-value > li > label {
+  display: block;
+  font-weight: bold;
+  font-size: 90%;
+  text-align: left;
+}
+
+
+ul.name-value > li > div.data {
+  display: block;
+  text-align: left;
+  font-size: 110%;
+  padding-left: .25em;
+}
+
+ul.name-value-grid
+{
+  list-style:none;
+  padding-left: 5px;
+  display: table;
+}
+
+ul.name-value-grid > li
+{
+  list-style:none;
+  padding: 5px;
+  display: table-row;
+}
+
+ul.name-value-grid > li > label
+{
+  display: table-cell;
+  text-align: right;
+  font-weight: bold;
+  font-size: 90%;
+  padding: 4px;
+}
+
+ul.name-value-grid > li > .data
+{
+  display: table-cell;
+  text-align: left;
+  font-size: 110%;
+  padding: 4px;
+}
+
+
+
+/*
+  Context for viewing data items
+*/
+
+div.dataItemView-info {
+  display: inline-block;
+  
+}
+
+div.dataItemView-actions {
+  display: inline-block;
+  vertical-align: top;
+}
+
+div.dataItemView-actions a.button {
+  min-width: 200px;
+  font-size: 110%;
+  margin: 40px;
+  display: block;
+}
+
+div.dataItemView-actions a.button:after {
+  content: "   \00BB";
+}
+
+div.session-view .dataItemView-info {
+  min-width: 800px;
+}
