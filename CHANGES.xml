@@ -16,6 +16,47 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev50
+        </revision>
+                
+        <notes>
+          <scm:Note>In standard page types, replace xxxTitleX property with
+            xxxTitle that uses a MessageFormat. Make title display in-page
+            optional.
+          </scm:Note>
+        </notes>
+
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>war-system/login.webui
+          </URI>
+          <URI>war-system/components/activity-page.tgl
+          </URI>
+          <URI>war-system/components/dialog-page.tgl
+          </URI>
+          <URI>war-webui/themes/standard/activity-page.tgl
+          </URI>
+          <URI>war-webui/themes/standard/dialog-page.tgl
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
+        <revision>-dev50
+        </revision>
+                
+        <notes>
+          <scm:Note>added User.forId method
+          </scm:Note>
+        </notes>
+
+        <path>package/war-classes/spiralcraft/webapp/meta/User.type.xml
+        </path>
+      </scm:Change>
+      
+      <scm:Change>
         <revision>-dev49
         </revision>
                 
