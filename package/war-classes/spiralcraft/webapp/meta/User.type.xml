@@ -72,5 +72,28 @@
       </x>
           
     </meta:Method>  
+
+    <meta:Method>
+      <name>forId</name>
+      
+      <static>true
+      </static>
+      
+      <parameterTypes>
+        <String.type/>
+      </parameterTypes>
+      
+      <returnType>
+        <wameta:User.type/>
+      </returnType>
+      
+      <contextX>{ id:[@j:String] }
+      </contextX>
+          
+      <x>[*dtask:Fetch{[@wameta:User],[{`id:=id`}]}].()
+      </x>
+          
+    </meta:Method>  
+
   </methods>
 </meta:Type>
