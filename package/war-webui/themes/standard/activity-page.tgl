@@ -5,16 +5,17 @@
   tgns:theme="context://theme/"
   tgns:j="class:/java/lang"
   tgns:swm="class:/spiralcraft/webapp/meta/"
+  tgns:st="class:/spiralcraft/text/"
   contextX='{ 
       id:[@j:String]
       ,activityClass:[@j:String]
-      ,activityTitle:=""
-      ,activityTitleX:=`[theme:activity-page].activityTitle`
+      ,activityTitle:=[@st:MessageFormat].("")
       ,crumbTrailX:=`[@swm:Path][{}]`
       ,includeSecondaryContentX:=`true`
+      ,displayTitle:=true
     }'
   %>
-  <%theme:main-page $id="[theme:activity-page].id" bodyClass="sc-activity-body" title='{|[theme:activity-page].activityTitleX.()|}'%>
+  <%theme:main-page $id="[theme:activity-page].id" bodyClass="sc-activity-body" $title='[theme:activity-page].activityTitle'%>
     <div class="main-content">
       <%With x="[theme:activity-page].crumbTrailX.().@cast([@swm:Path][])"%>
         <%If x=".!=null"%>
@@ -33,7 +34,9 @@
         <%/If%>
       <%/With%>
       <%html:Div tag.clazz="activity-container" tag.classX="[theme:activity-page].activityClass"%>
-        <h2 class="title"><%=[theme:activity-page].activityTitleX.()/%></h2>
+        <%? [theme:activity-page].displayTitle%>
+        <h2 class="title"><%Text $format="[theme:activity-page].activityTitle"/%></h2>
+        <%/?%>
         <%@insert/%>
       <%/html:Div%>
       <%html:Div tag.clazz="activity-container-secondary" tag.classX='[theme:activity-page].activityClass+"-secondary"'%>

@@ -4,15 +4,15 @@
   tgns:html="bundle://spiralcraft-webapp.war-system/components/html"
   tgns:j="class:/java/lang"
   tgns:swm="class:/spiralcraft/webapp/meta/"
+  tgns:st="class:/spiralcraft/text/"
   contextX='{ 
       id:[@j:String]
       ,activityClass:[@j:String]
-      ,activityTitle:=""
-      ,activityTitleX:=`[comp:activity-page].activityTitle`
+      ,activityTitle:=[@st:MessageFormat].("")
       ,crumbTrailX:=`[@swm:Path][{}]`      
     }'
   %>
-  <%comp:main-page $id="[comp:activity-page].id" bodyClass="sc-activity-body" title='{|[comp:activity-page].activityTitleX.()|}'%>
+  <%comp:main-page $id="[comp:activity-page].id" bodyClass="sc-activity-body" $title='[comp:activity-page].activityTitle'%>
     <div class="main-content">
       <%With x="[comp:activity-page].crumbTrailX.().@cast([@swm:Path][])"%>
         <%If x=".!=null"%>
@@ -33,7 +33,7 @@
     
     
       <%html:Div tag.clazz="activity-container" tag.classX="[comp:activity-page].activityClass"%>
-        <h2 class="title"><%=[comp:activity-page].activityTitleX.()/%></h2>
+        <h2 class="title"><%Text $format="[comp:activity-page].activityTitle"/%></h2>
         <%@insert/%>
       <%/html:Div%>
     </div>

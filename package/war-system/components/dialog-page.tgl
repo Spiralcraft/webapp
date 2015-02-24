@@ -3,17 +3,17 @@
   tgns:comp="bundle://spiralcraft-webapp.war-system/components/"
   tgns:html="bundle://spiralcraft-webapp.war-system/components/html"
   tgns:j="class:/java/lang"
+  tgns:st="class:/spiralcraft/text/"
   contextX='{ 
       id:[@j:String]
       ,dialogClass:[@j:String]
-      ,dialogTitle:=""
-      ,dialogTitleX:=`[comp:dialog-page].dialogTitle`
+      ,dialogTitle:=[@st:MessageFormat].("")
     }'
   %>
-  <%comp:main-page $id="[comp:dialog-page].id" bodyClass="sc-dialog-body"%>
+  <%comp:main-page $id="[comp:dialog-page].id" bodyClass="sc-dialog-body" $title="[comp:dialog-page].dialogTitle"%>
     <div class="main-content">
       <%html:Div tag.clazz="center-dialog" tag.classX="[comp:dialog-page].dialogClass"%>
-        <h2 class="title"><%=[comp:dialog-page].dialogTitleX.()/%></h2>
+        <h2 class="title"><%Text $format="[comp:dialog-page].dialogTitle"/%></h2>
         <%@insert/%>
       <%/html:Div%>
     </div>

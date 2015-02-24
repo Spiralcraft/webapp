@@ -4,17 +4,20 @@
   tgns:html="context://code/components/html/"
   tgns:theme="context://theme/"
   tgns:j="class:/java/lang"
+  tgns:st="class:/spiralcraft/text/"
   contextX='{ 
       id:[@j:String]
       ,dialogClass:[@j:String]
-      ,dialogTitle:=""
-      ,dialogTitleX:=`[theme:dialog-page].dialogTitle`
+      ,dialogTitle:=[@st:MessageFormat].("")
+      ,displayTitle:=true
     }'
   %>
   <%theme:main-page $id="[theme:dialog-page].id" bodyClass="sc-dialog-body"%>
     <div class="main-content">
       <%html:Div tag.clazz="center-dialog" tag.classX="[theme:dialog-page].dialogClass"%>
-        <h2 class="title"><%=[theme:dialog-page].dialogTitleX.()/%></h2>
+        <%? [theme:dialog-page].displayTitle%>
+          <h2 class="title"><%Text $format="[theme:dialog-page].dialogTitle"/%></h2>
+        <%/?%>
         <%@insert/%>
       <%/html:Div%>
     </div>

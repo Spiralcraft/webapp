@@ -4,7 +4,7 @@
   tgns:login="bundle://spiralcraft-webapp.war-webui/function/login/"
   tgns:swa="bundle://spiralcraft-webapp.war-webui/"  
   %>
-  <%comp:dialog-page id="login" dialogClass="form-dialog magnum-dialog" dialogTitleX='"System Login"'%>
+  <%comp:dialog-page id="login" dialogClass="form-dialog magnum-dialog" dialogTitle='System Login'%>
     <%html:Stylesheet href="/css/spiralcraft-webapp/themes/system/login-skin.css" target="HEAD"/%>
     <%login:Form tag.clazz="login-form" reloadAfterAction="true"
       %>
