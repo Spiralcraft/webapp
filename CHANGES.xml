@@ -16,6 +16,35 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev51
+        </revision>
+                
+        <notes>
+          <scm:Note>Split out the forms and tables css rules so they can be
+            used independently of the standard theme.
+          </scm:Note>
+        </notes>
+
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>war-css/themes/standard/data-forms.css
+          </URI>
+          <URI>war-css/themes/standard/data-tables.css
+          </URI>
+          <URI>war-css/themes/standard/layout.css
+          </URI>
+          <URI>war-css/themes/system/data-forms.css
+          </URI>
+          <URI>war-css/themes/system/data-tables.css
+          </URI>
+          <URI>war-css/themes/system/layout.css
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev50
         </revision>
                 
