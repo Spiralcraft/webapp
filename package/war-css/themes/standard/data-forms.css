@@ -1,0 +1,111 @@
+/* 
+  Labeled Control Grid aligns labels and controls into a 2 column grid
+*/
+div.sc-labeled-control-grid
+{
+  display: table;
+}
+
+div.sc-labeled-control-grid > .sc-webui-form-field 
+{
+  display: table-row;
+  text-align: left;
+}
+
+div.sc-labeled-control-grid .sc-webui-form-field > label 
+,div.sc-labeled-control-grid .sc-webui-form-field > .label
+{
+  display: table-cell;
+  padding: 0 10px 4px 4px;
+  text-align: right;
+  min-width: 7em;
+  vertical-align: top;
+  padding-bottom: 4px;
+}
+
+/* For misc blocks  */
+div.sc-labeled-control-grid .sc-webui-form-field > .labeled-control 
+{
+  display: table-cell;
+  margin-bottom: 4px;
+}
+
+div.sc-labeled-control-grid .sc-webui-form-field > .output-field 
+{
+  display: table-cell;
+  margin-bottom: 4px;
+}
+
+div.sc-labeled-control-grid .sc-webui-form-field > input
+{
+  display: table-cell;
+  margin-bottom: 4px;
+}
+
+div.sc-labeled-control-grid .sc-webui-form-field > select 
+{
+  display: table-cell;
+  margin-bottom: 4px;
+}
+
+div.sc-labeled-control-grid .sc-webui-form-field > textarea 
+{
+  display: table-cell;
+  margin-bottom: 4px;
+}
+
+/*
+  Labeled control flow puts labels on top of controls and allows for multiple
+    controls on a single row of a multi-row set of controls 
+*/
+ul.sc-labeled-control-flow
+{
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+  text-align: left;
+}
+
+ul.sc-labeled-control-flow > li
+{ padding-bottom: 6px;  
+}
+
+ul.sc-labeled-control-flow > li > .sc-webui-form-field
+{
+  display: inline-block;  
+  margin-right: 6px;
+  vertical-align: top;
+}
+
+ul.sc-labeled-control-flow > li > .sc-webui-form-field > label
+{
+  display: block; 
+}
+
+ul.sc-labeled-control-flow > li > .sc-webui-form-field > div.data
+{
+  display: inline-block; 
+}
+
+ul.sc-labeled-control-flow > li > .sc-webui-form-field > input
+{
+  display: inline-block; 
+}
+
+/*
+ Data entry forms
+*/
+form.data-entry {
+  display: inline-block;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+form.data-entry .sc-form-button-bar {
+  margin-top: 5px;
+  padding: 4px 10px;
+}
+
+ul.sc-field-grid {
+  list-style: none;  
+}
