@@ -236,7 +236,8 @@ div.height-constrained-module
 }
 
 .magnum-dialog .sc-field-grid {
-  text-align: left; 
+  text-align: left;
+  list-style: none; 
 }
 
 .magnum-dialog .sc-form-button-bar {
