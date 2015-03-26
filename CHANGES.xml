@@ -16,6 +16,26 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev52
+        </revision>
+                
+        <notes>
+          <scm:Note>Hide bullets for field grid in .magnum-dialog
+          </scm:Note>
+        </notes>
+
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>war-css/themes/standard/layout.css
+          </URI>
+          <URI>war-css/themes/system/layout.css
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev51
         </revision>
                 
