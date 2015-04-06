@@ -16,6 +16,20 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev53
+        </revision>
+                
+        <notes>
+          <scm:Note>Include forms and tabels css rules in global css.
+          </scm:Note>
+        </notes>
+
+        <path>package/war-css/themes/standard/global.css
+        </path>
+        
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev52
         </revision>
                 
