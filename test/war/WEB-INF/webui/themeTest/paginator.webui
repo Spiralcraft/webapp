@@ -1,0 +1,44 @@
+<%t:activity-page
+  tgns:t="context://theme/"
+  tgns:c="context://code/components/"
+  %>
+  <%c:Session 
+    x='[#s] { data:=
+                  [{0,1,2,3,4,5,6,7,8,9
+                    ,10,11,12,13,14,15,16,17,18,19,20
+                    ,21,22,23,24,25,26,27,28,29,30,31
+                  }]
+                  #{ 
+                    { count:=..
+                      , foo:="ipsum"+.count
+                      , bar:="lorem"+.count
+                      , baz:="fudgem"+.count 
+                    } 
+                  }
+           }
+      '
+    %>
+    <%c:Paginate x="[s].data" pageSize="10"%>
+      <%c:pagination-control/%>
+      <table class="data-output">
+        <thead>  
+          <tr>
+            <th>Foo</th>
+            <th>Bar</th>
+            <th>Baz</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%Iterate%>
+            <tr class="data-item">
+              <td><%=.foo/%></td>
+              <td><%=.bar/%></td>
+              <td><%=.baz/%></td>
+            </tr>
+          <%/Iterate%>
+        </tbody>
+      </table>
+    <%/c:Paginate%>
+  <%/c:Session%>
+    
+<%/t:activity-page%>
