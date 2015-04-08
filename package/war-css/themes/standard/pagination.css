@@ -1,0 +1,28 @@
+ul.sc-page-selector
+{
+  list-style: none;
+  margin: 2px 0;
+  padding: 0;
+}
+
+ul.sc-page-selector li
+{
+  display: inline-block;
+}
+
+ul.sc-page-selector li:not(:first-child) 
+{ margin-left: -1px;
+}
+
+ul.sc-page-selector li a
+{
+  text-decoration: none;
+  border: 1px solid #000000;
+  padding: 0px 4px;
+  background: #D8D8D8;
+}
+
+ul.sc-page-selector li.this a
+{
+  background: #FFFFFF;
+}

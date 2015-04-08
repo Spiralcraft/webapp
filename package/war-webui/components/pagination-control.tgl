@@ -1,0 +1,61 @@
+<%@doclet
+  tgns:sswc="class:/spiralcraft/servlet/webui/components/"
+  tgns:h="context://code/components/html/"
+  tgns:j="class:/java/lang/"
+  textgen:trim="true"
+  %>
+  <%With x="[sswc:Paginate]"%>
+    <ul class="sc-page-selector">    
+      <li class="start">
+        <%h:Link 
+          x="currentPageCommand(0)"
+          tag.classX='currentPage==0?"disabled":""'
+          %>&lt;&lt;
+        <%/h:Link%>
+      </li><%=""/%>
+      <li class="back">
+        <%h:Link 
+          x="currentPageCommand(currentPage-1)"
+          tag.classX='currentPage==0?"disabled":""'          
+          %>&lt;
+        <%/h:Link%>
+      </li>
+      <%Iterate 
+        x="pageList
+            #{{
+              page := ..
+              ,currentPage := currentPage
+              ,distance := [@j:Math].@abs(.currentPage-.page)
+            }}
+            [pageCount<20 || .distance<3 || (.distance<=20 && .page%10==9)]
+          "
+        %>
+        <%If x=".currentPage!=.page"%>
+          <li class="index">
+            <%h:Link x="[sswc:Paginate].currentPageCommand(.page)"%>
+              <%=.page+1/%>
+            <%/h:Link%>
+          </li>
+        <%Else/%>
+          <li class="this">
+            <a href=""><%=.page+1/%></a>
+          </li>
+        <%/If%>
+      <%/Iterate%>
+      <li class="next">
+         <%h:Link 
+           x="[sswc:Paginate].currentPageCommand([sswc:Paginate].currentPage+1)"
+           tag.classX='[sswc:Paginate].currentPage==[sswc:Paginate].pageCount-1?"disabled":""'
+           %>&gt;
+        <%/h:Link%>
+      </li><%=""/%>
+      <li class="end">
+         <%h:Link 
+           x="[sswc:Paginate].currentPageCommand([sswc:Paginate].state.pageCount-1)"
+           tag.classX='[sswc:Paginate].currentPage==[sswc:Paginate].pageCount-1?"disabled":""'
+           %>&gt;&gt;
+        <%/h:Link%>
+      </li>
+    </ul>
+  <%/With%>
+<%/@doclet%>
