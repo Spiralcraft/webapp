@@ -1,5 +1,8 @@
 @import url("reset.css");
 @import url("layout.css");
+@import url("data-forms.css");
+@import url("data-tables.css");
+@import url("pagination.css");
 @import url("style.css");
 
 .activity-container
