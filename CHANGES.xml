@@ -20,7 +20,29 @@
         </revision>
                 
         <notes>
-          <scm:Note>Include forms and tabels css rules in global css.
+          <scm:Note>Add a themed pagination component
+          </scm:Note>
+        </notes>
+
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>war-css/themes/standard/global.css
+          </URI>
+          <URI>war-css/themes/standard/pagination.css
+          </URI>
+          <URI>war-webui/components/pagination-control.tgl
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
+        <revision>-dev53
+        </revision>
+                
+        <notes>
+          <scm:Note>Include forms and tables css rules in global css.
           </scm:Note>
         </notes>
 
