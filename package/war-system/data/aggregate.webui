@@ -1,5 +1,7 @@
 <%@doclet
   tgns:c="bundle://spiralcraft-webapp.war-system/components/"
+  tgns:h="bundle://spiralcraft-webapp.war-system/components/html/"
+  tgns:wc="bundle://spiralcraft-webapp.war-webui/components/"
   tgns:d="class:/spiralcraft/data/"
   tgns:a="class:/spiralcraft/app/"
   tgns:da="class:/spiralcraft/data/access/"
@@ -18,8 +20,8 @@
     }'
   %>
   <%c:activity-page
-    activityClass="data-index-activity"
-    activityTitle='Data Index'
+    activityClass="data-entity-browser-activity"
+    activityTitle='Data Entity Browser'
     crumbTrailX='[{ [@swm:Path].(path:="/",name:="Home")
                    ,[@swm:Path].(path:="/system/",name:="System")
                    ,[@swm:Path].(path:="/system/data/",name:="Data")
@@ -28,7 +30,7 @@
                 '
       
     %>
-
+    <%h:Stylesheet href="/css/spiralcraft-webapp/themes/system/data-browser.css"/%>
     <h1><%=[a:PathContext].pathInfo/%></h1>
     
     <ul class="name-value">
@@ -42,24 +44,32 @@
       <%If x=".@empty"%>
         No Results
       <%Else/%>
-        <table class="data-output">
-          <thead>
-            <tr>
-              <th>Row</th>
-              <%Iterate x="[context].type.fieldSet.fieldNames"%>
-                <th><%=./%></th>
+        <%wc:Paginate pageSize="20"%>
+          <%wc:pagination-control/%>
+          <div class="table-container">
+            <table class="data-output">
+              <thead>
+                <tr>
+                  <th>Row</th>
+                  <%Iterate x="[context].type.fieldSet.fieldNames"%>
+                    <th><%=./%></th>
+                  <%/Iterate%>
+                </tr>
+              </thead>
+              <%Iterate%>
+                <tr class="data-item">
+                  <td><a href="<%=[Iterate].index+[wc:Paginate]{ .currentPage * .pageSize }/%>">
+                    #<%=[Iterate].index+[wc:Paginate]{ .currentPage * .pageSize }/%>.
+                  </a></td>
+                  <%Iterate x="[context].type.fieldSet.fieldNames"%>
+                    <td><%=[context].type.fieldSet.getFieldByName(.).getValue(..)/%></td>
+                  <%/Iterate%>
+                </tr>
               <%/Iterate%>
-            </tr>
-          </thead>
-          <%Iterate%>
-            <tr class="data-item">
-              <td><a href="<%=[Iterate].index/%>">#<%=[Iterate].index/%>.</a></td>
-              <%Iterate x="[context].type.fieldSet.fieldNames"%>
-                <td><%=[context].type.fieldSet.getFieldByName(.).getValue(..)/%></td>
-              <%/Iterate%>
-            </tr>
-          <%/Iterate%>
-        <table>
+            </table>
+          </div>
+          <%wc:pagination-control/%>
+        <%/wc:Paginate%>
       <%/If%>
     <%/With%>
 
