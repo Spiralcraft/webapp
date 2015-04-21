@@ -16,6 +16,57 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev54
+        </revision>
+                
+        <notes>
+          <scm:Note>Paginate the data browser
+          </scm:Note>
+        </notes>
+
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>war-css/themes/system/data-browser.css
+          </URI>
+          <URI>war-system/data/aggregate.webui
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
+        <revision>-dev54
+        </revision>
+                
+        <notes>
+          <scm:Note>Remove CSS files in system that duplicate the standard
+            theme.
+          </scm:Note>
+        </notes>
+
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>war-css/themes/system/data-forms.css
+          </URI>
+          <URI>war-css/themes/system/data-tables.css
+          </URI>
+          <URI>war-css/themes/system/global.css
+          </URI>
+          <URI>war-css/themes/system/layout.css
+          </URI>
+          <URI>war-css/themes/system/pagination.css
+          </URI>
+          <URI>war-css/themes/system/reset.css
+          </URI>
+          <URI>war-css/themes/system/style.css
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev53
         </revision>
                 

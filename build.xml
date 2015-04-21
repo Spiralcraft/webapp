@@ -3,8 +3,8 @@
 	
   <property name="organization" value="spiralcraft"/>
   <property name="module" value="webapp"/>
-  <property name="buildVersion" value="0.4.17-dev53"/>
-  <property name="build.status" value="milestone"/>
+  <property name="buildVersion" value="0.4.17-dev54"/>
+  <property name="build.status" value="integration"/>
 
   <property name="publish.resolver.type" value="distrib"/>  
   <property name="package.spiralcraft-jsclient.dest" value="lib"/>
@@ -13,6 +13,15 @@
   <property file="../../build.local/build.properties"/>
   <import file="../../build/build-common.xml"/>
 	
-
+  <target name="prepack-copy">
+    <copy 
+      todir="${package-staging-dir}/war-css/themes/system"
+      failonerror="false"
+      preservelastmodified="true"
+      overwrite="true"
+      >
+      <fileset dir="${package-staging-dir}/war-css/themes/standard"/>
+    </copy>
+  </target>
 
 </project>
