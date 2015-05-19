@@ -16,6 +16,28 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev55
+        </revision>
+                
+        <notes>
+          <scm:Note>Basic account info editor
+          </scm:Note>
+        </notes>
+
+        <path>package/war-webui/myAccount
+        </path>
+        
+        <resources>
+          <URI>components/editInfo-custom.tgl
+          </URI>
+          <URI>default.webui
+          </URI>
+          <URI>editInfo.webui
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev54
         </revision>
                 
