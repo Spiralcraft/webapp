@@ -13,10 +13,18 @@
   %> 
   <%c:Guard loginURI="/login"%>
     <%With x="[swm:Session].user"%>
+      <div>
+        <a class="button" href="editInfo">Edit</a>
+      </div>
       <ul class="name-value">
         <li>
           <label>Username</label>
           <div class="data"><%=[@sec:Login].@findById([secauth:AuthSession].accountId).username/%>
+          </div>
+        </li>
+        <li>
+          <label>Display Name</label>
+          <div class="data"><%=.commonName/%>
           </div>
         </li>
         <li>

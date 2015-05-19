@@ -1,0 +1,38 @@
+<%theme:activity-page
+  tgns:c="context://code/components/"
+  tgns:h="context://code/components/html/"
+  tgns:my="context://code/myAccount/components/"
+  tgns:theme="context://theme"
+  tgns:reg="context://code/function/registration/"
+  tgns:sec="class:/spiralcraft/security"
+  tgns:secauth="class:/spiralcraft/security/auth"
+  tgns:swm="class:/spiralcraft/webapp/meta/"
+  id="myAccount"
+  activityTitle='My Account'
+  activityClass="myAccount-activity"
+  %> 
+  <%c:Guard loginURI="/login"%>
+    <%h:Form afterSave='[*c:UI].redirect(".")'%>
+      <%h:TupleEditor x="[swm:Session].user"%>
+        <ul class="sc-labeled-control-flow">
+          <li>
+            <label>Username</label>
+            <div class="data"><%=[@sec:Login].@findById([secauth:AuthSession].accountId).username/%>
+            </div>
+          </li>
+          <li>
+            <%h:FormField%>
+              <%h:Label%>Display Name<%/h:Label%>
+              <%h:TextInput x="commonName" /%>
+            <%/h:FormField%>
+          </li>
+          <%my:editInfo-custom/%>
+        </ul>
+        <div class="sc-form-button-bar">
+          <%h:Button onAction="[h:Form].save()"%>Save<%/h:Button%>
+        </div>
+      <%/h:TupleEditor%>
+    <%/h:Form%>
+  <%/c:Guard%>
+<%/theme:activity-page%>
+  
