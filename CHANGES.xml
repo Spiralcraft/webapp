@@ -16,6 +16,20 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev56
+        </revision>
+                
+        <notes>
+          <scm:Note>Add indexes to analytics/Session for performance
+          </scm:Note>
+        </notes>
+
+        <path>package/war-classes/spiralcraft/webapp/analytics/Session.type.xml
+        </path>
+        
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev55
         </revision>
                 
