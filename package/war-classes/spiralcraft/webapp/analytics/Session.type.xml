@@ -135,6 +135,14 @@
       <fieldList>id
       </fieldList>
     </meta:Key>
+    <meta:Key>
+      <fieldList>startTime
+      </fieldList>
+    </meta:Key>
+    <meta:Key>
+      <fieldList>principalId
+      </fieldList>
+    </meta:Key>
   </keys>
 
 </meta:Type>
