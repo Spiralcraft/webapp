@@ -16,6 +16,26 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev57
+        </revision>
+                
+        <notes>
+          <scm:Note>Add challenge-response into login credential transport
+          </scm:Note>
+        </notes>
+
+        <path>package/war-webui
+        </path>
+        
+        <resources>
+          <URI>components/login-panel.tgl
+          </URI>
+          <URI>function/login/ChallengeHiddenInput.assy.xml
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev56
         </revision>
                 
