@@ -26,7 +26,6 @@
             <%/h:FormField%>
           </li>
           <li class="sc-field-row">
-            <%login:DigestHiddenInput/%>
           </li>
           <li class="sc-field-row check-row">
             
@@ -38,6 +37,8 @@
           </li>
   
         </ul>
+        <%login:DigestHiddenInput/%>
+        <%login:ChallengeHiddenInput/%>
         
         <div class="sc-form-button-bar sc-login-form-button-bar">
           <%h:Button 
