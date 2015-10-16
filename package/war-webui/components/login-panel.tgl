@@ -11,6 +11,7 @@
         defaultURI="/"
         errorTag.tagName="div"
         errorTag.clazz="error"
+        useChallenge="true"
         %>
         <ul class="sc-field-grid">
           <li class="sc-field-row text-row">
