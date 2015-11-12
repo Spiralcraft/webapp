@@ -16,6 +16,27 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev58
+        </revision>
+                
+        <notes>
+          <scm:Note>Add a plugin to package the servlet external authentication
+            functionality for use with the webapi package.
+          </scm:Note>
+        </notes>
+
+        <path>package/war-webui/config
+        </path>
+        
+        <resources>
+          <URI>ExtAuthPlugin.assy.xml
+          </URI>
+          <URI>ExtAuthStore.assy.xml
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev57
         </revision>
                 
