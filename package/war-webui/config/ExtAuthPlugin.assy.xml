@@ -1,0 +1,12 @@
+<app:PluginContext
+  xmlns:app="class:/spiralcraft/app/"
+  xmlns:swa-config="context://code/config/"
+  >
+  <pluginId>spiralcraft-servlet-auth
+  </pluginId>
+  
+  <stores>
+    <swa-config:ExtAuthStore/>
+  </stores>
+
+</app:PluginContext>

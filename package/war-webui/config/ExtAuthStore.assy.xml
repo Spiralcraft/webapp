@@ -1,0 +1,6 @@
+<conf-base:SqlStore
+  xmlns:conf-base="context://code/spiralcraft-webapp/config/base/"
+  xmlns:sa="class:/spiralcraft/servlet/auth/"  
+  >
+  <schema dataURI="sa:Auth.schema.xml"/>
+</conf-base:SqlStore>
