@@ -16,6 +16,20 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev59
+        </revision>
+                
+        <notes>
+          <scm:Note>Enhance result output to expand arrays
+          </scm:Note>
+        </notes>
+
+        <path>package/war-system/shell.webui
+        </path>
+        
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev58
         </revision>
                 
