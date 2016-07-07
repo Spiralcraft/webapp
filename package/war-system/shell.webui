@@ -53,10 +53,10 @@
               </div>
             <%Else/%>
               <div class="resultType">
-                Type: <%=lastResult.@subtype.typeURI/%> 
+                Type: <%=lastResultModel.type.typeURI/%>
               </div>
               <div class="resultDetail">
-                <%=lastResult.@subtype.stringConverter{.!=null?.toString(lastResult):lastResult}/%>
+                <%=lastResultModel.toString()/%>
               </div>
             <%/If%>
           <%/With%>
