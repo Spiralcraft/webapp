@@ -16,6 +16,20 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev60
+        </revision>
+                
+        <notes>
+          <scm:Note>Add css support for js-free tab panels
+          </scm:Note>
+        </notes>
+
+        <path>package/war-css/themes/standard/tabs.css
+        </path>
+        
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev59
         </revision>
                 
