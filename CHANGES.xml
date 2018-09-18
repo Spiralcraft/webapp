@@ -16,6 +16,20 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev62
+        </revision>
+                
+        <notes>
+          <scm:Note>Turn down hsqldb logging
+          </scm:Note>
+        </notes>
+
+        <path>package/war-webui/config/base/SqlStore.assy.xml
+        </path>
+        
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev60
         </revision>
                 
