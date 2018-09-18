@@ -3,6 +3,7 @@
   xmlns:data="class:/spiralcraft/data/"
   xmlns:webapp="class:/spiralcraft/webapp/meta/"
   xmlns:hsqlj="class:/org/hsqldb/jdbc/pool/"  
+  xmlns:jul="class:/java/util/logging/"
   >
   
   <debugLevel>INFO
@@ -28,7 +29,10 @@
       
   <autoUpgrade>true
   </autoUpgrade>
-      
+  
+  <onPoolStart>[@jul:Logger].@getLogger("hsqldb.db").setLevel([@jul:Level].@WARNING)
+  </onPoolStart>  
+        
   <connectionPool.maxStartupMs>1000
   </connectionPool.maxStartupMs>
 
