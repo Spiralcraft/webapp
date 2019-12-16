@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#export JAVA_VERSION="jdk-12.0.2"
+#export JAVA="/cygdrive/c/Program Files/Java/$JAVA_VERSION/bin/java"
+export JAVA="/cygdrive/c/Program Files/AdoptOpenJDK/jdk-13.0.1.9-hotspot/bin/java"
+
+export VMARGS="-XX:+UnlockExperimentalVMOptions -XX:+UseShenandoahGC -Xlog:gc"
+cp ../../packages/*.zip ../packages
+ls "$JAVA"
+echo $JAVA
+"$JAVA" $VMARGS -jar ../../lib/spiralcraft.jar --gui --debug httpd
+

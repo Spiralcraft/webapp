@@ -16,6 +16,28 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev63
+        </revision>
+                
+        <notes>
+          <scm:Note>Added metering log to standard configuration
+          </scm:Note>
+        </notes>
+
+        <path>package/config/
+        </path>
+        
+        <resources>
+          <URI>DaemonAdminAgent.assy.xml
+          </URI>
+          <URI>HttpDaemon.assy.xml
+          </URI>
+          <URI>RuntimeMeter.assy.xml
+          </URI>
+        </resources>
+        
+      </scm:Change>
+      <scm:Change>
         <revision>-dev62
         </revision>
                 
