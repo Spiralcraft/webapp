@@ -1,16 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <service:Daemon 
+
   xmlns:service="class:/spiralcraft/service" 
   xmlns:httpd="class:/spiralcraft/pioneer/httpd" 
   xmlns:net="class:/spiralcraft/pioneer/net"
   xmlns:config="context://config/"
   xmlns:rmac="class:/spiralcraft/admin/rmac/httpd/"
+  xmlns:log="class:/spiralcraft/log"
+  xmlns:meter="class:/spiralcraft/meter"  
   >
 
   <services>
-  
+    <log:LogService>
+      <sinks>
+        <log:RotatingFileSink>
+          <name>telemetry
+          </name>
+          <location>context://log/
+          </location>
+        </log:RotatingFileSink>
+      </sinks>
+    </log:LogService>
+    <meter:MeterService/>
+    <config:RuntimeMeter/>
     <config:DaemonAdminAgent/>
-    <config:HttpService/>
+    <config:HttpService>
+      <publishedConstantImports>
+        [meter:MeterContext].subcontext("webapp")
+      </publishedConstantImports>
+    </config:HttpService>
 
   </services>
 </service:Daemon>

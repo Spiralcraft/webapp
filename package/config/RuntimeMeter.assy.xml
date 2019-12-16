@@ -1,0 +1,25 @@
+<service:WorkerService
+  xmlns:service="class:/spiralcraft/service/"
+  xmlns:j="class:/java/lang"
+  xmlns:ju="class:/java/util"
+  xmlns:meter="class:/spiralcraft/meter"
+  >
+  <autoStart>true
+  </autoStart>
+  <context>
+    [#meter] 
+      { meter:=[meter:MeterContext].meter("runtime")
+        ,startTime:=[@ju:Date].().time
+        ,totalMemory:=.meter.register("totalMemory")
+        ,freeMemory:=.meter.register("freeMemory")
+        ,uptimeSeconds:=.meter.register("uptimeSeconds")
+      }
+  </context>
+  <action>
+    {
+      [meter].totalMemory.value=[@j:Runtime].@getRuntime().totalMemory()
+      ,[meter].freeMemory.value=[@j:Runtime].@getRuntime().freeMemory()
+      ,[meter].uptimeSeconds.value=([@ju:Date].().time-[meter].startTime)/1000
+    }
+  </action>
+</service:WorkerService>

@@ -1,6 +1,10 @@
 <rmac:Agent
   xmlns:rmac="class:/spiralcraft/admin/rmac/httpd/"
+  xmlns:meter="class:/spiralcraft/meter/"
   >
+  <publishedConstantImports>
+    [meter:MeterContext].subcontext("rmac")
+  </publishedConstantImports>
   <realmName>example.com
   </realmName>
 </rmac:Agent>
