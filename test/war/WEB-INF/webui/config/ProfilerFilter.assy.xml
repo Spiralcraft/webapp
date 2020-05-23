@@ -1,0 +1,8 @@
+<af:ProfilerFilter
+  xmlns:af="class:/spiralcraft/servlet/autofilter/"
+  >
+        
+  <profileEnableX>false
+  </profileEnableX>
+  
+</af:ProfilerFilter>  

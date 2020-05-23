@@ -16,6 +16,26 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev64
+        </revision>
+                
+        <notes>
+          <scm:Note>Added profiling to standard configuration
+          </scm:Note>
+        </notes>
+
+        <path>package/war-webui/
+        </path>
+        
+        <resources>
+          <URI>config/ProfileFilter.assy.xml
+          </URI>
+          <URI>PathContext.assy.xml
+          </URI>
+        </resources>
+        
+      </scm:Change>
+      <scm:Change>
         <revision>-dev63
         </revision>
                 
