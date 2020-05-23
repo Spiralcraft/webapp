@@ -7,10 +7,13 @@
   xmlns:swan="class:/spiralcraft/webapp/analytics/"
   >
 
+  <preFilters>
+    <swa-config:ProfilerFilter/>
+  </preFilters>
+
   <placeContext>
     <swa-config:PlaceContext/>
   </placeContext>
-  
   
   <filters
     xmlns:smtp="class:/spiralcraft/net/smtp/"
@@ -18,7 +21,7 @@
     xmlns:config="context://config/"
     xmlns:webapp="context://code"
     >
-  
+
     <swa-config:AnalyticsFilter/>
   
     <swa-config:SecurityFilter>
