@@ -16,6 +16,19 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev65
+        </revision>
+                
+        <notes>
+          <scm:Note>Integrate gzip filter at top level
+          </scm:Note>
+        </notes>
+
+        <path>package/config/Context.assy.xml
+        </path>
+        
+      </scm:Change>
+      <scm:Change>
         <revision>-dev64
         </revision>
                 
