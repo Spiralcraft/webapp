@@ -107,7 +107,7 @@
           <name>debug
           </name>
           
-          <value>true
+          <value>false
           </value>
         </httpd:InitParameter>
       </initParameters>
