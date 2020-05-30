@@ -54,6 +54,17 @@
  
   <filterMappings>
     <httpd:FilterMapping>
+      <filterName>gzip
+      </filterName>
+    
+      <URLPattern>*
+      </URLPattern>
+      
+      <onError>true
+      </onError>
+    </httpd:FilterMapping>
+
+    <httpd:FilterMapping>
       <filterName>controller
       </filterName>
     
@@ -79,6 +90,24 @@
           </name>
           
           <value>false
+          </value>
+        </httpd:InitParameter>
+      </initParameters>
+      
+    </httpd:FilterHolder>
+    <httpd:FilterHolder>
+      <filterName>gzip
+      </filterName>
+      
+      <filterClass>spiralcraft.servlet.gzip.GZipFilter
+      </filterClass>
+ 
+      <initParameters>
+        <httpd:InitParameter>
+          <name>debug
+          </name>
+          
+          <value>true
           </value>
         </httpd:InitParameter>
       </initParameters>
