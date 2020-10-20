@@ -7,29 +7,40 @@ html, body {
   height: 100%;
 }
 
+body {
+  display: flex;
+  flex-flow: column;
+}
+
 .wrap-header {
   height: 65px;
-  min-width: 491px;
+  width: 100%;
+  
 }
 
 .wrap-header > .inner {
   padding: 6px;        
-  display: block;
+  display: flex;
+  flex-flow: row wrap;
   max-height: 65px;
   width: 100%;
-  min-width: 872px;
+  min-width: 526px;
   text-align: center;
 }
 
 .wrap-header > .inner > .stretcher {
   clear: both;
 }
+.wrap-header-center {
+  flex: 1;
+}
+
 .wrap-footer {
   height: 1%;
 }
 
 .wrap-body {
-  height: 99%;
+  flex: 1;
   padding-bottom: 1%;
 }
 
