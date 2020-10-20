@@ -16,6 +16,32 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev66
+        </revision>
+                
+        <notes>
+          <scm:Note>Log when a session is established
+          </scm:Note>
+        </notes>
+
+        <path>package/war-webui/config/AnalyticsFilter.assy.xml
+        </path>
+        
+      </scm:Change>
+      <scm:Change>
+        <revision>-dev66
+        </revision>
+                
+        <notes>
+          <scm:Note>Standard theme uses flexbox in css
+          </scm:Note>
+        </notes>
+
+        <path>package/war-css/themes/standard
+        </path>
+        
+      </scm:Change>
+      <scm:Change>
         <revision>-dev65
         </revision>
                 
