@@ -22,7 +22,9 @@
   </onBind>
   
   <onEstablish>
-    [waan:Session].[*dt:Edit{autoSave:=true,forceSave:=true}].()
+    [waan:Session]
+      .@log("Established "+.)
+      .[*dt:Edit{autoSave:=true,forceSave:=true}].()
   </onEstablish>
   
 </af:SessionStateFilter>  
