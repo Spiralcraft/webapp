@@ -21,7 +21,7 @@
   </postInitialize>
     
   <plugins>
-    <swa-code:Plugin/>
+    <swa-conf:WebappPlugin/>
   </plugins>
   
   <imports>
