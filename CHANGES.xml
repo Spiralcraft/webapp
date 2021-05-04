@@ -16,6 +16,26 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev67
+        </revision>
+                
+        <notes>
+          <scm:Note>Move Plugin in webapp root to config dir to simplify integration
+          </scm:Note>
+        </notes>
+
+        <path>package/war-webui/
+        </path>
+        
+        <resources>
+          <URI>Plugin.assy.xml
+          </URI>
+          <URI>config/WebappPlugin.assy.xml
+          </URI>
+        </resources>
+        
+      </scm:Change>
+      <scm:Change>
         <revision>-dev66
         </revision>
                 
