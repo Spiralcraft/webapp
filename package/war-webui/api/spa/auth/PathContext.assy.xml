@@ -1,0 +1,32 @@
+<af:PathContext
+  xmlns:af="class:/spiralcraft/servlet/autofilter"
+  >
+  <filters>
+    <ResetPasswordSession/>
+    
+    <rpc:Filter
+      xmlns:rpc="class:/spiralcraft/servlet/rpc/"
+      >
+    
+      <handlers>
+        <ResetPassword>
+          <name>resetPassword
+          </name>
+        </ResetPassword>
+        <Login>
+          <name>login
+          </name>
+        </Login>
+        <Logout>
+          <name>logout
+          </name>
+        </Logout>
+        <Status>
+          <name>status
+          </name>
+        </Status>
+      </handlers>
+    
+    </rpc:Filter>
+  </filters>
+</af:PathContext>

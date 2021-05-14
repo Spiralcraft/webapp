@@ -1,0 +1,38 @@
+<rpc:DispatchHandler
+  xmlns:rpc="class:/spiralcraft/servlet/rpc/"
+  xmlns:t="class:/spiralcraft/task/"
+  xmlns:dt="class:/spiralcraft/data/task/"
+  xmlns:swm="class:/spiralcraft/webapp/meta"
+  xmlns:j="class:/java/lang/"
+  xmlns:fn="class:/spiralcraft/lang/functions"
+  xmlns:sec="class:/spiralcraft/security"
+  xmlns:auth="class:/spiralcraft/security/auth"
+  xmlns:codec="class:/spiralcraft/codec/text"
+  >
+  <debug>false
+  </debug>
+  <defaultHandler>
+    <rpc:JsonTaskHandler>
+      <task>
+        <t:Eval>
+          <contextX>
+            [#p] { username:[@j:String]
+                   ,passwordDigest:[@j:String] 
+                 }
+          </contextX>
+          <x>
+           [@auth:LoginEntry].([auth:AuthSession])
+              { .username=[p].username
+              , .saltedDigest=[@codec:HexCodec].@decodeHex([p].passwordDigest)
+              , .update()
+              , [auth:AuthSession].authenticate()
+              , [auth:AuthSession].isAuthenticated()
+              , { authenticated:=[auth:AuthSession].isAuthenticated() 
+                }
+              }
+          </x> 
+        </t:Eval>
+      </task>
+    </rpc:JsonTaskHandler>
+  </defaultHandler>
+</rpc:DispatchHandler>

@@ -1,0 +1,17 @@
+<af:SessionStateFilter
+  xmlns:af="class:/spiralcraft/servlet/autofilter"
+  xmlns:j="class:/java/lang"
+  xmlns:sec="class:/spiralcraft/security"
+  xmlns:sa="class:/spiralcraft/webapp/meta"
+  xmlns:st="class:/spiralcraft/time"
+  xmlns:c="context://code/components"
+  >
+  <attributeSuffix>spaSession
+  </attributeSuffix>
+  
+  <constructor>
+    [#spaSession]
+    { 
+    }
+  </constructor>
+</af:SessionStateFilter>

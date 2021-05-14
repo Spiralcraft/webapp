@@ -1,0 +1,12 @@
+<af:PathContext
+  xmlns:af="class:/spiralcraft/servlet/autofilter"
+  xmlns:j="class:/java/lang"
+  xmlns:sec="class:/spiralcraft/security"
+  xmlns:sa="class:/spiralcraft/security/auth"
+  xmlns:st="class:/spiralcraft/time"
+  xmlns:c="context://code/components"
+  >
+  <filters>
+    <Session/>
+  </filters>
+</af:PathContext>

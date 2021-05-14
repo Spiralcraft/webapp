@@ -1,0 +1,23 @@
+<rpc:DispatchHandler
+  xmlns:rpc="class:/spiralcraft/servlet/rpc"
+  xmlns:af="class:/spiralcraft/servlet/autofilter"
+  xmlns:t="class:/spiralcraft/task"
+  xmlns:auth="class:/spiralcraft/security/auth"
+  >
+  <debug>false
+  </debug>
+  <defaultHandler>
+    <rpc:JsonTaskHandler>
+      <task>
+        <t:Eval>
+          <x>.{ [af:SecurityFilter].logout()
+                ,[auth:AuthSession].logout()
+                ,{ authenticated:=[auth:AuthSession].isAuthenticated() 
+                 }
+             }
+          </x> 
+        </t:Eval>
+      </task>
+    </rpc:JsonTaskHandler>
+  </defaultHandler>
+</rpc:DispatchHandler>

@@ -1,0 +1,20 @@
+<rpc:JsonTaskHandler
+  xmlns:rpc="class:/spiralcraft/servlet/rpc"
+  xmlns:swa="class:/spiralcraft/webapp/meta"
+  xmlns:t="class:/spiralcraft/task"
+  >
+  
+  <task>
+    <t:Eval>
+      <x>{ user:=[swa:Session].user
+         }
+         {
+           {
+             principalName:=..user.principalName 
+             ,commonName:=..user.commonName
+           }
+         }
+      </x> 
+    </t:Eval>
+  </task>
+</rpc:JsonTaskHandler>
