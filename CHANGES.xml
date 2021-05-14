@@ -16,6 +16,42 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev68
+        </revision>
+                
+        <notes>
+          <scm:Note>Build out SPA API for modern front-end
+          </scm:Note>
+        </notes>
+
+        <path>package/war-webui/api/spa
+        </path>
+        
+        <resources>
+          <URI>PathContext.assy.xml
+          </URI>
+          <URI>Session.assy.xml
+          </URI>
+          <URI>auth/Login.assy.xml
+          </URI>
+          <URI>auth/Logout.assy.xml
+          </URI>
+          <URI>auth/PathContext.assy.xml
+          </URI>
+          <URI>auth/ResetPassword.assy.xml
+          </URI>
+          <URI>auth/ResetPasswordSession.assy.xml
+          </URI>
+          <URI>auth/Status.assy.xml
+          </URI>
+          <URI>my/PathContext.assy.xml
+          </URI>
+          <URI>my/AppProfile.assy.xml
+          </URI>
+        </resources>
+        
+      </scm:Change>
+      <scm:Change>
         <revision>-dev67
         </revision>
                 
