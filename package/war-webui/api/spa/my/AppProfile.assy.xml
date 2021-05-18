@@ -12,6 +12,7 @@
            {
              principalName:=..user.principalName 
              ,commonName:=..user.commonName
+             ,superUser:=..user.superUser
            }
          }
       </x> 
