@@ -8,6 +8,7 @@
   xmlns:sec="class:/spiralcraft/security"
   xmlns:auth="class:/spiralcraft/security/auth"
   xmlns:codec="class:/spiralcraft/codec/text"
+  xmlns:sa="class:/spiralcraft/servlet/autofilter"
   >
   <debug>false
   </debug>
@@ -18,6 +19,7 @@
           <contextX>
             [#p] { username:[@j:String]
                    ,passwordDigest:[@j:String] 
+                   ,remember:=false
                  }
           </contextX>
           <x>
@@ -27,6 +29,10 @@
               , .update()
               , [auth:AuthSession].authenticate()
               , [auth:AuthSession].isAuthenticated()
+                  ?[p].remember
+                    ?[sa:SecurityFilter].writeLoginCookie(.)
+                    :null
+                  :null
               , { authenticated:=[auth:AuthSession].isAuthenticated() 
                 }
               }
