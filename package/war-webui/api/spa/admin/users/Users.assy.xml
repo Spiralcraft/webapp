@@ -1,0 +1,51 @@
+<rpc:DispatchHandler
+  xmlns:rpc="class:/spiralcraft/servlet/rpc/"
+  xmlns:t="class:/spiralcraft/task/"
+  xmlns:dt="class:/spiralcraft/data/task/"
+  xmlns:swm="class:/spiralcraft/webapp/meta"
+  xmlns:j="class:/java/lang/"
+  xmlns:fn="class:/spiralcraft/lang/functions"
+  >
+  <debug>false
+  </debug>
+  <defaultHandler>
+    <rpc:JsonTaskHandler
+      >
+      <task>
+        <t:Eval>
+          <x>
+            [*dt:Fetch{[@swm:User.list]}].()
+          </x>
+        </t:Eval>
+      </task>
+    
+    </rpc:JsonTaskHandler>
+  
+  </defaultHandler>
+  <handlers>
+    <rpc:DispatchHandler>
+      <name>*
+      </name>
+      <contextX>
+        [#users] 
+          { 
+            user:=[@swm:User].@forId([rpc:Call].nextPath.firstElement())
+            ,response:=`[users].user`
+          }
+      </contextX>
+      <requireMapping>true
+      </requireMapping>
+      <defaultHandler>
+        <rpc:JsonTaskHandler>
+          <task>
+            <t:Eval>
+              <x>
+                [users].response()
+              </x>
+            </t:Eval>
+          </task>
+        </rpc:JsonTaskHandler>
+      </defaultHandler>
+    </rpc:DispatchHandler>
+  </handlers>
+</rpc:DispatchHandler>

@@ -1,0 +1,26 @@
+<af:PathContext
+  xmlns:af="class:/spiralcraft/servlet/autofilter"
+  >
+  <filters>
+    <af:GuardFilter>
+      <authenticate>true
+      </authenticate>
+      
+      <responseCode>401
+      </responseCode>
+      
+      <messageX>"Authentication required"
+      </messageX>
+    </af:GuardFilter>
+    <af:GuardFilter>
+      <guardX>[swa:Session].user.superUser
+      </guardX>
+      
+      <responseCode>401
+      </responseCode>
+      
+      <messageX>"Admin privileges required"
+      </messageX>
+    </af:GuardFilter>
+  </filters>
+</af:PathContext>
