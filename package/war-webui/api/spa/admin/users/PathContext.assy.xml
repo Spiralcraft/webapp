@@ -6,9 +6,9 @@
       xmlns:rpc="class:/spiralcraft/servlet/rpc/"
       >
     
-      <handlers>
+      <defaultHandler>
         <Users/>
-      </handlers>
+      </defaultHandler>
     
     </rpc:Filter>
   </filters>

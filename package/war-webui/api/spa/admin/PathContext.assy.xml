@@ -1,5 +1,6 @@
 <af:PathContext
   xmlns:af="class:/spiralcraft/servlet/autofilter"
+  xmlns:swa="class:/spiralcraft/webapp/meta"
   >
   <filters>
     <af:GuardFilter>
