@@ -1,10 +1,13 @@
-<rpc:DispatchHandler
+<rpc:Filter
   xmlns:rpc="class:/spiralcraft/servlet/rpc/"
   xmlns:t="class:/spiralcraft/task/"
   xmlns:dt="class:/spiralcraft/data/task/"
   xmlns:swm="class:/spiralcraft/webapp/meta"
   xmlns:j="class:/java/lang/"
   xmlns:fn="class:/spiralcraft/lang/functions"
+  xmlns:sec="class:/spiralcraft/security"
+  xmlns:seca="class:/spiralcraft/security/auth"
+  xmlns:util="class:/spiralcraft/util"
   >
   <debug>false
   </debug>
@@ -29,7 +32,11 @@
       <contextX>
         [#users] 
           { 
-            user:=[@swm:User].@forId([rpc:Call].nextPath.firstElement())
+            id:=[rpc:Call].nextPath.firstElement()
+            ,new:=.id=="-"
+            ,user:=!.new
+                  ?[@swm:User].@forId(.id)
+                  :[*dt:Edit{ [@swm:User] }].()
             ,response:=`[users].user`
           }
       </contextX>
@@ -39,13 +46,66 @@
         <rpc:JsonTaskHandler>
           <task>
             <t:Eval>
+              <contextX>
+                [#p]
+                {
+                  principalName:=[users].user.principalName
+                  ,commonName:=[users].user.commonName
+                  ,email:=[users].user.email
+                }
+              </contextX>
               <x>
-                [users].response()
+                ![rpc:Call].request.isPost()
+                ?[users].response()           
+                :@{[users].user
+                     =[users].user
+                      { [users].new
+                        ?.[*dt:Edit{ action:=`
+                           @{ principalName=[p].principalName
+                             ,commonName=[p].commonName
+                             ,email=[p].email
+                           }`
+                         }].()
+                        :.[*dt:Edit{ action:=`
+                           @{ commonName=[p].commonName
+                              ,email=[p].email
+                           }`
+                         }].()
+                       }
+                  ,[users].new
+                    ?[@sec:Login].@register
+                        ([seca:Authenticator].digestFunction
+                        ,[users].user.principalName
+                        ,[@util:RandomUtil].@generateString(16)
+                        )
+                      { [users].user.[*dt:Edit{ action:=`principalId=[sec:Login].principalId` }].()
+                      }
+                    :null     
+                  ,[users].response()
+                  }                
+                
               </x>
             </t:Eval>
           </task>
         </rpc:JsonTaskHandler>
       </defaultHandler>
+      <handlers>
+        <rpc:JsonTaskHandler>
+          <name>.delete
+          </name>
+          <task>
+            <t:Eval>
+              <x>
+               @{ 
+                   [users].user.login.[*dt:Edit{ action:=`@tuple.delete()` }].()
+                   ,[users].user.[*dt:Edit{ action:=`@tuple.delete()` }].()
+                   ,[users].user=null
+                }
+              </x>
+            </t:Eval>
+          </task>
+        </rpc:JsonTaskHandler>
+      </handlers>
     </rpc:DispatchHandler>
   </handlers>
-</rpc:DispatchHandler>
+</rpc:Filter>
