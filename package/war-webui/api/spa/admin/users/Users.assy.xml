@@ -12,18 +12,11 @@
   <debug>false
   </debug>
   <defaultHandler>
-    <rpc:JsonTaskHandler
-      >
-      <task>
-        <t:Eval>
-          <x>
-            [*dt:Fetch{[@swm:User.list]}].()
-          </x>
-        </t:Eval>
-      </task>
-    
-    </rpc:JsonTaskHandler>
-  
+    <rpc:JsonHandler>
+      <result>
+        [*dt:Fetch{[@swm:User.list]}].()
+      </result>
+    </rpc:JsonHandler>
   </defaultHandler>
   <handlers>
     <rpc:DispatchHandler>
@@ -43,68 +36,63 @@
       <requireMapping>true
       </requireMapping>
       <defaultHandler>
-        <rpc:JsonTaskHandler>
-          <task>
-            <t:Eval>
-              <contextX>
-                [#p]
-                {
-                  principalName:=[users].user.principalName
-                  ,commonName:=[users].user.commonName
-                  ,email:=[users].user.email
-                }
-              </contextX>
-              <x>
-                ![rpc:Call].request.isPost()
-                ?[users].response()           
-                :@{[users].user
-                     =[users].user
-                      { [users].new
-                        ?.[*dt:Edit{ action:=`
-                           @{ principalName=[p].principalName
-                             ,commonName=[p].commonName
-                             ,email=[p].email
-                           }`
-                         }].()
-                        :.[*dt:Edit{ action:=`
-                           @{ commonName=[p].commonName
-                              ,email=[p].email
-                           }`
-                         }].()
-                       }
-                  ,[users].new
-                    ?[@sec:Login].@register
-                        ([seca:Authenticator].digestFunction
-                        ,[users].user.principalName
-                        ,[@util:RandomUtil].@generateString(16)
-                        )
-                      { [users].user.[*dt:Edit{ action:=`principalId=[sec:Login].principalId` }].()
-                      }
-                    :null     
-                  ,[users].response()
-                  }                
-                
-              </x>
-            </t:Eval>
-          </task>
-        </rpc:JsonTaskHandler>
+        <rpc:JsonHandler>
+          <params>
+            [#p]
+            {
+              principalName:=[users].user.principalName
+              ,commonName:=[users].user.commonName
+              ,email:=[users].user.email
+              ,superUser:=[users].user.superUser
+            }
+          </params>
+          <result>
+            ![rpc:Call].request.isPost()
+            ?[users].response()           
+            :@{[users].user
+                 =[users].user
+                  { [users].new
+                    ?.[*dt:Edit{ action:=`
+                       @{ principalName=[p].principalName
+                         ,commonName=[p].commonName
+                         ,email=[p].email
+                         ,superUser=[p].superUser
+                       }`
+                     }].()
+                    :.[*dt:Edit{ action:=`
+                       @{ commonName=[p].commonName
+                          ,email=[p].email
+                          ,superUser=[p].superUser
+                       }`
+                     }].()
+                   }
+              ,[users].new
+                ?[@sec:Login].@register
+                    ([seca:Authenticator].digestFunction
+                    ,[users].user.principalName
+                    ,[@util:RandomUtil].@generateString(16)
+                    )
+                  { [users].user.[*dt:Edit{ action:=`principalId=[sec:Login].principalId` }].()
+                  }
+                :null     
+              ,[users].response()
+              }                
+            
+          </result>
+        </rpc:JsonHandler>
       </defaultHandler>
       <handlers>
-        <rpc:JsonTaskHandler>
+        <rpc:JsonHandler>
           <name>.delete
           </name>
-          <task>
-            <t:Eval>
-              <x>
-               @{ 
-                   [users].user.login.[*dt:Edit{ action:=`@tuple.delete()` }].()
-                   ,[users].user.[*dt:Edit{ action:=`@tuple.delete()` }].()
-                   ,[users].user=null
-                }
-              </x>
-            </t:Eval>
-          </task>
-        </rpc:JsonTaskHandler>
+          <result>
+             @{ 
+                 [users].user.login.[*dt:Edit{ action:=`@tuple.delete()` }].()
+                 ,[users].user.[*dt:Edit{ action:=`@tuple.delete()` }].()
+                 ,[users].user=null
+              }
+          </result>
+        </rpc:JsonHandler>
       </handlers>
     </rpc:DispatchHandler>
   </handlers>

@@ -13,32 +13,28 @@
   <debug>false
   </debug>
   <defaultHandler>
-    <rpc:JsonTaskHandler>
-      <task>
-        <t:Eval>
-          <contextX>
-            [#p] { username:[@j:String]
-                   ,passwordDigest:[@j:String] 
-                   ,remember:=false
-                 }
-          </contextX>
-          <x>
-           [@auth:LoginEntry].([auth:AuthSession])
-              { .username=[p].username
-              , .saltedDigest=[@codec:HexCodec].@decodeHex([p].passwordDigest)
-              , .update()
-              , [auth:AuthSession].authenticate()
-              , [auth:AuthSession].isAuthenticated()
-                  ?[p].remember
-                    ?[sa:SecurityFilter].writeLoginCookie(.)
-                    :null
-                  :null
-              , { authenticated:=[auth:AuthSession].isAuthenticated() 
-                }
-              }
-          </x> 
-        </t:Eval>
-      </task>
-    </rpc:JsonTaskHandler>
+    <rpc:JsonHandler>
+      <params>
+        [#p] { username:[@j:String]
+               ,passwordDigest:[@j:String] 
+               ,remember:=false
+             }
+      </params>
+      <result>
+       [@auth:LoginEntry].([auth:AuthSession])
+          { .username=[p].username
+          , .saltedDigest=[@codec:HexCodec].@decodeHex([p].passwordDigest)
+          , .update()
+          , [auth:AuthSession].authenticate()
+          , [auth:AuthSession].isAuthenticated()
+              ?[p].remember
+                ?[sa:SecurityFilter].writeLoginCookie(.)
+                :null
+              :null
+          , { authenticated:=[auth:AuthSession].isAuthenticated() 
+            }
+          }
+      </result>
+    </rpc:JsonHandler>
   </defaultHandler>
 </rpc:DispatchHandler>

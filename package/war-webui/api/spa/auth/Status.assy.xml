@@ -12,15 +12,11 @@
   <debug>false
   </debug>
   <defaultHandler>
-    <rpc:JsonTaskHandler>
-      <task>
-        <t:Eval>
-          <x>
-             { authenticated:=[auth:AuthSession].isAuthenticated() 
-             }
-          </x> 
-        </t:Eval>
-      </task>
-    </rpc:JsonTaskHandler>
+    <rpc:JsonHandler>
+      <result>
+         { authenticated:=[auth:AuthSession].isAuthenticated() 
+         }
+      </result> 
+    </rpc:JsonHandler>
   </defaultHandler>
 </rpc:DispatchHandler>

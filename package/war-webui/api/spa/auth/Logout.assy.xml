@@ -7,17 +7,13 @@
   <debug>false
   </debug>
   <defaultHandler>
-    <rpc:JsonTaskHandler>
-      <task>
-        <t:Eval>
-          <x>.{ [af:SecurityFilter].logout()
-                ,[auth:AuthSession].logout()
-                ,{ authenticated:=[auth:AuthSession].isAuthenticated() 
-                 }
+    <rpc:JsonHandler>
+      <result>.{ [af:SecurityFilter].logout()
+            ,[auth:AuthSession].logout()
+            ,{ authenticated:=[auth:AuthSession].isAuthenticated() 
              }
-          </x> 
-        </t:Eval>
-      </task>
-    </rpc:JsonTaskHandler>
+         }
+      </result> 
+    </rpc:JsonHandler>
   </defaultHandler>
 </rpc:DispatchHandler>
