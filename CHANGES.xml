@@ -32,6 +32,12 @@
           </URI>
           <URI>Session.assy.xml
           </URI>
+          <URI>admin/PathContext.assy.xml
+          </URI>
+          <URI>admin/users/PathContext.assy.xml
+          </URI>
+          <URI>admin/users/Users.assy.xml
+          </URI>
           <URI>auth/Login.assy.xml
           </URI>
           <URI>auth/Logout.assy.xml
