@@ -14,7 +14,13 @@
   <defaultHandler>
     <rpc:JsonHandler>
       <result>
-        [*dt:Fetch{[@swm:User.list]}].()
+        [*dt:Fetch{[@swm:User.list]}].()#{{
+          id:=..id
+          ,commonName:=..commonName
+          ,principalName:=..principalName
+          ,email:=..email
+          ,superUser:=..superUser
+        }}
       </result>
     </rpc:JsonHandler>
   </defaultHandler>
@@ -30,7 +36,13 @@
             ,user:=!.new
                   ?[@swm:User].@forId(.id)
                   :[*dt:Edit{ [@swm:User] }].()
-            ,response:=`[users].user`
+            ,response:=`[users].user{{
+              id:=..id
+              ,commonName:=..commonName
+              ,principalName:=..principalName
+              ,email:=..email
+              ,superUser:=..superUser
+              }}`
           }
       </contextX>
       <requireMapping>true
