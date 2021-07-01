@@ -1,0 +1,11 @@
+<rpc:JsonHandler
+  xmlns:rpc="class:/spiralcraft/servlet/rpc"
+  xmlns:swa="class:/spiralcraft/webapp/meta"
+  xmlns:t="class:/spiralcraft/task"
+  xmlns:http="class:/javax/servlet/http"
+  >
+  <result>
+    { maxInactiveInterval:=[http:HttpSession].maxInactiveInterval,
+    }
+  </result> 
+</rpc:JsonHandler>
