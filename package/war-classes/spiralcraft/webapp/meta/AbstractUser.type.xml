@@ -9,6 +9,9 @@
     <entity:Identity.type/>
   </baseType>
   
+  <description>An Identity that interacts with the system
+  </description>
+  
   <fields>
     <meta:Field>
       <name>principalId
@@ -22,6 +25,17 @@
       </name>
       
       <type><net:EmailAddress.type/>
+      </type>
+    </meta:Field>
+
+    <meta:Field>
+      <name>avatar
+      </name>
+      
+      <description>Relative filename of the image that represents the user
+      </description>
+      
+      <type><String.type/>
       </type>
     </meta:Field>
 

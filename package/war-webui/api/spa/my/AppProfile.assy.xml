@@ -11,6 +11,7 @@
        principalName:=..user.principalName 
        ,commonName:=..user.commonName
        ,superUser:=..user.superUser
+       ,avatar:=..user.avatar
     }}
   </result> 
 </rpc:JsonHandler>
