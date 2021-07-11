@@ -20,6 +20,26 @@
         </revision>
                 
         <notes>
+          <scm:Note>Add field for user avatar image
+          </scm:Note>
+        </notes>
+
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>war-classes/spiralcraft/webapp/meta/AbstractUser.type.xml
+          </URI>
+          <URI>war-webui/api/spi/my/AppProfile.assy.xml
+          </URI>
+        </resources>
+      </scm:Change>
+      
+      <scm:Change>
+        <revision>-dev68
+        </revision>
+                
+        <notes>
           <scm:Note>Build out SPA API for modern front-end
           </scm:Note>
         </notes>
