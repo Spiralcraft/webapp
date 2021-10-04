@@ -56,7 +56,9 @@
                 Type: <%=lastResultModel.type.typeURI/%>
               </div>
               <div class="resultDetail">
+                <pre>
                 <%=lastResultModel.toString()/%>
+                </pre>
               </div>
             <%/If%>
           <%/With%>
