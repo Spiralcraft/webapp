@@ -20,6 +20,20 @@
         </revision>
                 
         <notes>
+          <scm:Note>Preformat system shell output
+          </scm:Note>
+        </notes>
+
+        <path>package/war-system/shell.webui
+        </path>
+        
+      </scm:Change>
+
+      <scm:Change>
+        <revision>-dev68
+        </revision>
+                
+        <notes>
           <scm:Note>Add field for user avatar image
           </scm:Note>
         </notes>
