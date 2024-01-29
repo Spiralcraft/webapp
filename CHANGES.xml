@@ -16,6 +16,116 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev69
+        </revision>
+                
+        <notes>
+          <scm:Note>(incomplete) SPA and API for embedded system app
+          </scm:Note>
+        </notes>
+
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>npm/package.json
+          </URI>
+          <URI>npm/rollup.config.js
+          </URI>
+          <URI>package/war-css/system/applet-custom.css
+          </URI>
+          <URI>package/war-css/system/applet.css
+          </URI>
+          <URI>package/war-system/api/admin/users/PathContext.assy.xml
+          </URI>
+          <URI>package/war-system/api/admin/users/Users.assy.xml
+          </URI>
+          <URI>package/war-system/api/admin/PathContext.assy.xml
+          </URI>
+          <URI>package/war-system/api/admin/my/PathContext.assy.xml
+          </URI>
+          <URI>package/war-system/api/admin/my/AppProfile.assy.xml
+          </URI>
+          <URI>package/war-system/api/package.xml
+          </URI>
+          <URI>package/war-system/api/PathContext.assy.xml
+          </URI>
+          <URI>package/war-system/PathContext.assy.xml
+          </URI>
+          <URI>package/war-system/app.webui
+          </URI>
+          <URI>src-js/system/app/app.custom.js
+          </URI>
+          <URI>src-js/system/app/app.props.js
+          </URI>
+          <URI>src-js/system/app/applet.js
+          </URI>
+          <URI>src-js/system/app/MainSection.js
+          </URI>
+          <URI>src-js/system/app/model.props.js
+          </URI>
+          <URI>src-js/system/app/system/ShellRoute.svelte
+          </URI>
+          <URI>src-js/system/app/system/SystemModule.js
+          </URI>
+          <URI>src-js/system/app/system/SystemSidebar.js
+          </URI>
+          <URI>build.xml
+          </URI>
+        </resources>
+        
+      </scm:Change>
+
+      <scm:Change>
+        <revision>-dev69
+        </revision>
+                
+        <notes>
+          <scm:Note>Register default system user as superuser on init
+          </scm:Note>
+        </notes>
+
+        <path>package
+        </path>
+        
+        <resources>
+          <URI>war-classes/spiralcraft/webapp/meta/SystemUser.type.xml
+          </URI>
+          <URI>war-system/function/InitSystemUser.assy.xml
+          </URI>
+        </resources>
+        
+      </scm:Change>
+
+      <scm:Change>
+        <revision>-dev69
+        </revision>
+                
+        <notes>
+          <scm:Note>Fix pk violation exception due to race condition saving session buffer 
+          </scm:Note>
+        </notes>
+
+        <path>package/war-webui/config/AnalyticsFilter.assy.xml
+        </path>
+        
+      </scm:Change>
+
+      <scm:Change>
+        <revision>-dev68
+        </revision>
+                
+        <notes>
+          <scm:Note>Preformat system shell output
+          </scm:Note>
+        </notes>
+
+        <path>package/war-system/shell.webui
+        </path>
+        
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev68
         </revision>
                 
