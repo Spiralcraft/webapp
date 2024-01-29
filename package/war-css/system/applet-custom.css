@@ -1,0 +1,34 @@
+:root
+{
+  /* Mineral UI theme */
+
+  --color-slate-10: #EDF4F7;
+  --color-slate-20: #CBE3F5;
+  --color-slate-30: #A7CEEB;
+  --color-slate-40: #84B7DB;
+  --color-slate-50: #5E95BD;
+  --color-slate-60: #48799C;
+  --color-slate-70: #376180;
+  --color-slate-80: #2D4D63;
+  --color-slate-90: #243947;
+  --color-slate-100: #1D2830;
+  
+  --color-state-default: rgb(50, 114, 217);
+  --color-state-success: rgb(42, 133, 78);
+  --color-state-warning: rgb(173, 95, 0);
+  --color-state-danger: rgb(222, 27, 27);
+  --color-state-disabled: rgb(235, 239, 245);
+  
+  --color-theme-10: var(--color-slate-10);
+  --color-theme-20: var(--color-slate-20);
+  --color-theme-30: var(--color-slate-30);
+  --color-theme-40: var(--color-slate-40);
+  --color-theme-50: var(--color-slate-50);
+  --color-theme-60: var(--color-slate-60);
+  --color-theme-70: var(--color-slate-70);
+  --color-theme-80: var(--color-slate-80);
+  --color-theme-90: var(--color-slate-90);
+  --color-theme-100: var(--color-slate-100);
+  
+  --background-color: #FFFFFF;
+}

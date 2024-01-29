@@ -1,0 +1,5 @@
+ns:swa=class:/spiralcraft/webapp/meta
+ns:dt=class:/spiralcraft/data/task
+
+[*dt:Fetch{[@swa:SystemUser],`.principalName=="system"`}].()
+.[*dt:Edit{ action:=`.superUser=true` }].()

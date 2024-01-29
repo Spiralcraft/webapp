@@ -75,6 +75,14 @@
              ,viewURI:=""
             }
           ]
+          ,
+          [*swm:Path
+            { name:="app"
+             ,path:="/system/app"
+             ,title:="App"
+             ,viewURI:=""
+            }
+          ]
         }]
       </context.optionsX>
     

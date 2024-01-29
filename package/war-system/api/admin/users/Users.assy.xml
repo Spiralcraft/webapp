@@ -1,0 +1,111 @@
+<rpc:Filter
+  xmlns:rpc="class:/spiralcraft/servlet/rpc/"
+  xmlns:t="class:/spiralcraft/task/"
+  xmlns:dt="class:/spiralcraft/data/task/"
+  xmlns:swm="class:/spiralcraft/webapp/meta"
+  xmlns:j="class:/java/lang/"
+  xmlns:fn="class:/spiralcraft/lang/functions"
+  xmlns:sec="class:/spiralcraft/security"
+  xmlns:seca="class:/spiralcraft/security/auth"
+  xmlns:util="class:/spiralcraft/util"
+  >
+  <debug>false
+  </debug>
+  <defaultHandler>
+    <rpc:JsonHandler>
+      <result>
+        [*dt:Fetch{[@swm:SystemUser.list]}].()#{{
+          id:=..id
+          ,commonName:=..commonName
+          ,principalName:=..principalName
+          ,email:=..email
+          ,superUser:=..superUser
+        }}
+      </result>
+    </rpc:JsonHandler>
+  </defaultHandler>
+  <handlers>
+    <rpc:DispatchHandler>
+      <name>*
+      </name>
+      <contextX>
+        [#users] 
+          { 
+            id:=[rpc:Call].nextPath.firstElement()
+            ,new:=.id=="-"
+            ,user:=!.new
+                  ?[@swm:User].@forId(.id)
+                  :[*dt:Edit{ [@swm:User] }].()
+            ,response:=`[users].user{{
+              id:=..id
+              ,commonName:=..commonName
+              ,principalName:=..principalName
+              ,email:=..email
+              ,superUser:=..superUser
+              }}`
+          }
+      </contextX>
+      <requireMapping>true
+      </requireMapping>
+      <defaultHandler>
+        <rpc:JsonHandler>
+          <params>
+            [#p]
+            {
+              principalName:=[users].user.principalName
+              ,commonName:=[users].user.commonName
+              ,email:=[users].user.email
+              ,superUser:=[users].user.superUser
+            }
+          </params>
+          <result>
+            ![rpc:Call].request.isPost()
+            ?[users].response()           
+            :@{[users].user
+                 =[users].user
+                  { [users].new
+                    ?.[*dt:Edit{ action:=`
+                       @{ principalName=[p].principalName
+                         ,commonName=[p].commonName
+                         ,email=[p].email
+                         ,superUser=[p].superUser
+                       }`
+                     }].()
+                    :.[*dt:Edit{ action:=`
+                       @{ commonName=[p].commonName
+                          ,email=[p].email
+                          ,superUser=[p].superUser
+                       }`
+                     }].()
+                   }
+              ,[users].new
+                ?[@sec:Login].@register
+                    ([seca:Authenticator].digestFunction
+                    ,[users].user.principalName
+                    ,[@util:RandomUtil].@generateString(16)
+                    )
+                  { [users].user.[*dt:Edit{ action:=`principalId=[sec:Login].principalId` }].()
+                  }
+                :null     
+              ,[users].response()
+              }                
+            
+          </result>
+        </rpc:JsonHandler>
+      </defaultHandler>
+      <handlers>
+        <rpc:JsonHandler>
+          <name>.delete
+          </name>
+          <result>
+             @{ 
+                 [users].user.login.[*dt:Edit{ action:=`@tuple.delete()` }].()
+                 ,[users].user.[*dt:Edit{ action:=`@tuple.delete()` }].()
+                 ,[users].user=null
+              }
+          </result>
+        </rpc:JsonHandler>
+      </handlers>
+    </rpc:DispatchHandler>
+  </handlers>
+</rpc:Filter>

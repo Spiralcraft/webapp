@@ -1,0 +1,27 @@
+<af:PathContext
+  xmlns:af="class:/spiralcraft/servlet/autofilter"
+  xmlns:swa="class:/spiralcraft/webapp/meta"
+  >
+  <filters>
+    <af:GuardFilter>
+      <authenticate>true
+      </authenticate>
+      
+      <responseCode>401
+      </responseCode>
+      
+      <messageX>"Authentication required"
+      </messageX>
+    </af:GuardFilter>
+    <af:GuardFilter>
+      <guardX>[swa:SystemSession].user.superUser
+      </guardX>
+      
+      <responseCode>401
+      </responseCode>
+      
+      <messageX>"Superuser privileges required"
+      </messageX>
+    </af:GuardFilter>
+  </filters>
+</af:PathContext>

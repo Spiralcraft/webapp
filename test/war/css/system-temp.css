@@ -1,0 +1,31 @@
+:root
+{
+  --header-height: 58px;
+  --navbar-color-inverted: #FFFFFF;
+  --navbar-hover-color-inverted: var(--color-slate-20);
+  --navbar-disabled-color-inverted: var(--color-slate-80);
+  
+}
+
+body
+{
+  background-color: var(--background-color);
+  height: 100vh;
+}
+
+.navbar-brand img
+{
+  background-color: #FFFFFF;
+}
+
+.navbar-nav
+{
+  --bs-navbar-color: var(--navbar-color-inverted);
+  --bs-navbar-hover-color: var(--navbar-hover-color-inverted);
+  --bs-navbar-disabled-color: var(--navbar-disabled-color-inverted);
+}
+
+.app-frame>.container-fluid.full-height
+{
+  height: auto;
+}

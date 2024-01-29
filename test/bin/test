@@ -1,0 +1,9 @@
+#!/bin/bash
+source $(dirname $0)/common.sh
+LIB=$(dirname $0)/../../lib
+DEPLOY=$(dirname $0)/..
+rm -rf $DEPLOY/packages
+mkdir $DEPLOY/packages
+cp -r $DEPLOY/../packages/*.zip $DEPLOY/packages/
+echo $0
+"$JAVA" -Dspiralcraft.config.id=dev -Dspiralcraft.config.uri=config -jar $LIB/spiralcraft.jar httpd

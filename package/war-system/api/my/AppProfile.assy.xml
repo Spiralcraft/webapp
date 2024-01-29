@@ -1,0 +1,17 @@
+<rpc:JsonHandler
+  xmlns:rpc="class:/spiralcraft/servlet/rpc"
+  xmlns:swa="class:/spiralcraft/webapp/meta"
+  xmlns:t="class:/spiralcraft/task"
+  >
+  
+  <result>
+    { user:=[swa:SystemSession].user
+    }
+    {{
+       principalName:=..user.principalName 
+       ,commonName:=..user.commonName
+       ,superUser:=..user.superUser
+       ,avatar:=..user.avatar
+    }}
+  </result> 
+</rpc:JsonHandler>

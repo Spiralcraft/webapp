@@ -1,4 +1,4 @@
-<project name="spiralcraft-webapp" default="pack" basedir=".">
+<project name="spiralcraft-webapp"  default="pack" basedir=".">
   <property file="build-local.properties"/>
 	
   <property name="organization" value="spiralcraft"/>
@@ -10,7 +10,17 @@
 
   <property name="depends.dir" location="../../repo"/>
   <property file="../../build.local/build.properties"/>
+
   <import file="../../build/build-common.xml"/>
+
+  <property name="war.npm-target" location="package/war-js/npm"/>
+  
+  <fileset id="war.npm-libs" dir="npm/node_modules">
+     <include name="bootstrap/dist/**"></include>
+     <include name="feather-icons/dist/**"></include>
+     <include name="tabulator-tables/dist/**"></include>
+  </fileset>
+
 	
   <target name="prepack-copy">
     <copy 
@@ -23,4 +33,6 @@
     </copy>
   </target>
 
+
+  
 </project>

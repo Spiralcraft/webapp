@@ -1,0 +1,26 @@
+<base:PathContext
+  xmlns:base="context://package-base/"
+  xmlns:af="class:/spiralcraft/servlet/autofilter"
+  >
+  <filters>
+    <af:GuardFilter>
+      <authenticate>true
+      </authenticate>
+      
+      <responseCode>401
+      </responseCode>
+      
+      <messageX>"Authentication required"
+      </messageX>
+    </af:GuardFilter>
+    
+    <rpc:Filter
+      xmlns:rpc="class:/spiralcraft/servlet/rpc/"
+      >
+    
+      <handlers>
+      </handlers>
+    
+    </rpc:Filter>
+  </filters>
+</base:PathContext>

@@ -1,0 +1,30 @@
+<%@doclet
+  tgns:c="bundle://spiralcraft-webapp.war-system/components/"
+  tgns:h="bundle://spiralcraft-webapp.war-system/components/html/"
+  tgns:html="class:/spiralcraft/servlet/webui/components/html/"  
+  %>
+  <%c:page
+    title="System App"
+    %>  
+    <%h:Stylesheet href="/js/spiralcraft-webapp/npm/bootstrap/dist/css/bootstrap.min.css" target="HEAD"/%>
+    <%h:Stylesheet href="/css/spiralcraft-webapp/themes/system/shell-skin.css" target="HEAD"/%>
+    <%h:Stylesheet href="/js/spiralcraft-webapp/system/applet.css" target="HEAD"/%>
+    <%h:Stylesheet href="/css/spiralcraft-webapp/system/applet.css" target="HEAD"/%>
+    <%h:Stylesheet href="/css/spiralcraft-webapp/system/applet-custom.css" target="HEAD"/%>
+    <%h:Stylesheet href="/css/system-temp.css" target="HEAD"/%>
+    <div class="system-applet-container" 
+      data-view="system-main"
+      data-view-props='
+        { 
+        }
+      
+      '
+      >
+    </div>
+    <script src="/js/spiralcraft-webapp/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script> 
+    <link href="/js/spiralcraft-webapp/npm/tabulator-tables/dist/css/tabulator.min.css" rel="stylesheet"></link>
+    
+    <script defer type="module" src='/js/spiralcraft-webapp/system/applet.js'></script>    
+  <%/c:page%>
+
+<%/@doclet%>
