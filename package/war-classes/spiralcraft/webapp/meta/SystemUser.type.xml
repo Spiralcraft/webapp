@@ -34,6 +34,7 @@
         <String.type/>
         <String.type/>
         <String.type/>
+        <Boolean.type/>
       </parameterTypes>
       
       <returnType>
@@ -47,6 +48,7 @@
           ,principalName:[@j:String]
           ,email:[@j:String]
           ,principalId:[@j:String]
+          ,superUser:[@j:Boolean]
         }
       </contextX>     
        
@@ -55,6 +57,7 @@
           ,.principalName=[register].principalName
           ,.principalId=[register].principalId
           ,.email=[register].email
+          ,.superUser=[register].superUser
           ,.@tuple.save()
           ,.
         }
