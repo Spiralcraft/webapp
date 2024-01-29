@@ -22,9 +22,17 @@
   </onBind>
   
   <onEstablish>
-    [waan:Session]
-      .@log("Established "+.)
-      .[*dt:Edit{autoSave:=true,forceSave:=true}].()
+    [#ctx]
+    {
+      newSession:= [waan:Session]
+      ,dbSession:= [*dt:Fetch{[@waan:Session], [{ `cookie:= [http:HttpSession].id` }]}].()
+    }
+    { [ctx].newSession.@log("Established "+.)
+    , [ctx].dbSession==null &amp;&amp; [ctx].newSession.id==null
+       ?[ctx].newSession.[*dt:Edit{autoSave:=true,forceSave:=true}].()
+       :[ctx].dbSession.@log("Already saved "+.)
+    }
+      
   </onEstablish>
   
 </af:SessionStateFilter>  
