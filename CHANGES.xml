@@ -16,6 +16,20 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev70
+        </revision>
+                
+        <notes>
+          <scm:Note>(incomplete) SPA and API for embedded system app
+          </scm:Note>
+        </notes>
+
+        <path>package/war-system/components/userEdit-panel.tgl
+        </path>
+
+      </scm:Change>
+      
+      <scm:Change>
         <revision>-dev69
         </revision>
                 
