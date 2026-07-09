@@ -11,6 +11,26 @@
   <property name="depends.dir" location="../../repo"/>
   <property file="../../build.local/build.properties"/>
 
+
+
+  <exec os="Windows 11"
+        executable="fnm"
+        outputproperty="fnm.node.path"
+        failonerror="false"
+        errorProperty="exec.err">
+    <arg value="exec"/>
+    <arg value="--using=24"/>
+    <arg value="--"/>
+    <arg value="node"/>
+    <arg value="-e"/>
+    <arg value="process.stdout.write(path.dirname(process.execPath))"/>
+  </exec>
+  <echo message="${exec.err}"/>
+  
+  <property name="node.windows" location="${fnm.node.path}/node.exe"/>
+
+  <property name="node-modules.home.windows" location="${fnm.node.path}/node_modules"/>
+  
   <import file="../../build/build-common.xml"/>
 
   <property name="war.npm-target" location="package/war-js/npm"/>
