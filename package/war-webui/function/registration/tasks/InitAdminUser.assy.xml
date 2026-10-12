@@ -9,6 +9,7 @@
   xmlns:st="class:/spiralcraft/time/"
   xmlns:util="class:/spiralcraft/util/"
   xmlns:comp="context://code/components/"
+  xmlns:sct="class:/spiralcraft/codec/text"
   >
 
   <transactional>true
@@ -45,6 +46,8 @@
               ,ticket:=[@sec:Ticket].@create
                    (.login.principalId
                    ,[@st:Chronom].@MINUTE.times(30)
+                   ,length:=8
+                   ,alphabet:=[@sct:CrockfordBase32Codec].@alphabet
                    )
               ,@log("Admin password reset code is "+..ticket.code)
               ,[*comp:resetPassword-sendCode].(.user.email,.user.commonName,.ticket.code)
