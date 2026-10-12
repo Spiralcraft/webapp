@@ -16,6 +16,21 @@
 
     <detail>
       <scm:Change>
+        <revision>-dev71
+        </revision>
+                
+        <notes>
+          <scm:Note>Changed default onboarding app initialization onboarding
+            ticket format
+          </scm:Note>
+        </notes>
+
+        <path>package/war-webui/function/registration/tasks/initAdminUser.assy.xml
+        </path>
+
+      </scm:Change>
+
+      <scm:Change>
         <revision>-dev70
         </revision>
                 
