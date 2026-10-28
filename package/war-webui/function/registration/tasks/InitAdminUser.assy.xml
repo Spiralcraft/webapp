@@ -48,6 +48,7 @@
                    ,[@st:Chronom].@MINUTE.times(30)
                    ,length:=8
                    ,alphabet:=[@sct:CrockfordBase32Codec].@alphabet
+                   ,contextId:="PWDRESET"
                    )
               ,@log("Admin password reset code is "+..ticket.code)
               ,[*comp:resetPassword-sendCode].(.user.email,.user.commonName,.ticket.code)
