@@ -3,6 +3,8 @@
   tgns:h="context://code/components/html/"
   tgns:t="context://theme/"
   tgns:login="context://code/function/login/" 
+  tgns:auth="class:/spiralcraft/security/auth"
+  tgns:json="class:/spiralcraft/json"  
   %>
     <%login:Form tag.clazz="login-form" reloadAfterAction="true"
       %>
@@ -12,47 +14,70 @@
         errorTag.tagName="div"
         errorTag.clazz="error"
         useChallenge="true"
+        onStage="[*c:login-initiate-2FA].([auth:AuthSession].identifiedPrincipal.id)"
         %>
-        <ul class="sc-field-grid">
-          <li class="sc-field-row text-row">
-            <%h:FormField%>
-              <%h:Label%>Username<%/h:Label%>
-              <%login:UsernameInput /%>
-            <%/h:FormField%>
-          </li>
-          <li class="sc-field-row text-row">
-            <%h:FormField%>
-              <%h:Label%>Password<%/h:Label%>
-              <%login:PasswordInput /%>
-            <%/h:FormField%>
-          </li>
-          <li class="sc-field-row">
-          </li>
-          <li class="sc-field-row check-row">
+        <%Switch x="[auth:AuthSession].isStagedFor([@auth:OneTimeCodeCredential].class.simpleName)"%>
+          <%Case constantX="false"%>
+            <ul class="sc-field-grid">
+              <li class="sc-field-row text-row">
+                <%h:FormField%>
+                  <%h:Label%>Username<%/h:Label%>
+                  <%login:UsernameInput /%>
+                <%/h:FormField%>
+              </li>
+              <li class="sc-field-row text-row">
+                <%h:FormField%>
+                  <%h:Label%>Password<%/h:Label%>
+                  <%login:PasswordInput /%>
+                <%/h:FormField%>
+              </li>
+              <li class="sc-field-row">
+              </li>
+              <li class="sc-field-row check-row">
+                
+                <%h:FormField%>
+                  <%h:Label%>Remember Me<%/h:Label%>
+                  <%login:PersistentInput /%>
+                  <p>(Keep me signed in on this browser)</p>
+                <%/h:FormField%>
+              </li>
+      
+            </ul>
+            <%login:DigestHiddenInput/%>
+            <%login:ChallengeHiddenInput/%>
             
-            <%h:FormField%>
-              <%h:Label%>Remember Me<%/h:Label%>
-              <%login:PersistentInput /%>
-              <p>(Keep me signed in on this browser)</p>
-            <%/h:FormField%>
-          </li>
-  
-        </ul>
-        <%login:DigestHiddenInput/%>
-        <%login:ChallengeHiddenInput/%>
-        
-        <div class="sc-form-button-bar sc-login-form-button-bar">
-          <%h:Button 
-            x="[h:Login].loginCommand()" 
-            tag.clazz="sc-form-completion-button button"
-            %>Sign In
-          <%/h:Button%>
-        </div>
-
-        <div class="login-form-footer">
-          <span><a href="resetPassword">I forgot my password</a></span>
-        </div>
-        
+            <div class="sc-form-button-bar sc-login-form-button-bar">
+              <%h:Button 
+                x="[h:Login].loginCommand()" 
+                tag.clazz="sc-form-completion-button button"
+                %>Sign In
+              <%/h:Button%>
+            </div>
+    
+            <div class="login-form-footer">
+              <span><a href="resetPassword">I forgot my password</a></span>
+            </div>
+          <%/Case%>
+          <%Case constantX="true"%>
+            <ul class="sc-field-grid">
+              <li class="sc-field-row text-row">
+                <h3>2FA Verification</h3>
+              </li>
+              <li class="sc-field-row text-row">
+            
+                <%h:FormField%>
+                  <%h:Label%>Code<%/h:Label%>
+                  <%login:CodeInput /%>
+                <%/h:FormField%>
+            </ul>
+            <div class="sc-form-button-bar sc-login-form-button-bar">
+              <%h:Button x="[h:Login].loginCommand()"
+                tag.clazz="sc-form-completion-button button"%>Verify<%/h:Button%>
+              <%h:Button x="[h:Login].startOverCommand()"
+                tag.clazz="button"%>Use a different account<%/h:Button%>
+            </div>             
+          <%/Case%>
+        <%/Switch%>        
       <%/h:Login%>
     <%/login:Form%>
 <%/@doclet%>

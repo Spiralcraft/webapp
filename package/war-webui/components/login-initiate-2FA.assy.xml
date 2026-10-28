@@ -1,0 +1,41 @@
+<t:Eval
+  xmlns:t="class:/spiralcraft/task"
+  xmlns:j="class:/java/lang"
+  xmlns:swm="class:/spiralcraft/webapp/meta"
+  xmlns:c="context://code/components"
+  xmlns:sec="class:/spiralcraft/security"
+  xmlns:st="class:/spiralcraft/time"
+  xmlns:util="class:/spiralcraft/util"  
+  >
+  <contextX>
+    [#p] { principalId:[@j:String]}
+  </contextX>
+  <x>
+    [#factor] 
+    {
+      user:=[@swm:User].@findByPrincipalId([p].principalId)
+      ,ticket:=@{
+         [@sec:Ticket].@findValidByPrincipalId([p].principalId,"2fa:email")
+           #{ .revoke() }
+        ,[@sec:Ticket].@create
+           ([p].principalId
+           ,[@st:Chronom].@MINUTE.times(10)
+           ,contextId:="2fa:email"
+           ,pin:=[@util:Random].@secureInstance().generateString(6,"0123456789")
+           )
+       }
+      ,state:=
+        [.]
+        {
+          .user.email!=null
+            ?[*c:login-sendCode].
+               (.user.email
+                 ,.user.commonName
+                 ,[factor].ticket.pin
+               )
+            :@log("2FA code for non-system login is "+[factor].ticket.pin)
+          ,"SENT"
+        }
+    }
+  </x>
+</t:Eval>

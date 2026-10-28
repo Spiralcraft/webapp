@@ -1,0 +1,13 @@
+<%With 
+  tgns="context://code/components/"
+  tgns:net="class:/java/net/"
+  x='[sendCode]'
+  %>
+  
+Hello <%=[sendCode].displayName/%>,
+
+Please enter this code into the login panel to complete your login.
+
+<%=[sendCode].code/%>
+
+<%/With%>

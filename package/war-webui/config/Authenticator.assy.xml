@@ -9,11 +9,26 @@
 
   <authModules>
     
-    <secspi:PasswordDataAuthModule>
-      <name>local
-      </name>
-    </secspi:PasswordDataAuthModule>
 
+    <secspi:AuthModuleGroup>
+      <name>mfa
+      </name>
+      <modules>
+      <secspi:PasswordDataAuthModule>
+        <name>local
+        </name>
+        <debug>true
+        </debug>
+      </secspi:PasswordDataAuthModule>
+
+        <secspi:SecondFactorDataAuthModule>
+          <name>code
+          </name>
+          <debug>true
+          </debug>
+        </secspi:SecondFactorDataAuthModule>
+      </modules>
+    </secspi:AuthModuleGroup>
   </authModules>
   
   <authorizer>

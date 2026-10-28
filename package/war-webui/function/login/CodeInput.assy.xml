@@ -1,0 +1,19 @@
+<html:TextInput
+  xmlns:html="class:/spiralcraft/servlet/webui/components/html/"
+  xmlns:sec="class:/spiralcraft/security/auth/"
+  >
+  <x>[sec:LoginEntry].oneTimeCode
+  </x>
+  <name>login_code
+  </name>
+  <contextualizeName>false
+  </contextualizeName>
+  <errorTag.tagName>div
+  </errorTag.tagName>
+  <errorTag.clazz>error
+  </errorTag.clazz>
+  <tag.autocomplete>one-time-code
+  </tag.autocomplete>
+  <tag.clazz>sc-login-code
+  </tag.clazz>
+</html:TextInput>
