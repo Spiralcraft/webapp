@@ -15,6 +15,49 @@
 
 
     <detail>
+
+      <scm:Change>
+        <revision>-dev71
+        </revision>
+                
+        <notes>
+          <scm:Note>Implement 2FA flow for Login
+          </scm:Note>
+        </notes>
+
+        <path>package/war-webui/
+        </path>
+        <resources>
+          <URI>components/login-panel.tgl
+          </URI>
+          <URI>components/login-2FA-email.tgl
+          </URI>
+          <URI>components/login-initiate-2FA.assy.xml
+          </URI>
+          <URI>components/login-sendCode.assy.xml
+          </URI>
+          <URI>config/Authenticator.assy.xml
+          </URI>
+          <URI>function/login/CodeInput.assy.xml
+          </URI>
+        </resources>
+      </scm:Change>
+
+      <scm:Change>
+        <revision>-dev71
+        </revision>
+                
+        <notes>
+          <scm:Note>Provide a way to send the user a reset code with minimal
+            coupling.
+          </scm:Note>
+        </notes>
+
+        <path>package/war-webui/components/resetPassword-sendCodeToPrincipal.assy.xml
+        </path>
+
+      </scm:Change>
+
       <scm:Change>
         <revision>-dev71
         </revision>
@@ -25,7 +68,7 @@
           </scm:Note>
         </notes>
 
-        <path>package/war-webui/function/registration/tasks/initAdminUser.assy.xml
+        <path>package/war-webui/function/registration/tasks/InitAdminUser.assy.xml
         </path>
 
       </scm:Change>
