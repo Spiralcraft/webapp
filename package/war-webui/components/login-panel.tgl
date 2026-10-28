@@ -69,6 +69,7 @@
                   <%h:Label%>Code<%/h:Label%>
                   <%login:CodeInput /%>
                 <%/h:FormField%>
+              </li>
             </ul>
             <div class="sc-form-button-bar sc-login-form-button-bar">
               <%h:Button x="[h:Login].loginCommand()"

@@ -10,4 +10,6 @@ Please enter this code into the login panel to complete your login.
 
 <%=[sendCode].code/%>
 
+This code expires in 10 minutes. If you did not try to log in, you can ignore this message.
+
 <%/With%>
