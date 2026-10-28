@@ -1,0 +1,18 @@
+ns:dt=class:/spiralcraft/data/task
+ns:su=class:/spiralcraft/util
+ns:swa=class:/spiralcraft/webapp/meta
+ns:sec=class:/spiralcraft/security
+
+[#fn{{ username:="" }}]
+{
+  [#cx]
+  {     
+    login:=[@sec:Login].@findByName([fn].username)
+    ,user:=[@swa:User].@findByPrincipalId(.login.principalId)
+    ,ret:=.user.[*dt:Edit{ action:= `@{.superUser=true}` }].()
+  }
+  { 
+    .@log(.)
+    ,.
+  }
+}

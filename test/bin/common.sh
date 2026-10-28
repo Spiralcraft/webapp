@@ -8,12 +8,7 @@ if [ -f "$SDK/build.local/gitbash.env" ]; then
   source $SDK/build.local/gitbash.env
 fi
 export ANTJAR="$SDK/build/lib/ant-launcher.jar"
-if [ -z "$JAVA_HOME" ]
-then
-  export JAVA=java
-else
-  export JAVA=$JAVA_HOME/java
-fi
+
 
 if [ -f "$(dirname $0)/.env" ]; then
   source $(dirname $0)/.env

@@ -3,3 +3,4 @@ build-local.properties
 /sandbox.local.properties
 /nbproject/private/
 /lib-js/
+/.env

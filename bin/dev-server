@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+WD="$(dirname "${BASH_SOURCE[0]}")"
+source "$WD/lib/common.sh"
+
+PROJECT_ROOT_URI=$($WD/file-uri $PROJECT_ROOT)
+
+cd test
+bin/test
+cd $PROJECT_ROOT
