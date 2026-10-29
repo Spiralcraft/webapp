@@ -1,0 +1,17 @@
+ns:dt=class:/spiralcraft/data/task
+ns:su=class:/spiralcraft/util
+ns:swa=class:/spiralcraft/webapp/meta
+ns:sec=class:/spiralcraft/security
+
+[#fn{{ username:="", secondFactorList:="" }}]
+{
+  [#cx]
+  {     
+    login:=[@sec:Login].@findByName([fn].username)
+    ,ret:=.login.[*dt:Edit{ action:= `@{ .secondFactorList=[fn].secondFactorList }` }].()
+  }
+  { 
+    .@log(.)
+    ,.
+  }
+}

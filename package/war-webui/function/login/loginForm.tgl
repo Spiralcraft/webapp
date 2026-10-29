@@ -3,6 +3,8 @@
   tgns:h="context://code/components/html/"
   tgns:swa-login="bundle://spiralcraft-webapp.war-webui/function/login/"
   tgns:swa="bundle://spiralcraft-webapp.war-webui/"  
+  tgns:auth="class:/spiralcraft/security/auth"
+  
   %>
   <%swa-login:Form 
     %>
@@ -10,32 +12,58 @@
       requireLoginPermission="true"
       errorTag.tagName="div"
       errorTag.clazz="error"
+      useChallenge="true" 
+      onStage="[*c:login-initiate-2FA].([auth:AuthSession].identifiedPrincipal.id)"      
       %>
-      <%h:FormField%>
-        <%h:Label%>Username<%/h:Label%>
-        <%swa-login:UsernameInput/%>
-      <%/h:FormField%>
+      <%Switch x="[auth:AuthSession].isStagedFor([@auth:OneTimeCodeCredential].class.simpleName)"%>
+        <%Case constantX="false"%>
       
-      <%h:FormField labelX='"Password"'%>
-        <%h:Label%>Password<%/h:Label%>
-        <%swa-login:PasswordInput/%>
-      <%/h:FormField%>
-
-      <%swa-login:DigestHiddenInput/%>
-            
-      <%h:FormField%>
-        <%swa-login:PersistentInput/%>
-        Keep me signed in on this browser
-      <%/h:FormField%>
-      
-      <div class="sc-form-button-bar sc-login-form-button-bar">
-        <%h:Button 
-          x="[h:Login].loginCommand()" 
-          tag.clazz="sc-form-completion-button"
-          %>Sign In
-        <%/h:Button%>
-      </div>
+          <%h:FormField%>
+            <%h:Label%>Username<%/h:Label%>
+            <%swa-login:UsernameInput/%>
+          <%/h:FormField%>
           
+          <%h:FormField labelX='"Password"'%>
+            <%h:Label%>Password<%/h:Label%>
+            <%swa-login:PasswordInput/%>
+          <%/h:FormField%>
+    
+          <%swa-login:DigestHiddenInput/%>
+                
+          <%h:FormField%>
+            <%swa-login:PersistentInput/%>
+            Keep me signed in on this browser
+          <%/h:FormField%>
+          
+          <div class="sc-form-button-bar sc-login-form-button-bar">
+            <%h:Button 
+              x="[h:Login].loginCommand()" 
+              tag.clazz="sc-form-completion-button"
+              %>Sign In
+            <%/h:Button%>
+          </div>
+        <%/Case%>
+        <%Case constantX="true"%>
+          <ul class="sc-field-grid">
+            <li class="sc-field-row text-row">
+              <h3>2FA Verification</h3>
+            </li>
+            <li class="sc-field-row text-row">
+          
+              <%h:FormField%>
+                <%h:Label%>Code<%/h:Label%>
+                <%login:CodeInput /%>
+              <%/h:FormField%>
+            </li>
+          </ul>
+          <div class="sc-form-button-bar sc-login-form-button-bar">
+            <%h:Button x="[h:Login].loginCommand()"
+              tag.clazz="sc-form-completion-button button"%>Verify<%/h:Button%>
+            <%h:Button x="[h:Login].startOverCommand()"
+              tag.clazz="button"%>Use a different account<%/h:Button%>
+          </div>             
+        <%/Case%>
+      <%/Switch%>
     <%/h:Login%>
   <%/swa-login:Form%>
 
