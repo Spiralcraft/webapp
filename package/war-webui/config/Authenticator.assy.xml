@@ -17,14 +17,14 @@
       <secspi:PasswordDataAuthModule>
         <name>local
         </name>
-        <debug>true
+        <debug>false
         </debug>
       </secspi:PasswordDataAuthModule>
 
         <secspi:SecondFactorDataAuthModule>
           <name>code
           </name>
-          <debug>true
+          <debug>false
           </debug>
         </secspi:SecondFactorDataAuthModule>
       </modules>
