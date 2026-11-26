@@ -3,17 +3,17 @@
     
   <repo-inst org="spiralcraft" module="admin" rev="[0.4.17-dev,0.4.18-dev["/>
   <repo-inst org="spiralcraft" module="archetype" rev="[0.4.17-dev,0.4.18-dev["/>
-  <repo-inst org="spiralcraft" module="core" rev="[0.4.17-dev,0.4.18-dev["/>
+  <repo-inst org="spiralcraft" module="core" rev="[0.4.17-dev191,0.4.18-dev["/>
   <repo-inst org="spiralcraft" module="gui" rev="[0.4.17-dev,0.4.18-dev["/>
   <repo-inst org="spiralcraft" module="jsclient" rev="[0.4.17-dev,0.4.18-dev["/>
-  <repo-inst org="spiralcraft" module="json" rev="[0.4.17-dev,0.4.18-dev["/>
+  <repo-inst org="spiralcraft" module="json" rev="[0.4.17-dev24,0.4.18-dev["/>
   <repo-inst org="spiralcraft" module="launcher" rev="[0.4.17-dev,0.4.18-dev["/>
-  <repo-inst org="spiralcraft" module="net" rev="[0.4.17-dev,0.4.18-dev["/>
-  <repo-inst org="spiralcraft" module="pioneer" rev="[0.4.17-dev,0.4.18-dev["/>
-  <repo-inst org="spiralcraft" module="servlet" rev="[0.4.17-dev,0.4.18-dev["/>
-  <repo-inst org="spiralcraft" module="shell" rev="[0.4.17-dev,0.4.18-dev["/>
-  <repo-inst org="spiralcraft" module="sql" rev="[0.4.17-dev,0.4.18-dev["/>
-  <repo-inst org="spiralcraft" module="textgen" rev="[0.4.17-dev,0.4.18-dev["/>
+  <repo-inst org="spiralcraft" module="net" rev="[0.4.17-dev18,0.4.18-dev["/>
+  <repo-inst org="spiralcraft" module="pioneer" rev="[0.4.17-dev34,0.4.18-dev["/>
+  <repo-inst org="spiralcraft" module="servlet" rev="[0.4.17-dev128,0.4.18-dev["/>
+  <repo-inst org="spiralcraft" module="shell" rev="[0.4.17-dev4,0.4.18-dev["/>
+  <repo-inst org="spiralcraft" module="sql" rev="[0.4.17-dev35,0.4.18-dev["/>
+  <repo-inst org="spiralcraft" module="textgen" rev="[0.4.17-dev32,0.4.18-dev["/>
 
   <repo-inst org="java" module="servlet-api" rev="2.4"/>
 
